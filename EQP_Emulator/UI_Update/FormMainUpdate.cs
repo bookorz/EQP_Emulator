@@ -11,24 +11,73 @@ namespace EQP_Emulator.UI_Update
     class FormMainUpdate
     {
         delegate void UpdateLog(string msg);
+        delegate void UpdateBtnEnable(Boolean isRun);
 
-        public static void alarmUpdate(string status)
+        public static void SetRunBtnEnable(Boolean isRun)
+        {
+            Form form = Application.OpenForms["frmMain"];
+            if (form == null)
+                return;
+            Button btnScriptRun = form.Controls.Find("btnScriptRun", true).FirstOrDefault() as Button;
+            Button btnDel = form.Controls.Find("btnDel", true).FirstOrDefault() as Button;
+            Button btnUp = form.Controls.Find("btnUp", true).FirstOrDefault() as Button;
+            Button btnDown = form.Controls.Find("btnDown", true).FirstOrDefault() as Button;
+            Button btnStepRun = form.Controls.Find("btnStepRun", true).FirstOrDefault() as Button;
+            Button btnImport = form.Controls.Find("btnImport", true).FirstOrDefault() as Button;
+            Button btnExport = form.Controls.Find("btnExport", true).FirstOrDefault() as Button;
+            Button btnSend = form.Controls.Find("btnSend", true).FirstOrDefault() as Button;
+            Button btnAddScript = form.Controls.Find("btnAddScript", true).FirstOrDefault() as Button;
+
+            if (form.InvokeRequired)
+            {
+                UpdateBtnEnable ph = new UpdateBtnEnable(SetRunBtnEnable);
+                form.BeginInvoke(ph, isRun);
+            }
+            else
+            {
+                btnScriptRun.Enabled = !isRun;
+                btnDel.Enabled = !isRun;
+                btnUp.Enabled = !isRun;
+                btnDown.Enabled = !isRun;
+                btnStepRun.Enabled = !isRun;
+                btnImport.Enabled = !isRun;
+                btnExport.Enabled = !isRun;
+                btnSend.Enabled = !isRun;
+                btnAddScript.Enabled = !isRun;
+            }
+            
+        }
+
+        public static void AlarmUpdate(string status)
         {
             Form form = Application.OpenForms["frmMain"];
             if (form == null)
                 return;
             Label W = form.Controls.Find("lbl_alarm", true).FirstOrDefault() as Label;
+            Button btnReset = form.Controls.Find("btnReset", true).FirstOrDefault() as Button;
+
             if (W == null)
                 return;
 
             if (W.InvokeRequired)
             {
-                UpdateLog ph = new UpdateLog(alarmUpdate);
+                UpdateLog ph = new UpdateLog(AlarmUpdate);
                 W.BeginInvoke(ph, status);
             }
             else
             {
                 W.Text = status;
+                switch (status)
+                {
+                    case "Alarm clear":
+                        W.BackColor = Color.LimeGreen;
+                        btnReset.Enabled = false;
+                        break;
+                    case "Alarm set":
+                        W.BackColor = Color.Red;
+                        btnReset.Enabled = true;
+                        break;
+                }
             }
         }
 
@@ -58,7 +107,7 @@ namespace EQP_Emulator.UI_Update
                     switch (state)
                     {
                         case "Connected":
-                            W.BackColor = Color.Lime;
+                            W.BackColor = Color.LimeGreen;
                             btnConn.Enabled = false;
                             btnDisConn.Enabled = true;
                             break;
@@ -113,6 +162,11 @@ namespace EQP_Emulator.UI_Update
                     //{
                     //    W.Text = W.Text.Substring(W.Text.Length - 1000);
                     //}
+                    if (W.Lines.Length > 1000)
+                    {
+                        W.Select(0, W.GetFirstCharIndexFromLine(W.Lines.Length - 1000));
+                        W.SelectedText = "";
+                    }
                     W.ScrollToCaret();
                 }
             }

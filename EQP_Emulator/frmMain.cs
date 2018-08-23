@@ -22,7 +22,7 @@ namespace EQP_Emulator
         BindingList<CmdScript> oCmdScript = new BindingList<CmdScript>();
         Boolean isAlarmSet = false;
         Boolean isCmdFin = true;
-        Boolean isScriptStop = false;
+        Boolean isScriptRunning = false;
 
         public frmMain()
         {
@@ -36,6 +36,7 @@ namespace EQP_Emulator
                 cbCmdType.Items.Add(element);
             }
             tbTimes.MaxLength = 6;
+            btnConn_Click(null,null);
         }
 
         private void createCommand(object sender, EventArgs e)
@@ -78,6 +79,8 @@ namespace EQP_Emulator
             string[] p2Ary;
             string[] p3Ary;
             string[] p4Ary;
+
+            createCommand(sender,e);
 
             if (define.cmdParams1.TryGetValue(strCmd, out p1Ary))
             {
@@ -150,6 +153,7 @@ namespace EQP_Emulator
             if (replyMsg.StartsWith("NAK") || replyMsg.StartsWith("CAN") || replyMsg.StartsWith("ABS"))
             {
                 isAlarmSet = true;
+                FormMainUpdate.AlarmUpdate("Alarm set");
             }
             else
             {
@@ -161,13 +165,14 @@ namespace EQP_Emulator
             if (replyMsg.StartsWith("INF"))
             {
                 string[] cmd = replyMsg.Split(new char[] { ':', '/' });
-                if (define.autoAckCmd.Contains(cmd[1]))
-                {
-                    Thread.Sleep(200);
+                //if (define.autoAckCmd.Contains(cmd[1]))
+                //{
+                //暫時收到INF一律回ACK
+                    Thread.Sleep(200);//200
                     string ackMsg = replyMsg.Replace("INF:", "ACK:");
                     conn.Send(ackMsg + "\r");
                     FormMainUpdate.LogUpdate("     Send => " + ackMsg);
-                }
+                //}
                 isCmdFin = true;
             }
         }
@@ -205,7 +210,7 @@ namespace EQP_Emulator
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            if (conn == null)
+            if (!this.lbl_ConnectState.Text.Equals("Connected"))
                 MessageBox.Show("Please connect first!!");
             else
             {
@@ -326,7 +331,7 @@ namespace EQP_Emulator
 
             int idx = dgvCmdScript.CurrentCell.RowIndex;
             //send command
-            if (conn == null)
+            if (!this.lbl_ConnectState.Text.Equals("Connected"))
             {
                 MessageBox.Show("Please connect first!!");
                 return;
@@ -363,6 +368,11 @@ namespace EQP_Emulator
                     MessageBox.Show("Please select one row!");
                     return result;
                 }
+                if (isScriptRunning)
+                {
+                    MessageBox.Show("Script is running , please stop it first!");
+                    return result;
+                }
                 result = true;
             }
             catch (Exception e)
@@ -396,6 +406,7 @@ namespace EQP_Emulator
             {
                 isAlarmSet = true;
                 MessageBox.Show(ex.Message);
+                FormMainUpdate.AlarmUpdate("Alarm set");
             }
         }
 
@@ -406,14 +417,22 @@ namespace EQP_Emulator
                 MessageBox.Show("No data exists!");
                 return;
             }
-            if (conn == null)
+            if (!this.lbl_ConnectState.Text.Equals("Connected"))
             {
                 MessageBox.Show("Please connect first!!");
                 return;
             }
-            isScriptStop = false;//set Script 執行中
+            if (isAlarmSet)
+            {
+                MessageBox.Show("Please reset alarm first!");
+                return;
+            }
+            setIsRunning(true);//set Script 執行中
+            //isScriptRunning = true;
+            //setRunBtnEnable(true);
             ThreadPool.QueueUserWorkItem(new WaitCallback(runScript));
         }
+
         private Boolean checkFin()
         {
             return lblStatus.Text.Equals("Command Completed.");
@@ -425,7 +444,7 @@ namespace EQP_Emulator
             int.TryParse(tbTimes.Text, out repeatTimes);
             //The efem motion is not allowed when the alarm occurs,please reset alarm first.
             int cnt = 1;
-            while (cnt <= repeatTimes  && !isAlarmSet && !isScriptStop)
+            while (cnt <= repeatTimes  && !isAlarmSet && isScriptRunning)
             {
                 FormMainUpdate.LogUpdate("********  Run Script: " + cnt + "  ********");
                 //for (int idx = 0; idx < dgvCmdScript.RowCount; idx++)
@@ -438,6 +457,7 @@ namespace EQP_Emulator
                     if (!isCmdFin)
                     {
                         MessageBox.Show("Command Timeout");
+                        FormMainUpdate.AlarmUpdate("Alarm set");
                         isAlarmSet = true;
                         break;//exit for
                     }
@@ -447,20 +467,37 @@ namespace EQP_Emulator
                         MessageBox.Show("Execute " + cmd + " error.");
                         break;//exit for
                     }
-                    if (isScriptStop)
+                    if (!isScriptRunning)
                     {
-                        MessageBox.Show("Manual stop !!");
+                        MessageBox.Show("Script stop !!");
                         break;//exit for
                     }
                 }
                 cnt++;
-                //tbTimes.Text = repeatTimes.ToString(); kuma update 次數
             }
+            MessageBox.Show("Command Script done.");
+            setIsRunning(false);//執行結束
+
         }
 
         private void btnScriptStop_Click(object sender, EventArgs e)
         {
-            isScriptStop = true;
+            setIsRunning(false);
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            FormMainUpdate.AlarmUpdate("Alarm clear");
+            isAlarmSet = false;
+            setIsRunning(false);
+        }
+
+
+        private void setIsRunning(Boolean isRun)
+        {
+            isScriptRunning = isRun;
+            FormMainUpdate.SetRunBtnEnable(isRun);
+        }
+
     }
 }

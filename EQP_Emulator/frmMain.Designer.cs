@@ -33,6 +33,7 @@
             this.tbPort = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.GroupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbl_alarm = new System.Windows.Forms.Label();
             this.GroupBox4 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_ConnectState = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@
             this.btnConn = new System.Windows.Forms.Button();
             this.btnDisConn = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnReset = new System.Windows.Forms.Button();
             this.btnAddScript = new System.Windows.Forms.Button();
             this.cbPara4 = new System.Windows.Forms.ComboBox();
             this.cbPara3 = new System.Windows.Forms.ComboBox();
@@ -71,8 +73,6 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lbl_alarm = new System.Windows.Forms.Label();
-            this.btnReset = new System.Windows.Forms.Button();
             this.GroupBox3.SuspendLayout();
             this.GroupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -100,7 +100,7 @@
             this.tbHostIP.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbHostIP.Location = new System.Drawing.Point(106, 14);
             this.tbHostIP.Name = "tbHostIP";
-            this.tbHostIP.Size = new System.Drawing.Size(197, 32);
+            this.tbHostIP.Size = new System.Drawing.Size(174, 32);
             this.tbHostIP.TabIndex = 1;
             this.tbHostIP.Text = "127.0.0.1";
             this.tbHostIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -108,7 +108,7 @@
             // tbPort
             // 
             this.tbPort.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPort.Location = new System.Drawing.Point(374, 14);
+            this.tbPort.Location = new System.Drawing.Point(345, 14);
             this.tbPort.Name = "tbPort";
             this.tbPort.Size = new System.Drawing.Size(73, 32);
             this.tbPort.TabIndex = 3;
@@ -119,7 +119,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(309, 18);
+            this.label2.Location = new System.Drawing.Point(280, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 28);
             this.label2.TabIndex = 2;
@@ -131,12 +131,24 @@
             this.GroupBox3.Controls.Add(this.GroupBox4);
             this.GroupBox3.Controls.Add(this.lbl_ConnectState);
             this.GroupBox3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.GroupBox3.Location = new System.Drawing.Point(703, 13);
+            this.GroupBox3.Location = new System.Drawing.Point(681, 13);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(232, 56);
+            this.GroupBox3.Size = new System.Drawing.Size(254, 56);
             this.GroupBox3.TabIndex = 13;
             this.GroupBox3.TabStop = false;
             this.GroupBox3.Text = "EFEM Connection State";
+            // 
+            // lbl_alarm
+            // 
+            this.lbl_alarm.BackColor = System.Drawing.Color.LimeGreen;
+            this.lbl_alarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_alarm.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbl_alarm.Location = new System.Drawing.Point(141, 18);
+            this.lbl_alarm.Name = "lbl_alarm";
+            this.lbl_alarm.Size = new System.Drawing.Size(107, 30);
+            this.lbl_alarm.TabIndex = 6;
+            this.lbl_alarm.Text = "Alarm clear";
+            this.lbl_alarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GroupBox4
             // 
@@ -166,7 +178,7 @@
             this.lbl_ConnectState.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl_ConnectState.Location = new System.Drawing.Point(8, 18);
             this.lbl_ConnectState.Name = "lbl_ConnectState";
-            this.lbl_ConnectState.Size = new System.Drawing.Size(109, 30);
+            this.lbl_ConnectState.Size = new System.Drawing.Size(127, 30);
             this.lbl_ConnectState.TabIndex = 0;
             this.lbl_ConnectState.Text = "Disconnection";
             this.lbl_ConnectState.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -192,13 +204,13 @@
             this.groupBox2.Controls.Add(this.tbHostIP);
             this.groupBox2.Location = new System.Drawing.Point(6, 17);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(691, 52);
+            this.groupBox2.Size = new System.Drawing.Size(669, 52);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             // 
             // btnConn
             // 
-            this.btnConn.Location = new System.Drawing.Point(463, 14);
+            this.btnConn.Location = new System.Drawing.Point(434, 14);
             this.btnConn.Name = "btnConn";
             this.btnConn.Size = new System.Drawing.Size(108, 32);
             this.btnConn.TabIndex = 15;
@@ -209,7 +221,7 @@
             // btnDisConn
             // 
             this.btnDisConn.Enabled = false;
-            this.btnDisConn.Location = new System.Drawing.Point(577, 14);
+            this.btnDisConn.Location = new System.Drawing.Point(548, 14);
             this.btnDisConn.Name = "btnDisConn";
             this.btnDisConn.Size = new System.Drawing.Size(108, 32);
             this.btnDisConn.TabIndex = 16;
@@ -237,6 +249,18 @@
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Command Area";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Enabled = false;
+            this.btnReset.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(820, 73);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(106, 39);
+            this.btnReset.TabIndex = 29;
+            this.btnReset.Text = "Reset Alarm";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnAddScript
             // 
@@ -489,7 +513,7 @@
             // 
             // btnScriptStop
             // 
-            this.btnScriptStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnScriptStop.BackColor = System.Drawing.Color.OrangeRed;
             this.btnScriptStop.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnScriptStop.Location = new System.Drawing.Point(395, 22);
             this.btnScriptStop.Name = "btnScriptStop";
@@ -560,28 +584,6 @@
             this.tabPage2.Size = new System.Drawing.Size(965, 607);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Running Mode";
-            // 
-            // lbl_alarm
-            // 
-            this.lbl_alarm.BackColor = System.Drawing.Color.LimeGreen;
-            this.lbl_alarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_alarm.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbl_alarm.Location = new System.Drawing.Point(119, 18);
-            this.lbl_alarm.Name = "lbl_alarm";
-            this.lbl_alarm.Size = new System.Drawing.Size(107, 30);
-            this.lbl_alarm.TabIndex = 6;
-            this.lbl_alarm.Text = "Alarm clear";
-            this.lbl_alarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnReset
-            // 
-            this.btnReset.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(820, 73);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(106, 39);
-            this.btnReset.TabIndex = 29;
-            this.btnReset.Text = "Reset Alarm";
-            this.btnReset.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
