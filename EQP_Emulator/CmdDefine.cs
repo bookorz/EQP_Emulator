@@ -20,11 +20,11 @@ namespace EQP_Emulator
         string[] setCmds = new string[] { "ALIGN", "ERROR", "CLAMP", "SIGOUT", "EVENT", "SIZE" };
 
         // parameter list 
-        public static string[] devices = new string[] { "ALL", "P1", "P2", "P3", "P4", "ROB", "ALIGN1", "ALIGN2" };
-        public static string[] devices_single = new string[] { "P1", "P2", "P3", "P4", "ROB", "ALIGN1", "ALIGN2" };
+        public static string[] devices = new string[] { "ALL", "P1", "P2", "P3", "P4", "ROB", "ROB1", "ROB2", "ALIGN", "ALIGN1", "ALIGN2" };
+        public static string[] devices_single = new string[] { "P1", "P2", "P3", "P4", "ROB", "ROB1", "ROB2", "ALIGN", "ALIGN1", "ALIGN2" };
         public static string[] ports = new string[] { "P1", "P2", "P3", "P4" };
-        public static string[] points = new string[] { "P1", "P2", "P3", "P4", "LL1", "LL2", "ALIGN1", "ALIGN2" };
-        public static string[] points_inside = new string[] { "ALIGN1", "ALIGN2", "LL1", "LL101", "LL2", "LL201" };
+        public static string[] points = new string[] { "P1", "P2", "P3", "P4", "LL1", "LL2", "ALIGN", "ALIGN1", "ALIGN2" };
+        public static string[] points_inside = new string[] { "ALIGN", "ALIGN1", "ALIGN2", "LL1", "LL101", "LL2", "LL201" };
         public static string[] points_slot = new string[] {
             "P101","P102","P103","P104","P105","P106","P107","P108","P109","P110",
             "P111","P112","P113","P114","P115","P116","P117","P118","P119","P120",
@@ -38,14 +38,14 @@ namespace EQP_Emulator
             "P401","P402","P403","P404","P405","P406","P407","P408","P409","P410",
             "P411","P412","P413","P414","P415","P416","P417","P418","P419","P420",
             "P421","P422","P423","P424","P425",
-            "ALIGN1", "ALIGN2", 
+            "ALIGN", "ALIGN1", "ALIGN2", 
             "LL1", "LL101", "LL2", "LL201" };
         public static string[] p_position = points_slot.Concat(new string[] { "ARM1", "ARM2" }).ToArray();
         public static string[] arms = new string[] { "ARM1", "ARM2", "ARM3"};
         public static string[] arms_single = new string[] { "ARM1", "ARM2" };
         public static string[] angles = new string[] { "P1", "P2", "P3", "P4", "LL1", "LL2", "Dxxxx" };
-        public static string[] aligners = new string[] { "ALIGN1", "ALIGN2"};
-        public static string[] devices_clamp = new string[] { "ALIGN1", "ALIGN2", "ARM1", "ARM2" };
+        public static string[] aligners = new string[] { "ALIGN", "ALIGN1", "ALIGN2"};
+        public static string[] devices_clamp = new string[] { "ALIGN", "ALIGN1", "ALIGN2", "ARM1", "ARM2" };
         public static string[] p_states = new string[] { "VER", "TRACK", "PRS1", "FFU1" };
         public static string[] p_events = new string[] { "ALL", "MAPDT", "TRANSREQ", "SYSTEM", "PORT", "PRS", "FFU" };
 
