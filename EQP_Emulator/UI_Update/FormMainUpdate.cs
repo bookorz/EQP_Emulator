@@ -27,6 +27,7 @@ namespace EQP_Emulator.UI_Update
             Button btnExport = form.Controls.Find("btnExport", true).FirstOrDefault() as Button;
             Button btnSend = form.Controls.Find("btnSend", true).FirstOrDefault() as Button;
             Button btnAddScript = form.Controls.Find("btnAddScript", true).FirstOrDefault() as Button;
+            Button btnNewScript = form.Controls.Find("btnNewScript", true).FirstOrDefault() as Button;
 
             if (form.InvokeRequired)
             {
@@ -44,6 +45,7 @@ namespace EQP_Emulator.UI_Update
                 btnExport.Enabled = !isRun;
                 btnSend.Enabled = !isRun;
                 btnAddScript.Enabled = !isRun;
+                btnNewScript.Enabled = !isRun;
             }
             
         }

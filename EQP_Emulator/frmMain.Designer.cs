@@ -73,6 +73,7 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnNewScript = new System.Windows.Forms.Button();
             this.GroupBox3.SuspendLayout();
             this.GroupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -442,6 +443,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.btnNewScript);
             this.groupBox7.Controls.Add(this.btnStepRun);
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Controls.Add(this.tbTimes);
@@ -565,6 +567,7 @@
             this.btnExport.TabIndex = 19;
             this.btnExport.Text = "Export";
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnImport
             // 
@@ -574,6 +577,7 @@
             this.btnImport.TabIndex = 18;
             this.btnImport.Text = "Import";
             this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // tabPage2
             // 
@@ -585,6 +589,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Running Mode";
             // 
+            // btnNewScript
+            // 
+            this.btnNewScript.Location = new System.Drawing.Point(413, 422);
+            this.btnNewScript.Name = "btnNewScript";
+            this.btnNewScript.Size = new System.Drawing.Size(38, 32);
+            this.btnNewScript.TabIndex = 31;
+            this.btnNewScript.Text = "New";
+            this.btnNewScript.UseVisualStyleBackColor = true;
+            this.btnNewScript.Click += new System.EventHandler(this.btnNewScript_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -592,6 +606,8 @@
             this.ClientSize = new System.Drawing.Size(984, 721);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "EQP Emulator";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -660,6 +676,7 @@
         private System.Windows.Forms.Label lblStatus;
         internal System.Windows.Forms.Label lbl_alarm;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnNewScript;
     }
 }
 

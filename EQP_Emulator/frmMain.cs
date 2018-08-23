@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using System.Net.Sockets;
 using System.Net;
 using System.Threading;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace EQP_Emulator
 {
@@ -37,6 +39,7 @@ namespace EQP_Emulator
             }
             tbTimes.MaxLength = 6;
             btnConn_Click(null,null);
+            tbCmd.Select();
         }
 
         private void createCommand(object sender, EventArgs e)
@@ -499,5 +502,91 @@ namespace EQP_Emulator
             FormMainUpdate.SetRunBtnEnable(isRun);
         }
 
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if (dgvCmdScript.Rows.Count == 0)
+            {
+                return;
+            }
+
+            SaveFileDialog saveFileDialog1;
+            StreamWriter sw;
+
+            try
+            {
+                saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Title = "Save file";
+                saveFileDialog1.InitialDirectory = ".\\";
+                saveFileDialog1.Filter = "json files (*.json)|*.json";
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    sw = new StreamWriter(saveFileDialog1.FileName.ToString());
+
+                    sw.WriteLine(JsonConvert.SerializeObject(oCmdScript, Formatting.Indented));
+
+                    sw.Close();
+
+                    MessageBox.Show("Done it.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Exception Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+            }
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1;
+            StreamReader myStream = null;
+
+            try
+            {
+                openFileDialog1 = new OpenFileDialog();
+                openFileDialog1.Filter = "json files (*.json)|*.json";
+                openFileDialog1.FilterIndex = 2;
+                openFileDialog1.RestoreDirectory = true;
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    string line = string.Empty;
+
+                    using (myStream = new StreamReader(openFileDialog1.FileName))
+                    {
+                        line = myStream.ReadToEnd();
+                    }
+
+                    oCmdScript = (BindingList<CmdScript>)Newtonsoft.Json.JsonConvert.DeserializeObject(line, (typeof(BindingList<CmdScript>)));
+                    dgvCmdScript.DataSource = oCmdScript;
+                    if (dgvCmdScript.RowCount > 0)
+                    {
+                        dgvCmdScript.Columns[0].Width = 30;
+                        dgvCmdScript.Columns[1].Width = 300;
+                    }
+                    //MessageBox.Show("Done it.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Exception Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+            }
+        }
+
+        private void btnNewScript_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                oCmdScript.Clear();//remove list
+                if(dgvCmdScript.RowCount > 0)
+                {
+                    dgvCmdScript.Columns[0].Width = 30;
+                    dgvCmdScript.Columns[1].Width = 300;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

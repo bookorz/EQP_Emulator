@@ -14,10 +14,10 @@ namespace EQP_Emulator
         string[] ackCmds = new string[] { "READY"};
         string[] movCmds = new string[] { "INIT","ORGSH","LOCK","UNLOCK","DOCK","UNDOCK","OPEN","CLOSE",
                                                  "WAFSH","GOTO","LOAD","UNLOAD","TRANS","CHANGE","ALIGN","HOME",
-                                                 "HOLD","RESTR","ABORT","EMS","ADPLOCK","ADPUNLOCK" };
+                                                 "HOLD","RESTR","ABORT","EMS","ADPLOCK","ADPUNLOCK", "TRANSREQ" };
         string[] getCmds = new string[] { "MAPDT", "ERROR", "CLAMP", "STATE", "MODE", "TRANSREQ", "SIGSTAT",
                                                  "EVENT", "CSTID", "SIZE" };
-        string[] setCmds = new string[] { "ALIGN", "ERROR", "CLAMP", "SIGOUT", "EVENT", "SIZE" };
+        string[] setCmds = new string[] { "ALIGN", "ERROR", "CLAMP", "MODE", "SIGOUT", "EVENT", "SIZE" };
 
         // parameter list 
         public static string[] devices = new string[] { "ALL", "P1", "P2", "P3", "P4", "ROB", "ROB1", "ROB2", "ALIGN", "ALIGN1", "ALIGN2" };
@@ -48,6 +48,9 @@ namespace EQP_Emulator
         public static string[] devices_clamp = new string[] { "ALIGN", "ALIGN1", "ALIGN2", "ARM1", "ARM2" };
         public static string[] p_states = new string[] { "VER", "TRACK", "PRS1", "FFU1" };
         public static string[] p_events = new string[] { "ALL", "MAPDT", "TRANSREQ", "SYSTEM", "PORT", "PRS", "FFU" };
+        public static string[] p_e84_device = new string[] { "ALL", "P1", "P2", "P3", "P4"};
+        public static string[] p_e84_port = new string[] { "P1", "P2", "P3", "P4" };
+        public static string[] p_e84_request = new string[] { "LOAD", "UNLOAD", "STOP"};
 
         //command list of  auto reply ack
         public string[] autoAckCmd = new string[] { "INIT","ORGSH","LOCK","UNLOCK","DOCK","UNDOCK","OPEN","CLOSE",
@@ -133,7 +136,13 @@ namespace EQP_Emulator
 
             /****************** E84相關 **************************/
             //MODE
+            cmdParams1.Add("GET:MODE", p_e84_device);//E84 設備
+            cmdParams1.Add("SET:MODE", p_e84_device);//E84 設備
+            cmdParams2.Add("SET:MODE", new string[] { "AUTO", "MANUAL" });//E84 模式
             //TRANSREQ
+            cmdParams1.Add("MOV:TRANSREQ", p_e84_port);//E84 Port
+            cmdParams2.Add("MOV:TRANSREQ", p_e84_request);//E84 request type
+            cmdParams1.Add("GET:TRANSREQ", p_e84_port);//E84 Port
 
             /****************** 燈號控制相關 **************************/
             cmdParams1.Add("SET:SIGOUT", new string[] { "STOWER","P1","P2","P3","P4" });//燈號設備
@@ -146,6 +155,7 @@ namespace EQP_Emulator
             /****************** 事件 **************************/
             cmdParams1.Add("SET:EVENT", p_events);//事件類型
             cmdParams2.Add("SET:EVENT", new string[] { "ON", "OFF" });//事件開關
+            cmdParams1.Add("GET:EVENT", p_events);//事件類型
 
             /***************** Wafer Size *******************/
             cmdParams1.Add("SET:SIZE", p_position);//位置
@@ -153,8 +163,8 @@ namespace EQP_Emulator
             cmdParams1.Add("GET:SIZE", p_position);//位置
 
             /***************** FOUP Adapter *****************/
-            cmdParams1.Add("MOVE:ADPLOCK", ports);//位置
-            cmdParams1.Add("MOVE:ADPUNLOCK", ports);//位置
+            cmdParams1.Add("MOV:ADPLOCK", ports);//位置
+            cmdParams1.Add("MOV:ADPUNLOCK", ports);//位置
         }
 
         public CmdDefine()
