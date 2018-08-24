@@ -14,6 +14,7 @@ using System.Net;
 using System.Threading;
 using System.IO;
 using Newtonsoft.Json;
+using System.Collections;
 
 namespace EQP_Emulator
 {
@@ -25,6 +26,12 @@ namespace EQP_Emulator
         Boolean isAlarmSet = false;
         Boolean isCmdFin = true;
         Boolean isScriptRunning = false;
+        Label[] p1Ary;
+        Label[] p2Ary;
+        Label[] p3Ary;
+        Label[] p4Ary;
+        Dictionary<string, Label[]> pMap = new Dictionary<string, Label[]> ();
+        ComboBox[] t_cbs;
 
         public frmMain()
         {
@@ -40,6 +47,44 @@ namespace EQP_Emulator
             tbTimes.MaxLength = 6;
             btnConn_Click(null,null);
             tbCmd.Select();
+            initData();
+        }
+
+        private void initData()
+        {
+            p1Ary = new Label[] { lbl_p101, lbl_p102, lbl_p103, lbl_p104, lbl_p105,
+                                  lbl_p106, lbl_p107, lbl_p108, lbl_p109, lbl_p110,
+                                  lbl_p111, lbl_p112, lbl_p113, lbl_p114, lbl_p115,
+                                  lbl_p116, lbl_p117, lbl_p118, lbl_p119, lbl_p120,
+                                  lbl_p121, lbl_p122, lbl_p123, lbl_p124, lbl_p125
+                                };
+            p2Ary = new Label[] { lbl_p201, lbl_p202, lbl_p203, lbl_p204, lbl_p205,
+                                  lbl_p206, lbl_p207, lbl_p208, lbl_p209, lbl_p210,
+                                  lbl_p211, lbl_p212, lbl_p213, lbl_p214, lbl_p215,
+                                  lbl_p216, lbl_p217, lbl_p218, lbl_p219, lbl_p220,
+                                  lbl_p221, lbl_p222, lbl_p223, lbl_p224, lbl_p225
+                                };
+            p3Ary = new Label[] { lbl_p301, lbl_p302, lbl_p303, lbl_p304, lbl_p305,
+                                  lbl_p306, lbl_p307, lbl_p308, lbl_p309, lbl_p310,
+                                  lbl_p311, lbl_p312, lbl_p313, lbl_p314, lbl_p315,
+                                  lbl_p316, lbl_p317, lbl_p318, lbl_p319, lbl_p320,
+                                  lbl_p321, lbl_p322, lbl_p323, lbl_p324, lbl_p325
+                                };
+            p4Ary = new Label[] { lbl_p401, lbl_p402, lbl_p403, lbl_p404, lbl_p405,
+                                  lbl_p406, lbl_p407, lbl_p408, lbl_p409, lbl_p410,
+                                  lbl_p411, lbl_p412, lbl_p413, lbl_p414, lbl_p415,
+                                  lbl_p416, lbl_p417, lbl_p418, lbl_p419, lbl_p420,
+                                  lbl_p421, lbl_p422, lbl_p423, lbl_p424, lbl_p425
+                                };
+            pMap.Add("P1", p1Ary);
+            pMap.Add("P2", p2Ary);
+            pMap.Add("P3", p3Ary);
+            pMap.Add("P4", p4Ary);
+            t_cbs = new ComboBox[] { cbP1Target, cbP2Target, cbP3Target, cbP4Target, };
+            cbP1Size.SelectedIndex = 0;
+            cbP2Size.SelectedIndex = 0;
+            cbP3Size.SelectedIndex = 0;
+            cbP4Size.SelectedIndex = 0;
         }
 
         private void createCommand(object sender, EventArgs e)
@@ -245,9 +290,10 @@ namespace EQP_Emulator
             dgvCmdScript.DataSource = null;
             int seq = oCmdScript.Count + 1;
             oCmdScript.Add(new CmdScript { Seq = seq, Command = tbCmd.Text });
-            dgvCmdScript.DataSource = oCmdScript;
-            dgvCmdScript.Columns[0].Width = 30;
-            dgvCmdScript.Columns[1].Width = 300;
+            //dgvCmdScript.DataSource = oCmdScript;
+            //dgvCmdScript.Columns[0].Width = 30;
+            //dgvCmdScript.Columns[1].Width = 300;
+            refreshScriptSet();
         }
 
         private void btnDel_Click(object sender, EventArgs e)
@@ -557,12 +603,7 @@ namespace EQP_Emulator
                     }
 
                     oCmdScript = (BindingList<CmdScript>)Newtonsoft.Json.JsonConvert.DeserializeObject(line, (typeof(BindingList<CmdScript>)));
-                    dgvCmdScript.DataSource = oCmdScript;
-                    if (dgvCmdScript.RowCount > 0)
-                    {
-                        dgvCmdScript.Columns[0].Width = 30;
-                        dgvCmdScript.Columns[1].Width = 300;
-                    }
+                    refreshScriptSet();
                     //MessageBox.Show("Done it.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 }
             }
@@ -572,21 +613,228 @@ namespace EQP_Emulator
             }
         }
 
+        private void refreshScriptSet()
+        {
+            dgvCmdScript.DataSource = oCmdScript;
+            if (dgvCmdScript.RowCount > 0)
+            {
+                dgvCmdScript.Columns[0].Width = 30;
+                dgvCmdScript.Columns[1].Width = 300;
+            }
+        }
+
         private void btnNewScript_Click(object sender, EventArgs e)
         {
             try
             {
                 oCmdScript.Clear();//remove list
-                if(dgvCmdScript.RowCount > 0)
-                {
-                    dgvCmdScript.Columns[0].Width = 30;
-                    dgvCmdScript.Columns[1].Width = 300;
-                }
+                //if(dgvCmdScript.RowCount > 0)
+                //{
+                //    dgvCmdScript.Columns[0].Width = 30;
+                //    dgvCmdScript.Columns[1].Width = 300;
+                //}
+                refreshScriptSet();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void slot_assign(object sender, EventArgs e)
+        {
+            MouseEventArgs me = (MouseEventArgs)e;
+            switch (me.Button)
+            {
+                case MouseButtons.Left:
+                    // Left click
+                    break;
+                case MouseButtons.Right:
+                    // Right click
+                    return;
+            }
+            Label label = ((Label)sender);
+            Color color = label.BackColor;
+            label.Text = ""; //重新 assign 時, 一律清空目的地
+            if (color == SystemColors.HighlightText)
+            {
+                label.BackColor = Color.LightGreen;
+                //label.Text = getWaferID(label);
+            }
+            else if (color == Color.LightGreen)
+            {
+                label.BackColor = SystemColors.HighlightText;
+                //label.Text = "";
+            }
+                
+        }
+        //private string getWaferID(Label label)
+        //{
+        //    return label.Name;
+        //}
+        private void checkUnloadPort(object sender, EventArgs e)
+        {
+            ComboBox cb = (ComboBox)sender;
+            if (cb.Text.Equals(""))
+                return;//Do not need to check
+            string result = "";
+            Boolean isNotUnload = false;
+            Boolean isUsed = false;
+            //check target is unlaod port or not 
+            string port_type = "";
+            switch (cb.Text)
+            {
+                case "P1":
+                    port_type = cbP1Type.Text;           
+                    break;
+                case "P2":
+                    port_type = cbP2Type.Text;
+                    break;
+                case "P3":
+                    port_type = cbP3Type.Text;
+                    break;
+                case "P4":
+                    port_type = cbP4Type.Text;
+                    break;
+            }
+            isNotUnload = !port_type.Equals("U")?true:false;
+            //check target is in use
+            foreach (ComboBox item in t_cbs)
+            {
+                //if cb.Name = "cbPxTarget" AND cb.Text = "Px" => Do not need to check
+                if (cb.Name.Contains(cb.Text))
+                    continue;
+                if (cb.Name == item.Name)//the same object => skip
+                    continue;
+                if (cb.Text == item.Text )
+                    isUsed = true;
+            }
+            if (isNotUnload)
+                result = "Port " + cb.Text + " is not Unload port.";
+            else if (isUsed)
+                result = "Port " + cb.Text + " is in use.";
+
+            if (!result.Equals(""))
+            {
+                MessageBox.Show(result);
+                cb.SelectedIndex = -1;
+            }
+        }
+
+        private void setPortType(object sender, EventArgs e)
+        {
+            ComboBox cb = (ComboBox)sender;
+            Label[] labels = null;
+            ComboBox t_cb = null; //combobox of target port
+            Color color;
+            Boolean isClear = cb.Text.Equals("U");//unload port => clear slot data
+            color = isClear? color = SystemColors.HighlightText: color = Color.LightGreen;
+            string port_name = "";
+            switch (cb.Name)
+            {
+                case "cbP1Type":
+                    labels = p1Ary;
+                    t_cb = cbP1Target;
+                    port_name = "P1";
+                    break;
+                case "cbP2Type":
+                    labels = p2Ary;
+                    t_cb = cbP2Target;
+                    port_name = "P2";
+                    break;
+                case "cbP3Type":
+                    labels = p3Ary;
+                    t_cb = cbP3Target;
+                    port_name = "P3";
+                    break;
+                case "cbP4Type":
+                    labels = p4Ary;
+                    t_cb = cbP4Target;
+                    port_name = "P4";
+                    break;
+            }
+            switch (cb.Text)
+            {
+                case "L":
+                    t_cb.Enabled = true;//only load port can change target
+                    break;
+                case "U":
+                    //t_cb.Enabled = true;//Reset object must be available
+                    t_cb.SelectedIndex = -1;
+                    t_cb.Text = "";
+                    t_cb.Enabled = false;
+                    break;
+                case "LU":
+                    t_cb.SelectedText = port_name;
+                    t_cb.Enabled = false;
+                    break;
+            }
+            if (labels != null)
+            {
+                foreach(Label item in labels)
+                {
+                    //item.Text = isClear? "":getWaferID(item);
+                    item.Text = "";
+                    item.BackColor = color;
+                    item.Enabled = !isClear;
+                }
+            }
+            // If the unload condition changes, clear the dependency
+            if (!isClear)
+            {
+                foreach (ComboBox foo in t_cbs)
+                {
+                    if (foo.Name.Contains(port_name))//the same object => skip
+                        continue;
+                    if (foo.Text == port_name)
+                    {
+                        foo.SelectedIndex = -1;
+                        assignTarget(pMap[foo.Name.Substring(2, 2)], ""); //clear target ID
+                    }
+                        
+                }
+            }
+        }
+
+        private void btnAssign_Click(object sender, EventArgs e)
+        {
+            //assign port1
+            if (!cbP1Type.Text.Equals("U") && !cbP1Type.Text.Equals(""))
+                assignTarget(p1Ary, cbP1Target.Text);
+            //assign port2
+            if (!cbP2Type.Text.Equals("U") && !cbP2Type.Text.Equals(""))
+                assignTarget(p2Ary, cbP2Target.Text);
+            //assign port3
+            if (!cbP3Type.Text.Equals("U") && !cbP3Type.Text.Equals(""))
+                assignTarget(p3Ary, cbP3Target.Text);
+            //assign port4
+            if (!cbP4Type.Text.Equals("U") && !cbP4Type.Text.Equals(""))
+                assignTarget(p4Ary, cbP4Target.Text);
+            MessageBox.Show("Succesessfully Completed.");
+        }
+        private void assignTarget(Label[] labels, string target)
+        {
+            foreach(Label label in labels)
+            {
+                if (label.BackColor == SystemColors.HighlightText)
+                    continue;//no wafer
+                string t_slot = target + label.Name.Substring(6);
+                label.Text = target.Equals("")?"": t_slot;
+            }
+        }
+
+        private void btnTransfer_Click(object sender, EventArgs e)
+        {
+            tabMode.SelectedIndex = 0;
+            tbTimes.Text = "1";//set run times 1
+            oCmdScript.Clear();//clear script
+            for(int i = 0; i < 100; i++)
+            {
+                int seq = oCmdScript.Count + 1;
+                oCmdScript.Add(new CmdScript { Seq = seq, Command = "MOV:INIT/ALL" + seq });
+            }
+            refreshScriptSet();
+            btnScriptRun_Click(btnScriptRun, e);
         }
     }
 }
