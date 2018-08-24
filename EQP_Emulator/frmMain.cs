@@ -107,7 +107,7 @@ namespace EQP_Emulator
             {
                 cmd.Append("/" + cbPara4.Text);
             }
-            tbCmd.Text = cmd.ToString();
+            tbCmd.Text = cmd.ToString() + ";";
         }
 
         private void cbCmd_SelectedIndexChanged(object sender, EventArgs e)
@@ -448,8 +448,8 @@ namespace EQP_Emulator
         {
             try
             {
-                conn.Send(cmd + ";\r");
-                FormMainUpdate.LogUpdate("\n     Send => " + cmd + ";");
+                conn.Send(cmd + "\r");
+                FormMainUpdate.LogUpdate("\n     Send => " + cmd );
             }
             catch (Exception ex)
             {
@@ -825,16 +825,64 @@ namespace EQP_Emulator
 
         private void btnTransfer_Click(object sender, EventArgs e)
         {
+            
+            string msg = "Are you sure you want to execute the transfer job?";
+            DialogResult confirm = MessageBox.Show(msg, "Notice", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+
+            if (confirm != System.Windows.Forms.DialogResult.Yes)
+                return;
             tabMode.SelectedIndex = 0;
             tbTimes.Text = "1";//set run times 1
             oCmdScript.Clear();//clear script
             for(int i = 0; i < 100; i++)
             {
                 int seq = oCmdScript.Count + 1;
-                oCmdScript.Add(new CmdScript { Seq = seq, Command = "MOV:INIT/ALL" + seq });
+                oCmdScript.Add(new CmdScript { Seq = seq, Command = "MOV:INIT/ALL;" + seq });
             }
             refreshScriptSet();
             btnScriptRun_Click(btnScriptRun, e);
+        }
+
+        private void dgvCmdScript_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvCmdScript.SelectedCells[0].ColumnIndex < 1)
+                return;// not command cell
+            string o_value = dgvCmdScript.SelectedCells[0].Value.ToString();
+            string n_value = ShowDialog("Update", "New Command:", o_value);
+            if (n_value.Equals(""))
+                return;//cancel update
+            else
+            {
+                CmdScript cmd = oCmdScript.ElementAt(dgvCmdScript.CurrentCell.RowIndex);
+                cmd.Command = n_value;
+                refreshScriptSet();
+            }
+           
+        }
+
+        public static string ShowDialog(string title, string label, string text)
+        {
+            Form prompt = new Form()
+            {
+                Width = 500,
+                Height = 200,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                Text = title,
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            Label textLabel = new Label() { Left = 50, Top = 20, Text = label , Width = 200 };            
+            TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 400 ,Text = text };
+            Button confirmation = new Button() { Text = "Ok", Left = 350, Width = 100, Top = 90, DialogResult = DialogResult.OK , Height = 35};
+            textLabel.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textBox.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            confirmation.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            confirmation.Click += (sender, e) => { prompt.Close(); };
+            prompt.Controls.Add(textBox);
+            prompt.Controls.Add(confirmation);
+            prompt.Controls.Add(textLabel);
+            prompt.AcceptButton = confirmation;
+
+            return prompt.ShowDialog() == DialogResult.OK ? textBox.Text : "";
         }
     }
 }

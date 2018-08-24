@@ -75,6 +75,34 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
             this.tabRun = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
+            this.cbP4Size = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.cbP3Size = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.cbP2Size = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.cbP1Size = new System.Windows.Forms.ComboBox();
+            this.cbA2 = new System.Windows.Forms.CheckBox();
+            this.cbR2Arm3 = new System.Windows.Forms.CheckBox();
+            this.cbR2Arm2 = new System.Windows.Forms.CheckBox();
+            this.cbR2Arm1 = new System.Windows.Forms.CheckBox();
+            this.cbR1Arm3 = new System.Windows.Forms.CheckBox();
+            this.cbR1Arm2 = new System.Windows.Forms.CheckBox();
+            this.cbR1Arm1 = new System.Windows.Forms.CheckBox();
+            this.cbA1 = new System.Windows.Forms.CheckBox();
+            this.cbLLD = new System.Windows.Forms.CheckBox();
+            this.cbLLC = new System.Windows.Forms.CheckBox();
+            this.cbLLB = new System.Windows.Forms.CheckBox();
+            this.cbLLA = new System.Windows.Forms.CheckBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -218,34 +246,6 @@
             this.lbl_p225 = new System.Windows.Forms.Label();
             this.lbl_p125 = new System.Windows.Forms.Label();
             this.lbl_slot25 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.cbP1Size = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cbP2Size = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.cbP3Size = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.cbP4Size = new System.Windows.Forms.ComboBox();
             this.slot = new System.Windows.Forms.ToolTip(this.components);
             this.GroupBox3.SuspendLayout();
             this.GroupBox4.SuspendLayout();
@@ -740,6 +740,7 @@
             this.dgvCmdScript.RowTemplate.Height = 24;
             this.dgvCmdScript.Size = new System.Drawing.Size(399, 396);
             this.dgvCmdScript.TabIndex = 22;
+            this.dgvCmdScript.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCmdScript_CellDoubleClick);
             // 
             // btnScriptRun
             // 
@@ -785,18 +786,18 @@
             this.tabRun.Controls.Add(this.cbP2Size);
             this.tabRun.Controls.Add(this.label22);
             this.tabRun.Controls.Add(this.cbP1Size);
-            this.tabRun.Controls.Add(this.checkBox12);
-            this.tabRun.Controls.Add(this.checkBox9);
-            this.tabRun.Controls.Add(this.checkBox10);
-            this.tabRun.Controls.Add(this.checkBox11);
-            this.tabRun.Controls.Add(this.checkBox8);
-            this.tabRun.Controls.Add(this.checkBox7);
-            this.tabRun.Controls.Add(this.checkBox6);
-            this.tabRun.Controls.Add(this.checkBox5);
-            this.tabRun.Controls.Add(this.checkBox4);
-            this.tabRun.Controls.Add(this.checkBox3);
-            this.tabRun.Controls.Add(this.checkBox2);
-            this.tabRun.Controls.Add(this.checkBox1);
+            this.tabRun.Controls.Add(this.cbA2);
+            this.tabRun.Controls.Add(this.cbR2Arm3);
+            this.tabRun.Controls.Add(this.cbR2Arm2);
+            this.tabRun.Controls.Add(this.cbR2Arm1);
+            this.tabRun.Controls.Add(this.cbR1Arm3);
+            this.tabRun.Controls.Add(this.cbR1Arm2);
+            this.tabRun.Controls.Add(this.cbR1Arm1);
+            this.tabRun.Controls.Add(this.cbA1);
+            this.tabRun.Controls.Add(this.cbLLD);
+            this.tabRun.Controls.Add(this.cbLLC);
+            this.tabRun.Controls.Add(this.cbLLB);
+            this.tabRun.Controls.Add(this.cbLLA);
             this.tabRun.Controls.Add(this.label21);
             this.tabRun.Controls.Add(this.label20);
             this.tabRun.Controls.Add(this.label19);
@@ -829,6 +830,352 @@
             this.tabRun.Size = new System.Drawing.Size(965, 607);
             this.tabRun.TabIndex = 1;
             this.tabRun.Text = "Running Mode";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(680, 179);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(27, 14);
+            this.label25.TabIndex = 56;
+            this.label25.Text = "mm";
+            // 
+            // cbP4Size
+            // 
+            this.cbP4Size.AutoCompleteCustomSource.AddRange(new string[] {
+            "200",
+            "300"});
+            this.cbP4Size.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbP4Size.FormattingEnabled = true;
+            this.cbP4Size.Items.AddRange(new object[] {
+            "200",
+            "300"});
+            this.cbP4Size.Location = new System.Drawing.Point(625, 173);
+            this.cbP4Size.Name = "cbP4Size";
+            this.cbP4Size.Size = new System.Drawing.Size(52, 22);
+            this.cbP4Size.TabIndex = 55;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(680, 154);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(27, 14);
+            this.label24.TabIndex = 54;
+            this.label24.Text = "mm";
+            // 
+            // cbP3Size
+            // 
+            this.cbP3Size.AutoCompleteCustomSource.AddRange(new string[] {
+            "200",
+            "300"});
+            this.cbP3Size.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbP3Size.FormattingEnabled = true;
+            this.cbP3Size.Items.AddRange(new object[] {
+            "200",
+            "300"});
+            this.cbP3Size.Location = new System.Drawing.Point(625, 148);
+            this.cbP3Size.Name = "cbP3Size";
+            this.cbP3Size.Size = new System.Drawing.Size(52, 22);
+            this.cbP3Size.TabIndex = 53;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(680, 129);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(27, 14);
+            this.label23.TabIndex = 52;
+            this.label23.Text = "mm";
+            // 
+            // cbP2Size
+            // 
+            this.cbP2Size.AutoCompleteCustomSource.AddRange(new string[] {
+            "200",
+            "300"});
+            this.cbP2Size.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbP2Size.FormattingEnabled = true;
+            this.cbP2Size.Items.AddRange(new object[] {
+            "200",
+            "300"});
+            this.cbP2Size.Location = new System.Drawing.Point(625, 123);
+            this.cbP2Size.Name = "cbP2Size";
+            this.cbP2Size.Size = new System.Drawing.Size(52, 22);
+            this.cbP2Size.TabIndex = 51;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(680, 104);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(27, 14);
+            this.label22.TabIndex = 50;
+            this.label22.Text = "mm";
+            // 
+            // cbP1Size
+            // 
+            this.cbP1Size.AutoCompleteCustomSource.AddRange(new string[] {
+            "200",
+            "300"});
+            this.cbP1Size.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbP1Size.FormattingEnabled = true;
+            this.cbP1Size.Items.AddRange(new object[] {
+            "200",
+            "300"});
+            this.cbP1Size.Location = new System.Drawing.Point(625, 98);
+            this.cbP1Size.Name = "cbP1Size";
+            this.cbP1Size.Size = new System.Drawing.Size(52, 22);
+            this.cbP1Size.TabIndex = 49;
+            // 
+            // cbA2
+            // 
+            this.cbA2.AutoSize = true;
+            this.cbA2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbA2.Location = new System.Drawing.Point(700, 249);
+            this.cbA2.Name = "cbA2";
+            this.cbA2.Size = new System.Drawing.Size(72, 22);
+            this.cbA2.TabIndex = 48;
+            this.cbA2.Text = "ALIGN2";
+            this.cbA2.UseVisualStyleBackColor = true;
+            // 
+            // cbR2Arm3
+            // 
+            this.cbR2Arm3.AutoSize = true;
+            this.cbR2Arm3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbR2Arm3.Location = new System.Drawing.Point(775, 225);
+            this.cbR2Arm3.Name = "cbR2Arm3";
+            this.cbR2Arm3.Size = new System.Drawing.Size(63, 22);
+            this.cbR2Arm3.TabIndex = 47;
+            this.cbR2Arm3.Text = "ARM3";
+            this.cbR2Arm3.UseVisualStyleBackColor = true;
+            // 
+            // cbR2Arm2
+            // 
+            this.cbR2Arm2.AutoSize = true;
+            this.cbR2Arm2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbR2Arm2.Location = new System.Drawing.Point(700, 225);
+            this.cbR2Arm2.Name = "cbR2Arm2";
+            this.cbR2Arm2.Size = new System.Drawing.Size(63, 22);
+            this.cbR2Arm2.TabIndex = 46;
+            this.cbR2Arm2.Text = "ARM2";
+            this.cbR2Arm2.UseVisualStyleBackColor = true;
+            // 
+            // cbR2Arm1
+            // 
+            this.cbR2Arm1.AutoSize = true;
+            this.cbR2Arm1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbR2Arm1.Location = new System.Drawing.Point(625, 225);
+            this.cbR2Arm1.Name = "cbR2Arm1";
+            this.cbR2Arm1.Size = new System.Drawing.Size(63, 22);
+            this.cbR2Arm1.TabIndex = 45;
+            this.cbR2Arm1.Text = "ARM1";
+            this.cbR2Arm1.UseVisualStyleBackColor = true;
+            // 
+            // cbR1Arm3
+            // 
+            this.cbR1Arm3.AutoSize = true;
+            this.cbR1Arm3.Checked = true;
+            this.cbR1Arm3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbR1Arm3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbR1Arm3.Location = new System.Drawing.Point(775, 200);
+            this.cbR1Arm3.Name = "cbR1Arm3";
+            this.cbR1Arm3.Size = new System.Drawing.Size(63, 22);
+            this.cbR1Arm3.TabIndex = 44;
+            this.cbR1Arm3.Text = "ARM3";
+            this.cbR1Arm3.UseVisualStyleBackColor = true;
+            // 
+            // cbR1Arm2
+            // 
+            this.cbR1Arm2.AutoSize = true;
+            this.cbR1Arm2.Checked = true;
+            this.cbR1Arm2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbR1Arm2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbR1Arm2.Location = new System.Drawing.Point(700, 200);
+            this.cbR1Arm2.Name = "cbR1Arm2";
+            this.cbR1Arm2.Size = new System.Drawing.Size(63, 22);
+            this.cbR1Arm2.TabIndex = 43;
+            this.cbR1Arm2.Text = "ARM2";
+            this.cbR1Arm2.UseVisualStyleBackColor = true;
+            // 
+            // cbR1Arm1
+            // 
+            this.cbR1Arm1.AutoSize = true;
+            this.cbR1Arm1.Checked = true;
+            this.cbR1Arm1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbR1Arm1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbR1Arm1.Location = new System.Drawing.Point(625, 200);
+            this.cbR1Arm1.Name = "cbR1Arm1";
+            this.cbR1Arm1.Size = new System.Drawing.Size(63, 22);
+            this.cbR1Arm1.TabIndex = 42;
+            this.cbR1Arm1.Text = "ARM1";
+            this.cbR1Arm1.UseVisualStyleBackColor = true;
+            // 
+            // cbA1
+            // 
+            this.cbA1.AutoSize = true;
+            this.cbA1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbA1.Location = new System.Drawing.Point(625, 249);
+            this.cbA1.Name = "cbA1";
+            this.cbA1.Size = new System.Drawing.Size(72, 22);
+            this.cbA1.TabIndex = 41;
+            this.cbA1.Text = "ALIGN1";
+            this.cbA1.UseVisualStyleBackColor = true;
+            // 
+            // cbLLD
+            // 
+            this.cbLLD.AutoSize = true;
+            this.cbLLD.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLLD.Location = new System.Drawing.Point(790, 275);
+            this.cbLLD.Name = "cbLLD";
+            this.cbLLD.Size = new System.Drawing.Size(48, 22);
+            this.cbLLD.TabIndex = 40;
+            this.cbLLD.Text = "LLD";
+            this.cbLLD.UseVisualStyleBackColor = true;
+            // 
+            // cbLLC
+            // 
+            this.cbLLC.AutoSize = true;
+            this.cbLLC.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLLC.Location = new System.Drawing.Point(735, 275);
+            this.cbLLC.Name = "cbLLC";
+            this.cbLLC.Size = new System.Drawing.Size(47, 22);
+            this.cbLLC.TabIndex = 39;
+            this.cbLLC.Text = "LLC";
+            this.cbLLC.UseVisualStyleBackColor = true;
+            // 
+            // cbLLB
+            // 
+            this.cbLLB.AutoSize = true;
+            this.cbLLB.Checked = true;
+            this.cbLLB.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbLLB.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLLB.Location = new System.Drawing.Point(680, 275);
+            this.cbLLB.Name = "cbLLB";
+            this.cbLLB.Size = new System.Drawing.Size(47, 22);
+            this.cbLLB.TabIndex = 38;
+            this.cbLLB.Text = "LLB";
+            this.cbLLB.UseVisualStyleBackColor = true;
+            // 
+            // cbLLA
+            // 
+            this.cbLLA.AutoSize = true;
+            this.cbLLA.Checked = true;
+            this.cbLLA.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbLLA.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLLA.Location = new System.Drawing.Point(625, 275);
+            this.cbLLA.Name = "cbLLA";
+            this.cbLLA.Size = new System.Drawing.Size(48, 22);
+            this.cbLLA.TabIndex = 37;
+            this.cbLLA.Text = "LLA";
+            this.cbLLA.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label21.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(513, 274);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(98, 18);
+            this.label21.TabIndex = 36;
+            this.label21.Text = "  Locd Lock Use";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(514, 249);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(96, 18);
+            this.label20.TabIndex = 35;
+            this.label20.Text = "       Algner Use";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label19.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(514, 224);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(96, 18);
+            this.label19.TabIndex = 34;
+            this.label19.Text = "ROB2 Arm Use";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(514, 199);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(96, 18);
+            this.label18.TabIndex = 33;
+            this.label18.Text = "ROB1 Arm Use";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(513, 149);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(97, 18);
+            this.label17.TabIndex = 32;
+            this.label17.Text = "  P3 Wafer Size";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label16.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(513, 174);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(97, 18);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "  P4 Wafer Size";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(513, 124);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 18);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "  P2 Wafer Size";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label15.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(513, 99);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(97, 18);
+            this.label15.TabIndex = 29;
+            this.label15.Text = "  P1 Wafer Size";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label10
             // 
@@ -2928,352 +3275,6 @@
             this.lbl_slot25.Text = "25";
             this.lbl_slot25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label15.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(513, 99);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(97, 18);
-            this.label15.TabIndex = 29;
-            this.label15.Text = "  P1 Wafer Size";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(513, 124);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 18);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "  P2 Wafer Size";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label16.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(513, 174);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(97, 18);
-            this.label16.TabIndex = 31;
-            this.label16.Text = "  P4 Wafer Size";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(513, 149);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(97, 18);
-            this.label17.TabIndex = 32;
-            this.label17.Text = "  P3 Wafer Size";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(514, 199);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(96, 18);
-            this.label18.TabIndex = 33;
-            this.label18.Text = "ROB1 Arm Use";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label19.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(514, 224);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(96, 18);
-            this.label19.TabIndex = 34;
-            this.label19.Text = "ROB2 Arm Use";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(514, 249);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(96, 18);
-            this.label20.TabIndex = 35;
-            this.label20.Text = "       Algner Use";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label21.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(513, 274);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(98, 18);
-            this.label21.TabIndex = 36;
-            this.label21.Text = "  Locd Lock Use";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(625, 275);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(48, 22);
-            this.checkBox1.TabIndex = 37;
-            this.checkBox1.Text = "LLA";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(680, 275);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(47, 22);
-            this.checkBox2.TabIndex = 38;
-            this.checkBox2.Text = "LLB";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(735, 275);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(47, 22);
-            this.checkBox3.TabIndex = 39;
-            this.checkBox3.Text = "LLC";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(790, 275);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(48, 22);
-            this.checkBox4.TabIndex = 40;
-            this.checkBox4.Text = "LLD";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Location = new System.Drawing.Point(625, 249);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(79, 22);
-            this.checkBox5.TabIndex = 41;
-            this.checkBox5.Text = "Aligner1";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Checked = true;
-            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(625, 200);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(60, 22);
-            this.checkBox6.TabIndex = 42;
-            this.checkBox6.Text = "Arm1";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Checked = true;
-            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7.Location = new System.Drawing.Point(685, 200);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(60, 22);
-            this.checkBox7.TabIndex = 43;
-            this.checkBox7.Text = "Arm2";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Checked = true;
-            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox8.Location = new System.Drawing.Point(746, 200);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(60, 22);
-            this.checkBox8.TabIndex = 44;
-            this.checkBox8.Text = "Arm3";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox9.Location = new System.Drawing.Point(746, 225);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(60, 22);
-            this.checkBox9.TabIndex = 47;
-            this.checkBox9.Text = "Arm3";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox10.Location = new System.Drawing.Point(685, 225);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(60, 22);
-            this.checkBox10.TabIndex = 46;
-            this.checkBox10.Text = "Arm2";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox11.Location = new System.Drawing.Point(625, 225);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(60, 22);
-            this.checkBox11.TabIndex = 45;
-            this.checkBox11.Text = "Arm1";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox12.Location = new System.Drawing.Point(703, 248);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(79, 22);
-            this.checkBox12.TabIndex = 48;
-            this.checkBox12.Text = "Aligner2";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // cbP1Size
-            // 
-            this.cbP1Size.AutoCompleteCustomSource.AddRange(new string[] {
-            "200",
-            "300"});
-            this.cbP1Size.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbP1Size.FormattingEnabled = true;
-            this.cbP1Size.Items.AddRange(new object[] {
-            "200",
-            "300"});
-            this.cbP1Size.Location = new System.Drawing.Point(625, 98);
-            this.cbP1Size.Name = "cbP1Size";
-            this.cbP1Size.Size = new System.Drawing.Size(52, 22);
-            this.cbP1Size.TabIndex = 49;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(680, 104);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(27, 14);
-            this.label22.TabIndex = 50;
-            this.label22.Text = "mm";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(680, 129);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(27, 14);
-            this.label23.TabIndex = 52;
-            this.label23.Text = "mm";
-            // 
-            // cbP2Size
-            // 
-            this.cbP2Size.AutoCompleteCustomSource.AddRange(new string[] {
-            "200",
-            "300"});
-            this.cbP2Size.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbP2Size.FormattingEnabled = true;
-            this.cbP2Size.Items.AddRange(new object[] {
-            "200",
-            "300"});
-            this.cbP2Size.Location = new System.Drawing.Point(625, 123);
-            this.cbP2Size.Name = "cbP2Size";
-            this.cbP2Size.Size = new System.Drawing.Size(52, 22);
-            this.cbP2Size.TabIndex = 51;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(680, 154);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(27, 14);
-            this.label24.TabIndex = 54;
-            this.label24.Text = "mm";
-            // 
-            // cbP3Size
-            // 
-            this.cbP3Size.AutoCompleteCustomSource.AddRange(new string[] {
-            "200",
-            "300"});
-            this.cbP3Size.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbP3Size.FormattingEnabled = true;
-            this.cbP3Size.Items.AddRange(new object[] {
-            "200",
-            "300"});
-            this.cbP3Size.Location = new System.Drawing.Point(625, 148);
-            this.cbP3Size.Name = "cbP3Size";
-            this.cbP3Size.Size = new System.Drawing.Size(52, 22);
-            this.cbP3Size.TabIndex = 53;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(680, 179);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(27, 14);
-            this.label25.TabIndex = 56;
-            this.label25.Text = "mm";
-            // 
-            // cbP4Size
-            // 
-            this.cbP4Size.AutoCompleteCustomSource.AddRange(new string[] {
-            "200",
-            "300"});
-            this.cbP4Size.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbP4Size.FormattingEnabled = true;
-            this.cbP4Size.Items.AddRange(new object[] {
-            "200",
-            "300"});
-            this.cbP4Size.Location = new System.Drawing.Point(625, 173);
-            this.cbP4Size.Name = "cbP4Size";
-            this.cbP4Size.Size = new System.Drawing.Size(52, 22);
-            this.cbP4Size.TabIndex = 55;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -3507,18 +3508,18 @@
         private System.Windows.Forms.ComboBox cbP2Size;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ComboBox cbP1Size;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbA2;
+        private System.Windows.Forms.CheckBox cbR2Arm3;
+        private System.Windows.Forms.CheckBox cbR2Arm2;
+        private System.Windows.Forms.CheckBox cbR2Arm1;
+        private System.Windows.Forms.CheckBox cbR1Arm3;
+        private System.Windows.Forms.CheckBox cbR1Arm2;
+        private System.Windows.Forms.CheckBox cbR1Arm1;
+        private System.Windows.Forms.CheckBox cbA1;
+        private System.Windows.Forms.CheckBox cbLLD;
+        private System.Windows.Forms.CheckBox cbLLC;
+        private System.Windows.Forms.CheckBox cbLLB;
+        private System.Windows.Forms.CheckBox cbLLA;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
