@@ -91,21 +91,31 @@ namespace EQP_Emulator
         {
             string strCmd = cbCmdType.Text + ":" + cbCmd.Text;
             StringBuilder cmd = new StringBuilder(strCmd);
-            if (cbPara1.Visible)
+            if (cbCmd.Text.Equals("TRANS"))
             {
                 cmd.Append("/" + cbPara1.Text);
-            }
-            if (cbPara2.Visible)
-            {
-                cmd.Append("/" + cbPara2.Text);
-            }
-            if (cbPara3.Visible)
-            {
+                cmd.Append(">" + cbPara2.Text);
                 cmd.Append("/" + cbPara3.Text);
+                cmd.Append(">" + cbPara4.Text);
             }
-            if (cbPara4.Visible)
+            else
             {
-                cmd.Append("/" + cbPara4.Text);
+                if (cbPara1.Visible)
+                {
+                    cmd.Append("/" + cbPara1.Text);
+                }
+                if (cbPara2.Visible)
+                {
+                    cmd.Append("/" + cbPara2.Text);
+                }
+                if (cbPara3.Visible)
+                {
+                    cmd.Append("/" + cbPara3.Text);
+                }
+                if (cbPara4.Visible)
+                {
+                    cmd.Append("/" + cbPara4.Text);
+                }
             }
             tbCmd.Text = cmd.ToString() + ";";
         }
@@ -495,7 +505,7 @@ namespace EQP_Emulator
             int cnt = 1;
             while (cnt <= repeatTimes  && !isAlarmSet && isScriptRunning)
             {
-                FormMainUpdate.LogUpdate("********  Run Script: " + cnt + "  ********");
+                FormMainUpdate.LogUpdate("\n**************  Run Script: " + cnt + "  **************");
                 //for (int idx = 0; idx < dgvCmdScript.RowCount; idx++)
                 foreach (CmdScript element in oCmdScript)
                 {
@@ -532,6 +542,10 @@ namespace EQP_Emulator
         private void btnScriptStop_Click(object sender, EventArgs e)
         {
             setIsRunning(false);
+            FormMainUpdate.LogUpdate("\n*************   Manual Stop: Begin   *************");
+            sendCommand("MOV: HOLD;");//send pause command to efem
+            Thread.Sleep(200);
+            sendCommand("MOV: ABORT;");//send abort command to efem
         }
 
         private void btnReset_Click(object sender, EventArgs e)

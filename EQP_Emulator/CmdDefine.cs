@@ -23,8 +23,8 @@ namespace EQP_Emulator
         public static string[] devices = new string[] { "ALL", "P1", "P2", "P3", "P4", "ROB", "ROB1", "ROB2", "ALIGN", "ALIGN1", "ALIGN2" };
         public static string[] devices_single = new string[] { "P1", "P2", "P3", "P4", "ROB", "ROB1", "ROB2", "ALIGN", "ALIGN1", "ALIGN2" };
         public static string[] ports = new string[] { "P1", "P2", "P3", "P4" };
-        public static string[] points = new string[] { "P1", "P2", "P3", "P4", "LL1", "LL2", "ALIGN", "ALIGN1", "ALIGN2" };
-        public static string[] points_inside = new string[] { "ALIGN", "ALIGN1", "ALIGN2", "LL1", "LL101", "LL2", "LL201" };
+        public static string[] points = new string[] { "P1", "P2", "P3", "P4", "LLA", "LLB", "LLC", "LLD", "ALIGN", "ALIGN1", "ALIGN2" };
+        public static string[] points_inside = new string[] { "ALIGN", "ALIGN1", "ALIGN2", "LLA", "LLA01", "LLB", "LLB01", "LLC", "LLC01", "LLD", "LLD01" };
         public static string[] points_slot = new string[] {
             "P101","P102","P103","P104","P105","P106","P107","P108","P109","P110",
             "P111","P112","P113","P114","P115","P116","P117","P118","P119","P120",
@@ -39,11 +39,13 @@ namespace EQP_Emulator
             "P411","P412","P413","P414","P415","P416","P417","P418","P419","P420",
             "P421","P422","P423","P424","P425",
             "ALIGN", "ALIGN1", "ALIGN2", 
-            "LL1", "LL101", "LL2", "LL201" };
-        public static string[] p_position = points_slot.Concat(new string[] { "ARM1", "ARM2" }).ToArray();
+            "LLA", "LLA01", "LLB", "LLB01", "LLC", "LLC01", "LLD", "LLD01" };
+        //public static string[] p_position = points_slot.Concat(new string[] { "ARM1", "ARM2" }).ToArray();
+        public static string[] p_size_pos = new string[] { "P1", "P2", "P3", "P4", "ALIGN", "ALIGN1", "ALIGN2", "ARM1", "ARM2",
+                                                           "LLA", "LLA01", "LLB", "LLB01", "LLC", "LLC01", "LLD", "LLD01" };
         public static string[] arms = new string[] { "ARM1", "ARM2", "ARM3"};
         public static string[] arms_single = new string[] { "ARM1", "ARM2" };
-        public static string[] angles = new string[] { "P1", "P2", "P3", "P4", "LL1", "LL2", "Dxxxx" };
+        public static string[] angles = new string[] { "P1", "P2", "P3", "P4", "LLA", "LLB", "LLC", "LLD", "D******" };
         public static string[] aligners = new string[] { "ALIGN", "ALIGN1", "ALIGN2"};
         public static string[] devices_clamp = new string[] { "ALIGN", "ALIGN1", "ALIGN2", "ARM1", "ARM2" };
         public static string[] p_states = new string[] { "VER", "TRACK", "PRS1", "FFU1" };
@@ -54,10 +56,10 @@ namespace EQP_Emulator
         public static string[] p_e84_request = new string[] { "LOAD", "UNLOAD", "STOP"};
 
         //command list of  auto reply ack
-        public string[] autoAckCmd = new string[] { "INIT","ORGSH","LOCK","UNLOCK","DOCK","UNDOCK","OPEN","CLOSE",
-                                                    "WAFSH","MAPDT","GOTO","LOAD","UNLOAD","TRANS","CHANGE","ALIGN","HOME",
-                                                    "HOLD","RESTR","ABORT","EMS","ERROR","CLAMP","STATE","SIGSTAT",
-                                                    "CSTID","SIZE","ADPLOCK","ADPUNLOCK"};
+        //public string[] autoAckCmd = new string[] { "INIT","ORGSH","LOCK","UNLOCK","DOCK","UNDOCK","OPEN","CLOSE",
+        //                                            "WAFSH","MAPDT","GOTO","LOAD","UNLOAD","TRANS","CHANGE","ALIGN","HOME",
+        //                                            "HOLD","RESTR","ABORT","EMS","ERROR","CLAMP","STATE","SIGSTAT",
+        //                                            "CSTID","SIZE","ADPLOCK","ADPUNLOCK"};
 
         public Dictionary<string, string[]> cmdList = new Dictionary<string, string[]>();
         public Dictionary<string, string[]> cmdParams1 = new Dictionary<string, string[]>();
@@ -159,9 +161,9 @@ namespace EQP_Emulator
             cmdParams1.Add("GET:EVENT", p_events_get);//事件類型
 
             /***************** Wafer Size *******************/
-            cmdParams1.Add("SET:SIZE", p_position);//位置
+            cmdParams1.Add("SET:SIZE", p_size_pos);//位置
             cmdParams2.Add("SET:SIZE", new string[] { "????", "NONE", "200", "300" });//wafer size
-            cmdParams1.Add("GET:SIZE", p_position);//位置
+            cmdParams1.Add("GET:SIZE", p_size_pos);//位置
 
             /***************** FOUP Adapter *****************/
             cmdParams1.Add("MOV:ADPLOCK", ports);//位置
