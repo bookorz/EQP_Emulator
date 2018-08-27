@@ -12,6 +12,25 @@ namespace EQP_Emulator.UI_Update
     {
         delegate void UpdateLog(string msg);
         delegate void UpdateBtnEnable(Boolean isRun);
+        delegate void MessageShow(string msg);
+
+        public static void ShowMessage(string msg)
+        {
+            Form form = Application.OpenForms["frmMain"];
+            if (form == null)
+                return;
+
+            if (form.InvokeRequired)
+            {
+                MessageShow ph = new MessageShow(ShowMessage);
+                form.BeginInvoke(ph, msg);
+            }
+            else
+            {
+                MessageBox.Show(form, msg);
+            }
+
+        }
 
         public static void SetRunBtnEnable(Boolean isRun)
         {

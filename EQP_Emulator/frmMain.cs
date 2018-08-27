@@ -48,6 +48,8 @@ namespace EQP_Emulator
             btnConn_Click(null,null);
             tbCmd.Select();
             initData();
+            //this.TopMost = true;
+            //this.Focus();
         }
 
         private void initData()
@@ -85,6 +87,13 @@ namespace EQP_Emulator
             cbP2Size.SelectedIndex = 0;
             cbP3Size.SelectedIndex = 0;
             cbP4Size.SelectedIndex = 0;
+            cbport_ml.SelectedIndex = 0;
+            cbAlign_ma.SelectedIndex = 0;
+            cbRobot_mr.SelectedIndex = 0;
+            cbP1Type.SelectedIndex = 1;
+            cbP2Type.SelectedIndex = 1;
+            cbP3Type.SelectedIndex = 1;
+            cbP4Type.SelectedIndex = 1;
         }
 
         private void createCommand(object sender, EventArgs e)
@@ -208,17 +217,17 @@ namespace EQP_Emulator
         void IConnectionReport.On_Connection_Message(object Msg)
         {
             string replyMsg = (string)Msg;
+            FormMainUpdate.LogUpdate("Reveive <= " + replyMsg);
+            if (isAlarmSet)
+            {
+                FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state.");
+                return;
+            }
             if (replyMsg.StartsWith("NAK") || replyMsg.StartsWith("CAN") || replyMsg.StartsWith("ABS"))
             {
                 isAlarmSet = true;
                 FormMainUpdate.AlarmUpdate("Alarm set");
             }
-            else
-            {
-                isAlarmSet = false;
-            }
-
-            FormMainUpdate.LogUpdate("Reveive <= " + replyMsg);
             //Thread.Sleep(1000);
             if (replyMsg.StartsWith("INF"))
             {
@@ -226,10 +235,10 @@ namespace EQP_Emulator
                 //if (define.autoAckCmd.Contains(cmd[1]))
                 //{
                 //暫時收到INF一律回ACK
-                    Thread.Sleep(200);//200
-                    string ackMsg = replyMsg.Replace("INF:", "ACK:");
-                    conn.Send(ackMsg + "\r");
-                    FormMainUpdate.LogUpdate("     Send => " + ackMsg);
+                Thread.Sleep(200);//200
+                string ackMsg = replyMsg.Replace("INF:", "ACK:");
+                sendCommand(ackMsg);
+                FormMainUpdate.LogUpdate("**************  Commnad Finish  **************\n");
                 //}
                 isCmdFin = true;
             }
@@ -255,6 +264,7 @@ namespace EQP_Emulator
 
         void IConnectionReport.On_Connection_Error(string Msg)
         {
+            isAlarmSet = true;
             FormMainUpdate.ConnectUpdate("Connection_Error");
             FormMainUpdate.LogUpdate("Connection_Error");
         }
@@ -269,7 +279,9 @@ namespace EQP_Emulator
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (!this.lbl_ConnectState.Text.Equals("Connected"))
-                MessageBox.Show("Please connect first!!");
+                FormMainUpdate.ShowMessage("Please connect first!!");
+            if(tbCmd.Text.Trim().Equals(""))
+                FormMainUpdate.ShowMessage("Command text is empty.");
             else
             {
                 sendCommand(tbCmd.Text);
@@ -293,16 +305,13 @@ namespace EQP_Emulator
         {
             if (tbCmd.Text.Trim().Equals(""))
             {
-                MessageBox.Show("No command data!");
+                FormMainUpdate.ShowMessage("No command data!");
                 return;
             }
 
             dgvCmdScript.DataSource = null;
             int seq = oCmdScript.Count + 1;
             oCmdScript.Add(new CmdScript { Seq = seq, Command = tbCmd.Text });
-            //dgvCmdScript.DataSource = oCmdScript;
-            //dgvCmdScript.Columns[0].Width = 30;
-            //dgvCmdScript.Columns[1].Width = 300;
             refreshScriptSet();
         }
 
@@ -351,7 +360,7 @@ namespace EQP_Emulator
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FormMainUpdate.ShowMessage(ex.Message + ":" + ex.ToString());
             }
 
         }
@@ -371,15 +380,12 @@ namespace EQP_Emulator
                     selItem.Seq = idx + 2;
                     oCmdScript = new BindingList<CmdScript>(oCmdScript.OrderBy(x => x.Seq).ToList());
                     dgvCmdScript.DataSource = oCmdScript;
-                    //dgvCmdScript.ClearSelection();
-                    //dgvCmdScript.CurrentCell = dgvCmdScript.Rows[idx + 1].Cells[0];
-                    //dgvCmdScript.Rows[idx + 1].Selected = true;
                     setSelectRow(idx + 1);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FormMainUpdate.ShowMessage(ex.Message + ":" + ex.ToString());
             }
         }
 
@@ -392,7 +398,7 @@ namespace EQP_Emulator
             //send command
             if (!this.lbl_ConnectState.Text.Equals("Connected"))
             {
-                MessageBox.Show("Please connect first!!");
+                FormMainUpdate.ShowMessage("Please connect first!!");
                 return;
             }
             else
@@ -419,24 +425,24 @@ namespace EQP_Emulator
             {
                 if (dgvCmdScript.RowCount == 0)
                 {
-                    MessageBox.Show("No data exists!");
+                    FormMainUpdate.ShowMessage("No data exists!"); 
                     return result;
                 }
                 if (dgvCmdScript.CurrentCell == null)
                 {
-                    MessageBox.Show("Please select one row!");
+                    FormMainUpdate.ShowMessage("Please select one row!"); 
                     return result;
                 }
                 if (isScriptRunning)
                 {
-                    MessageBox.Show("Script is running , please stop it first!");
+                    FormMainUpdate.ShowMessage("Script is running , please stop it first!"); 
                     return result;
                 }
                 result = true;
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                FormMainUpdate.ShowMessage(e.Message);
             }
             return result;
         }
@@ -458,13 +464,20 @@ namespace EQP_Emulator
         {
             try
             {
-                conn.Send(cmd + "\r");
-                FormMainUpdate.LogUpdate("\n     Send => " + cmd );
+                if (isAlarmSet)
+                {
+                    FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state:" + cmd);
+                }
+                else
+                {
+                    conn.Send(cmd + "\r");
+                    FormMainUpdate.LogUpdate("     Send => " + cmd);
+                }
             }
             catch (Exception ex)
             {
                 isAlarmSet = true;
-                MessageBox.Show(ex.Message);
+                FormMainUpdate.ShowMessage(ex.Message + ":" + ex.ToString());
                 FormMainUpdate.AlarmUpdate("Alarm set");
             }
         }
@@ -473,22 +486,20 @@ namespace EQP_Emulator
         {
             if (dgvCmdScript.RowCount == 0)
             {
-                MessageBox.Show("No data exists!");
+                FormMainUpdate.ShowMessage("No data exists!");
                 return;
             }
             if (!this.lbl_ConnectState.Text.Equals("Connected"))
             {
-                MessageBox.Show("Please connect first!!");
+                FormMainUpdate.ShowMessage("Please connect first!!");
                 return;
             }
             if (isAlarmSet)
             {
-                MessageBox.Show("Please reset alarm first!");
+                FormMainUpdate.ShowMessage("Please reset alarm first!");
                 return;
             }
             setIsRunning(true);//set Script 執行中
-            //isScriptRunning = true;
-            //setRunBtnEnable(true);
             ThreadPool.QueueUserWorkItem(new WaitCallback(runScript));
         }
 
@@ -515,7 +526,7 @@ namespace EQP_Emulator
                     SpinWait.SpinUntil(() => isCmdFin, 3000);// pause for motion complete
                     if (!isCmdFin)
                     {
-                        MessageBox.Show("Command Timeout");
+                        FormMainUpdate.ShowMessage("Command Timeout");
                         FormMainUpdate.AlarmUpdate("Alarm set");
                         isAlarmSet = true;
                         break;//exit for
@@ -523,18 +534,18 @@ namespace EQP_Emulator
                     //resummn after motion complete               
                     if (isAlarmSet)
                     {
-                        MessageBox.Show("Execute " + cmd + " error.");
+                        FormMainUpdate.ShowMessage("Execute " + cmd + " error.");
                         break;//exit for
                     }
                     if (!isScriptRunning)
                     {
-                        MessageBox.Show("Script stop !!");
+                        FormMainUpdate.ShowMessage("Script stop !!");
                         break;//exit for
                     }
                 }
                 cnt++;
             }
-            MessageBox.Show("Command Script done.");
+            FormMainUpdate.ShowMessage("Command Script done.");
             setIsRunning(false);//執行結束
 
         }
@@ -618,7 +629,6 @@ namespace EQP_Emulator
 
                     oCmdScript = (BindingList<CmdScript>)Newtonsoft.Json.JsonConvert.DeserializeObject(line, (typeof(BindingList<CmdScript>)));
                     refreshScriptSet();
-                    //MessageBox.Show("Done it.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 }
             }
             catch (Exception ex)
@@ -632,7 +642,7 @@ namespace EQP_Emulator
             dgvCmdScript.DataSource = oCmdScript;
             if (dgvCmdScript.RowCount > 0)
             {
-                dgvCmdScript.Columns[0].Width = 30;
+                dgvCmdScript.Columns[0].Width = 45;
                 dgvCmdScript.Columns[1].Width = 300;
             }
         }
@@ -642,16 +652,11 @@ namespace EQP_Emulator
             try
             {
                 oCmdScript.Clear();//remove list
-                //if(dgvCmdScript.RowCount > 0)
-                //{
-                //    dgvCmdScript.Columns[0].Width = 30;
-                //    dgvCmdScript.Columns[1].Width = 300;
-                //}
                 refreshScriptSet();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FormMainUpdate.ShowMessage(ex.Message + ":" + ex.ToString());
             }
         }
 
@@ -673,7 +678,6 @@ namespace EQP_Emulator
             if (color == SystemColors.HighlightText)
             {
                 label.BackColor = Color.LightGreen;
-                //label.Text = getWaferID(label);
             }
             else if (color == Color.LightGreen)
             {
@@ -682,10 +686,6 @@ namespace EQP_Emulator
             }
                 
         }
-        //private string getWaferID(Label label)
-        //{
-        //    return label.Name;
-        //}
         private void checkUnloadPort(object sender, EventArgs e)
         {
             ComboBox cb = (ComboBox)sender;
@@ -730,7 +730,7 @@ namespace EQP_Emulator
 
             if (!result.Equals(""))
             {
-                MessageBox.Show(result);
+                FormMainUpdate.ShowMessage(result);
                 cb.SelectedIndex = -1;
             }
         }
@@ -773,7 +773,6 @@ namespace EQP_Emulator
                     t_cb.Enabled = true;//only load port can change target
                     break;
                 case "U":
-                    //t_cb.Enabled = true;//Reset object must be available
                     t_cb.SelectedIndex = -1;
                     t_cb.Text = "";
                     t_cb.Enabled = false;
@@ -787,7 +786,6 @@ namespace EQP_Emulator
             {
                 foreach(Label item in labels)
                 {
-                    //item.Text = isClear? "":getWaferID(item);
                     item.Text = "";
                     item.BackColor = color;
                     item.Enabled = !isClear;
@@ -824,7 +822,7 @@ namespace EQP_Emulator
             //assign port4
             if (!cbP4Type.Text.Equals("U") && !cbP4Type.Text.Equals(""))
                 assignTarget(p4Ary, cbP4Target.Text);
-            MessageBox.Show("Succesessfully Completed.");
+            FormMainUpdate.ShowMessage("Succesessfully Completed.");
         }
         private void assignTarget(Label[] labels, string target)
         {
@@ -897,6 +895,11 @@ namespace EQP_Emulator
             prompt.AcceptButton = confirmation;
 
             return prompt.ShowDialog() == DialogResult.OK ? textBox.Text : "";
+        }
+
+        private void sendManualCmd(object sender, EventArgs e)
+        {
+            FormMainUpdate.ShowMessage(((Button)sender).Name);
         }
     }
 }

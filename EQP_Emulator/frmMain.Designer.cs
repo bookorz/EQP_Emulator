@@ -75,42 +75,69 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
             this.tabRun = new System.Windows.Forms.TabPage();
-            this.label25 = new System.Windows.Forms.Label();
-            this.cbP4Size = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.cbP3Size = new System.Windows.Forms.ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cbP2Size = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.cbP1Size = new System.Windows.Forms.ComboBox();
-            this.cbA2 = new System.Windows.Forms.CheckBox();
-            this.cbR2Arm3 = new System.Windows.Forms.CheckBox();
-            this.cbR2Arm2 = new System.Windows.Forms.CheckBox();
-            this.cbR2Arm1 = new System.Windows.Forms.CheckBox();
-            this.cbR1Arm3 = new System.Windows.Forms.CheckBox();
-            this.cbR1Arm2 = new System.Windows.Forms.CheckBox();
-            this.cbR1Arm1 = new System.Windows.Forms.CheckBox();
-            this.cbA1 = new System.Windows.Forms.CheckBox();
-            this.cbLLD = new System.Windows.Forms.CheckBox();
-            this.cbLLC = new System.Windows.Forms.CheckBox();
-            this.cbLLB = new System.Windows.Forms.CheckBox();
-            this.cbLLA = new System.Windows.Forms.CheckBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.btnTransfer = new System.Windows.Forms.Button();
+            this.btnAssign = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbP4Size = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cbP3Size = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.cbP2Size = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cbP1Size = new System.Windows.Forms.ComboBox();
+            this.cbLLA = new System.Windows.Forms.CheckBox();
+            this.cbA2 = new System.Windows.Forms.CheckBox();
+            this.cbLLB = new System.Windows.Forms.CheckBox();
+            this.cbR2Arm3 = new System.Windows.Forms.CheckBox();
+            this.cbLLC = new System.Windows.Forms.CheckBox();
+            this.cbR2Arm2 = new System.Windows.Forms.CheckBox();
+            this.cbLLD = new System.Windows.Forms.CheckBox();
+            this.cbR2Arm1 = new System.Windows.Forms.CheckBox();
+            this.cbA1 = new System.Windows.Forms.CheckBox();
+            this.cbR1Arm3 = new System.Windows.Forms.CheckBox();
+            this.cbR1Arm1 = new System.Windows.Forms.CheckBox();
+            this.cbR1Arm2 = new System.Windows.Forms.CheckBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.btnLoad_ml = new System.Windows.Forms.Button();
+            this.btnReset_ml = new System.Windows.Forms.Button();
+            this.cbWithMap_ml = new System.Windows.Forms.CheckBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.btnMap_ml = new System.Windows.Forms.Button();
+            this.btnUnload_ml = new System.Windows.Forms.Button();
+            this.btnInit_ml = new System.Windows.Forms.Button();
+            this.cbport_ml = new System.Windows.Forms.ComboBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.btnReset_mr = new System.Windows.Forms.Button();
+            this.cbRobot_mr = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.rdbArm2_mr = new System.Windows.Forms.RadioButton();
+            this.rdbArm1_mr = new System.Windows.Forms.RadioButton();
+            this.btnInit_mr = new System.Windows.Forms.Button();
+            this.btnClamp_mr = new System.Windows.Forms.Button();
+            this.btnUnClamp_mr = new System.Windows.Forms.Button();
+            this.btnOrg_mr = new System.Windows.Forms.Button();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.btnReset_ma = new System.Windows.Forms.Button();
+            this.btnInit_ma = new System.Windows.Forms.Button();
+            this.btnClamp_ma = new System.Windows.Forms.Button();
+            this.btnUnClamp_ma = new System.Windows.Forms.Button();
+            this.btnOrg_ma = new System.Windows.Forms.Button();
+            this.cbAlign_ma = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btnTransfer = new System.Windows.Forms.Button();
-            this.btnAssign = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.cbP4Target = new System.Windows.Forms.ComboBox();
             this.cbP3Target = new System.Windows.Forms.ComboBox();
@@ -258,35 +285,41 @@
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCmdScript)).BeginInit();
             this.tabRun.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 18);
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(26, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 28);
+            this.label1.Size = new System.Drawing.Size(66, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Host IP";
             // 
             // tbHostIP
             // 
-            this.tbHostIP.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbHostIP.Location = new System.Drawing.Point(106, 14);
+            this.tbHostIP.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHostIP.Location = new System.Drawing.Point(89, 13);
             this.tbHostIP.Name = "tbHostIP";
-            this.tbHostIP.Size = new System.Drawing.Size(174, 32);
+            this.tbHostIP.Size = new System.Drawing.Size(174, 31);
             this.tbHostIP.TabIndex = 1;
             this.tbHostIP.Text = "127.0.0.1";
             this.tbHostIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbPort
             // 
-            this.tbPort.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPort.Location = new System.Drawing.Point(345, 14);
+            this.tbPort.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPort.Location = new System.Drawing.Point(323, 13);
             this.tbPort.Name = "tbPort";
-            this.tbPort.Size = new System.Drawing.Size(73, 32);
+            this.tbPort.Size = new System.Drawing.Size(58, 31);
             this.tbPort.TabIndex = 3;
             this.tbPort.Text = "13000";
             this.tbPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -294,10 +327,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(280, 18);
+            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(281, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 28);
+            this.label2.Size = new System.Drawing.Size(43, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Port";
             // 
@@ -306,10 +339,10 @@
             this.GroupBox3.Controls.Add(this.lbl_alarm);
             this.GroupBox3.Controls.Add(this.GroupBox4);
             this.GroupBox3.Controls.Add(this.lbl_ConnectState);
-            this.GroupBox3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.GroupBox3.Location = new System.Drawing.Point(681, 13);
+            this.GroupBox3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox3.Location = new System.Drawing.Point(653, 13);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(254, 56);
+            this.GroupBox3.Size = new System.Drawing.Size(282, 56);
             this.GroupBox3.TabIndex = 13;
             this.GroupBox3.TabStop = false;
             this.GroupBox3.Text = "EFEM Connection State";
@@ -318,10 +351,10 @@
             // 
             this.lbl_alarm.BackColor = System.Drawing.Color.LimeGreen;
             this.lbl_alarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_alarm.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbl_alarm.Location = new System.Drawing.Point(141, 18);
+            this.lbl_alarm.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_alarm.Location = new System.Drawing.Point(144, 18);
             this.lbl_alarm.Name = "lbl_alarm";
-            this.lbl_alarm.Size = new System.Drawing.Size(107, 30);
+            this.lbl_alarm.Size = new System.Drawing.Size(127, 30);
             this.lbl_alarm.TabIndex = 6;
             this.lbl_alarm.Text = "Alarm clear";
             this.lbl_alarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -351,8 +384,8 @@
             // 
             this.lbl_ConnectState.BackColor = System.Drawing.Color.Red;
             this.lbl_ConnectState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_ConnectState.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbl_ConnectState.Location = new System.Drawing.Point(8, 18);
+            this.lbl_ConnectState.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ConnectState.Location = new System.Drawing.Point(9, 18);
             this.lbl_ConnectState.Name = "lbl_ConnectState";
             this.lbl_ConnectState.Size = new System.Drawing.Size(127, 30);
             this.lbl_ConnectState.TabIndex = 0;
@@ -363,6 +396,7 @@
             // 
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.GroupBox3);
+            this.groupBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(944, 79);
@@ -376,17 +410,17 @@
             this.groupBox2.Controls.Add(this.tbPort);
             this.groupBox2.Controls.Add(this.btnDisConn);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.tbHostIP);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(6, 17);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(669, 52);
+            this.groupBox2.Size = new System.Drawing.Size(641, 52);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             // 
             // btnConn
             // 
-            this.btnConn.Location = new System.Drawing.Point(434, 14);
+            this.btnConn.Location = new System.Drawing.Point(408, 14);
             this.btnConn.Name = "btnConn";
             this.btnConn.Size = new System.Drawing.Size(108, 32);
             this.btnConn.TabIndex = 15;
@@ -397,7 +431,7 @@
             // btnDisConn
             // 
             this.btnDisConn.Enabled = false;
-            this.btnDisConn.Location = new System.Drawing.Point(548, 14);
+            this.btnDisConn.Location = new System.Drawing.Point(522, 14);
             this.btnDisConn.Name = "btnDisConn";
             this.btnDisConn.Size = new System.Drawing.Size(108, 32);
             this.btnDisConn.TabIndex = 16;
@@ -453,7 +487,7 @@
             // 
             this.cbPara4.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPara4.FormattingEnabled = true;
-            this.cbPara4.Location = new System.Drawing.Point(795, 26);
+            this.cbPara4.Location = new System.Drawing.Point(790, 26);
             this.cbPara4.Name = "cbPara4";
             this.cbPara4.Size = new System.Drawing.Size(131, 36);
             this.cbPara4.TabIndex = 27;
@@ -464,7 +498,7 @@
             // 
             this.cbPara3.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPara3.FormattingEnabled = true;
-            this.cbPara3.Location = new System.Drawing.Point(658, 26);
+            this.cbPara3.Location = new System.Drawing.Point(653, 26);
             this.cbPara3.Name = "cbPara3";
             this.cbPara3.Size = new System.Drawing.Size(131, 36);
             this.cbPara3.TabIndex = 26;
@@ -475,7 +509,7 @@
             // 
             this.cbPara2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPara2.FormattingEnabled = true;
-            this.cbPara2.Location = new System.Drawing.Point(521, 26);
+            this.cbPara2.Location = new System.Drawing.Point(516, 26);
             this.cbPara2.Name = "cbPara2";
             this.cbPara2.Size = new System.Drawing.Size(131, 36);
             this.cbPara2.TabIndex = 25;
@@ -486,7 +520,7 @@
             // 
             this.cbPara1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPara1.FormattingEnabled = true;
-            this.cbPara1.Location = new System.Drawing.Point(385, 26);
+            this.cbPara1.Location = new System.Drawing.Point(380, 26);
             this.cbPara1.Name = "cbPara1";
             this.cbPara1.Size = new System.Drawing.Size(131, 36);
             this.cbPara1.TabIndex = 24;
@@ -505,7 +539,7 @@
             // 
             this.cbCmd.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCmd.FormattingEnabled = true;
-            this.cbCmd.Location = new System.Drawing.Point(216, 26);
+            this.cbCmd.Location = new System.Drawing.Point(211, 26);
             this.cbCmd.Name = "cbCmd";
             this.cbCmd.Size = new System.Drawing.Size(163, 36);
             this.cbCmd.TabIndex = 22;
@@ -515,20 +549,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(130, 34);
+            this.label5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(135, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 19);
+            this.label5.Size = new System.Drawing.Size(71, 18);
             this.label5.TabIndex = 21;
             this.label5.Text = "Command";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 35);
+            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(17, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 19);
+            this.label3.Size = new System.Drawing.Size(37, 18);
             this.label3.TabIndex = 17;
             this.label3.Text = "Type";
             // 
@@ -536,7 +570,7 @@
             // 
             this.cbCmdType.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCmdType.FormattingEnabled = true;
-            this.cbCmdType.Location = new System.Drawing.Point(56, 26);
+            this.cbCmdType.Location = new System.Drawing.Point(54, 26);
             this.cbCmdType.Name = "cbCmdType";
             this.cbCmdType.Size = new System.Drawing.Size(68, 36);
             this.cbCmdType.TabIndex = 20;
@@ -576,6 +610,7 @@
             // 
             // rtbMsg
             // 
+            this.rtbMsg.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbMsg.Location = new System.Drawing.Point(6, 21);
             this.rtbMsg.Name = "rtbMsg";
             this.rtbMsg.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
@@ -598,6 +633,7 @@
             // 
             this.tabMode.Controls.Add(this.tabCmd);
             this.tabMode.Controls.Add(this.tabRun);
+            this.tabMode.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabMode.Location = new System.Drawing.Point(12, 84);
             this.tabMode.Name = "tabMode";
             this.tabMode.SelectedIndex = 0;
@@ -610,10 +646,11 @@
             this.tabCmd.Controls.Add(this.groupBox7);
             this.tabCmd.Controls.Add(this.groupBox5);
             this.tabCmd.Controls.Add(this.groupBox6);
-            this.tabCmd.Location = new System.Drawing.Point(4, 22);
+            this.tabCmd.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabCmd.Location = new System.Drawing.Point(4, 24);
             this.tabCmd.Name = "tabCmd";
             this.tabCmd.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCmd.Size = new System.Drawing.Size(965, 607);
+            this.tabCmd.Size = new System.Drawing.Size(965, 605);
             this.tabCmd.TabIndex = 0;
             this.tabCmd.Text = "Command Mode";
             // 
@@ -640,7 +677,7 @@
             // 
             // btnNewScript
             // 
-            this.btnNewScript.Font = new System.Drawing.Font("新細明體", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewScript.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewScript.Location = new System.Drawing.Point(413, 422);
             this.btnNewScript.Name = "btnNewScript";
             this.btnNewScript.Size = new System.Drawing.Size(38, 32);
@@ -651,7 +688,7 @@
             // 
             // btnStepRun
             // 
-            this.btnStepRun.Font = new System.Drawing.Font("新細明體", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStepRun.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStepRun.Location = new System.Drawing.Point(413, 174);
             this.btnStepRun.Name = "btnStepRun";
             this.btnStepRun.Size = new System.Drawing.Size(38, 32);
@@ -683,7 +720,7 @@
             // 
             // btnDel
             // 
-            this.btnDel.Font = new System.Drawing.Font("新細明體", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Location = new System.Drawing.Point(413, 217);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(38, 32);
@@ -694,7 +731,7 @@
             // 
             // btnDown
             // 
-            this.btnDown.Font = new System.Drawing.Font("新細明體", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDown.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDown.Location = new System.Drawing.Point(413, 260);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(38, 32);
@@ -718,7 +755,7 @@
             // 
             // btnUp
             // 
-            this.btnUp.Font = new System.Drawing.Font("新細明體", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUp.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUp.Location = new System.Drawing.Point(413, 131);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(38, 32);
@@ -778,42 +815,11 @@
             // tabRun
             // 
             this.tabRun.BackColor = System.Drawing.SystemColors.Control;
-            this.tabRun.Controls.Add(this.label25);
-            this.tabRun.Controls.Add(this.cbP4Size);
-            this.tabRun.Controls.Add(this.label24);
-            this.tabRun.Controls.Add(this.cbP3Size);
-            this.tabRun.Controls.Add(this.label23);
-            this.tabRun.Controls.Add(this.cbP2Size);
-            this.tabRun.Controls.Add(this.label22);
-            this.tabRun.Controls.Add(this.cbP1Size);
-            this.tabRun.Controls.Add(this.cbA2);
-            this.tabRun.Controls.Add(this.cbR2Arm3);
-            this.tabRun.Controls.Add(this.cbR2Arm2);
-            this.tabRun.Controls.Add(this.cbR2Arm1);
-            this.tabRun.Controls.Add(this.cbR1Arm3);
-            this.tabRun.Controls.Add(this.cbR1Arm2);
-            this.tabRun.Controls.Add(this.cbR1Arm1);
-            this.tabRun.Controls.Add(this.cbA1);
-            this.tabRun.Controls.Add(this.cbLLD);
-            this.tabRun.Controls.Add(this.cbLLC);
-            this.tabRun.Controls.Add(this.cbLLB);
-            this.tabRun.Controls.Add(this.cbLLA);
-            this.tabRun.Controls.Add(this.label21);
-            this.tabRun.Controls.Add(this.label20);
-            this.tabRun.Controls.Add(this.label19);
-            this.tabRun.Controls.Add(this.label18);
-            this.tabRun.Controls.Add(this.label17);
-            this.tabRun.Controls.Add(this.label16);
-            this.tabRun.Controls.Add(this.label11);
-            this.tabRun.Controls.Add(this.label15);
+            this.tabRun.Controls.Add(this.groupBox13);
+            this.tabRun.Controls.Add(this.groupBox9);
             this.tabRun.Controls.Add(this.label10);
             this.tabRun.Controls.Add(this.label9);
             this.tabRun.Controls.Add(this.label8);
-            this.tabRun.Controls.Add(this.label14);
-            this.tabRun.Controls.Add(this.label13);
-            this.tabRun.Controls.Add(this.label12);
-            this.tabRun.Controls.Add(this.btnTransfer);
-            this.tabRun.Controls.Add(this.btnAssign);
             this.tabRun.Controls.Add(this.label7);
             this.tabRun.Controls.Add(this.cbP4Target);
             this.tabRun.Controls.Add(this.cbP3Target);
@@ -824,22 +830,124 @@
             this.tabRun.Controls.Add(this.cbP1Target);
             this.tabRun.Controls.Add(this.cbP1Type);
             this.tabRun.Controls.Add(this.tableLayoutPanel1);
-            this.tabRun.Location = new System.Drawing.Point(4, 22);
+            this.tabRun.Location = new System.Drawing.Point(4, 24);
             this.tabRun.Name = "tabRun";
             this.tabRun.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRun.Size = new System.Drawing.Size(965, 607);
+            this.tabRun.Size = new System.Drawing.Size(965, 605);
             this.tabRun.TabIndex = 1;
             this.tabRun.Text = "Running Mode";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.btnTransfer);
+            this.groupBox13.Controls.Add(this.btnAssign);
+            this.groupBox13.Controls.Add(this.groupBox8);
+            this.groupBox13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.ForeColor = System.Drawing.Color.Firebrick;
+            this.groupBox13.Location = new System.Drawing.Point(486, 280);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(473, 321);
+            this.groupBox13.TabIndex = 59;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Transfer Rule Setting";
+            // 
+            // btnTransfer
+            // 
+            this.btnTransfer.BackColor = System.Drawing.Color.Gold;
+            this.btnTransfer.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransfer.Location = new System.Drawing.Point(251, 248);
+            this.btnTransfer.Name = "btnTransfer";
+            this.btnTransfer.Size = new System.Drawing.Size(106, 39);
+            this.btnTransfer.TabIndex = 21;
+            this.btnTransfer.Text = "Transfer";
+            this.btnTransfer.UseVisualStyleBackColor = false;
+            this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
+            // 
+            // btnAssign
+            // 
+            this.btnAssign.BackColor = System.Drawing.Color.Honeydew;
+            this.btnAssign.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssign.Location = new System.Drawing.Point(139, 248);
+            this.btnAssign.Name = "btnAssign";
+            this.btnAssign.Size = new System.Drawing.Size(106, 39);
+            this.btnAssign.TabIndex = 20;
+            this.btnAssign.Text = "Assign";
+            this.btnAssign.UseVisualStyleBackColor = false;
+            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.label15);
+            this.groupBox8.Controls.Add(this.label25);
+            this.groupBox8.Controls.Add(this.label11);
+            this.groupBox8.Controls.Add(this.cbP4Size);
+            this.groupBox8.Controls.Add(this.label16);
+            this.groupBox8.Controls.Add(this.label24);
+            this.groupBox8.Controls.Add(this.label17);
+            this.groupBox8.Controls.Add(this.cbP3Size);
+            this.groupBox8.Controls.Add(this.label18);
+            this.groupBox8.Controls.Add(this.label23);
+            this.groupBox8.Controls.Add(this.label19);
+            this.groupBox8.Controls.Add(this.cbP2Size);
+            this.groupBox8.Controls.Add(this.label20);
+            this.groupBox8.Controls.Add(this.label22);
+            this.groupBox8.Controls.Add(this.label21);
+            this.groupBox8.Controls.Add(this.cbP1Size);
+            this.groupBox8.Controls.Add(this.cbLLA);
+            this.groupBox8.Controls.Add(this.cbA2);
+            this.groupBox8.Controls.Add(this.cbLLB);
+            this.groupBox8.Controls.Add(this.cbR2Arm3);
+            this.groupBox8.Controls.Add(this.cbLLC);
+            this.groupBox8.Controls.Add(this.cbR2Arm2);
+            this.groupBox8.Controls.Add(this.cbLLD);
+            this.groupBox8.Controls.Add(this.cbR2Arm1);
+            this.groupBox8.Controls.Add(this.cbA1);
+            this.groupBox8.Controls.Add(this.cbR1Arm3);
+            this.groupBox8.Controls.Add(this.cbR1Arm1);
+            this.groupBox8.Controls.Add(this.cbR1Arm2);
+            this.groupBox8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.groupBox8.Location = new System.Drawing.Point(7, 15);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(350, 227);
+            this.groupBox8.TabIndex = 57;
+            this.groupBox8.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label15.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(16, 23);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(97, 18);
+            this.label15.TabIndex = 29;
+            this.label15.Text = "  P1 Wafer Size";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(680, 179);
+            this.label25.Location = new System.Drawing.Point(183, 103);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(27, 14);
             this.label25.TabIndex = 56;
             this.label25.Text = "mm";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(16, 48);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 18);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "  P2 Wafer Size";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cbP4Size
             // 
@@ -851,20 +959,46 @@
             this.cbP4Size.Items.AddRange(new object[] {
             "200",
             "300"});
-            this.cbP4Size.Location = new System.Drawing.Point(625, 173);
+            this.cbP4Size.Location = new System.Drawing.Point(128, 97);
             this.cbP4Size.Name = "cbP4Size";
             this.cbP4Size.Size = new System.Drawing.Size(52, 22);
             this.cbP4Size.TabIndex = 55;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label16.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(16, 98);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(97, 18);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "  P4 Wafer Size";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(680, 154);
+            this.label24.Location = new System.Drawing.Point(183, 78);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(27, 14);
             this.label24.TabIndex = 54;
             this.label24.Text = "mm";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(16, 73);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(97, 18);
+            this.label17.TabIndex = 32;
+            this.label17.Text = "  P3 Wafer Size";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cbP3Size
             // 
@@ -876,20 +1010,46 @@
             this.cbP3Size.Items.AddRange(new object[] {
             "200",
             "300"});
-            this.cbP3Size.Location = new System.Drawing.Point(625, 148);
+            this.cbP3Size.Location = new System.Drawing.Point(128, 72);
             this.cbP3Size.Name = "cbP3Size";
             this.cbP3Size.Size = new System.Drawing.Size(52, 22);
             this.cbP3Size.TabIndex = 53;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(17, 123);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(96, 18);
+            this.label18.TabIndex = 33;
+            this.label18.Text = "ROB1 Arm Use";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(680, 129);
+            this.label23.Location = new System.Drawing.Point(183, 53);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(27, 14);
             this.label23.TabIndex = 52;
             this.label23.Text = "mm";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label19.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(17, 148);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(96, 18);
+            this.label19.TabIndex = 34;
+            this.label19.Text = "ROB2 Arm Use";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cbP2Size
             // 
@@ -901,20 +1061,46 @@
             this.cbP2Size.Items.AddRange(new object[] {
             "200",
             "300"});
-            this.cbP2Size.Location = new System.Drawing.Point(625, 123);
+            this.cbP2Size.Location = new System.Drawing.Point(128, 47);
             this.cbP2Size.Name = "cbP2Size";
             this.cbP2Size.Size = new System.Drawing.Size(52, 22);
             this.cbP2Size.TabIndex = 51;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(17, 173);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(96, 18);
+            this.label20.TabIndex = 35;
+            this.label20.Text = "       Algner Use";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(680, 104);
+            this.label22.Location = new System.Drawing.Point(183, 28);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(27, 14);
             this.label22.TabIndex = 50;
             this.label22.Text = "mm";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label21.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(17, 198);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(95, 18);
+            this.label21.TabIndex = 36;
+            this.label21.Text = " Locd Lock Use";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cbP1Size
             // 
@@ -926,139 +1112,10 @@
             this.cbP1Size.Items.AddRange(new object[] {
             "200",
             "300"});
-            this.cbP1Size.Location = new System.Drawing.Point(625, 98);
+            this.cbP1Size.Location = new System.Drawing.Point(128, 22);
             this.cbP1Size.Name = "cbP1Size";
             this.cbP1Size.Size = new System.Drawing.Size(52, 22);
             this.cbP1Size.TabIndex = 49;
-            // 
-            // cbA2
-            // 
-            this.cbA2.AutoSize = true;
-            this.cbA2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbA2.Location = new System.Drawing.Point(700, 249);
-            this.cbA2.Name = "cbA2";
-            this.cbA2.Size = new System.Drawing.Size(72, 22);
-            this.cbA2.TabIndex = 48;
-            this.cbA2.Text = "ALIGN2";
-            this.cbA2.UseVisualStyleBackColor = true;
-            // 
-            // cbR2Arm3
-            // 
-            this.cbR2Arm3.AutoSize = true;
-            this.cbR2Arm3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbR2Arm3.Location = new System.Drawing.Point(775, 225);
-            this.cbR2Arm3.Name = "cbR2Arm3";
-            this.cbR2Arm3.Size = new System.Drawing.Size(63, 22);
-            this.cbR2Arm3.TabIndex = 47;
-            this.cbR2Arm3.Text = "ARM3";
-            this.cbR2Arm3.UseVisualStyleBackColor = true;
-            // 
-            // cbR2Arm2
-            // 
-            this.cbR2Arm2.AutoSize = true;
-            this.cbR2Arm2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbR2Arm2.Location = new System.Drawing.Point(700, 225);
-            this.cbR2Arm2.Name = "cbR2Arm2";
-            this.cbR2Arm2.Size = new System.Drawing.Size(63, 22);
-            this.cbR2Arm2.TabIndex = 46;
-            this.cbR2Arm2.Text = "ARM2";
-            this.cbR2Arm2.UseVisualStyleBackColor = true;
-            // 
-            // cbR2Arm1
-            // 
-            this.cbR2Arm1.AutoSize = true;
-            this.cbR2Arm1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbR2Arm1.Location = new System.Drawing.Point(625, 225);
-            this.cbR2Arm1.Name = "cbR2Arm1";
-            this.cbR2Arm1.Size = new System.Drawing.Size(63, 22);
-            this.cbR2Arm1.TabIndex = 45;
-            this.cbR2Arm1.Text = "ARM1";
-            this.cbR2Arm1.UseVisualStyleBackColor = true;
-            // 
-            // cbR1Arm3
-            // 
-            this.cbR1Arm3.AutoSize = true;
-            this.cbR1Arm3.Checked = true;
-            this.cbR1Arm3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbR1Arm3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbR1Arm3.Location = new System.Drawing.Point(775, 200);
-            this.cbR1Arm3.Name = "cbR1Arm3";
-            this.cbR1Arm3.Size = new System.Drawing.Size(63, 22);
-            this.cbR1Arm3.TabIndex = 44;
-            this.cbR1Arm3.Text = "ARM3";
-            this.cbR1Arm3.UseVisualStyleBackColor = true;
-            // 
-            // cbR1Arm2
-            // 
-            this.cbR1Arm2.AutoSize = true;
-            this.cbR1Arm2.Checked = true;
-            this.cbR1Arm2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbR1Arm2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbR1Arm2.Location = new System.Drawing.Point(700, 200);
-            this.cbR1Arm2.Name = "cbR1Arm2";
-            this.cbR1Arm2.Size = new System.Drawing.Size(63, 22);
-            this.cbR1Arm2.TabIndex = 43;
-            this.cbR1Arm2.Text = "ARM2";
-            this.cbR1Arm2.UseVisualStyleBackColor = true;
-            // 
-            // cbR1Arm1
-            // 
-            this.cbR1Arm1.AutoSize = true;
-            this.cbR1Arm1.Checked = true;
-            this.cbR1Arm1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbR1Arm1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbR1Arm1.Location = new System.Drawing.Point(625, 200);
-            this.cbR1Arm1.Name = "cbR1Arm1";
-            this.cbR1Arm1.Size = new System.Drawing.Size(63, 22);
-            this.cbR1Arm1.TabIndex = 42;
-            this.cbR1Arm1.Text = "ARM1";
-            this.cbR1Arm1.UseVisualStyleBackColor = true;
-            // 
-            // cbA1
-            // 
-            this.cbA1.AutoSize = true;
-            this.cbA1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbA1.Location = new System.Drawing.Point(625, 249);
-            this.cbA1.Name = "cbA1";
-            this.cbA1.Size = new System.Drawing.Size(72, 22);
-            this.cbA1.TabIndex = 41;
-            this.cbA1.Text = "ALIGN1";
-            this.cbA1.UseVisualStyleBackColor = true;
-            // 
-            // cbLLD
-            // 
-            this.cbLLD.AutoSize = true;
-            this.cbLLD.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLLD.Location = new System.Drawing.Point(790, 275);
-            this.cbLLD.Name = "cbLLD";
-            this.cbLLD.Size = new System.Drawing.Size(48, 22);
-            this.cbLLD.TabIndex = 40;
-            this.cbLLD.Text = "LLD";
-            this.cbLLD.UseVisualStyleBackColor = true;
-            // 
-            // cbLLC
-            // 
-            this.cbLLC.AutoSize = true;
-            this.cbLLC.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLLC.Location = new System.Drawing.Point(735, 275);
-            this.cbLLC.Name = "cbLLC";
-            this.cbLLC.Size = new System.Drawing.Size(47, 22);
-            this.cbLLC.TabIndex = 39;
-            this.cbLLC.Text = "LLC";
-            this.cbLLC.UseVisualStyleBackColor = true;
-            // 
-            // cbLLB
-            // 
-            this.cbLLB.AutoSize = true;
-            this.cbLLB.Checked = true;
-            this.cbLLB.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbLLB.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLLB.Location = new System.Drawing.Point(680, 275);
-            this.cbLLB.Name = "cbLLB";
-            this.cbLLB.Size = new System.Drawing.Size(47, 22);
-            this.cbLLB.TabIndex = 38;
-            this.cbLLB.Text = "LLB";
-            this.cbLLB.UseVisualStyleBackColor = true;
             // 
             // cbLLA
             // 
@@ -1066,116 +1123,486 @@
             this.cbLLA.Checked = true;
             this.cbLLA.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbLLA.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLLA.Location = new System.Drawing.Point(625, 275);
+            this.cbLLA.Location = new System.Drawing.Point(128, 199);
             this.cbLLA.Name = "cbLLA";
             this.cbLLA.Size = new System.Drawing.Size(48, 22);
             this.cbLLA.TabIndex = 37;
             this.cbLLA.Text = "LLA";
             this.cbLLA.UseVisualStyleBackColor = true;
             // 
-            // label21
+            // cbA2
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label21.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(513, 274);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(98, 18);
-            this.label21.TabIndex = 36;
-            this.label21.Text = "  Locd Lock Use";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbA2.AutoSize = true;
+            this.cbA2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbA2.Location = new System.Drawing.Point(203, 173);
+            this.cbA2.Name = "cbA2";
+            this.cbA2.Size = new System.Drawing.Size(72, 22);
+            this.cbA2.TabIndex = 48;
+            this.cbA2.Text = "ALIGN2";
+            this.cbA2.UseVisualStyleBackColor = true;
             // 
-            // label20
+            // cbLLB
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(514, 249);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(96, 18);
-            this.label20.TabIndex = 35;
-            this.label20.Text = "       Algner Use";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbLLB.AutoSize = true;
+            this.cbLLB.Checked = true;
+            this.cbLLB.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbLLB.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLLB.Location = new System.Drawing.Point(183, 199);
+            this.cbLLB.Name = "cbLLB";
+            this.cbLLB.Size = new System.Drawing.Size(47, 22);
+            this.cbLLB.TabIndex = 38;
+            this.cbLLB.Text = "LLB";
+            this.cbLLB.UseVisualStyleBackColor = true;
             // 
-            // label19
+            // cbR2Arm3
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label19.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(514, 224);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(96, 18);
-            this.label19.TabIndex = 34;
-            this.label19.Text = "ROB2 Arm Use";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbR2Arm3.AutoSize = true;
+            this.cbR2Arm3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbR2Arm3.Location = new System.Drawing.Point(278, 149);
+            this.cbR2Arm3.Name = "cbR2Arm3";
+            this.cbR2Arm3.Size = new System.Drawing.Size(63, 22);
+            this.cbR2Arm3.TabIndex = 47;
+            this.cbR2Arm3.Text = "ARM3";
+            this.cbR2Arm3.UseVisualStyleBackColor = true;
             // 
-            // label18
+            // cbLLC
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(514, 199);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(96, 18);
-            this.label18.TabIndex = 33;
-            this.label18.Text = "ROB1 Arm Use";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbLLC.AutoSize = true;
+            this.cbLLC.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLLC.Location = new System.Drawing.Point(238, 199);
+            this.cbLLC.Name = "cbLLC";
+            this.cbLLC.Size = new System.Drawing.Size(47, 22);
+            this.cbLLC.TabIndex = 39;
+            this.cbLLC.Text = "LLC";
+            this.cbLLC.UseVisualStyleBackColor = true;
             // 
-            // label17
+            // cbR2Arm2
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(513, 149);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(97, 18);
-            this.label17.TabIndex = 32;
-            this.label17.Text = "  P3 Wafer Size";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbR2Arm2.AutoSize = true;
+            this.cbR2Arm2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbR2Arm2.Location = new System.Drawing.Point(203, 149);
+            this.cbR2Arm2.Name = "cbR2Arm2";
+            this.cbR2Arm2.Size = new System.Drawing.Size(63, 22);
+            this.cbR2Arm2.TabIndex = 46;
+            this.cbR2Arm2.Text = "ARM2";
+            this.cbR2Arm2.UseVisualStyleBackColor = true;
             // 
-            // label16
+            // cbLLD
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label16.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(513, 174);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(97, 18);
-            this.label16.TabIndex = 31;
-            this.label16.Text = "  P4 Wafer Size";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbLLD.AutoSize = true;
+            this.cbLLD.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLLD.Location = new System.Drawing.Point(293, 199);
+            this.cbLLD.Name = "cbLLD";
+            this.cbLLD.Size = new System.Drawing.Size(48, 22);
+            this.cbLLD.TabIndex = 40;
+            this.cbLLD.Text = "LLD";
+            this.cbLLD.UseVisualStyleBackColor = true;
             // 
-            // label11
+            // cbR2Arm1
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(513, 124);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 18);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "  P2 Wafer Size";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbR2Arm1.AutoSize = true;
+            this.cbR2Arm1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbR2Arm1.Location = new System.Drawing.Point(128, 149);
+            this.cbR2Arm1.Name = "cbR2Arm1";
+            this.cbR2Arm1.Size = new System.Drawing.Size(63, 22);
+            this.cbR2Arm1.TabIndex = 45;
+            this.cbR2Arm1.Text = "ARM1";
+            this.cbR2Arm1.UseVisualStyleBackColor = true;
             // 
-            // label15
+            // cbA1
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label15.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(513, 99);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(97, 18);
-            this.label15.TabIndex = 29;
-            this.label15.Text = "  P1 Wafer Size";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbA1.AutoSize = true;
+            this.cbA1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbA1.Location = new System.Drawing.Point(128, 173);
+            this.cbA1.Name = "cbA1";
+            this.cbA1.Size = new System.Drawing.Size(72, 22);
+            this.cbA1.TabIndex = 41;
+            this.cbA1.Text = "ALIGN1";
+            this.cbA1.UseVisualStyleBackColor = true;
+            // 
+            // cbR1Arm3
+            // 
+            this.cbR1Arm3.AutoSize = true;
+            this.cbR1Arm3.Checked = true;
+            this.cbR1Arm3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbR1Arm3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbR1Arm3.Location = new System.Drawing.Point(278, 124);
+            this.cbR1Arm3.Name = "cbR1Arm3";
+            this.cbR1Arm3.Size = new System.Drawing.Size(63, 22);
+            this.cbR1Arm3.TabIndex = 44;
+            this.cbR1Arm3.Text = "ARM3";
+            this.cbR1Arm3.UseVisualStyleBackColor = true;
+            // 
+            // cbR1Arm1
+            // 
+            this.cbR1Arm1.AutoSize = true;
+            this.cbR1Arm1.Checked = true;
+            this.cbR1Arm1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbR1Arm1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbR1Arm1.Location = new System.Drawing.Point(128, 124);
+            this.cbR1Arm1.Name = "cbR1Arm1";
+            this.cbR1Arm1.Size = new System.Drawing.Size(63, 22);
+            this.cbR1Arm1.TabIndex = 42;
+            this.cbR1Arm1.Text = "ARM1";
+            this.cbR1Arm1.UseVisualStyleBackColor = true;
+            // 
+            // cbR1Arm2
+            // 
+            this.cbR1Arm2.AutoSize = true;
+            this.cbR1Arm2.Checked = true;
+            this.cbR1Arm2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbR1Arm2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbR1Arm2.Location = new System.Drawing.Point(203, 124);
+            this.cbR1Arm2.Name = "cbR1Arm2";
+            this.cbR1Arm2.Size = new System.Drawing.Size(63, 22);
+            this.cbR1Arm2.TabIndex = 43;
+            this.cbR1Arm2.Text = "ARM2";
+            this.cbR1Arm2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.groupBox10);
+            this.groupBox9.Controls.Add(this.groupBox12);
+            this.groupBox9.Controls.Add(this.groupBox11);
+            this.groupBox9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.Location = new System.Drawing.Point(486, 5);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(468, 264);
+            this.groupBox9.TabIndex = 58;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Manual Function";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.btnLoad_ml);
+            this.groupBox10.Controls.Add(this.btnReset_ml);
+            this.groupBox10.Controls.Add(this.cbWithMap_ml);
+            this.groupBox10.Controls.Add(this.label26);
+            this.groupBox10.Controls.Add(this.btnMap_ml);
+            this.groupBox10.Controls.Add(this.btnUnload_ml);
+            this.groupBox10.Controls.Add(this.btnInit_ml);
+            this.groupBox10.Controls.Add(this.cbport_ml);
+            this.groupBox10.Location = new System.Drawing.Point(6, 14);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(450, 85);
+            this.groupBox10.TabIndex = 59;
+            this.groupBox10.TabStop = false;
+            // 
+            // btnLoad_ml
+            // 
+            this.btnLoad_ml.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoad_ml.Location = new System.Drawing.Point(192, 14);
+            this.btnLoad_ml.Name = "btnLoad_ml";
+            this.btnLoad_ml.Size = new System.Drawing.Size(65, 31);
+            this.btnLoad_ml.TabIndex = 67;
+            this.btnLoad_ml.Text = "Load";
+            this.btnLoad_ml.UseVisualStyleBackColor = true;
+            this.btnLoad_ml.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // btnReset_ml
+            // 
+            this.btnReset_ml.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset_ml.Location = new System.Drawing.Point(117, 48);
+            this.btnReset_ml.Name = "btnReset_ml";
+            this.btnReset_ml.Size = new System.Drawing.Size(65, 31);
+            this.btnReset_ml.TabIndex = 66;
+            this.btnReset_ml.Text = "Reset";
+            this.btnReset_ml.UseVisualStyleBackColor = true;
+            this.btnReset_ml.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // cbWithMap_ml
+            // 
+            this.cbWithMap_ml.AutoSize = true;
+            this.cbWithMap_ml.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbWithMap_ml.Location = new System.Drawing.Point(334, 19);
+            this.cbWithMap_ml.Name = "cbWithMap_ml";
+            this.cbWithMap_ml.Size = new System.Drawing.Size(112, 22);
+            this.cbWithMap_ml.TabIndex = 59;
+            this.cbWithMap_ml.Text = "with Mapping";
+            this.cbWithMap_ml.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label26.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(7, 13);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(100, 23);
+            this.label26.TabIndex = 33;
+            this.label26.Text = "    Load Port";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnMap_ml
+            // 
+            this.btnMap_ml.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMap_ml.Location = new System.Drawing.Point(263, 48);
+            this.btnMap_ml.Name = "btnMap_ml";
+            this.btnMap_ml.Size = new System.Drawing.Size(65, 31);
+            this.btnMap_ml.TabIndex = 38;
+            this.btnMap_ml.Text = "Mapping";
+            this.btnMap_ml.UseVisualStyleBackColor = true;
+            this.btnMap_ml.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // btnUnload_ml
+            // 
+            this.btnUnload_ml.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUnload_ml.Location = new System.Drawing.Point(263, 14);
+            this.btnUnload_ml.Name = "btnUnload_ml";
+            this.btnUnload_ml.Size = new System.Drawing.Size(65, 31);
+            this.btnUnload_ml.TabIndex = 39;
+            this.btnUnload_ml.Text = "UnLoad";
+            this.btnUnload_ml.UseVisualStyleBackColor = true;
+            this.btnUnload_ml.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // btnInit_ml
+            // 
+            this.btnInit_ml.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInit_ml.Location = new System.Drawing.Point(192, 48);
+            this.btnInit_ml.Name = "btnInit_ml";
+            this.btnInit_ml.Size = new System.Drawing.Size(65, 31);
+            this.btnInit_ml.TabIndex = 40;
+            this.btnInit_ml.Text = "Init";
+            this.btnInit_ml.UseVisualStyleBackColor = true;
+            this.btnInit_ml.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // cbport_ml
+            // 
+            this.cbport_ml.AutoCompleteCustomSource.AddRange(new string[] {
+            "200",
+            "300"});
+            this.cbport_ml.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbport_ml.FormattingEnabled = true;
+            this.cbport_ml.Items.AddRange(new object[] {
+            "P1",
+            "P2",
+            "P3",
+            "P4"});
+            this.cbport_ml.Location = new System.Drawing.Point(113, 14);
+            this.cbport_ml.Name = "cbport_ml";
+            this.cbport_ml.Size = new System.Drawing.Size(69, 22);
+            this.cbport_ml.TabIndex = 57;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.btnReset_mr);
+            this.groupBox12.Controls.Add(this.cbRobot_mr);
+            this.groupBox12.Controls.Add(this.label27);
+            this.groupBox12.Controls.Add(this.rdbArm2_mr);
+            this.groupBox12.Controls.Add(this.rdbArm1_mr);
+            this.groupBox12.Controls.Add(this.btnInit_mr);
+            this.groupBox12.Controls.Add(this.btnClamp_mr);
+            this.groupBox12.Controls.Add(this.btnUnClamp_mr);
+            this.groupBox12.Controls.Add(this.btnOrg_mr);
+            this.groupBox12.Location = new System.Drawing.Point(6, 94);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(450, 85);
+            this.groupBox12.TabIndex = 60;
+            this.groupBox12.TabStop = false;
+            // 
+            // btnReset_mr
+            // 
+            this.btnReset_mr.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset_mr.Location = new System.Drawing.Point(117, 47);
+            this.btnReset_mr.Name = "btnReset_mr";
+            this.btnReset_mr.Size = new System.Drawing.Size(65, 31);
+            this.btnReset_mr.TabIndex = 67;
+            this.btnReset_mr.Text = "Reset";
+            this.btnReset_mr.UseVisualStyleBackColor = true;
+            this.btnReset_mr.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // cbRobot_mr
+            // 
+            this.cbRobot_mr.AutoCompleteCustomSource.AddRange(new string[] {
+            "200",
+            "300"});
+            this.cbRobot_mr.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbRobot_mr.FormattingEnabled = true;
+            this.cbRobot_mr.Items.AddRange(new object[] {
+            "ROB1",
+            "ROB2"});
+            this.cbRobot_mr.Location = new System.Drawing.Point(113, 14);
+            this.cbRobot_mr.Name = "cbRobot_mr";
+            this.cbRobot_mr.Size = new System.Drawing.Size(69, 22);
+            this.cbRobot_mr.TabIndex = 57;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label27.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(6, 13);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(100, 23);
+            this.label27.TabIndex = 60;
+            this.label27.Text = "           Robot";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // rdbArm2_mr
+            // 
+            this.rdbArm2_mr.AutoSize = true;
+            this.rdbArm2_mr.Location = new System.Drawing.Point(334, 51);
+            this.rdbArm2_mr.Name = "rdbArm2_mr";
+            this.rdbArm2_mr.Size = new System.Drawing.Size(62, 22);
+            this.rdbArm2_mr.TabIndex = 70;
+            this.rdbArm2_mr.Text = "ARM2";
+            this.rdbArm2_mr.UseVisualStyleBackColor = true;
+            // 
+            // rdbArm1_mr
+            // 
+            this.rdbArm1_mr.AutoSize = true;
+            this.rdbArm1_mr.Checked = true;
+            this.rdbArm1_mr.Location = new System.Drawing.Point(266, 51);
+            this.rdbArm1_mr.Name = "rdbArm1_mr";
+            this.rdbArm1_mr.Size = new System.Drawing.Size(62, 22);
+            this.rdbArm1_mr.TabIndex = 69;
+            this.rdbArm1_mr.TabStop = true;
+            this.rdbArm1_mr.Text = "ARM1";
+            this.rdbArm1_mr.UseVisualStyleBackColor = true;
+            // 
+            // btnInit_mr
+            // 
+            this.btnInit_mr.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInit_mr.Location = new System.Drawing.Point(192, 47);
+            this.btnInit_mr.Name = "btnInit_mr";
+            this.btnInit_mr.Size = new System.Drawing.Size(65, 31);
+            this.btnInit_mr.TabIndex = 65;
+            this.btnInit_mr.Text = "Init";
+            this.btnInit_mr.UseVisualStyleBackColor = true;
+            this.btnInit_mr.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // btnClamp_mr
+            // 
+            this.btnClamp_mr.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClamp_mr.Location = new System.Drawing.Point(263, 13);
+            this.btnClamp_mr.Name = "btnClamp_mr";
+            this.btnClamp_mr.Size = new System.Drawing.Size(65, 31);
+            this.btnClamp_mr.TabIndex = 63;
+            this.btnClamp_mr.Text = "Clamp";
+            this.btnClamp_mr.UseVisualStyleBackColor = true;
+            this.btnClamp_mr.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // btnUnClamp_mr
+            // 
+            this.btnUnClamp_mr.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUnClamp_mr.Location = new System.Drawing.Point(334, 14);
+            this.btnUnClamp_mr.Name = "btnUnClamp_mr";
+            this.btnUnClamp_mr.Size = new System.Drawing.Size(65, 31);
+            this.btnUnClamp_mr.TabIndex = 64;
+            this.btnUnClamp_mr.Text = "UnClamp";
+            this.btnUnClamp_mr.UseVisualStyleBackColor = true;
+            this.btnUnClamp_mr.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // btnOrg_mr
+            // 
+            this.btnOrg_mr.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrg_mr.Location = new System.Drawing.Point(192, 13);
+            this.btnOrg_mr.Name = "btnOrg_mr";
+            this.btnOrg_mr.Size = new System.Drawing.Size(65, 31);
+            this.btnOrg_mr.TabIndex = 62;
+            this.btnOrg_mr.Text = "ORGSH";
+            this.btnOrg_mr.UseVisualStyleBackColor = true;
+            this.btnOrg_mr.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.btnReset_ma);
+            this.groupBox11.Controls.Add(this.btnInit_ma);
+            this.groupBox11.Controls.Add(this.btnClamp_ma);
+            this.groupBox11.Controls.Add(this.btnUnClamp_ma);
+            this.groupBox11.Controls.Add(this.btnOrg_ma);
+            this.groupBox11.Controls.Add(this.cbAlign_ma);
+            this.groupBox11.Controls.Add(this.label28);
+            this.groupBox11.Location = new System.Drawing.Point(6, 174);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(450, 85);
+            this.groupBox11.TabIndex = 60;
+            this.groupBox11.TabStop = false;
+            // 
+            // btnReset_ma
+            // 
+            this.btnReset_ma.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset_ma.Location = new System.Drawing.Point(117, 48);
+            this.btnReset_ma.Name = "btnReset_ma";
+            this.btnReset_ma.Size = new System.Drawing.Size(65, 31);
+            this.btnReset_ma.TabIndex = 70;
+            this.btnReset_ma.Text = "Reset";
+            this.btnReset_ma.UseVisualStyleBackColor = true;
+            this.btnReset_ma.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // btnInit_ma
+            // 
+            this.btnInit_ma.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInit_ma.Location = new System.Drawing.Point(192, 48);
+            this.btnInit_ma.Name = "btnInit_ma";
+            this.btnInit_ma.Size = new System.Drawing.Size(65, 31);
+            this.btnInit_ma.TabIndex = 69;
+            this.btnInit_ma.Text = "Init";
+            this.btnInit_ma.UseVisualStyleBackColor = true;
+            this.btnInit_ma.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // btnClamp_ma
+            // 
+            this.btnClamp_ma.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClamp_ma.Location = new System.Drawing.Point(263, 14);
+            this.btnClamp_ma.Name = "btnClamp_ma";
+            this.btnClamp_ma.Size = new System.Drawing.Size(65, 31);
+            this.btnClamp_ma.TabIndex = 67;
+            this.btnClamp_ma.Text = "Clamp";
+            this.btnClamp_ma.UseVisualStyleBackColor = true;
+            this.btnClamp_ma.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // btnUnClamp_ma
+            // 
+            this.btnUnClamp_ma.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUnClamp_ma.Location = new System.Drawing.Point(334, 15);
+            this.btnUnClamp_ma.Name = "btnUnClamp_ma";
+            this.btnUnClamp_ma.Size = new System.Drawing.Size(65, 31);
+            this.btnUnClamp_ma.TabIndex = 68;
+            this.btnUnClamp_ma.Text = "UnClamp";
+            this.btnUnClamp_ma.UseVisualStyleBackColor = true;
+            this.btnUnClamp_ma.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // btnOrg_ma
+            // 
+            this.btnOrg_ma.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrg_ma.Location = new System.Drawing.Point(192, 14);
+            this.btnOrg_ma.Name = "btnOrg_ma";
+            this.btnOrg_ma.Size = new System.Drawing.Size(65, 31);
+            this.btnOrg_ma.TabIndex = 66;
+            this.btnOrg_ma.Text = "ORGSH";
+            this.btnOrg_ma.UseVisualStyleBackColor = true;
+            this.btnOrg_ma.Click += new System.EventHandler(this.sendManualCmd);
+            // 
+            // cbAlign_ma
+            // 
+            this.cbAlign_ma.AutoCompleteCustomSource.AddRange(new string[] {
+            "200",
+            "300"});
+            this.cbAlign_ma.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAlign_ma.FormattingEnabled = true;
+            this.cbAlign_ma.Items.AddRange(new object[] {
+            "ALIGN1",
+            "ALIGN2"});
+            this.cbAlign_ma.Location = new System.Drawing.Point(113, 14);
+            this.cbAlign_ma.Name = "cbAlign_ma";
+            this.cbAlign_ma.Size = new System.Drawing.Size(69, 22);
+            this.cbAlign_ma.TabIndex = 57;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label28.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.White;
+            this.label28.Location = new System.Drawing.Point(7, 13);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(100, 23);
+            this.label28.TabIndex = 61;
+            this.label28.Text = "         Aligner";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label10
             // 
@@ -1213,58 +1640,6 @@
             this.label8.TabIndex = 26;
             this.label8.Text = "P2 Type      To  ";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(485, 35);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(99, 14);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "LU: Load & UnLoad";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(484, 20);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 14);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "U: UnLoad";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(485, 5);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 14);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "L: Load";
-            // 
-            // btnTransfer
-            // 
-            this.btnTransfer.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransfer.Location = new System.Drawing.Point(676, 408);
-            this.btnTransfer.Name = "btnTransfer";
-            this.btnTransfer.Size = new System.Drawing.Size(106, 39);
-            this.btnTransfer.TabIndex = 21;
-            this.btnTransfer.Text = "Transfer";
-            this.btnTransfer.UseVisualStyleBackColor = true;
-            this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
-            // 
-            // btnAssign
-            // 
-            this.btnAssign.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAssign.Location = new System.Drawing.Point(550, 408);
-            this.btnAssign.Name = "btnAssign";
-            this.btnAssign.Size = new System.Drawing.Size(106, 39);
-            this.btnAssign.TabIndex = 20;
-            this.btnAssign.Text = "Assign";
-            this.btnAssign.UseVisualStyleBackColor = true;
-            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -1285,9 +1660,9 @@
             "P2",
             "P3",
             "P4"});
-            this.cbP4Target.Location = new System.Drawing.Point(441, 28);
+            this.cbP4Target.Location = new System.Drawing.Point(441, 26);
             this.cbP4Target.Name = "cbP4Target";
-            this.cbP4Target.Size = new System.Drawing.Size(36, 20);
+            this.cbP4Target.Size = new System.Drawing.Size(36, 23);
             this.cbP4Target.TabIndex = 8;
             this.cbP4Target.SelectedIndexChanged += new System.EventHandler(this.checkUnloadPort);
             // 
@@ -1299,9 +1674,9 @@
             "P2",
             "P3",
             "P4"});
-            this.cbP3Target.Location = new System.Drawing.Point(341, 28);
+            this.cbP3Target.Location = new System.Drawing.Point(341, 26);
             this.cbP3Target.Name = "cbP3Target";
-            this.cbP3Target.Size = new System.Drawing.Size(36, 20);
+            this.cbP3Target.Size = new System.Drawing.Size(36, 23);
             this.cbP3Target.TabIndex = 7;
             this.cbP3Target.SelectedIndexChanged += new System.EventHandler(this.checkUnloadPort);
             // 
@@ -1313,9 +1688,9 @@
             "P2",
             "P3",
             "P4"});
-            this.cbP2Target.Location = new System.Drawing.Point(241, 28);
+            this.cbP2Target.Location = new System.Drawing.Point(241, 26);
             this.cbP2Target.Name = "cbP2Target";
-            this.cbP2Target.Size = new System.Drawing.Size(36, 20);
+            this.cbP2Target.Size = new System.Drawing.Size(36, 23);
             this.cbP2Target.TabIndex = 6;
             this.cbP2Target.SelectedIndexChanged += new System.EventHandler(this.checkUnloadPort);
             // 
@@ -1326,9 +1701,9 @@
             "L",
             "U",
             "LU"});
-            this.cbP4Type.Location = new System.Drawing.Point(383, 28);
+            this.cbP4Type.Location = new System.Drawing.Point(402, 26);
             this.cbP4Type.Name = "cbP4Type";
-            this.cbP4Type.Size = new System.Drawing.Size(52, 20);
+            this.cbP4Type.Size = new System.Drawing.Size(36, 23);
             this.cbP4Type.TabIndex = 5;
             this.cbP4Type.SelectedIndexChanged += new System.EventHandler(this.setPortType);
             // 
@@ -1339,9 +1714,9 @@
             "L",
             "U",
             "LU"});
-            this.cbP3Type.Location = new System.Drawing.Point(283, 28);
+            this.cbP3Type.Location = new System.Drawing.Point(303, 26);
             this.cbP3Type.Name = "cbP3Type";
-            this.cbP3Type.Size = new System.Drawing.Size(52, 20);
+            this.cbP3Type.Size = new System.Drawing.Size(36, 23);
             this.cbP3Type.TabIndex = 4;
             this.cbP3Type.SelectedIndexChanged += new System.EventHandler(this.setPortType);
             // 
@@ -1352,9 +1727,9 @@
             "L",
             "U",
             "LU"});
-            this.cbP2Type.Location = new System.Drawing.Point(183, 28);
+            this.cbP2Type.Location = new System.Drawing.Point(202, 26);
             this.cbP2Type.Name = "cbP2Type";
-            this.cbP2Type.Size = new System.Drawing.Size(52, 20);
+            this.cbP2Type.Size = new System.Drawing.Size(36, 23);
             this.cbP2Type.TabIndex = 3;
             this.cbP2Type.SelectedIndexChanged += new System.EventHandler(this.setPortType);
             // 
@@ -1366,9 +1741,9 @@
             "P2",
             "P3",
             "P4"});
-            this.cbP1Target.Location = new System.Drawing.Point(141, 28);
+            this.cbP1Target.Location = new System.Drawing.Point(141, 26);
             this.cbP1Target.Name = "cbP1Target";
-            this.cbP1Target.Size = new System.Drawing.Size(36, 20);
+            this.cbP1Target.Size = new System.Drawing.Size(36, 23);
             this.cbP1Target.TabIndex = 2;
             this.cbP1Target.SelectedIndexChanged += new System.EventHandler(this.checkUnloadPort);
             // 
@@ -1379,9 +1754,9 @@
             "L",
             "U",
             "LU"});
-            this.cbP1Type.Location = new System.Drawing.Point(83, 28);
+            this.cbP1Type.Location = new System.Drawing.Point(103, 26);
             this.cbP1Type.Name = "cbP1Type";
-            this.cbP1Type.Size = new System.Drawing.Size(52, 20);
+            this.cbP1Type.Size = new System.Drawing.Size(36, 23);
             this.cbP1Type.TabIndex = 1;
             this.cbP1Type.SelectedIndexChanged += new System.EventHandler(this.setPortType);
             // 
@@ -3285,6 +3660,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EQP Emulator";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.GroupBox3.ResumeLayout(false);
@@ -3303,6 +3679,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCmdScript)).EndInit();
             this.tabRun.ResumeLayout(false);
             this.tabRun.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -3497,9 +3883,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox cbP4Size;
         private System.Windows.Forms.Label label24;
@@ -3529,6 +3912,36 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ToolTip slot;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.CheckBox cbWithMap_ml;
+        private System.Windows.Forms.ComboBox cbport_ml;
+        private System.Windows.Forms.Button btnInit_ml;
+        private System.Windows.Forms.Button btnUnload_ml;
+        private System.Windows.Forms.Button btnMap_ml;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Button btnReset_ml;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Button btnReset_mr;
+        private System.Windows.Forms.ComboBox cbRobot_mr;
+        private System.Windows.Forms.RadioButton rdbArm2_mr;
+        private System.Windows.Forms.RadioButton rdbArm1_mr;
+        private System.Windows.Forms.Button btnInit_mr;
+        private System.Windows.Forms.Button btnClamp_mr;
+        private System.Windows.Forms.Button btnUnClamp_mr;
+        private System.Windows.Forms.Button btnOrg_mr;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Button btnReset_ma;
+        private System.Windows.Forms.Button btnInit_ma;
+        private System.Windows.Forms.Button btnClamp_ma;
+        private System.Windows.Forms.Button btnUnClamp_ma;
+        private System.Windows.Forms.Button btnOrg_ma;
+        private System.Windows.Forms.ComboBox cbAlign_ma;
+        private System.Windows.Forms.Button btnLoad_ml;
     }
 }
 
