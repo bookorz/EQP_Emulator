@@ -1157,6 +1157,7 @@
             // cbR2Arm3
             // 
             this.cbR2Arm3.AutoSize = true;
+            this.cbR2Arm3.Enabled = false;
             this.cbR2Arm3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbR2Arm3.Location = new System.Drawing.Point(278, 149);
             this.cbR2Arm3.Name = "cbR2Arm3";
@@ -1164,6 +1165,7 @@
             this.cbR2Arm3.TabIndex = 47;
             this.cbR2Arm3.Text = "ARM3";
             this.cbR2Arm3.UseVisualStyleBackColor = true;
+            this.cbR2Arm3.CheckedChanged += new System.EventHandler(this.cbR2Arm3_CheckedChanged);
             // 
             // cbLLC
             // 
@@ -1179,6 +1181,7 @@
             // cbR2Arm2
             // 
             this.cbR2Arm2.AutoSize = true;
+            this.cbR2Arm2.Enabled = false;
             this.cbR2Arm2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbR2Arm2.Location = new System.Drawing.Point(203, 149);
             this.cbR2Arm2.Name = "cbR2Arm2";
@@ -1186,6 +1189,7 @@
             this.cbR2Arm2.TabIndex = 46;
             this.cbR2Arm2.Text = "ARM2";
             this.cbR2Arm2.UseVisualStyleBackColor = true;
+            this.cbR2Arm2.Click += new System.EventHandler(this.cbR2Arm2_Click);
             // 
             // cbLLD
             // 
@@ -1201,6 +1205,7 @@
             // cbR2Arm1
             // 
             this.cbR2Arm1.AutoSize = true;
+            this.cbR2Arm1.Enabled = false;
             this.cbR2Arm1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbR2Arm1.Location = new System.Drawing.Point(128, 149);
             this.cbR2Arm1.Name = "cbR2Arm1";
@@ -1208,6 +1213,7 @@
             this.cbR2Arm1.TabIndex = 45;
             this.cbR2Arm1.Text = "ARM1";
             this.cbR2Arm1.UseVisualStyleBackColor = true;
+            this.cbR2Arm1.Click += new System.EventHandler(this.cbR2Arm1_Click);
             // 
             // cbA1
             // 
@@ -1232,6 +1238,7 @@
             this.cbR1Arm3.TabIndex = 44;
             this.cbR1Arm3.Text = "ARM3";
             this.cbR1Arm3.UseVisualStyleBackColor = true;
+            this.cbR1Arm3.CheckedChanged += new System.EventHandler(this.cbR1Arm3_CheckedChanged);
             // 
             // cbR1Arm1
             // 
@@ -1245,6 +1252,7 @@
             this.cbR1Arm1.TabIndex = 42;
             this.cbR1Arm1.Text = "ARM1";
             this.cbR1Arm1.UseVisualStyleBackColor = true;
+            this.cbR1Arm1.Click += new System.EventHandler(this.cbR1Arm1_Click);
             // 
             // cbR1Arm2
             // 
@@ -1258,6 +1266,7 @@
             this.cbR1Arm2.TabIndex = 43;
             this.cbR1Arm2.Text = "ARM2";
             this.cbR1Arm2.UseVisualStyleBackColor = true;
+            this.cbR1Arm2.Click += new System.EventHandler(this.cbR1Arm2_Click);
             // 
             // groupBox9
             // 

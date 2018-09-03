@@ -58,9 +58,11 @@
   <ItemGroup>
     <Compile Include="CmdDefine.cs" />
     <Compile Include="CmdScript.cs" />
+    <Compile Include="Command.cs" />
     <Compile Include="Comm\IConnection.cs" />
     <Compile Include="Comm\IConnectionReport.cs" />
     <Compile Include="Comm\SocketClient.cs" />
+    <Compile Include="EFEM.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>

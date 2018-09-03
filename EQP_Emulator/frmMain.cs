@@ -22,7 +22,7 @@ namespace EQP_Emulator
     {
         SocketClient conn;
         CmdDefine define = new CmdDefine();
-        BindingList<CmdScript> oCmdScript = new BindingList<CmdScript>();
+        
         Boolean isAlarmSet = false;
         Boolean isCmdFin = true;
         Boolean isScriptRunning = false;
@@ -82,7 +82,7 @@ namespace EQP_Emulator
             pMap.Add("P2", p2Ary);
             pMap.Add("P3", p3Ary);
             pMap.Add("P4", p4Ary);
-            t_cbs = new ComboBox[] { cbP1Target, cbP2Target, cbP3Target, cbP4Target, };
+            t_cbs = new ComboBox[] { cbP1Target, cbP2Target, cbP3Target, cbP4Target };
             cbP1Size.SelectedIndex = 0;
             cbP2Size.SelectedIndex = 0;
             cbP3Size.SelectedIndex = 0;
@@ -221,6 +221,7 @@ namespace EQP_Emulator
             if (isAlarmSet)
             {
                 FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state.");
+                FormMainUpdate.AlarmUpdate("Alarm set");
                 return;
             }
             if (replyMsg.StartsWith("NAK") || replyMsg.StartsWith("CAN") || replyMsg.StartsWith("ABS"))
@@ -310,8 +311,9 @@ namespace EQP_Emulator
             }
 
             dgvCmdScript.DataSource = null;
-            int seq = oCmdScript.Count + 1;
-            oCmdScript.Add(new CmdScript { Seq = seq, Command = tbCmd.Text });
+            Command.addScriptCmd(tbCmd.Text);
+            //int seq = oCmdScript.Count + 1;
+            //oCmdScript.Add(new CmdScript { Seq = seq, Command = tbCmd.Text });
             refreshScriptSet();
         }
 
@@ -327,14 +329,14 @@ namespace EQP_Emulator
 
             int idx = dgvCmdScript.CurrentCell.RowIndex;
             int delSeq = idx + 1;
-            oCmdScript.RemoveAt(idx);
-            foreach (CmdScript element in oCmdScript)
+            Command.oCmdScript.RemoveAt(idx);
+            foreach (CmdScript element in Command.oCmdScript)
             {
                 if (element.Seq > delSeq)
                     element.Seq--;
             }
-            oCmdScript = new BindingList<CmdScript>(oCmdScript.OrderBy(x => x.Seq).ToList());
-            dgvCmdScript.DataSource = oCmdScript;
+            Command.oCmdScript = new BindingList<CmdScript>(Command.oCmdScript.OrderBy(x => x.Seq).ToList());
+            dgvCmdScript.DataSource = Command.oCmdScript;
             setSelectRow(idx);
         }
 
@@ -347,12 +349,12 @@ namespace EQP_Emulator
             {
                 if (idx > 0)
                 {
-                    CmdScript preItem = ((IEnumerable<CmdScript>)oCmdScript.ToList()).FirstOrDefault(predicate: d => d.Seq == idx);
-                    CmdScript selItem = ((IEnumerable<CmdScript>)oCmdScript.ToList()).FirstOrDefault(predicate: d => d.Seq == idx + 1);
+                    CmdScript preItem = Command.getCmdList().FirstOrDefault(predicate: d => d.Seq == idx);
+                    CmdScript selItem = Command.getCmdList().FirstOrDefault(predicate: d => d.Seq == idx + 1);
                     preItem.Seq = idx + 1; // change sequence
                     selItem.Seq = idx;
-                    oCmdScript = new BindingList<CmdScript>(oCmdScript.OrderBy(x => x.Seq).ToList());
-                    dgvCmdScript.DataSource = oCmdScript;
+                    Command.oCmdScript = new BindingList<CmdScript>(Command.oCmdScript.OrderBy(x => x.Seq).ToList());
+                    dgvCmdScript.DataSource = Command.oCmdScript;
                     dgvCmdScript.ClearSelection();
                     dgvCmdScript.CurrentCell = dgvCmdScript.Rows[idx - 1].Cells[0];
                     dgvCmdScript.Rows[idx - 1].Selected = true;
@@ -374,12 +376,12 @@ namespace EQP_Emulator
             {
                 if (idx < dgvCmdScript.RowCount - 1)
                 {
-                    CmdScript nexItem = ((IEnumerable<CmdScript>)oCmdScript.ToList()).FirstOrDefault(predicate: d => d.Seq == idx + 2);
-                    CmdScript selItem = ((IEnumerable<CmdScript>)oCmdScript.ToList()).FirstOrDefault(predicate: d => d.Seq == idx + 1);
+                    CmdScript nexItem = Command.getCmdList().FirstOrDefault(predicate: d => d.Seq == idx + 2);
+                    CmdScript selItem = Command.getCmdList().FirstOrDefault(predicate: d => d.Seq == idx + 1);
                     nexItem.Seq = idx + 1; // change sequence
                     selItem.Seq = idx + 2;
-                    oCmdScript = new BindingList<CmdScript>(oCmdScript.OrderBy(x => x.Seq).ToList());
-                    dgvCmdScript.DataSource = oCmdScript;
+                    Command.oCmdScript = new BindingList<CmdScript>(Command.oCmdScript.OrderBy(x => x.Seq).ToList());
+                    dgvCmdScript.DataSource = Command.oCmdScript;
                     setSelectRow(idx + 1);
                 }
             }
@@ -518,7 +520,7 @@ namespace EQP_Emulator
             {
                 FormMainUpdate.LogUpdate("\n**************  Run Script: " + cnt + "  **************");
                 //for (int idx = 0; idx < dgvCmdScript.RowCount; idx++)
-                foreach (CmdScript element in oCmdScript)
+                foreach (CmdScript element in Command.oCmdScript)
                 {
                     string cmd = element.Command;
                     isCmdFin = false;
@@ -593,7 +595,7 @@ namespace EQP_Emulator
                 {
                     sw = new StreamWriter(saveFileDialog1.FileName.ToString());
 
-                    sw.WriteLine(JsonConvert.SerializeObject(oCmdScript, Formatting.Indented));
+                    sw.WriteLine(JsonConvert.SerializeObject(Command.oCmdScript, Formatting.Indented));
 
                     sw.Close();
 
@@ -627,7 +629,7 @@ namespace EQP_Emulator
                         line = myStream.ReadToEnd();
                     }
 
-                    oCmdScript = (BindingList<CmdScript>)Newtonsoft.Json.JsonConvert.DeserializeObject(line, (typeof(BindingList<CmdScript>)));
+                    Command.oCmdScript = (BindingList<CmdScript>)Newtonsoft.Json.JsonConvert.DeserializeObject(line, (typeof(BindingList<CmdScript>)));
                     refreshScriptSet();
                 }
             }
@@ -639,7 +641,7 @@ namespace EQP_Emulator
 
         private void refreshScriptSet()
         {
-            dgvCmdScript.DataSource = oCmdScript;
+            dgvCmdScript.DataSource = Command.oCmdScript;
             if (dgvCmdScript.RowCount > 0)
             {
                 dgvCmdScript.Columns[0].Width = 45;
@@ -651,7 +653,7 @@ namespace EQP_Emulator
         {
             try
             {
-                oCmdScript.Clear();//remove list
+                Command.oCmdScript.Clear();//remove list
                 refreshScriptSet();
             }
             catch (Exception ex)
@@ -843,16 +845,336 @@ namespace EQP_Emulator
 
             if (confirm != System.Windows.Forms.DialogResult.Yes)
                 return;
+            initEFEMConfig();
             tabMode.SelectedIndex = 0;
             tbTimes.Text = "1";//set run times 1
-            oCmdScript.Clear();//clear script
-            for(int i = 0; i < 100; i++)
+            Command.oCmdScript.Clear();//clear script
+            //create script
+            createScript();
+            //btnScriptRun_Click(btnScriptRun, e); 暫時不送指令
+        }
+
+        private void initEFEMConfig()
+        {
+            EFEM.isR1Arm1Enable = cbR1Arm1.Checked;
+            EFEM.isR1Arm2Enable = cbR1Arm2.Checked;
+            EFEM.isR1Arm3Enable = cbR1Arm3.Checked;
+            EFEM.isAlign1Enable = cbA1.Checked;
+            EFEM.isAlign2Enable = cbA2.Checked;
+            EFEM.isAlign1Empty = cbA1.Checked;
+            EFEM.isAlign2Empty = cbA2.Checked;
+            EFEM.isLLAEnable = cbLLA.Checked;
+            EFEM.isLLBEnable = cbLLB.Checked;
+            EFEM.isLLCEnable = cbLLC.Checked;
+            EFEM.isLLDEnable = cbLLD.Checked;
+            EFEM.isLLAEmpty = cbLLA.Checked;
+            EFEM.isLLBEmpty = cbLLB.Checked;
+            EFEM.isLLCEmpty = cbLLC.Checked;
+            EFEM.isLLDEmpty = cbLLD.Checked;
+        }
+
+        private void createScript()
+        {
+            // arm use case
+            string armCase = (cbR1Arm1.Checked ? "1" : "0") + (cbR1Arm2.Checked ? "1" : "0") + (cbR1Arm3.Checked ? "1" : "0");
+            foreach (ComboBox t_port in t_cbs)
             {
-                int seq = oCmdScript.Count + 1;
-                oCmdScript.Add(new CmdScript { Seq = seq, Command = "MOV:INIT/ALL;" + seq });
+                // No destination, no processing
+                if (t_port.Text.Equals(""))
+                    continue;
+                // No arms, no processing
+                if (armCase.Equals("000"))
+                    continue;
+
+                //--------------------  Process Port Start --------------------  //
+                string port_id = t_port.Name.Substring(2, 2);
+                Label[] wafers = pMap[t_port.Name.Substring(2, 2)];
+
+                int s_idx = 0;
+                int idx1 = 0;//first wafer index
+                int idx2 = 0;//second wafer index
+                while (s_idx < wafers.Length && s_idx >= 0)
+                {
+                    
+                    Label wafer_1st = null;
+                    Label wafer_2nd = null;
+                    idx1 = getNextWaferIdx(wafers, s_idx);
+                    if (idx1 == -1)
+                        break; // No wafer, no processing,  exit while
+                    else
+                    {
+                        wafer_1st = wafers[idx1];
+                        idx2 = getNextWaferIdx(wafers, idx1+1);//find next wafer
+                        if (idx2 != -1)
+                        {
+                            wafer_2nd = wafers[idx2];
+                        }
+                    }
+
+                    switch (armCase)
+                    {
+                        case "100":
+                        case "010":
+                            //----------  Process 1st Wafer Start----------  //
+                            s_idx = processSingleArm(wafer_1st, port_id, idx1);
+                            break;
+                            //----------  Process 1st Wafer End ----------  //
+                        case "110":
+                            //單取滿兩片後結束
+                            if(wafer_2nd == null)
+                                s_idx = processSingleArm(wafer_1st, port_id, idx1);
+                            else
+                                s_idx = process2SingleArm(wafer_1st, wafer_2nd, port_id, idx1, idx2);                            
+                            break;
+                        case "111":
+                            if (wafer_2nd == null)
+                                s_idx = processSingleArm(wafer_1st, port_id, idx1);
+                            else if(idx2 != idx1 + 1)
+                                s_idx = process2SingleArm(wafer_1st, wafer_2nd, port_id, idx1, idx2);
+                            else
+                                s_idx = processDoubleArm(wafer_1st, wafer_2nd, port_id, idx1, idx2);
+                            break;
+                    }    
+                }
+                //--------------------  Process Port End  --------------------  //
             }
             refreshScriptSet();
-            btnScriptRun_Click(btnScriptRun, e);
+        }
+
+        private int processDoubleArm(Label wafer_1st, Label wafer_2nd, string port_id, int idx1, int idx2)
+        {
+            string slot_no1 = (idx1 + 1).ToString().PadLeft(2, '0');
+            string wafer_id1 = port_id + "_W" + slot_no1;
+            EFEM.UpdateWaferInfo(port_id + slot_no1, wafer_id1);
+            //GetWafer(wafer_id1);//from port
+
+            string slot_no2 = (idx2 + 1).ToString().PadLeft(2, '0');
+            string wafer_id2 = port_id + "_W" + slot_no2;
+            EFEM.UpdateWaferInfo(port_id + slot_no2, wafer_id2);
+            GetWafer2Arm(wafer_id1, wafer_id2);//from port
+
+            if (cbA1.Checked || cbA2.Checked)
+            {
+                PutAlign(wafer_id2);
+                if (EFEM.isAlign1Empty || EFEM.isAlign2Empty)
+                {
+                    PutAlign(wafer_id1);
+                    GetWafer(wafer_id2);
+                    GetWafer(wafer_id1);
+                }
+                else
+                {
+                    GetWafer(wafer_id2);
+                    PutAlign(wafer_id1);
+                    GetWafer(wafer_id1);
+                }
+            }
+            if (cbLLA.Checked || cbLLB.Checked || cbLLC.Checked || cbLLD.Checked)
+            {
+                PutLoadLock(wafer_id2);
+                if (EFEM.isLLAEmpty || EFEM.isLLBEmpty || EFEM.isLLCEmpty || EFEM.isLLDEmpty)
+                {
+                    PutLoadLock(wafer_id1);
+                    GetWafer(wafer_id2);
+                    GetWafer(wafer_id1);
+                }
+                else
+                {
+                    GetWafer(wafer_id2);
+                    PutLoadLock(wafer_id1);
+                    GetWafer(wafer_id1);
+                }
+            }
+            PutWafer2Arm(wafer_2nd, wafer_id2, wafer_1st,  wafer_id1 );
+            return idx2 + 1; // set next start index for scan wafer
+        }
+
+        private int process2SingleArm(Label wafer_1st, Label wafer_2nd, string port_id, int idx1, int idx2)
+        {
+            string slot_no1 = (idx1 + 1).ToString().PadLeft(2, '0');
+            string wafer_id1 = port_id + "_W" + slot_no1;
+            EFEM.UpdateWaferInfo(port_id + slot_no1, wafer_id1);
+            GetWafer(wafer_id1);//from port
+
+            string slot_no2 = (idx2 + 1).ToString().PadLeft(2, '0');
+            string wafer_id2 = port_id + "_W" + slot_no2;
+            EFEM.UpdateWaferInfo(port_id + slot_no2, wafer_id2);
+            GetWafer(wafer_id2);//from port
+
+            if (cbA1.Checked || cbA2.Checked)
+            {
+                PutAlign(wafer_id1);
+                if(EFEM.isAlign1Empty || EFEM.isAlign2Empty){
+                    PutAlign(wafer_id2);
+                    GetWafer(wafer_id1);
+                    GetWafer(wafer_id2);
+                }
+                else
+                {
+                    GetWafer(wafer_id1);
+                    PutAlign(wafer_id2);
+                    GetWafer(wafer_id2);
+                }
+            }
+            if (cbLLA.Checked || cbLLB.Checked || cbLLC.Checked || cbLLD.Checked)
+            {
+                PutLoadLock(wafer_id1);
+                if (EFEM.isLLAEmpty || EFEM.isLLBEmpty || EFEM.isLLCEmpty || EFEM.isLLDEmpty )
+                {
+                    PutLoadLock(wafer_id2);
+                    GetWafer(wafer_id1);
+                    GetWafer(wafer_id2);
+                }
+                else
+                {
+                    GetWafer(wafer_id1);
+                    PutLoadLock(wafer_id2);
+                    GetWafer(wafer_id2);
+                }
+            }
+            PutWafer(wafer_1st.Text, wafer_id1); // PutWafer to unload port
+            PutWafer(wafer_2nd.Text, wafer_id2); // PutWafer to unload port
+            return idx2 + 1; // set next start index for scan wafer
+        }
+
+        private int processSingleArm(Label wafer_1st, string port_id, int idx1)
+        {
+            string slot_no1 = (idx1 + 1).ToString().PadLeft(2, '0');
+            string wafer_id1 = port_id + "_W" + slot_no1;
+            EFEM.UpdateWaferInfo(port_id + slot_no1, wafer_id1);
+            GetWafer(wafer_id1);//from port
+            if (cbA1.Checked || cbA2.Checked)
+            {
+                PutAlign(wafer_id1);//PutWafer2Align
+                GetWafer(wafer_id1);//GetWafer from aligner
+            }
+            if (cbLLA.Checked || cbLLB.Checked || cbLLC.Checked || cbLLD.Checked)
+            {
+                PutLoadLock(wafer_id1);//PutWafer2LoadLock
+                GetWafer(wafer_id1);//GetWafer from load lock
+            }
+            PutWafer(wafer_1st.Text, wafer_id1); // PutWafer to unload port
+            return idx1 + 1; // set next start index for scan wafer
+        }
+
+        public int getNextWaferIdx(Label[] wafers, int s_index)
+        {
+            int result = -1;
+            try
+            {
+                for(int i = s_index; i< wafers.Length; i++)
+                {
+                    if (!wafers[i].Text.Equals(""))
+                    {
+                        result = i;
+                        break;//find wafer , exit for
+                    }                        
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return result;
+        }
+
+        public void GetWafer2Arm(string wafer_id1, string wafer_id2)
+        {
+            string source = EFEM.wafers[wafer_id2];
+            if (source.Equals(""))
+                return;
+            string arm = "ARM3";
+            Command.Load(source, arm);
+            EFEM.UpdateWaferInfo("R1A2", wafer_id1);
+            EFEM.UpdateWaferInfo("R1A1", wafer_id2);
+        }
+
+        public void GetWafer(string wafer_id)
+        {
+            string source = EFEM.wafers[wafer_id];
+            if (source.Equals(""))
+                return;
+            string arm = "";
+            string location = "";
+            if (EFEM.isR1Arm1Enable && EFEM.isR1Arm1Empty)
+            {
+                arm = "ARM1";
+                location = "R1A1";
+            }
+            else if (EFEM.isR1Arm2Enable && EFEM.isR1Arm2Empty)
+            {
+                arm = "ARM2";
+                location = "R1A2";
+            }                
+            else
+                return; // do nothing
+            Command.Load(source, arm);
+            EFEM.UpdateWaferInfo(location, wafer_id);
+        }
+        
+        public void PutWafer(string destination, string wafer_id)
+        {
+            string source = EFEM.wafers[wafer_id];
+            if (source.Equals(""))
+                return;
+            string arm = source.EndsWith("A1") ? "ARM1" : "ARM2";
+            Command.Unload(destination, arm);
+            EFEM.UpdateWaferInfo(destination, wafer_id);
+        }
+
+        public void PutWafer2Arm(Label waferUp, string wafer_id_up, Label waferDown, string wafer_id_down)
+        {
+            Command.Unload(waferUp.Text, "ARM3");
+            EFEM.UpdateWaferInfo(waferUp.Text, wafer_id_up);
+            EFEM.UpdateWaferInfo(waferDown.Text, wafer_id_down);
+        }
+
+        public void PutAlign(string wafer_id)
+        {
+            string source = EFEM.wafers[wafer_id];
+            if (source.Equals(""))
+                return;
+            string arm = source.EndsWith("A1")? "ARM1" : "ARM2";
+            string destination = "";
+            if (EFEM.isAlign1Enable && EFEM.isAlign1Empty)
+            {
+                destination = "ALIGN1";
+            }
+            else if (EFEM.isAlign2Enable && EFEM.isAlign2Empty)
+            {
+                destination = "ALIGN2";
+            }
+            else
+                return; // do nothing
+            Command.Unload(destination, arm);
+            EFEM.UpdateWaferInfo(destination, wafer_id);
+        }
+        public void PutLoadLock(string wafer_id)
+        {
+            string source = EFEM.wafers[wafer_id];
+            if (source.Equals(""))
+                return;
+            string arm = source.EndsWith("A1") ? "ARM1" : "ARM2";
+            string destination = "";
+            if (EFEM.isLLAEnable && EFEM.isLLAEmpty)
+            {
+                destination = "LLA01";
+            }
+            else if (EFEM.isLLBEnable && EFEM.isLLBEmpty)
+            {
+                destination = "LLB01";
+            }
+            else if (EFEM.isLLCEnable && EFEM.isLLCEmpty)
+            {
+                destination = "LLC01";
+            }
+            else if (EFEM.isLLDEnable && EFEM.isLLDEmpty)
+            {
+                destination = "LLD01";
+            }
+            else
+                return; // do nothing
+            Command.Unload(destination, arm);
+            EFEM.UpdateWaferInfo(destination, wafer_id);
         }
 
         private void dgvCmdScript_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -865,7 +1187,7 @@ namespace EQP_Emulator
                 return;//cancel update
             else
             {
-                CmdScript cmd = oCmdScript.ElementAt(dgvCmdScript.CurrentCell.RowIndex);
+                CmdScript cmd = Command.oCmdScript.ElementAt(dgvCmdScript.CurrentCell.RowIndex);
                 cmd.Command = n_value;
                 refreshScriptSet();
             }
@@ -900,6 +1222,57 @@ namespace EQP_Emulator
         private void sendManualCmd(object sender, EventArgs e)
         {
             FormMainUpdate.ShowMessage(((Button)sender).Name);
+        }
+        
+        private void cbR1Arm3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbR1Arm3.Checked)
+            {
+                cbR1Arm1.Checked = true;
+                cbR1Arm2.Checked = true;
+            }
+        }
+        
+        private void cbR2Arm3_Click(object sender, EventArgs e)
+        {
+            if (cbR2Arm3.Checked)
+            {
+                cbR2Arm1.Checked = true;
+                cbR2Arm2.Checked = true;
+            }
+        }
+        
+        private void cbR1Arm1_Click(object sender, EventArgs e)
+        {
+            if (!cbR1Arm1.Checked || !cbR1Arm2.Checked)
+                cbR1Arm3.Checked = false;
+        }
+
+        private void cbR1Arm2_Click(object sender, EventArgs e)
+        {
+            if (!cbR1Arm1.Checked || !cbR1Arm2.Checked)
+                cbR1Arm3.Checked = false;
+        }
+
+        private void cbR2Arm1_Click(object sender, EventArgs e)
+        {
+            if (!cbR2Arm1.Checked || !cbR2Arm2.Checked)
+                cbR2Arm3.Checked = false;
+        }
+
+        private void cbR2Arm2_Click(object sender, EventArgs e)
+        {
+            if (!cbR2Arm1.Checked || !cbR2Arm2.Checked)
+                cbR2Arm3.Checked = false;
+        }
+
+        private void cbR2Arm3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbR2Arm3.Checked)
+            {
+                cbR2Arm1.Checked = true;
+                cbR2Arm2.Checked = true;
+            }
         }
     }
 }
