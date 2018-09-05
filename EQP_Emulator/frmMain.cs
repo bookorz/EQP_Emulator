@@ -23,7 +23,7 @@ namespace EQP_Emulator
         SocketClient conn;
         CmdDefine define = new CmdDefine();
         
-        Boolean isAlarmSet = false;
+        
         Boolean isCmdFin = true;
         Boolean isScriptRunning = false;
         Label[] p1Ary;
@@ -45,9 +45,10 @@ namespace EQP_Emulator
                 cbCmdType.Items.Add(element);
             }
             tbTimes.MaxLength = 6;
-            btnConn_Click(null,null);
+            tbHostIP.Text = System.Configuration.ConfigurationManager.AppSettings["host_ip"];
             tbCmd.Select();
             initData();
+            btnConn_Click(null, null);
             //this.TopMost = true;
             //this.Focus();
         }
@@ -218,19 +219,13 @@ namespace EQP_Emulator
         {
             string replyMsg = (string)Msg;
             FormMainUpdate.LogUpdate("Reveive <= " + replyMsg);
-            if (isAlarmSet)
-            {
-                FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state.");
-                FormMainUpdate.AlarmUpdate("Alarm set");
-                return;
-            }
             if (replyMsg.StartsWith("NAK") || replyMsg.StartsWith("CAN") || replyMsg.StartsWith("ABS"))
             {
-                isAlarmSet = true;
+                //isAlarmSet = true;
                 FormMainUpdate.AlarmUpdate("Alarm set");
             }
             //Thread.Sleep(1000);
-            if (replyMsg.StartsWith("INF"))
+            if (replyMsg.StartsWith("INF")|| replyMsg.StartsWith("NAK") || replyMsg.StartsWith("CAN") || replyMsg.StartsWith("ABS"))
             {
                 string[] cmd = replyMsg.Split(new char[] { ':', '/' });
                 //if (define.autoAckCmd.Contains(cmd[1]))
@@ -243,6 +238,12 @@ namespace EQP_Emulator
                 //}
                 isCmdFin = true;
             }
+            //if (FormMainUpdate.isAlarmSet)
+            //{
+            //    FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state.");
+            //    FormMainUpdate.AlarmUpdate("Alarm set");
+            //    return;
+            //}
         }
 
         void IConnectionReport.On_Connection_Connecting(string Msg)
@@ -265,7 +266,8 @@ namespace EQP_Emulator
 
         void IConnectionReport.On_Connection_Error(string Msg)
         {
-            isAlarmSet = true;
+            //isAlarmSet = true;
+            FormMainUpdate.AlarmUpdate("Alarm set");
             FormMainUpdate.ConnectUpdate("Connection_Error");
             FormMainUpdate.LogUpdate("Connection_Error");
         }
@@ -466,7 +468,7 @@ namespace EQP_Emulator
         {
             try
             {
-                if (isAlarmSet)
+                if (FormMainUpdate.isAlarmSet && !cmd.StartsWith("ACK"))
                 {
                     FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state:" + cmd);
                 }
@@ -478,7 +480,7 @@ namespace EQP_Emulator
             }
             catch (Exception ex)
             {
-                isAlarmSet = true;
+                //isAlarmSet = true;
                 FormMainUpdate.ShowMessage(ex.Message + ":" + ex.ToString());
                 FormMainUpdate.AlarmUpdate("Alarm set");
             }
@@ -496,7 +498,7 @@ namespace EQP_Emulator
                 FormMainUpdate.ShowMessage("Please connect first!!");
                 return;
             }
-            if (isAlarmSet)
+            if (FormMainUpdate.isAlarmSet)
             {
                 FormMainUpdate.ShowMessage("Please reset alarm first!");
                 return;
@@ -516,7 +518,7 @@ namespace EQP_Emulator
             int.TryParse(tbTimes.Text, out repeatTimes);
             //The efem motion is not allowed when the alarm occurs,please reset alarm first.
             int cnt = 1;
-            while (cnt <= repeatTimes  && !isAlarmSet && isScriptRunning)
+            while (cnt <= repeatTimes  && !FormMainUpdate.isAlarmSet && isScriptRunning)
             {
                 FormMainUpdate.LogUpdate("\n**************  Run Script: " + cnt + "  **************");
                 //for (int idx = 0; idx < dgvCmdScript.RowCount; idx++)
@@ -530,11 +532,11 @@ namespace EQP_Emulator
                     {
                         FormMainUpdate.ShowMessage("Command Timeout");
                         FormMainUpdate.AlarmUpdate("Alarm set");
-                        isAlarmSet = true;
+                        //isAlarmSet = true;
                         break;//exit for
                     }
                     //resummn after motion complete               
-                    if (isAlarmSet)
+                    if (FormMainUpdate.isAlarmSet)
                     {
                         FormMainUpdate.ShowMessage("Execute " + cmd + " error.");
                         break;//exit for
@@ -564,7 +566,7 @@ namespace EQP_Emulator
         private void btnReset_Click(object sender, EventArgs e)
         {
             FormMainUpdate.AlarmUpdate("Alarm clear");
-            isAlarmSet = false;
+            //isAlarmSet = false;
             setIsRunning(false);
         }
 
@@ -713,6 +715,9 @@ namespace EQP_Emulator
                     port_type = cbP4Type.Text;
                     break;
             }
+            if (port_type.Equals("LU") && cb.Name.Contains(cb.Text))
+                return;//Do not need to check, It will be set automatically.
+
             isNotUnload = !port_type.Equals("U")?true:false;
             //check target is in use
             foreach (ComboBox item in t_cbs)
@@ -772,15 +777,18 @@ namespace EQP_Emulator
             switch (cb.Text)
             {
                 case "L":
+                    t_cb.SelectedIndex = -1;
+                    //t_cb.Text = "";
                     t_cb.Enabled = true;//only load port can change target
                     break;
                 case "U":
                     t_cb.SelectedIndex = -1;
-                    t_cb.Text = "";
+                    //t_cb.Text = "";
                     t_cb.Enabled = false;
                     break;
                 case "LU":
-                    t_cb.SelectedText = port_name;
+                    //t_cb.SelectedText = port_name;
+                    t_cb.SelectedItem = port_name;
                     t_cb.Enabled = false;
                     break;
             }
@@ -851,7 +859,8 @@ namespace EQP_Emulator
             Command.oCmdScript.Clear();//clear script
             //create script
             createScript();
-            //btnScriptRun_Click(btnScriptRun, e); 暫時不送指令
+            // run script
+            btnScriptRun_Click(btnScriptRun, e); 
         }
 
         private void initEFEMConfig()

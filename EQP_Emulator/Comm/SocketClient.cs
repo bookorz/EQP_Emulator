@@ -1,4 +1,5 @@
-﻿using log4net;
+﻿using EQP_Emulator.UI_Update;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,45 +71,55 @@ namespace EQP_Emulator.Comm
         /// 
         private bool socket_create_connect()
         {
-            IPAddress ipAddress = IPAddress.Parse(remoteHost);
-            IPEndPoint remoteEP = new IPEndPoint(ipAddress, remotePort);
-            theSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            theSocket.SendTimeout = 1000;
-
-            SetHeartBeat();//設置心跳參數
-
-            #region 異步連接代碼
-
-            TimeoutObject.Reset(); //覆位timeout事件
             try
             {
-                ConnReport.On_Connection_Connecting("Connecting");
-                theSocket.BeginConnect(remoteEP, connectedCallback, theSocket);
-            }
-            catch (Exception err)
-            {
-                SockErrorStr = err.ToString();
-                ConnReport.On_Connection_Error(err.Message);
-                return false;
-            }
-            if (TimeoutObject.WaitOne(10000, false))//直到timeout，或者TimeoutObject.set()
-            {
-                if (IsconnectSuccess)
+
+                IPAddress ipAddress = IPAddress.Parse(remoteHost);
+                IPEndPoint remoteEP = new IPEndPoint(ipAddress, remotePort);
+                theSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                theSocket.SendTimeout = 1000;
+
+                SetHeartBeat();//設置心跳參數
+
+                #region 異步連接代碼
+
+                TimeoutObject.Reset(); //覆位timeout事件
+                try
                 {
-                    return true;
+                    ConnReport.On_Connection_Connecting("Connecting");
+                    theSocket.BeginConnect(remoteEP, connectedCallback, theSocket);
+                }
+                catch (Exception err)
+                {
+                    SockErrorStr = err.ToString();
+                    ConnReport.On_Connection_Error(err.Message);
+                    return false;
+                }
+                if (TimeoutObject.WaitOne(10000, false))//直到timeout，或者TimeoutObject.set()
+                {
+                    if (IsconnectSuccess)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
                 else
                 {
+                    SockErrorStr = "Time Out";
+                    ConnReport.On_Connection_Error("Time Out");
                     return false;
                 }
+                #endregion
             }
-            else
+            catch (Exception e)
             {
-                SockErrorStr = "Time Out";
-                ConnReport.On_Connection_Error("Time Out");
+                FormMainUpdate.LogUpdate(e.StackTrace + ":" + e.Message);
+                FormMainUpdate.AlarmUpdate("Alarm set");
                 return false;
             }
-            #endregion
         }
 
         ///

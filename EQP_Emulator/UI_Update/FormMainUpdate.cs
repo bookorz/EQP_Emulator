@@ -10,6 +10,7 @@ namespace EQP_Emulator.UI_Update
 {
     class FormMainUpdate
     {
+        public static Boolean isAlarmSet = false;
         delegate void UpdateLog(string msg);
         delegate void UpdateBtnEnable(Boolean isRun);
         delegate void MessageShow(string msg);
@@ -93,10 +94,12 @@ namespace EQP_Emulator.UI_Update
                     case "Alarm clear":
                         W.BackColor = Color.LimeGreen;
                         btnReset.Enabled = false;
+                        isAlarmSet = false;
                         break;
                     case "Alarm set":
                         W.BackColor = Color.Red;
                         btnReset.Enabled = true;
+                        isAlarmSet = true;
                         break;
                 }
             }
