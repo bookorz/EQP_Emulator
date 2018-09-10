@@ -15,6 +15,10 @@ using System.Threading;
 using System.IO;
 using Newtonsoft.Json;
 using System.Collections;
+using System.Configuration;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.InteropServices;
 
 namespace EQP_Emulator
 {
@@ -32,6 +36,9 @@ namespace EQP_Emulator
         Label[] p4Ary;
         Dictionary<string, Label[]> pMap = new Dictionary<string, Label[]> ();
         ComboBox[] t_cbs;
+        int intCmdTimeOut = 300000;//default 5 mins
+        int ackTimeOut = 5000; // default 5 seconds
+        int ackSleepTime = 200; // default 0.2 seconds
 
         public frmMain()
         {
@@ -44,13 +51,20 @@ namespace EQP_Emulator
             {
                 cbCmdType.Items.Add(element);
             }
-            tbTimes.MaxLength = 6;
-            tbHostIP.Text = System.Configuration.ConfigurationManager.AppSettings["host_ip"];
-            tbCmd.Select();
             initData();
             btnConn_Click(null, null);
             //this.TopMost = true;
             //this.Focus();
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
         }
 
         private void initData()
@@ -95,6 +109,37 @@ namespace EQP_Emulator
             cbP2Type.SelectedIndex = 1;
             cbP3Type.SelectedIndex = 1;
             cbP4Type.SelectedIndex = 1;
+
+            tbTimes.MaxLength = 6;
+            tbHostIP.Text = ConfigurationManager.AppSettings["host_ip"];
+            tbCmd.Select();
+            if (ConfigurationManager.AppSettings["Robot1_enable"].Equals("false"))
+            {
+                cbR1Arm1.Enabled = false;
+                cbR1Arm2.Enabled = false;
+                cbR1Arm3.Enabled = false;
+            }
+            if (ConfigurationManager.AppSettings["Robot2_enable"].Equals("false"))
+            {
+                cbR2Arm1.Enabled = false;
+                cbR2Arm2.Enabled = false;
+                cbR2Arm3.Enabled = false;
+            }
+            cbA1.Enabled = ConfigurationManager.AppSettings["Aligner1_enable"].Equals("false") ? false : true;
+            cbA2.Enabled = ConfigurationManager.AppSettings["Aligner2_enable"].Equals("false") ? false : true;
+            cbLLA.Enabled = ConfigurationManager.AppSettings["LLA_enable"].Equals("false") ? false : true;
+            cbLLB.Enabled = ConfigurationManager.AppSettings["LLB_enable"].Equals("false") ? false : true;
+            cbLLC.Enabled = ConfigurationManager.AppSettings["LLC_enable"].Equals("false") ? false : true;
+            cbLLD.Enabled = ConfigurationManager.AppSettings["LLD_enable"].Equals("false") ? false : true;
+            p1gb.Enabled = ConfigurationManager.AppSettings["PORT1_Enable"].Equals("false") ? false : true;
+            p2gb.Enabled = ConfigurationManager.AppSettings["PORT2_Enable"].Equals("false") ? false : true;
+            p3gb.Enabled = ConfigurationManager.AppSettings["PORT3_Enable"].Equals("false") ? false : true;
+            p4gb.Enabled = ConfigurationManager.AppSettings["PORT4_Enable"].Equals("false") ? false : true;
+            intCmdTimeOut = Int32.Parse(ConfigurationManager.AppSettings["cmd_timeout"]);
+            ackTimeOut = Int32.Parse(ConfigurationManager.AppSettings["ack_timeout"]);
+            ackSleepTime = Int32.Parse(ConfigurationManager.AppSettings["ack_sleep_time"]);
+
+            cbErrMsg.Items.AddRange(define.getErrMsgList());
         }
 
         private void createCommand(object sender, EventArgs e)
@@ -231,7 +276,7 @@ namespace EQP_Emulator
                 //if (define.autoAckCmd.Contains(cmd[1]))
                 //{
                 //暫時收到INF一律回ACK
-                Thread.Sleep(200);//200
+                Thread.Sleep(ackSleepTime);
                 string ackMsg = replyMsg.Replace("INF:", "ACK:");
                 sendCommand(ackMsg);
                 FormMainUpdate.LogUpdate("**************  Commnad Finish  **************\n");
@@ -527,7 +572,8 @@ namespace EQP_Emulator
                     string cmd = element.Command;
                     isCmdFin = false;
                     sendCommand(cmd);
-                    SpinWait.SpinUntil(() => isCmdFin, 3000);// pause for motion complete
+                    
+                    SpinWait.SpinUntil(() => isCmdFin, intCmdTimeOut);// pause for motion complete
                     if (!isCmdFin)
                     {
                         FormMainUpdate.ShowMessage("Command Timeout");
@@ -698,21 +744,26 @@ namespace EQP_Emulator
             string result = "";
             Boolean isNotUnload = false;
             Boolean isUsed = false;
+            Boolean isPortEnable = true;
             //check target is unlaod port or not 
             string port_type = "";
             switch (cb.Text)
             {
                 case "P1":
-                    port_type = cbP1Type.Text;           
+                    port_type = cbP1Type.Text;
+                    isPortEnable = cbP1Type.Enabled;
                     break;
                 case "P2":
                     port_type = cbP2Type.Text;
+                    isPortEnable = cbP2Type.Enabled;
                     break;
                 case "P3":
                     port_type = cbP3Type.Text;
+                    isPortEnable = cbP3Type.Enabled;
                     break;
                 case "P4":
                     port_type = cbP4Type.Text;
+                    isPortEnable = cbP4Type.Enabled;
                     break;
             }
             if (port_type.Equals("LU") && cb.Name.Contains(cb.Text))
@@ -734,6 +785,8 @@ namespace EQP_Emulator
                 result = "Port " + cb.Text + " is not Unload port.";
             else if (isUsed)
                 result = "Port " + cb.Text + " is in use.";
+            else if (!isPortEnable)
+                result = "Port " + cb.Text + " is not avalible.";
 
             if (!result.Equals(""))
             {
@@ -1281,6 +1334,42 @@ namespace EQP_Emulator
             {
                 cbR2Arm1.Checked = true;
                 cbR2Arm2.Checked = true;
+            }
+        }
+        
+        private void cbErrMsg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ErrMsg msg = define.getErrMsgInfo(cbErrMsg.Text);
+            if (msg.isNeedMaintain)
+                rbNeedPMYes.Checked = true;
+            else
+                rbNeedPMNo.Checked = true;
+            tbErrDesc.Text = msg.desc;
+            tbRecoverMethod.Text = msg.recover_method.ToString();
+        }
+
+        private void cbErrPos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ErrPosition pos = define.getErrPosInfo(cbErrPos.Text);
+            tbErrPosDecs.Text = pos.desc;
+        }
+
+        private void btnRecovery_Click(object sender, EventArgs e)
+        {
+            switch (tbRecoverMethod.Text)
+            {
+                case "0":
+                    MessageBox.Show("No Error");
+                    break;
+                case "1":
+                    MessageBox.Show("Reset Error");
+                    break;
+                case "2":
+                    MessageBox.Show("Reset Error => Init => Origin search");
+                    break;
+                case "3":
+                    MessageBox.Show("Turn on the power again or reboot system program.");
+                    break;
             }
         }
     }
