@@ -907,7 +907,7 @@ namespace EQP_Emulator
             if (confirm != System.Windows.Forms.DialogResult.Yes)
                 return;
             initEFEMConfig();
-            tabMode.SelectedIndex = 0;
+            //tabMode.SelectedIndex = 0;
             tbTimes.Text = "1";//set run times 1
             Command.oCmdScript.Clear();//clear script
             //create script
@@ -1371,6 +1371,217 @@ namespace EQP_Emulator
                     MessageBox.Show("Turn on the power again or reboot system program.");
                     break;
             }
+        }
+        
+        private void rbEvtAllOn_Click(object sender, EventArgs e)
+        {
+            this.rbEvtFfuOn.Checked = true;
+            this.rbEvtSysOn.Checked = true;
+            this.rbEvtMapdtOn.Checked = true;
+            this.rbEvtTransOn.Checked = true;
+            this.rbEvtPrsOn.Checked = true;
+            this.rbEvtPortOn.Checked = true;
+            this.sendCommand("SET:EVENT/ALL/ON;");
+        }
+
+        private void rbEvtAllOff_Click(object sender, EventArgs e)
+        {
+            this.rbEvtFfuOff.Checked = true;
+            this.rbEvtSysOff.Checked = true;
+            this.rbEvtMapdtOff.Checked = true;
+            this.rbEvtTransOff.Checked = true;
+            this.rbEvtPrsOff.Checked = true;
+            this.rbEvtPortOff.Checked = true;
+            this.sendCommand("SET:EVENT/ALL/OFF;");
+        }
+
+        private void rbEvt_Click(object sender, EventArgs e)
+        {
+            RadioButton btn = (RadioButton)sender;
+            string type = "";
+            string setting = "";
+            // Get Event type
+            if (btn.Name.StartsWith("rbEvtFfu"))
+            {
+                type = "FFU";
+            }else if (btn.Name.StartsWith("rbEvtSys"))
+            {
+                type = "SYSTEM";
+            }
+            else if(btn.Name.StartsWith("rbEvtMapdt"))
+            {
+                type = "MAPDT";
+            }
+            else if (btn.Name.StartsWith("rbEvtTrans"))
+            {
+                type = "TRANSREQ";
+            }
+            else if (btn.Name.StartsWith("rbEvtPrs"))
+            {
+                type = "PRS";
+            }
+            else if (btn.Name.StartsWith("rbEvtPort"))
+            {
+                type = "PORT";
+            }
+            //Get Event Setting
+            setting = btn.Text.Trim();
+            if (setting.Equals("ON"))
+                rbEvtAllOff.Checked = false;
+            else if (setting.Equals("OFF"))
+                rbEvtAllOn.Checked = false;
+            string cmd = "SET:EVENT/" + type + "/"+ setting  + ";";
+            this.sendCommand(cmd);
+        }
+
+        private void rbSignal_Click(object sender, EventArgs e)
+        {
+            RadioButton btn = (RadioButton)sender;
+            string type = "";
+            string setting = "";
+            string device = "";
+            // Get Event type
+            if (btn.Name.StartsWith("rbSignalRed"))
+            {
+                device = "STOWER";
+                type = "RED";
+            }
+            else if (btn.Name.StartsWith("rbSignalYellow"))
+            {
+                device = "STOWER";
+                type = "YELLOW";
+            }
+            else if (btn.Name.StartsWith("rbSignalGreen"))
+            {
+                device = "STOWER";
+                type = "GREEN";
+            }
+            else if (btn.Name.StartsWith("rbSignalBlue"))
+            {
+                device = "STOWER";
+                type = "BLUE";
+            }
+            else if (btn.Name.StartsWith("rbSignalBuzzer1"))
+            {
+                device = "STOWER";
+                type = "BUZZER1";
+            }
+            else if (btn.Name.StartsWith("rbSignalBuzzer2"))
+            {
+                device = "STOWER";
+                type = "BUZZER2";
+            }
+            else if (btn.Name.StartsWith("rbSignalLoad"))
+            {
+                type = "LOAD";
+            }
+            else if (btn.Name.StartsWith("rbSignalUnLoad"))
+            {
+                type = "UNLOAD";
+            }
+            else if (btn.Name.StartsWith("rbSignalAccess"))
+            {
+                type = "OP ACCESS";
+            }
+            //Get port 
+            if(btn.Name.StartsWith("rbSignalLoad") || btn.Name.StartsWith("rbSignalUnLoad") || btn.Name.StartsWith("rbSignalAccess"))
+            {
+                if(rbSignalP1.Checked)
+                    device = "P1";
+                else if (rbSignalP2.Checked)
+                    device = "P2";
+                else if (rbSignalP3.Checked)
+                    device = "P3";
+                else if (rbSignalP4.Checked)
+                    device = "P4";
+            }
+            //Get Event Setting
+            setting = btn.Text.Trim();
+            string cmd = "SET:SIGOUT/" + device + "/" + type + "/" + setting + ";";
+            this.sendCommand(cmd);
+        }
+
+        private void btnSetSize_Click(object sender, EventArgs e)
+        {
+            if (cbSizeTarget.SelectedIndex < 0)
+            {
+                cbSizeTarget.Focus();
+                MessageBox.Show("Please designates a target first.");
+                return;
+            }
+            else
+            {
+                //set target
+                string device = "";
+                device = cbSizeTarget.Text;
+
+                //set size
+                string size = "";
+                if (rbSizeNone.Checked)
+                    size = rbSizeNone.Text;
+                else if (rbSizeNa.Checked)
+                    size = rbSizeNa.Text;
+                else if (rbSize200.Checked)
+                    size = rbSize200.Text;
+                else if (rbSize300.Checked)
+                    size = rbSize300.Text;
+                string cmd = "SET:SIZE/" + device + "/" + size + ";";
+                this.sendCommand(cmd);
+            }
+
+        }
+
+        private void rbE84_Click(object sender, EventArgs e)
+        {
+            RadioButton btn = (RadioButton)sender;
+            string device = "";
+            string setting = "";
+
+            // Get device
+            if (btn.Name.StartsWith("rbE84All"))
+            {
+                device = "ALL";
+            }
+            else if (btn.Name.StartsWith("rbE84P1"))
+            {
+                device = "P1";
+            }
+            else if (btn.Name.StartsWith("rbE84P2"))
+            {
+                device = "P2";
+            }
+            else if (btn.Name.StartsWith("rbE84P3"))
+            {
+                device = "P3";
+            }
+            else if (btn.Name.StartsWith("rbE84P4"))
+            {
+                device = "P4";
+            }
+
+            //Get Event Setting
+            setting = btn.Text.Trim();
+            if (!device.Equals("ALL") && setting.Equals("AUTO"))
+                rbE84AllManual.Checked = false;
+            else if (!device.Equals("ALL") && setting.Equals("MANUAL"))
+                rbE84AllAuto.Checked = false;
+            else if (btn.Name.Equals("rbE84AllAuto"))
+            {
+                rbE84P1Auto.Checked = true;
+                rbE84P2Auto.Checked = true;
+                rbE84P3Auto.Checked = true;
+                rbE84P4Auto.Checked = true;
+            }
+            else if (btn.Name.Equals("rbE84AllManual"))
+            {
+                rbE84P1Manual.Checked = true;
+                rbE84P2Manual.Checked = true;
+                rbE84P3Manual.Checked = true;
+                rbE84P4Manual.Checked = true;
+            }
+
+            string cmd = "SET:MODE/" + device + "/" + setting + ";";
+            this.sendCommand(cmd);
         }
     }
 }

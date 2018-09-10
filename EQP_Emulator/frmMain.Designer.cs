@@ -292,7 +292,117 @@
             this.tbErrDesc = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.slot = new System.Windows.Forms.ToolTip(this.components);
+            this.tabSetting = new System.Windows.Forms.TabPage();
+            this.groupBox34 = new System.Windows.Forms.GroupBox();
+            this.groupBox38 = new System.Windows.Forms.GroupBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.rbE84P2Manual = new System.Windows.Forms.RadioButton();
+            this.rbE84P2Auto = new System.Windows.Forms.RadioButton();
+            this.groupBox39 = new System.Windows.Forms.GroupBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.rbE84P4Manual = new System.Windows.Forms.RadioButton();
+            this.rbE84P4Auto = new System.Windows.Forms.RadioButton();
+            this.groupBox41 = new System.Windows.Forms.GroupBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.rbE84P1Manual = new System.Windows.Forms.RadioButton();
+            this.rbE84P1Auto = new System.Windows.Forms.RadioButton();
+            this.groupBox42 = new System.Windows.Forms.GroupBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.rbE84P3Manual = new System.Windows.Forms.RadioButton();
+            this.rbE84P3Auto = new System.Windows.Forms.RadioButton();
+            this.groupBox43 = new System.Windows.Forms.GroupBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.rbE84AllManual = new System.Windows.Forms.RadioButton();
+            this.rbE84AllAuto = new System.Windows.Forms.RadioButton();
+            this.groupBox32 = new System.Windows.Forms.GroupBox();
+            this.btnSetSize = new System.Windows.Forms.Button();
+            this.label42 = new System.Windows.Forms.Label();
+            this.cbSizeTarget = new System.Windows.Forms.ComboBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.rbSize300 = new System.Windows.Forms.RadioButton();
+            this.rbSize200 = new System.Windows.Forms.RadioButton();
+            this.rbSizeNone = new System.Windows.Forms.RadioButton();
+            this.rbSizeNa = new System.Windows.Forms.RadioButton();
+            this.groupBox31 = new System.Windows.Forms.GroupBox();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.rbSignalP4 = new System.Windows.Forms.RadioButton();
+            this.rbSignalP3 = new System.Windows.Forms.RadioButton();
+            this.rbSignalP2 = new System.Windows.Forms.RadioButton();
+            this.rbSignalP1 = new System.Windows.Forms.RadioButton();
+            this.groupBox33 = new System.Windows.Forms.GroupBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.rbSignalUnLoadOn = new System.Windows.Forms.RadioButton();
+            this.rbSignalUnLoadBlink = new System.Windows.Forms.RadioButton();
+            this.rbSignalUnLoadOff = new System.Windows.Forms.RadioButton();
+            this.groupBox36 = new System.Windows.Forms.GroupBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.rbSignalLoadOn = new System.Windows.Forms.RadioButton();
+            this.rbSignalLoadBlink = new System.Windows.Forms.RadioButton();
+            this.rbSignalLoadOff = new System.Windows.Forms.RadioButton();
+            this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.rbSignalAccessOn = new System.Windows.Forms.RadioButton();
+            this.rbSignalAccessBlink = new System.Windows.Forms.RadioButton();
+            this.rbSignalAccessOff = new System.Windows.Forms.RadioButton();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.rbSignalBuzzer2On = new System.Windows.Forms.RadioButton();
+            this.rbSignalBuzzer2Off = new System.Windows.Forms.RadioButton();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.rbSignalYellowOn = new System.Windows.Forms.RadioButton();
+            this.rbSignalYellowBlink = new System.Windows.Forms.RadioButton();
+            this.rbSignalYellowOff = new System.Windows.Forms.RadioButton();
+            this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.rbSignalGreenOn = new System.Windows.Forms.RadioButton();
+            this.rbSignalGreenBlink = new System.Windows.Forms.RadioButton();
+            this.rbSignalGreenOff = new System.Windows.Forms.RadioButton();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.rbSignalBlueOn = new System.Windows.Forms.RadioButton();
+            this.rbSignalBlueBlink = new System.Windows.Forms.RadioButton();
+            this.rbSignalBlueOff = new System.Windows.Forms.RadioButton();
+            this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.rbSignalBuzzer1On = new System.Windows.Forms.RadioButton();
+            this.rbSignalBuzzer1Off = new System.Windows.Forms.RadioButton();
+            this.groupBox28 = new System.Windows.Forms.GroupBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.rbSignalRedOn = new System.Windows.Forms.RadioButton();
+            this.rbSignalRedBlink = new System.Windows.Forms.RadioButton();
+            this.rbSignalRedOff = new System.Windows.Forms.RadioButton();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.rbEvtFfuOn = new System.Windows.Forms.RadioButton();
+            this.rbEvtFfuOff = new System.Windows.Forms.RadioButton();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.rbEvtTransOn = new System.Windows.Forms.RadioButton();
+            this.rbEvtTransOff = new System.Windows.Forms.RadioButton();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.rbEvtPortOn = new System.Windows.Forms.RadioButton();
+            this.rbEvtPortOff = new System.Windows.Forms.RadioButton();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.rbEvtPrsOn = new System.Windows.Forms.RadioButton();
+            this.rbEvtPrsOff = new System.Windows.Forms.RadioButton();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.rbEvtMapdtOn = new System.Windows.Forms.RadioButton();
+            this.rbEvtMapdtOff = new System.Windows.Forms.RadioButton();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.rbEvtSysOn = new System.Windows.Forms.RadioButton();
+            this.rbEvtSysOff = new System.Windows.Forms.RadioButton();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.rbEvtAllOn = new System.Windows.Forms.RadioButton();
+            this.rbEvtAllOff = new System.Windows.Forms.RadioButton();
+            this.hint = new System.Windows.Forms.ToolTip(this.components);
             this.GroupBox3.SuspendLayout();
             this.GroupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -317,6 +427,34 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tabInfo.SuspendLayout();
             this.groupBox14.SuspendLayout();
+            this.tabSetting.SuspendLayout();
+            this.groupBox34.SuspendLayout();
+            this.groupBox38.SuspendLayout();
+            this.groupBox39.SuspendLayout();
+            this.groupBox41.SuspendLayout();
+            this.groupBox42.SuspendLayout();
+            this.groupBox43.SuspendLayout();
+            this.groupBox32.SuspendLayout();
+            this.groupBox31.SuspendLayout();
+            this.groupBox30.SuspendLayout();
+            this.groupBox33.SuspendLayout();
+            this.groupBox36.SuspendLayout();
+            this.groupBox37.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            this.groupBox23.SuspendLayout();
+            this.groupBox29.SuspendLayout();
+            this.groupBox26.SuspendLayout();
+            this.groupBox27.SuspendLayout();
+            this.groupBox28.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox25.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox22.SuspendLayout();
+            this.groupBox24.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.groupBox21.SuspendLayout();
+            this.groupBox17.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -673,6 +811,7 @@
             this.tabMode.Controls.Add(this.tabCmd);
             this.tabMode.Controls.Add(this.tabRun);
             this.tabMode.Controls.Add(this.tabInfo);
+            this.tabMode.Controls.Add(this.tabSetting);
             this.tabMode.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabMode.Location = new System.Drawing.Point(7, 64);
             this.tabMode.Name = "tabMode";
@@ -2059,7 +2198,7 @@
             this.lbl_p401.Size = new System.Drawing.Size(94, 23);
             this.lbl_p401.TabIndex = 124;
             this.lbl_p401.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p401, "Slot: 1");
+            this.hint.SetToolTip(this.lbl_p401, "Slot: 1");
             this.lbl_p401.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p301
@@ -2073,7 +2212,7 @@
             this.lbl_p301.Size = new System.Drawing.Size(94, 23);
             this.lbl_p301.TabIndex = 123;
             this.lbl_p301.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p301, "Slot: 1");
+            this.hint.SetToolTip(this.lbl_p301, "Slot: 1");
             this.lbl_p301.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p201
@@ -2087,7 +2226,7 @@
             this.lbl_p201.Size = new System.Drawing.Size(94, 23);
             this.lbl_p201.TabIndex = 122;
             this.lbl_p201.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p201, "Slot: 1");
+            this.hint.SetToolTip(this.lbl_p201, "Slot: 1");
             this.lbl_p201.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p101
@@ -2101,7 +2240,7 @@
             this.lbl_p101.Size = new System.Drawing.Size(94, 23);
             this.lbl_p101.TabIndex = 121;
             this.lbl_p101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p101, "Slot: 1");
+            this.hint.SetToolTip(this.lbl_p101, "Slot: 1");
             this.lbl_p101.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot1
@@ -2128,7 +2267,7 @@
             this.lbl_p402.Size = new System.Drawing.Size(94, 22);
             this.lbl_p402.TabIndex = 119;
             this.lbl_p402.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p402, "Slot: 2");
+            this.hint.SetToolTip(this.lbl_p402, "Slot: 2");
             this.lbl_p402.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p302
@@ -2142,7 +2281,7 @@
             this.lbl_p302.Size = new System.Drawing.Size(94, 22);
             this.lbl_p302.TabIndex = 118;
             this.lbl_p302.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p302, "Slot: 2");
+            this.hint.SetToolTip(this.lbl_p302, "Slot: 2");
             this.lbl_p302.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p202
@@ -2156,7 +2295,7 @@
             this.lbl_p202.Size = new System.Drawing.Size(94, 22);
             this.lbl_p202.TabIndex = 117;
             this.lbl_p202.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p202, "Slot: 2");
+            this.hint.SetToolTip(this.lbl_p202, "Slot: 2");
             this.lbl_p202.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p102
@@ -2170,7 +2309,7 @@
             this.lbl_p102.Size = new System.Drawing.Size(94, 22);
             this.lbl_p102.TabIndex = 116;
             this.lbl_p102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p102, "Slot: 2");
+            this.hint.SetToolTip(this.lbl_p102, "Slot: 2");
             this.lbl_p102.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot2
@@ -2197,7 +2336,7 @@
             this.lbl_p403.Size = new System.Drawing.Size(94, 22);
             this.lbl_p403.TabIndex = 114;
             this.lbl_p403.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p403, "Slot: 3");
+            this.hint.SetToolTip(this.lbl_p403, "Slot: 3");
             this.lbl_p403.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p303
@@ -2211,7 +2350,7 @@
             this.lbl_p303.Size = new System.Drawing.Size(94, 22);
             this.lbl_p303.TabIndex = 113;
             this.lbl_p303.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p303, "Slot: 3");
+            this.hint.SetToolTip(this.lbl_p303, "Slot: 3");
             this.lbl_p303.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p203
@@ -2225,7 +2364,7 @@
             this.lbl_p203.Size = new System.Drawing.Size(94, 22);
             this.lbl_p203.TabIndex = 112;
             this.lbl_p203.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p203, "Slot: 3");
+            this.hint.SetToolTip(this.lbl_p203, "Slot: 3");
             this.lbl_p203.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p103
@@ -2239,7 +2378,7 @@
             this.lbl_p103.Size = new System.Drawing.Size(94, 22);
             this.lbl_p103.TabIndex = 111;
             this.lbl_p103.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p103, "Slot: 3");
+            this.hint.SetToolTip(this.lbl_p103, "Slot: 3");
             this.lbl_p103.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot3
@@ -2266,7 +2405,7 @@
             this.lbl_p404.Size = new System.Drawing.Size(94, 22);
             this.lbl_p404.TabIndex = 109;
             this.lbl_p404.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p404, "Slot: 4");
+            this.hint.SetToolTip(this.lbl_p404, "Slot: 4");
             this.lbl_p404.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p304
@@ -2280,7 +2419,7 @@
             this.lbl_p304.Size = new System.Drawing.Size(94, 22);
             this.lbl_p304.TabIndex = 108;
             this.lbl_p304.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p304, "Slot: 4");
+            this.hint.SetToolTip(this.lbl_p304, "Slot: 4");
             this.lbl_p304.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p204
@@ -2294,7 +2433,7 @@
             this.lbl_p204.Size = new System.Drawing.Size(94, 22);
             this.lbl_p204.TabIndex = 107;
             this.lbl_p204.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p204, "Slot: 4");
+            this.hint.SetToolTip(this.lbl_p204, "Slot: 4");
             this.lbl_p204.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p104
@@ -2308,7 +2447,7 @@
             this.lbl_p104.Size = new System.Drawing.Size(94, 22);
             this.lbl_p104.TabIndex = 106;
             this.lbl_p104.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p104, "Slot: 4");
+            this.hint.SetToolTip(this.lbl_p104, "Slot: 4");
             this.lbl_p104.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot4
@@ -2335,7 +2474,7 @@
             this.lbl_p405.Size = new System.Drawing.Size(94, 22);
             this.lbl_p405.TabIndex = 104;
             this.lbl_p405.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p405, "Slot: 5");
+            this.hint.SetToolTip(this.lbl_p405, "Slot: 5");
             this.lbl_p405.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p305
@@ -2349,7 +2488,7 @@
             this.lbl_p305.Size = new System.Drawing.Size(94, 22);
             this.lbl_p305.TabIndex = 103;
             this.lbl_p305.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p305, "Slot: 5");
+            this.hint.SetToolTip(this.lbl_p305, "Slot: 5");
             this.lbl_p305.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p205
@@ -2363,7 +2502,7 @@
             this.lbl_p205.Size = new System.Drawing.Size(94, 22);
             this.lbl_p205.TabIndex = 102;
             this.lbl_p205.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p205, "Slot: 5");
+            this.hint.SetToolTip(this.lbl_p205, "Slot: 5");
             this.lbl_p205.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p105
@@ -2377,7 +2516,7 @@
             this.lbl_p105.Size = new System.Drawing.Size(94, 22);
             this.lbl_p105.TabIndex = 101;
             this.lbl_p105.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p105, "Slot: 5");
+            this.hint.SetToolTip(this.lbl_p105, "Slot: 5");
             this.lbl_p105.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot5
@@ -2404,7 +2543,7 @@
             this.lbl_p406.Size = new System.Drawing.Size(94, 22);
             this.lbl_p406.TabIndex = 99;
             this.lbl_p406.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p406, "Slot: 6");
+            this.hint.SetToolTip(this.lbl_p406, "Slot: 6");
             this.lbl_p406.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p306
@@ -2418,7 +2557,7 @@
             this.lbl_p306.Size = new System.Drawing.Size(94, 22);
             this.lbl_p306.TabIndex = 98;
             this.lbl_p306.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p306, "Slot: 6");
+            this.hint.SetToolTip(this.lbl_p306, "Slot: 6");
             this.lbl_p306.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p206
@@ -2432,7 +2571,7 @@
             this.lbl_p206.Size = new System.Drawing.Size(94, 22);
             this.lbl_p206.TabIndex = 97;
             this.lbl_p206.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p206, "Slot: 6");
+            this.hint.SetToolTip(this.lbl_p206, "Slot: 6");
             this.lbl_p206.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p106
@@ -2446,7 +2585,7 @@
             this.lbl_p106.Size = new System.Drawing.Size(94, 22);
             this.lbl_p106.TabIndex = 96;
             this.lbl_p106.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p106, "Slot: 6");
+            this.hint.SetToolTip(this.lbl_p106, "Slot: 6");
             this.lbl_p106.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot6
@@ -2473,7 +2612,7 @@
             this.lbl_p407.Size = new System.Drawing.Size(94, 22);
             this.lbl_p407.TabIndex = 94;
             this.lbl_p407.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p407, "Slot: 7");
+            this.hint.SetToolTip(this.lbl_p407, "Slot: 7");
             this.lbl_p407.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p307
@@ -2487,7 +2626,7 @@
             this.lbl_p307.Size = new System.Drawing.Size(94, 22);
             this.lbl_p307.TabIndex = 93;
             this.lbl_p307.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p307, "Slot: 7");
+            this.hint.SetToolTip(this.lbl_p307, "Slot: 7");
             this.lbl_p307.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p207
@@ -2501,7 +2640,7 @@
             this.lbl_p207.Size = new System.Drawing.Size(94, 22);
             this.lbl_p207.TabIndex = 92;
             this.lbl_p207.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p207, "Slot: 7");
+            this.hint.SetToolTip(this.lbl_p207, "Slot: 7");
             this.lbl_p207.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p107
@@ -2515,7 +2654,7 @@
             this.lbl_p107.Size = new System.Drawing.Size(94, 22);
             this.lbl_p107.TabIndex = 91;
             this.lbl_p107.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p107, "Slot: 7");
+            this.hint.SetToolTip(this.lbl_p107, "Slot: 7");
             this.lbl_p107.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot7
@@ -2542,7 +2681,7 @@
             this.lbl_p408.Size = new System.Drawing.Size(94, 22);
             this.lbl_p408.TabIndex = 89;
             this.lbl_p408.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p408, "Slot: 8");
+            this.hint.SetToolTip(this.lbl_p408, "Slot: 8");
             this.lbl_p408.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p308
@@ -2556,7 +2695,7 @@
             this.lbl_p308.Size = new System.Drawing.Size(94, 22);
             this.lbl_p308.TabIndex = 88;
             this.lbl_p308.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p308, "Slot: 8");
+            this.hint.SetToolTip(this.lbl_p308, "Slot: 8");
             this.lbl_p308.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p208
@@ -2570,7 +2709,7 @@
             this.lbl_p208.Size = new System.Drawing.Size(94, 22);
             this.lbl_p208.TabIndex = 87;
             this.lbl_p208.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p208, "Slot: 8");
+            this.hint.SetToolTip(this.lbl_p208, "Slot: 8");
             this.lbl_p208.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p108
@@ -2584,7 +2723,7 @@
             this.lbl_p108.Size = new System.Drawing.Size(94, 22);
             this.lbl_p108.TabIndex = 86;
             this.lbl_p108.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p108, "Slot: 8");
+            this.hint.SetToolTip(this.lbl_p108, "Slot: 8");
             this.lbl_p108.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot8
@@ -2611,7 +2750,7 @@
             this.lbl_p409.Size = new System.Drawing.Size(94, 22);
             this.lbl_p409.TabIndex = 84;
             this.lbl_p409.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p409, "Slot: 9");
+            this.hint.SetToolTip(this.lbl_p409, "Slot: 9");
             this.lbl_p409.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p309
@@ -2625,7 +2764,7 @@
             this.lbl_p309.Size = new System.Drawing.Size(94, 22);
             this.lbl_p309.TabIndex = 83;
             this.lbl_p309.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p309, "Slot: 9");
+            this.hint.SetToolTip(this.lbl_p309, "Slot: 9");
             this.lbl_p309.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p209
@@ -2639,7 +2778,7 @@
             this.lbl_p209.Size = new System.Drawing.Size(94, 22);
             this.lbl_p209.TabIndex = 82;
             this.lbl_p209.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p209, "Slot: 9");
+            this.hint.SetToolTip(this.lbl_p209, "Slot: 9");
             this.lbl_p209.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p109
@@ -2653,7 +2792,7 @@
             this.lbl_p109.Size = new System.Drawing.Size(94, 22);
             this.lbl_p109.TabIndex = 81;
             this.lbl_p109.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p109, "Slot: 9");
+            this.hint.SetToolTip(this.lbl_p109, "Slot: 9");
             this.lbl_p109.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot9
@@ -2680,7 +2819,7 @@
             this.lbl_p410.Size = new System.Drawing.Size(94, 22);
             this.lbl_p410.TabIndex = 79;
             this.lbl_p410.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p410, "Slot: 10");
+            this.hint.SetToolTip(this.lbl_p410, "Slot: 10");
             this.lbl_p410.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p310
@@ -2694,7 +2833,7 @@
             this.lbl_p310.Size = new System.Drawing.Size(94, 22);
             this.lbl_p310.TabIndex = 78;
             this.lbl_p310.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p310, "Slot: 10");
+            this.hint.SetToolTip(this.lbl_p310, "Slot: 10");
             this.lbl_p310.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p210
@@ -2708,7 +2847,7 @@
             this.lbl_p210.Size = new System.Drawing.Size(94, 22);
             this.lbl_p210.TabIndex = 77;
             this.lbl_p210.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p210, "Slot: 10");
+            this.hint.SetToolTip(this.lbl_p210, "Slot: 10");
             this.lbl_p210.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p110
@@ -2722,7 +2861,7 @@
             this.lbl_p110.Size = new System.Drawing.Size(94, 22);
             this.lbl_p110.TabIndex = 76;
             this.lbl_p110.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p110, "Slot: 10");
+            this.hint.SetToolTip(this.lbl_p110, "Slot: 10");
             this.lbl_p110.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot10
@@ -2749,7 +2888,7 @@
             this.lbl_p411.Size = new System.Drawing.Size(94, 22);
             this.lbl_p411.TabIndex = 74;
             this.lbl_p411.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p411, "Slot: 11");
+            this.hint.SetToolTip(this.lbl_p411, "Slot: 11");
             this.lbl_p411.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p311
@@ -2763,7 +2902,7 @@
             this.lbl_p311.Size = new System.Drawing.Size(94, 22);
             this.lbl_p311.TabIndex = 73;
             this.lbl_p311.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p311, "Slot: 11");
+            this.hint.SetToolTip(this.lbl_p311, "Slot: 11");
             this.lbl_p311.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p211
@@ -2777,7 +2916,7 @@
             this.lbl_p211.Size = new System.Drawing.Size(94, 22);
             this.lbl_p211.TabIndex = 72;
             this.lbl_p211.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p211, "Slot: 11");
+            this.hint.SetToolTip(this.lbl_p211, "Slot: 11");
             this.lbl_p211.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p111
@@ -2791,7 +2930,7 @@
             this.lbl_p111.Size = new System.Drawing.Size(94, 22);
             this.lbl_p111.TabIndex = 71;
             this.lbl_p111.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p111, "Slot: 11");
+            this.hint.SetToolTip(this.lbl_p111, "Slot: 11");
             this.lbl_p111.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot11
@@ -2818,7 +2957,7 @@
             this.lbl_p412.Size = new System.Drawing.Size(94, 22);
             this.lbl_p412.TabIndex = 69;
             this.lbl_p412.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p412, "Slot: 12");
+            this.hint.SetToolTip(this.lbl_p412, "Slot: 12");
             this.lbl_p412.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p312
@@ -2832,7 +2971,7 @@
             this.lbl_p312.Size = new System.Drawing.Size(94, 22);
             this.lbl_p312.TabIndex = 68;
             this.lbl_p312.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p312, "Slot: 12");
+            this.hint.SetToolTip(this.lbl_p312, "Slot: 12");
             this.lbl_p312.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p212
@@ -2846,7 +2985,7 @@
             this.lbl_p212.Size = new System.Drawing.Size(94, 22);
             this.lbl_p212.TabIndex = 67;
             this.lbl_p212.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p212, "Slot: 12");
+            this.hint.SetToolTip(this.lbl_p212, "Slot: 12");
             this.lbl_p212.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p112
@@ -2860,7 +2999,7 @@
             this.lbl_p112.Size = new System.Drawing.Size(94, 22);
             this.lbl_p112.TabIndex = 66;
             this.lbl_p112.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p112, "Slot: 12");
+            this.hint.SetToolTip(this.lbl_p112, "Slot: 12");
             this.lbl_p112.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot12
@@ -2887,7 +3026,7 @@
             this.lbl_p413.Size = new System.Drawing.Size(94, 22);
             this.lbl_p413.TabIndex = 64;
             this.lbl_p413.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p413, "Slot: 13");
+            this.hint.SetToolTip(this.lbl_p413, "Slot: 13");
             this.lbl_p413.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p313
@@ -2901,7 +3040,7 @@
             this.lbl_p313.Size = new System.Drawing.Size(94, 22);
             this.lbl_p313.TabIndex = 63;
             this.lbl_p313.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p313, "Slot: 13");
+            this.hint.SetToolTip(this.lbl_p313, "Slot: 13");
             this.lbl_p313.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p213
@@ -2915,7 +3054,7 @@
             this.lbl_p213.Size = new System.Drawing.Size(94, 22);
             this.lbl_p213.TabIndex = 62;
             this.lbl_p213.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p213, "Slot: 13");
+            this.hint.SetToolTip(this.lbl_p213, "Slot: 13");
             this.lbl_p213.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p113
@@ -2929,7 +3068,7 @@
             this.lbl_p113.Size = new System.Drawing.Size(94, 22);
             this.lbl_p113.TabIndex = 61;
             this.lbl_p113.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p113, "Slot: 13");
+            this.hint.SetToolTip(this.lbl_p113, "Slot: 13");
             this.lbl_p113.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot13
@@ -2956,7 +3095,7 @@
             this.lbl_p414.Size = new System.Drawing.Size(94, 22);
             this.lbl_p414.TabIndex = 59;
             this.lbl_p414.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p414, "Slot: 14");
+            this.hint.SetToolTip(this.lbl_p414, "Slot: 14");
             this.lbl_p414.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p314
@@ -2970,7 +3109,7 @@
             this.lbl_p314.Size = new System.Drawing.Size(94, 22);
             this.lbl_p314.TabIndex = 58;
             this.lbl_p314.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p314, "Slot: 14");
+            this.hint.SetToolTip(this.lbl_p314, "Slot: 14");
             this.lbl_p314.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p214
@@ -2984,7 +3123,7 @@
             this.lbl_p214.Size = new System.Drawing.Size(94, 22);
             this.lbl_p214.TabIndex = 57;
             this.lbl_p214.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p214, "Slot: 14");
+            this.hint.SetToolTip(this.lbl_p214, "Slot: 14");
             this.lbl_p214.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p114
@@ -2998,7 +3137,7 @@
             this.lbl_p114.Size = new System.Drawing.Size(94, 22);
             this.lbl_p114.TabIndex = 56;
             this.lbl_p114.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p114, "Slot: 14");
+            this.hint.SetToolTip(this.lbl_p114, "Slot: 14");
             this.lbl_p114.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot14
@@ -3025,7 +3164,7 @@
             this.lbl_p415.Size = new System.Drawing.Size(94, 22);
             this.lbl_p415.TabIndex = 54;
             this.lbl_p415.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p415, "Slot: 15");
+            this.hint.SetToolTip(this.lbl_p415, "Slot: 15");
             this.lbl_p415.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p315
@@ -3039,7 +3178,7 @@
             this.lbl_p315.Size = new System.Drawing.Size(94, 22);
             this.lbl_p315.TabIndex = 53;
             this.lbl_p315.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p315, "Slot: 15");
+            this.hint.SetToolTip(this.lbl_p315, "Slot: 15");
             this.lbl_p315.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p215
@@ -3053,7 +3192,7 @@
             this.lbl_p215.Size = new System.Drawing.Size(94, 22);
             this.lbl_p215.TabIndex = 52;
             this.lbl_p215.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p215, "Slot: 15");
+            this.hint.SetToolTip(this.lbl_p215, "Slot: 15");
             this.lbl_p215.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p115
@@ -3067,7 +3206,7 @@
             this.lbl_p115.Size = new System.Drawing.Size(94, 22);
             this.lbl_p115.TabIndex = 51;
             this.lbl_p115.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p115, "Slot: 15");
+            this.hint.SetToolTip(this.lbl_p115, "Slot: 15");
             this.lbl_p115.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot15
@@ -3094,7 +3233,7 @@
             this.lbl_p416.Size = new System.Drawing.Size(94, 22);
             this.lbl_p416.TabIndex = 49;
             this.lbl_p416.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p416, "Slot: 16");
+            this.hint.SetToolTip(this.lbl_p416, "Slot: 16");
             this.lbl_p416.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p316
@@ -3108,7 +3247,7 @@
             this.lbl_p316.Size = new System.Drawing.Size(94, 22);
             this.lbl_p316.TabIndex = 48;
             this.lbl_p316.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p316, "Slot: 16");
+            this.hint.SetToolTip(this.lbl_p316, "Slot: 16");
             this.lbl_p316.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p216
@@ -3122,7 +3261,7 @@
             this.lbl_p216.Size = new System.Drawing.Size(94, 22);
             this.lbl_p216.TabIndex = 47;
             this.lbl_p216.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p216, "Slot: 16");
+            this.hint.SetToolTip(this.lbl_p216, "Slot: 16");
             this.lbl_p216.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p116
@@ -3136,7 +3275,7 @@
             this.lbl_p116.Size = new System.Drawing.Size(94, 22);
             this.lbl_p116.TabIndex = 46;
             this.lbl_p116.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p116, "Slot: 16");
+            this.hint.SetToolTip(this.lbl_p116, "Slot: 16");
             this.lbl_p116.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot16
@@ -3163,7 +3302,7 @@
             this.lbl_p417.Size = new System.Drawing.Size(94, 22);
             this.lbl_p417.TabIndex = 44;
             this.lbl_p417.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p417, "Slot: 17");
+            this.hint.SetToolTip(this.lbl_p417, "Slot: 17");
             this.lbl_p417.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p317
@@ -3177,7 +3316,7 @@
             this.lbl_p317.Size = new System.Drawing.Size(94, 22);
             this.lbl_p317.TabIndex = 43;
             this.lbl_p317.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p317, "Slot: 17");
+            this.hint.SetToolTip(this.lbl_p317, "Slot: 17");
             this.lbl_p317.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p217
@@ -3191,7 +3330,7 @@
             this.lbl_p217.Size = new System.Drawing.Size(94, 22);
             this.lbl_p217.TabIndex = 42;
             this.lbl_p217.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p217, "Slot: 17");
+            this.hint.SetToolTip(this.lbl_p217, "Slot: 17");
             this.lbl_p217.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p117
@@ -3205,7 +3344,7 @@
             this.lbl_p117.Size = new System.Drawing.Size(94, 22);
             this.lbl_p117.TabIndex = 41;
             this.lbl_p117.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p117, "Slot: 17");
+            this.hint.SetToolTip(this.lbl_p117, "Slot: 17");
             this.lbl_p117.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot17
@@ -3232,7 +3371,7 @@
             this.lbl_p418.Size = new System.Drawing.Size(94, 22);
             this.lbl_p418.TabIndex = 39;
             this.lbl_p418.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p418, "Slot: 18");
+            this.hint.SetToolTip(this.lbl_p418, "Slot: 18");
             this.lbl_p418.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p318
@@ -3246,7 +3385,7 @@
             this.lbl_p318.Size = new System.Drawing.Size(94, 22);
             this.lbl_p318.TabIndex = 38;
             this.lbl_p318.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p318, "Slot: 18");
+            this.hint.SetToolTip(this.lbl_p318, "Slot: 18");
             this.lbl_p318.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p218
@@ -3260,7 +3399,7 @@
             this.lbl_p218.Size = new System.Drawing.Size(94, 22);
             this.lbl_p218.TabIndex = 37;
             this.lbl_p218.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p218, "Slot: 18");
+            this.hint.SetToolTip(this.lbl_p218, "Slot: 18");
             this.lbl_p218.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p118
@@ -3274,7 +3413,7 @@
             this.lbl_p118.Size = new System.Drawing.Size(94, 22);
             this.lbl_p118.TabIndex = 36;
             this.lbl_p118.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p118, "Slot: 18");
+            this.hint.SetToolTip(this.lbl_p118, "Slot: 18");
             this.lbl_p118.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot18
@@ -3301,7 +3440,7 @@
             this.lbl_p419.Size = new System.Drawing.Size(94, 22);
             this.lbl_p419.TabIndex = 34;
             this.lbl_p419.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p419, "Slot: 19");
+            this.hint.SetToolTip(this.lbl_p419, "Slot: 19");
             this.lbl_p419.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p319
@@ -3315,7 +3454,7 @@
             this.lbl_p319.Size = new System.Drawing.Size(94, 22);
             this.lbl_p319.TabIndex = 33;
             this.lbl_p319.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p319, "Slot: 19");
+            this.hint.SetToolTip(this.lbl_p319, "Slot: 19");
             this.lbl_p319.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p219
@@ -3329,7 +3468,7 @@
             this.lbl_p219.Size = new System.Drawing.Size(94, 22);
             this.lbl_p219.TabIndex = 32;
             this.lbl_p219.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p219, "Slot: 19");
+            this.hint.SetToolTip(this.lbl_p219, "Slot: 19");
             this.lbl_p219.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p119
@@ -3343,7 +3482,7 @@
             this.lbl_p119.Size = new System.Drawing.Size(94, 22);
             this.lbl_p119.TabIndex = 31;
             this.lbl_p119.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p119, "Slot: 19");
+            this.hint.SetToolTip(this.lbl_p119, "Slot: 19");
             this.lbl_p119.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot19
@@ -3370,7 +3509,7 @@
             this.lbl_p420.Size = new System.Drawing.Size(94, 22);
             this.lbl_p420.TabIndex = 29;
             this.lbl_p420.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p420, "Slot: 20");
+            this.hint.SetToolTip(this.lbl_p420, "Slot: 20");
             this.lbl_p420.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p320
@@ -3384,7 +3523,7 @@
             this.lbl_p320.Size = new System.Drawing.Size(94, 22);
             this.lbl_p320.TabIndex = 28;
             this.lbl_p320.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p320, "Slot: 20");
+            this.hint.SetToolTip(this.lbl_p320, "Slot: 20");
             this.lbl_p320.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p220
@@ -3398,7 +3537,7 @@
             this.lbl_p220.Size = new System.Drawing.Size(94, 22);
             this.lbl_p220.TabIndex = 27;
             this.lbl_p220.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p220, "Slot: 20");
+            this.hint.SetToolTip(this.lbl_p220, "Slot: 20");
             this.lbl_p220.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p120
@@ -3412,7 +3551,7 @@
             this.lbl_p120.Size = new System.Drawing.Size(94, 22);
             this.lbl_p120.TabIndex = 26;
             this.lbl_p120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p120, "Slot: 20");
+            this.hint.SetToolTip(this.lbl_p120, "Slot: 20");
             this.lbl_p120.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot20
@@ -3439,7 +3578,7 @@
             this.lbl_p421.Size = new System.Drawing.Size(94, 22);
             this.lbl_p421.TabIndex = 24;
             this.lbl_p421.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p421, "Slot: 21");
+            this.hint.SetToolTip(this.lbl_p421, "Slot: 21");
             this.lbl_p421.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p321
@@ -3453,7 +3592,7 @@
             this.lbl_p321.Size = new System.Drawing.Size(94, 22);
             this.lbl_p321.TabIndex = 23;
             this.lbl_p321.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p321, "Slot: 21");
+            this.hint.SetToolTip(this.lbl_p321, "Slot: 21");
             this.lbl_p321.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p221
@@ -3467,7 +3606,7 @@
             this.lbl_p221.Size = new System.Drawing.Size(94, 22);
             this.lbl_p221.TabIndex = 22;
             this.lbl_p221.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p221, "Slot: 21");
+            this.hint.SetToolTip(this.lbl_p221, "Slot: 21");
             this.lbl_p221.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p121
@@ -3481,7 +3620,7 @@
             this.lbl_p121.Size = new System.Drawing.Size(94, 22);
             this.lbl_p121.TabIndex = 21;
             this.lbl_p121.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p121, "Slot: 21");
+            this.hint.SetToolTip(this.lbl_p121, "Slot: 21");
             this.lbl_p121.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot21
@@ -3508,7 +3647,7 @@
             this.lbl_p422.Size = new System.Drawing.Size(94, 22);
             this.lbl_p422.TabIndex = 19;
             this.lbl_p422.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p422, "Slot: 22");
+            this.hint.SetToolTip(this.lbl_p422, "Slot: 22");
             this.lbl_p422.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p322
@@ -3522,7 +3661,7 @@
             this.lbl_p322.Size = new System.Drawing.Size(94, 22);
             this.lbl_p322.TabIndex = 18;
             this.lbl_p322.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p322, "Slot: 22");
+            this.hint.SetToolTip(this.lbl_p322, "Slot: 22");
             this.lbl_p322.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p222
@@ -3536,7 +3675,7 @@
             this.lbl_p222.Size = new System.Drawing.Size(94, 22);
             this.lbl_p222.TabIndex = 17;
             this.lbl_p222.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p222, "Slot: 22");
+            this.hint.SetToolTip(this.lbl_p222, "Slot: 22");
             this.lbl_p222.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p122
@@ -3550,7 +3689,7 @@
             this.lbl_p122.Size = new System.Drawing.Size(94, 22);
             this.lbl_p122.TabIndex = 16;
             this.lbl_p122.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p122, "Slot: 22");
+            this.hint.SetToolTip(this.lbl_p122, "Slot: 22");
             this.lbl_p122.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot22
@@ -3577,7 +3716,7 @@
             this.lbl_p423.Size = new System.Drawing.Size(94, 22);
             this.lbl_p423.TabIndex = 14;
             this.lbl_p423.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p423, "Slot: 23");
+            this.hint.SetToolTip(this.lbl_p423, "Slot: 23");
             this.lbl_p423.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p323
@@ -3591,7 +3730,7 @@
             this.lbl_p323.Size = new System.Drawing.Size(94, 22);
             this.lbl_p323.TabIndex = 13;
             this.lbl_p323.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p323, "Slot: 23");
+            this.hint.SetToolTip(this.lbl_p323, "Slot: 23");
             this.lbl_p323.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p223
@@ -3605,7 +3744,7 @@
             this.lbl_p223.Size = new System.Drawing.Size(94, 22);
             this.lbl_p223.TabIndex = 12;
             this.lbl_p223.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p223, "Slot: 23");
+            this.hint.SetToolTip(this.lbl_p223, "Slot: 23");
             this.lbl_p223.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p123
@@ -3619,7 +3758,7 @@
             this.lbl_p123.Size = new System.Drawing.Size(94, 22);
             this.lbl_p123.TabIndex = 11;
             this.lbl_p123.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p123, "Slot: 23");
+            this.hint.SetToolTip(this.lbl_p123, "Slot: 23");
             this.lbl_p123.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot23
@@ -3646,7 +3785,7 @@
             this.lbl_p424.Size = new System.Drawing.Size(94, 22);
             this.lbl_p424.TabIndex = 9;
             this.lbl_p424.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p424, "Slot: 24");
+            this.hint.SetToolTip(this.lbl_p424, "Slot: 24");
             this.lbl_p424.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p324
@@ -3660,7 +3799,7 @@
             this.lbl_p324.Size = new System.Drawing.Size(94, 22);
             this.lbl_p324.TabIndex = 8;
             this.lbl_p324.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p324, "Slot: 24");
+            this.hint.SetToolTip(this.lbl_p324, "Slot: 24");
             this.lbl_p324.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p224
@@ -3674,7 +3813,7 @@
             this.lbl_p224.Size = new System.Drawing.Size(94, 22);
             this.lbl_p224.TabIndex = 7;
             this.lbl_p224.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p224, "Slot: 24");
+            this.hint.SetToolTip(this.lbl_p224, "Slot: 24");
             this.lbl_p224.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p124
@@ -3688,7 +3827,7 @@
             this.lbl_p124.Size = new System.Drawing.Size(94, 22);
             this.lbl_p124.TabIndex = 6;
             this.lbl_p124.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p124, "Slot: 24");
+            this.hint.SetToolTip(this.lbl_p124, "Slot: 24");
             this.lbl_p124.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot24
@@ -3715,7 +3854,7 @@
             this.lbl_p425.Size = new System.Drawing.Size(94, 22);
             this.lbl_p425.TabIndex = 4;
             this.lbl_p425.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p425, "Slot: 25");
+            this.hint.SetToolTip(this.lbl_p425, "Slot: 25");
             this.lbl_p425.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p325
@@ -3729,7 +3868,7 @@
             this.lbl_p325.Size = new System.Drawing.Size(94, 22);
             this.lbl_p325.TabIndex = 3;
             this.lbl_p325.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p325, "Slot: 25");
+            this.hint.SetToolTip(this.lbl_p325, "Slot: 25");
             this.lbl_p325.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p225
@@ -3743,7 +3882,7 @@
             this.lbl_p225.Size = new System.Drawing.Size(94, 22);
             this.lbl_p225.TabIndex = 2;
             this.lbl_p225.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p225, "Slot: 25");
+            this.hint.SetToolTip(this.lbl_p225, "Slot: 25");
             this.lbl_p225.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_p125
@@ -3757,7 +3896,7 @@
             this.lbl_p125.Size = new System.Drawing.Size(94, 22);
             this.lbl_p125.TabIndex = 1;
             this.lbl_p125.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.slot.SetToolTip(this.lbl_p125, "Slot: 25");
+            this.hint.SetToolTip(this.lbl_p125, "Slot: 25");
             this.lbl_p125.Click += new System.EventHandler(this.slot_assign);
             // 
             // lbl_slot25
@@ -4003,6 +4142,1615 @@
             this.label10.Text = "         Message";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // tabSetting
+            // 
+            this.tabSetting.Controls.Add(this.groupBox34);
+            this.tabSetting.Controls.Add(this.groupBox32);
+            this.tabSetting.Controls.Add(this.groupBox31);
+            this.tabSetting.Controls.Add(this.groupBox16);
+            this.tabSetting.Location = new System.Drawing.Point(4, 33);
+            this.tabSetting.Margin = new System.Windows.Forms.Padding(0);
+            this.tabSetting.Name = "tabSetting";
+            this.tabSetting.Size = new System.Drawing.Size(965, 622);
+            this.tabSetting.TabIndex = 3;
+            this.tabSetting.Text = "  EFEM Setting  ";
+            this.tabSetting.UseVisualStyleBackColor = true;
+            // 
+            // groupBox34
+            // 
+            this.groupBox34.Controls.Add(this.groupBox38);
+            this.groupBox34.Controls.Add(this.groupBox39);
+            this.groupBox34.Controls.Add(this.groupBox41);
+            this.groupBox34.Controls.Add(this.groupBox42);
+            this.groupBox34.Controls.Add(this.groupBox43);
+            this.groupBox34.Location = new System.Drawing.Point(447, 407);
+            this.groupBox34.Name = "groupBox34";
+            this.groupBox34.Size = new System.Drawing.Size(510, 177);
+            this.groupBox34.TabIndex = 75;
+            this.groupBox34.TabStop = false;
+            this.groupBox34.Text = "E84 Mode";
+            // 
+            // groupBox38
+            // 
+            this.groupBox38.Controls.Add(this.label47);
+            this.groupBox38.Controls.Add(this.rbE84P2Manual);
+            this.groupBox38.Controls.Add(this.rbE84P2Auto);
+            this.groupBox38.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox38.Location = new System.Drawing.Point(10, 119);
+            this.groupBox38.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox38.Name = "groupBox38";
+            this.groupBox38.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox38.Size = new System.Drawing.Size(241, 44);
+            this.groupBox38.TabIndex = 76;
+            this.groupBox38.TabStop = false;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label47.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.White;
+            this.label47.Location = new System.Drawing.Point(7, 10);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(73, 23);
+            this.label47.TabIndex = 40;
+            this.label47.Text = "    Port 2";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // rbE84P2Manual
+            // 
+            this.rbE84P2Manual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbE84P2Manual.AutoSize = true;
+            this.rbE84P2Manual.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbE84P2Manual.Location = new System.Drawing.Point(151, 7);
+            this.rbE84P2Manual.Name = "rbE84P2Manual";
+            this.rbE84P2Manual.Size = new System.Drawing.Size(84, 31);
+            this.rbE84P2Manual.TabIndex = 71;
+            this.rbE84P2Manual.Text = "MANUAL";
+            this.hint.SetToolTip(this.rbE84P2Manual, "Controls E84 sequence only by TRANSREQ message.");
+            this.rbE84P2Manual.UseVisualStyleBackColor = true;
+            this.rbE84P2Manual.Click += new System.EventHandler(this.rbE84_Click);
+            // 
+            // rbE84P2Auto
+            // 
+            this.rbE84P2Auto.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbE84P2Auto.AutoSize = true;
+            this.rbE84P2Auto.Checked = true;
+            this.rbE84P2Auto.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbE84P2Auto.Location = new System.Drawing.Point(86, 7);
+            this.rbE84P2Auto.Name = "rbE84P2Auto";
+            this.rbE84P2Auto.Size = new System.Drawing.Size(60, 31);
+            this.rbE84P2Auto.TabIndex = 72;
+            this.rbE84P2Auto.TabStop = true;
+            this.rbE84P2Auto.Text = "AUTO";
+            this.rbE84P2Auto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbE84P2Auto, "Performs E84 sequence automatically.");
+            this.rbE84P2Auto.UseVisualStyleBackColor = true;
+            this.rbE84P2Auto.Click += new System.EventHandler(this.rbE84_Click);
+            // 
+            // groupBox39
+            // 
+            this.groupBox39.Controls.Add(this.label51);
+            this.groupBox39.Controls.Add(this.rbE84P4Manual);
+            this.groupBox39.Controls.Add(this.rbE84P4Auto);
+            this.groupBox39.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox39.Location = new System.Drawing.Point(258, 119);
+            this.groupBox39.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox39.Name = "groupBox39";
+            this.groupBox39.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox39.Size = new System.Drawing.Size(241, 44);
+            this.groupBox39.TabIndex = 76;
+            this.groupBox39.TabStop = false;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label51.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.Color.White;
+            this.label51.Location = new System.Drawing.Point(8, 10);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(73, 23);
+            this.label51.TabIndex = 40;
+            this.label51.Text = "    Port 4";
+            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // rbE84P4Manual
+            // 
+            this.rbE84P4Manual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbE84P4Manual.AutoSize = true;
+            this.rbE84P4Manual.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbE84P4Manual.Location = new System.Drawing.Point(150, 6);
+            this.rbE84P4Manual.Name = "rbE84P4Manual";
+            this.rbE84P4Manual.Size = new System.Drawing.Size(84, 31);
+            this.rbE84P4Manual.TabIndex = 71;
+            this.rbE84P4Manual.Text = "MANUAL";
+            this.hint.SetToolTip(this.rbE84P4Manual, "Controls E84 sequence only by TRANSREQ message.");
+            this.rbE84P4Manual.UseVisualStyleBackColor = true;
+            this.rbE84P4Manual.Click += new System.EventHandler(this.rbE84_Click);
+            // 
+            // rbE84P4Auto
+            // 
+            this.rbE84P4Auto.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbE84P4Auto.AutoSize = true;
+            this.rbE84P4Auto.Checked = true;
+            this.rbE84P4Auto.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbE84P4Auto.Location = new System.Drawing.Point(88, 6);
+            this.rbE84P4Auto.Name = "rbE84P4Auto";
+            this.rbE84P4Auto.Size = new System.Drawing.Size(60, 31);
+            this.rbE84P4Auto.TabIndex = 72;
+            this.rbE84P4Auto.TabStop = true;
+            this.rbE84P4Auto.Text = "AUTO";
+            this.rbE84P4Auto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbE84P4Auto, "Performs E84 sequence automatically.");
+            this.rbE84P4Auto.UseVisualStyleBackColor = true;
+            this.rbE84P4Auto.Click += new System.EventHandler(this.rbE84_Click);
+            // 
+            // groupBox41
+            // 
+            this.groupBox41.Controls.Add(this.label53);
+            this.groupBox41.Controls.Add(this.rbE84P1Manual);
+            this.groupBox41.Controls.Add(this.rbE84P1Auto);
+            this.groupBox41.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox41.Location = new System.Drawing.Point(10, 72);
+            this.groupBox41.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox41.Name = "groupBox41";
+            this.groupBox41.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox41.Size = new System.Drawing.Size(241, 44);
+            this.groupBox41.TabIndex = 76;
+            this.groupBox41.TabStop = false;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label53.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.White;
+            this.label53.Location = new System.Drawing.Point(7, 10);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(73, 23);
+            this.label53.TabIndex = 40;
+            this.label53.Text = "    Port 1";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // rbE84P1Manual
+            // 
+            this.rbE84P1Manual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbE84P1Manual.AutoSize = true;
+            this.rbE84P1Manual.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbE84P1Manual.Location = new System.Drawing.Point(151, 6);
+            this.rbE84P1Manual.Name = "rbE84P1Manual";
+            this.rbE84P1Manual.Size = new System.Drawing.Size(84, 31);
+            this.rbE84P1Manual.TabIndex = 71;
+            this.rbE84P1Manual.Text = "MANUAL";
+            this.hint.SetToolTip(this.rbE84P1Manual, "Controls E84 sequence only by TRANSREQ message.");
+            this.rbE84P1Manual.UseVisualStyleBackColor = true;
+            this.rbE84P1Manual.Click += new System.EventHandler(this.rbE84_Click);
+            // 
+            // rbE84P1Auto
+            // 
+            this.rbE84P1Auto.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbE84P1Auto.AutoSize = true;
+            this.rbE84P1Auto.Checked = true;
+            this.rbE84P1Auto.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbE84P1Auto.Location = new System.Drawing.Point(86, 7);
+            this.rbE84P1Auto.Name = "rbE84P1Auto";
+            this.rbE84P1Auto.Size = new System.Drawing.Size(60, 31);
+            this.rbE84P1Auto.TabIndex = 72;
+            this.rbE84P1Auto.TabStop = true;
+            this.rbE84P1Auto.Text = "AUTO";
+            this.rbE84P1Auto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbE84P1Auto, "Performs E84 sequence automatically.");
+            this.rbE84P1Auto.UseVisualStyleBackColor = true;
+            this.rbE84P1Auto.Click += new System.EventHandler(this.rbE84_Click);
+            // 
+            // groupBox42
+            // 
+            this.groupBox42.Controls.Add(this.label54);
+            this.groupBox42.Controls.Add(this.rbE84P3Manual);
+            this.groupBox42.Controls.Add(this.rbE84P3Auto);
+            this.groupBox42.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox42.Location = new System.Drawing.Point(258, 72);
+            this.groupBox42.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox42.Name = "groupBox42";
+            this.groupBox42.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox42.Size = new System.Drawing.Size(241, 44);
+            this.groupBox42.TabIndex = 76;
+            this.groupBox42.TabStop = false;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label54.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.White;
+            this.label54.Location = new System.Drawing.Point(9, 10);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(73, 23);
+            this.label54.TabIndex = 40;
+            this.label54.Text = "    Port 3";
+            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // rbE84P3Manual
+            // 
+            this.rbE84P3Manual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbE84P3Manual.AutoSize = true;
+            this.rbE84P3Manual.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbE84P3Manual.Location = new System.Drawing.Point(150, 6);
+            this.rbE84P3Manual.Name = "rbE84P3Manual";
+            this.rbE84P3Manual.Size = new System.Drawing.Size(84, 31);
+            this.rbE84P3Manual.TabIndex = 71;
+            this.rbE84P3Manual.Text = "MANUAL";
+            this.hint.SetToolTip(this.rbE84P3Manual, "Controls E84 sequence only by TRANSREQ message.");
+            this.rbE84P3Manual.UseVisualStyleBackColor = true;
+            this.rbE84P3Manual.Click += new System.EventHandler(this.rbE84_Click);
+            // 
+            // rbE84P3Auto
+            // 
+            this.rbE84P3Auto.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbE84P3Auto.AutoSize = true;
+            this.rbE84P3Auto.Checked = true;
+            this.rbE84P3Auto.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbE84P3Auto.Location = new System.Drawing.Point(88, 6);
+            this.rbE84P3Auto.Name = "rbE84P3Auto";
+            this.rbE84P3Auto.Size = new System.Drawing.Size(60, 31);
+            this.rbE84P3Auto.TabIndex = 72;
+            this.rbE84P3Auto.TabStop = true;
+            this.rbE84P3Auto.Text = "AUTO";
+            this.rbE84P3Auto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbE84P3Auto, "Performs E84 sequence automatically.");
+            this.rbE84P3Auto.UseVisualStyleBackColor = true;
+            this.rbE84P3Auto.Click += new System.EventHandler(this.rbE84_Click);
+            // 
+            // groupBox43
+            // 
+            this.groupBox43.Controls.Add(this.label55);
+            this.groupBox43.Controls.Add(this.rbE84AllManual);
+            this.groupBox43.Controls.Add(this.rbE84AllAuto);
+            this.groupBox43.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox43.Location = new System.Drawing.Point(10, 24);
+            this.groupBox43.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox43.Name = "groupBox43";
+            this.groupBox43.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox43.Size = new System.Drawing.Size(241, 44);
+            this.groupBox43.TabIndex = 76;
+            this.groupBox43.TabStop = false;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.ForestGreen;
+            this.label55.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.White;
+            this.label55.Location = new System.Drawing.Point(7, 10);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(73, 23);
+            this.label55.TabIndex = 40;
+            this.label55.Text = "         ALL";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // rbE84AllManual
+            // 
+            this.rbE84AllManual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbE84AllManual.AutoSize = true;
+            this.rbE84AllManual.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbE84AllManual.Location = new System.Drawing.Point(151, 7);
+            this.rbE84AllManual.Name = "rbE84AllManual";
+            this.rbE84AllManual.Size = new System.Drawing.Size(84, 31);
+            this.rbE84AllManual.TabIndex = 71;
+            this.rbE84AllManual.Text = "MANUAL";
+            this.hint.SetToolTip(this.rbE84AllManual, "Controls E84 sequence only by TRANSREQ message.");
+            this.rbE84AllManual.UseVisualStyleBackColor = true;
+            this.rbE84AllManual.Click += new System.EventHandler(this.rbE84_Click);
+            // 
+            // rbE84AllAuto
+            // 
+            this.rbE84AllAuto.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbE84AllAuto.AutoSize = true;
+            this.rbE84AllAuto.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbE84AllAuto.Location = new System.Drawing.Point(86, 7);
+            this.rbE84AllAuto.Name = "rbE84AllAuto";
+            this.rbE84AllAuto.Size = new System.Drawing.Size(60, 31);
+            this.rbE84AllAuto.TabIndex = 72;
+            this.rbE84AllAuto.Text = "AUTO";
+            this.rbE84AllAuto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbE84AllAuto, "Performs E84 sequence automatically.");
+            this.rbE84AllAuto.UseVisualStyleBackColor = true;
+            this.rbE84AllAuto.Click += new System.EventHandler(this.rbE84_Click);
+            // 
+            // groupBox32
+            // 
+            this.groupBox32.Controls.Add(this.btnSetSize);
+            this.groupBox32.Controls.Add(this.label42);
+            this.groupBox32.Controls.Add(this.cbSizeTarget);
+            this.groupBox32.Controls.Add(this.label50);
+            this.groupBox32.Controls.Add(this.rbSize300);
+            this.groupBox32.Controls.Add(this.rbSize200);
+            this.groupBox32.Controls.Add(this.rbSizeNone);
+            this.groupBox32.Controls.Add(this.rbSizeNa);
+            this.groupBox32.Location = new System.Drawing.Point(7, 407);
+            this.groupBox32.Name = "groupBox32";
+            this.groupBox32.Size = new System.Drawing.Size(436, 173);
+            this.groupBox32.TabIndex = 75;
+            this.groupBox32.TabStop = false;
+            this.groupBox32.Text = "Size setting";
+            // 
+            // btnSetSize
+            // 
+            this.btnSetSize.BackColor = System.Drawing.Color.Gold;
+            this.btnSetSize.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetSize.Location = new System.Drawing.Point(311, 106);
+            this.btnSetSize.Name = "btnSetSize";
+            this.btnSetSize.Size = new System.Drawing.Size(118, 50);
+            this.btnSetSize.TabIndex = 77;
+            this.btnSetSize.Text = "Set Size";
+            this.btnSetSize.UseVisualStyleBackColor = false;
+            this.btnSetSize.Click += new System.EventHandler(this.btnSetSize_Click);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label42.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.White;
+            this.label42.Location = new System.Drawing.Point(11, 75);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(154, 23);
+            this.label42.TabIndex = 79;
+            this.label42.Text = " Select a wafer size";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label42, "System I/O update event");
+            // 
+            // cbSizeTarget
+            // 
+            this.cbSizeTarget.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSizeTarget.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbSizeTarget.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSizeTarget.FormattingEnabled = true;
+            this.cbSizeTarget.Items.AddRange(new object[] {
+            "P1",
+            "P2",
+            "P3",
+            "P4",
+            "ALIGN1",
+            "ALIGN2",
+            "ARM1",
+            "ARM2",
+            "LLA",
+            "LLB",
+            "LLC",
+            "LLD"});
+            this.cbSizeTarget.Location = new System.Drawing.Point(184, 27);
+            this.cbSizeTarget.Name = "cbSizeTarget";
+            this.cbSizeTarget.Size = new System.Drawing.Size(245, 36);
+            this.cbSizeTarget.TabIndex = 77;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label50.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.White;
+            this.label50.Location = new System.Drawing.Point(8, 34);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(157, 23);
+            this.label50.TabIndex = 78;
+            this.label50.Text = "Designates a target";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label50, "System I/O update event");
+            // 
+            // rbSize300
+            // 
+            this.rbSize300.AutoSize = true;
+            this.rbSize300.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSize300.Location = new System.Drawing.Point(374, 75);
+            this.rbSize300.Name = "rbSize300";
+            this.rbSize300.Size = new System.Drawing.Size(55, 25);
+            this.rbSize300.TabIndex = 78;
+            this.rbSize300.Text = "300";
+            this.hint.SetToolTip(this.rbSize300, "300mm wafer(12’)");
+            this.rbSize300.UseVisualStyleBackColor = true;
+            // 
+            // rbSize200
+            // 
+            this.rbSize200.AutoSize = true;
+            this.rbSize200.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSize200.Location = new System.Drawing.Point(312, 75);
+            this.rbSize200.Name = "rbSize200";
+            this.rbSize200.Size = new System.Drawing.Size(55, 25);
+            this.rbSize200.TabIndex = 78;
+            this.rbSize200.Text = "200";
+            this.hint.SetToolTip(this.rbSize200, "200mm wafer(8’)");
+            this.rbSize200.UseVisualStyleBackColor = true;
+            // 
+            // rbSizeNone
+            // 
+            this.rbSizeNone.AutoSize = true;
+            this.rbSizeNone.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSizeNone.Location = new System.Drawing.Point(237, 75);
+            this.rbSizeNone.Name = "rbSizeNone";
+            this.rbSizeNone.Size = new System.Drawing.Size(69, 25);
+            this.rbSizeNone.TabIndex = 78;
+            this.rbSizeNone.Text = "NONE";
+            this.hint.SetToolTip(this.rbSizeNone, "No wafer");
+            this.rbSizeNone.UseVisualStyleBackColor = true;
+            // 
+            // rbSizeNa
+            // 
+            this.rbSizeNa.AutoSize = true;
+            this.rbSizeNa.Checked = true;
+            this.rbSizeNa.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSizeNa.Location = new System.Drawing.Point(178, 75);
+            this.rbSizeNa.Name = "rbSizeNa";
+            this.rbSizeNa.Size = new System.Drawing.Size(60, 25);
+            this.rbSizeNa.TabIndex = 77;
+            this.rbSizeNa.TabStop = true;
+            this.rbSizeNa.Text = "????";
+            this.hint.SetToolTip(this.rbSizeNa, "Size unknown");
+            this.rbSizeNa.UseVisualStyleBackColor = true;
+            // 
+            // groupBox31
+            // 
+            this.groupBox31.Controls.Add(this.groupBox30);
+            this.groupBox31.Controls.Add(this.groupBox15);
+            this.groupBox31.Location = new System.Drawing.Point(7, 182);
+            this.groupBox31.Name = "groupBox31";
+            this.groupBox31.Size = new System.Drawing.Size(905, 218);
+            this.groupBox31.TabIndex = 76;
+            this.groupBox31.TabStop = false;
+            this.groupBox31.Text = "Changes output status of signals";
+            // 
+            // groupBox30
+            // 
+            this.groupBox30.Controls.Add(this.rbSignalP4);
+            this.groupBox30.Controls.Add(this.rbSignalP3);
+            this.groupBox30.Controls.Add(this.rbSignalP2);
+            this.groupBox30.Controls.Add(this.rbSignalP1);
+            this.groupBox30.Controls.Add(this.groupBox33);
+            this.groupBox30.Controls.Add(this.groupBox36);
+            this.groupBox30.Controls.Add(this.groupBox37);
+            this.groupBox30.Location = new System.Drawing.Point(572, 11);
+            this.groupBox30.Name = "groupBox30";
+            this.groupBox30.Size = new System.Drawing.Size(317, 199);
+            this.groupBox30.TabIndex = 75;
+            this.groupBox30.TabStop = false;
+            this.groupBox30.Text = "Port";
+            // 
+            // rbSignalP4
+            // 
+            this.rbSignalP4.AutoSize = true;
+            this.rbSignalP4.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalP4.Location = new System.Drawing.Point(255, 25);
+            this.rbSignalP4.Name = "rbSignalP4";
+            this.rbSignalP4.Size = new System.Drawing.Size(46, 25);
+            this.rbSignalP4.TabIndex = 78;
+            this.rbSignalP4.Text = "P4";
+            this.hint.SetToolTip(this.rbSignalP4, "Port 4");
+            this.rbSignalP4.UseVisualStyleBackColor = true;
+            // 
+            // rbSignalP3
+            // 
+            this.rbSignalP3.AutoSize = true;
+            this.rbSignalP3.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalP3.Location = new System.Drawing.Point(203, 25);
+            this.rbSignalP3.Name = "rbSignalP3";
+            this.rbSignalP3.Size = new System.Drawing.Size(46, 25);
+            this.rbSignalP3.TabIndex = 78;
+            this.rbSignalP3.Text = "P3";
+            this.hint.SetToolTip(this.rbSignalP3, "Port 3");
+            this.rbSignalP3.UseVisualStyleBackColor = true;
+            // 
+            // rbSignalP2
+            // 
+            this.rbSignalP2.AutoSize = true;
+            this.rbSignalP2.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalP2.Location = new System.Drawing.Point(151, 25);
+            this.rbSignalP2.Name = "rbSignalP2";
+            this.rbSignalP2.Size = new System.Drawing.Size(46, 25);
+            this.rbSignalP2.TabIndex = 78;
+            this.rbSignalP2.Text = "P2";
+            this.hint.SetToolTip(this.rbSignalP2, "Port 2");
+            this.rbSignalP2.UseVisualStyleBackColor = true;
+            // 
+            // rbSignalP1
+            // 
+            this.rbSignalP1.AutoSize = true;
+            this.rbSignalP1.Checked = true;
+            this.rbSignalP1.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalP1.Location = new System.Drawing.Point(101, 25);
+            this.rbSignalP1.Name = "rbSignalP1";
+            this.rbSignalP1.Size = new System.Drawing.Size(46, 25);
+            this.rbSignalP1.TabIndex = 77;
+            this.rbSignalP1.TabStop = true;
+            this.rbSignalP1.Text = "P1";
+            this.hint.SetToolTip(this.rbSignalP1, "Port 1");
+            this.rbSignalP1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox33
+            // 
+            this.groupBox33.Controls.Add(this.label45);
+            this.groupBox33.Controls.Add(this.rbSignalUnLoadOn);
+            this.groupBox33.Controls.Add(this.rbSignalUnLoadBlink);
+            this.groupBox33.Controls.Add(this.rbSignalUnLoadOff);
+            this.groupBox33.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox33.Location = new System.Drawing.Point(18, 100);
+            this.groupBox33.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox33.Name = "groupBox33";
+            this.groupBox33.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox33.Size = new System.Drawing.Size(283, 44);
+            this.groupBox33.TabIndex = 76;
+            this.groupBox33.TabStop = false;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Goldenrod;
+            this.label45.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.White;
+            this.label45.Location = new System.Drawing.Point(7, 10);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(94, 23);
+            this.label45.TabIndex = 40;
+            this.label45.Text = "   UNLOAD ";
+            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label45, "UNLOAD indicator");
+            // 
+            // rbSignalUnLoadOn
+            // 
+            this.rbSignalUnLoadOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalUnLoadOn.AutoSize = true;
+            this.rbSignalUnLoadOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalUnLoadOn.Location = new System.Drawing.Point(164, 7);
+            this.rbSignalUnLoadOn.Name = "rbSignalUnLoadOn";
+            this.rbSignalUnLoadOn.Size = new System.Drawing.Size(46, 31);
+            this.rbSignalUnLoadOn.TabIndex = 71;
+            this.rbSignalUnLoadOn.Text = " ON";
+            this.hint.SetToolTip(this.rbSignalUnLoadOn, "turn on");
+            this.rbSignalUnLoadOn.UseVisualStyleBackColor = true;
+            this.rbSignalUnLoadOn.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalUnLoadBlink
+            // 
+            this.rbSignalUnLoadBlink.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalUnLoadBlink.AutoSize = true;
+            this.rbSignalUnLoadBlink.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalUnLoadBlink.Location = new System.Drawing.Point(216, 7);
+            this.rbSignalUnLoadBlink.Name = "rbSignalUnLoadBlink";
+            this.rbSignalUnLoadBlink.Size = new System.Drawing.Size(60, 31);
+            this.rbSignalUnLoadBlink.TabIndex = 72;
+            this.rbSignalUnLoadBlink.Text = "BLINK";
+            this.rbSignalUnLoadBlink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalUnLoadBlink, "shine intermittently ");
+            this.rbSignalUnLoadBlink.UseVisualStyleBackColor = true;
+            this.rbSignalUnLoadBlink.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalUnLoadOff
+            // 
+            this.rbSignalUnLoadOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalUnLoadOff.AutoSize = true;
+            this.rbSignalUnLoadOff.Checked = true;
+            this.rbSignalUnLoadOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalUnLoadOff.Location = new System.Drawing.Point(111, 7);
+            this.rbSignalUnLoadOff.Name = "rbSignalUnLoadOff";
+            this.rbSignalUnLoadOff.Size = new System.Drawing.Size(47, 31);
+            this.rbSignalUnLoadOff.TabIndex = 72;
+            this.rbSignalUnLoadOff.TabStop = true;
+            this.rbSignalUnLoadOff.Text = "OFF";
+            this.rbSignalUnLoadOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalUnLoadOff, "turn off");
+            this.rbSignalUnLoadOff.UseVisualStyleBackColor = true;
+            this.rbSignalUnLoadOff.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // groupBox36
+            // 
+            this.groupBox36.Controls.Add(this.label48);
+            this.groupBox36.Controls.Add(this.rbSignalLoadOn);
+            this.groupBox36.Controls.Add(this.rbSignalLoadBlink);
+            this.groupBox36.Controls.Add(this.rbSignalLoadOff);
+            this.groupBox36.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox36.Location = new System.Drawing.Point(18, 53);
+            this.groupBox36.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox36.Name = "groupBox36";
+            this.groupBox36.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox36.Size = new System.Drawing.Size(283, 44);
+            this.groupBox36.TabIndex = 76;
+            this.groupBox36.TabStop = false;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Green;
+            this.label48.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.White;
+            this.label48.Location = new System.Drawing.Point(7, 10);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(94, 23);
+            this.label48.TabIndex = 40;
+            this.label48.Text = "         LOAD ";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label48, "LOAD indicator");
+            // 
+            // rbSignalLoadOn
+            // 
+            this.rbSignalLoadOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalLoadOn.AutoSize = true;
+            this.rbSignalLoadOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalLoadOn.Location = new System.Drawing.Point(164, 7);
+            this.rbSignalLoadOn.Name = "rbSignalLoadOn";
+            this.rbSignalLoadOn.Size = new System.Drawing.Size(46, 31);
+            this.rbSignalLoadOn.TabIndex = 71;
+            this.rbSignalLoadOn.Text = " ON";
+            this.hint.SetToolTip(this.rbSignalLoadOn, "turn on");
+            this.rbSignalLoadOn.UseVisualStyleBackColor = true;
+            this.rbSignalLoadOn.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalLoadBlink
+            // 
+            this.rbSignalLoadBlink.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalLoadBlink.AutoSize = true;
+            this.rbSignalLoadBlink.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalLoadBlink.Location = new System.Drawing.Point(216, 7);
+            this.rbSignalLoadBlink.Name = "rbSignalLoadBlink";
+            this.rbSignalLoadBlink.Size = new System.Drawing.Size(60, 31);
+            this.rbSignalLoadBlink.TabIndex = 72;
+            this.rbSignalLoadBlink.Text = "BLINK";
+            this.rbSignalLoadBlink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalLoadBlink, "shine intermittently ");
+            this.rbSignalLoadBlink.UseVisualStyleBackColor = true;
+            this.rbSignalLoadBlink.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalLoadOff
+            // 
+            this.rbSignalLoadOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalLoadOff.AutoSize = true;
+            this.rbSignalLoadOff.Checked = true;
+            this.rbSignalLoadOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalLoadOff.Location = new System.Drawing.Point(111, 7);
+            this.rbSignalLoadOff.Name = "rbSignalLoadOff";
+            this.rbSignalLoadOff.Size = new System.Drawing.Size(47, 31);
+            this.rbSignalLoadOff.TabIndex = 72;
+            this.rbSignalLoadOff.TabStop = true;
+            this.rbSignalLoadOff.Text = "OFF";
+            this.rbSignalLoadOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalLoadOff, "turn off");
+            this.rbSignalLoadOff.UseVisualStyleBackColor = true;
+            this.rbSignalLoadOff.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // groupBox37
+            // 
+            this.groupBox37.Controls.Add(this.label49);
+            this.groupBox37.Controls.Add(this.rbSignalAccessOn);
+            this.groupBox37.Controls.Add(this.rbSignalAccessBlink);
+            this.groupBox37.Controls.Add(this.rbSignalAccessOff);
+            this.groupBox37.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox37.Location = new System.Drawing.Point(18, 148);
+            this.groupBox37.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox37.Name = "groupBox37";
+            this.groupBox37.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox37.Size = new System.Drawing.Size(283, 44);
+            this.groupBox37.TabIndex = 76;
+            this.groupBox37.TabStop = false;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.BackColor = System.Drawing.Color.White;
+            this.label49.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.DimGray;
+            this.label49.Location = new System.Drawing.Point(6, 9);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(95, 23);
+            this.label49.TabIndex = 40;
+            this.label49.Text = "OP ACCESS";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label49, "ACCESS SW indicator");
+            // 
+            // rbSignalAccessOn
+            // 
+            this.rbSignalAccessOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalAccessOn.AutoSize = true;
+            this.rbSignalAccessOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalAccessOn.Location = new System.Drawing.Point(164, 6);
+            this.rbSignalAccessOn.Name = "rbSignalAccessOn";
+            this.rbSignalAccessOn.Size = new System.Drawing.Size(46, 31);
+            this.rbSignalAccessOn.TabIndex = 71;
+            this.rbSignalAccessOn.Text = " ON";
+            this.hint.SetToolTip(this.rbSignalAccessOn, "turn on");
+            this.rbSignalAccessOn.UseVisualStyleBackColor = true;
+            this.rbSignalAccessOn.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalAccessBlink
+            // 
+            this.rbSignalAccessBlink.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalAccessBlink.AutoSize = true;
+            this.rbSignalAccessBlink.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalAccessBlink.Location = new System.Drawing.Point(216, 6);
+            this.rbSignalAccessBlink.Name = "rbSignalAccessBlink";
+            this.rbSignalAccessBlink.Size = new System.Drawing.Size(60, 31);
+            this.rbSignalAccessBlink.TabIndex = 72;
+            this.rbSignalAccessBlink.Text = "BLINK";
+            this.rbSignalAccessBlink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalAccessBlink, "shine intermittently ");
+            this.rbSignalAccessBlink.UseVisualStyleBackColor = true;
+            this.rbSignalAccessBlink.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalAccessOff
+            // 
+            this.rbSignalAccessOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalAccessOff.AutoSize = true;
+            this.rbSignalAccessOff.Checked = true;
+            this.rbSignalAccessOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalAccessOff.Location = new System.Drawing.Point(111, 6);
+            this.rbSignalAccessOff.Name = "rbSignalAccessOff";
+            this.rbSignalAccessOff.Size = new System.Drawing.Size(47, 31);
+            this.rbSignalAccessOff.TabIndex = 72;
+            this.rbSignalAccessOff.TabStop = true;
+            this.rbSignalAccessOff.Text = "OFF";
+            this.rbSignalAccessOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalAccessOff, "turn off");
+            this.rbSignalAccessOff.UseVisualStyleBackColor = true;
+            this.rbSignalAccessOff.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.groupBox20);
+            this.groupBox15.Controls.Add(this.groupBox23);
+            this.groupBox15.Controls.Add(this.groupBox29);
+            this.groupBox15.Controls.Add(this.groupBox26);
+            this.groupBox15.Controls.Add(this.groupBox27);
+            this.groupBox15.Controls.Add(this.groupBox28);
+            this.groupBox15.Location = new System.Drawing.Point(6, 26);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(557, 177);
+            this.groupBox15.TabIndex = 75;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Signal tower";
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.label31);
+            this.groupBox20.Controls.Add(this.rbSignalBuzzer2On);
+            this.groupBox20.Controls.Add(this.rbSignalBuzzer2Off);
+            this.groupBox20.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox20.Location = new System.Drawing.Point(286, 119);
+            this.groupBox20.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox20.Size = new System.Drawing.Size(259, 44);
+            this.groupBox20.TabIndex = 76;
+            this.groupBox20.TabStop = false;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label31.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(7, 10);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(83, 23);
+            this.label31.TabIndex = 40;
+            this.label31.Text = " BUZZER2";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label31, "Intermittent buzzer sound");
+            // 
+            // rbSignalBuzzer2On
+            // 
+            this.rbSignalBuzzer2On.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalBuzzer2On.AutoSize = true;
+            this.rbSignalBuzzer2On.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalBuzzer2On.Location = new System.Drawing.Point(146, 7);
+            this.rbSignalBuzzer2On.Name = "rbSignalBuzzer2On";
+            this.rbSignalBuzzer2On.Size = new System.Drawing.Size(46, 31);
+            this.rbSignalBuzzer2On.TabIndex = 71;
+            this.rbSignalBuzzer2On.Text = " ON";
+            this.hint.SetToolTip(this.rbSignalBuzzer2On, "turn on");
+            this.rbSignalBuzzer2On.UseVisualStyleBackColor = true;
+            this.rbSignalBuzzer2On.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalBuzzer2Off
+            // 
+            this.rbSignalBuzzer2Off.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalBuzzer2Off.AutoSize = true;
+            this.rbSignalBuzzer2Off.Checked = true;
+            this.rbSignalBuzzer2Off.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalBuzzer2Off.Location = new System.Drawing.Point(95, 7);
+            this.rbSignalBuzzer2Off.Name = "rbSignalBuzzer2Off";
+            this.rbSignalBuzzer2Off.Size = new System.Drawing.Size(47, 31);
+            this.rbSignalBuzzer2Off.TabIndex = 72;
+            this.rbSignalBuzzer2Off.TabStop = true;
+            this.rbSignalBuzzer2Off.Text = "OFF";
+            this.rbSignalBuzzer2Off.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalBuzzer2Off, "turn off");
+            this.rbSignalBuzzer2Off.UseVisualStyleBackColor = true;
+            this.rbSignalBuzzer2Off.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // groupBox23
+            // 
+            this.groupBox23.Controls.Add(this.label32);
+            this.groupBox23.Controls.Add(this.rbSignalYellowOn);
+            this.groupBox23.Controls.Add(this.rbSignalYellowBlink);
+            this.groupBox23.Controls.Add(this.rbSignalYellowOff);
+            this.groupBox23.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox23.Location = new System.Drawing.Point(18, 71);
+            this.groupBox23.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox23.Size = new System.Drawing.Size(259, 44);
+            this.groupBox23.TabIndex = 76;
+            this.groupBox23.TabStop = false;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Goldenrod;
+            this.label32.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(7, 10);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(82, 23);
+            this.label32.TabIndex = 40;
+            this.label32.Text = "  YELLOW";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label32, "Yellow");
+            // 
+            // rbSignalYellowOn
+            // 
+            this.rbSignalYellowOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalYellowOn.AutoSize = true;
+            this.rbSignalYellowOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalYellowOn.Location = new System.Drawing.Point(145, 7);
+            this.rbSignalYellowOn.Name = "rbSignalYellowOn";
+            this.rbSignalYellowOn.Size = new System.Drawing.Size(46, 31);
+            this.rbSignalYellowOn.TabIndex = 71;
+            this.rbSignalYellowOn.Text = " ON";
+            this.hint.SetToolTip(this.rbSignalYellowOn, "turn on");
+            this.rbSignalYellowOn.UseVisualStyleBackColor = true;
+            this.rbSignalYellowOn.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalYellowBlink
+            // 
+            this.rbSignalYellowBlink.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalYellowBlink.AutoSize = true;
+            this.rbSignalYellowBlink.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalYellowBlink.Location = new System.Drawing.Point(194, 7);
+            this.rbSignalYellowBlink.Name = "rbSignalYellowBlink";
+            this.rbSignalYellowBlink.Size = new System.Drawing.Size(60, 31);
+            this.rbSignalYellowBlink.TabIndex = 72;
+            this.rbSignalYellowBlink.Text = "BLINK";
+            this.rbSignalYellowBlink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalYellowBlink, "shine intermittently ");
+            this.rbSignalYellowBlink.UseVisualStyleBackColor = true;
+            this.rbSignalYellowBlink.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalYellowOff
+            // 
+            this.rbSignalYellowOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalYellowOff.AutoSize = true;
+            this.rbSignalYellowOff.Checked = true;
+            this.rbSignalYellowOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalYellowOff.Location = new System.Drawing.Point(95, 6);
+            this.rbSignalYellowOff.Name = "rbSignalYellowOff";
+            this.rbSignalYellowOff.Size = new System.Drawing.Size(47, 31);
+            this.rbSignalYellowOff.TabIndex = 72;
+            this.rbSignalYellowOff.TabStop = true;
+            this.rbSignalYellowOff.Text = "OFF";
+            this.rbSignalYellowOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalYellowOff, "turn off");
+            this.rbSignalYellowOff.UseVisualStyleBackColor = true;
+            this.rbSignalYellowOff.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // groupBox29
+            // 
+            this.groupBox29.Controls.Add(this.label39);
+            this.groupBox29.Controls.Add(this.rbSignalGreenOn);
+            this.groupBox29.Controls.Add(this.rbSignalGreenBlink);
+            this.groupBox29.Controls.Add(this.rbSignalGreenOff);
+            this.groupBox29.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox29.Location = new System.Drawing.Point(286, 24);
+            this.groupBox29.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox29.Name = "groupBox29";
+            this.groupBox29.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox29.Size = new System.Drawing.Size(259, 44);
+            this.groupBox29.TabIndex = 76;
+            this.groupBox29.TabStop = false;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Green;
+            this.label39.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.White;
+            this.label39.Location = new System.Drawing.Point(9, 10);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(82, 23);
+            this.label39.TabIndex = 40;
+            this.label39.Text = "     GREEN";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label39, "Green");
+            // 
+            // rbSignalGreenOn
+            // 
+            this.rbSignalGreenOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalGreenOn.AutoSize = true;
+            this.rbSignalGreenOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalGreenOn.Location = new System.Drawing.Point(146, 7);
+            this.rbSignalGreenOn.Name = "rbSignalGreenOn";
+            this.rbSignalGreenOn.Size = new System.Drawing.Size(46, 31);
+            this.rbSignalGreenOn.TabIndex = 71;
+            this.rbSignalGreenOn.Text = " ON";
+            this.hint.SetToolTip(this.rbSignalGreenOn, "turn on");
+            this.rbSignalGreenOn.UseVisualStyleBackColor = true;
+            this.rbSignalGreenOn.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalGreenBlink
+            // 
+            this.rbSignalGreenBlink.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalGreenBlink.AutoSize = true;
+            this.rbSignalGreenBlink.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalGreenBlink.Location = new System.Drawing.Point(194, 7);
+            this.rbSignalGreenBlink.Name = "rbSignalGreenBlink";
+            this.rbSignalGreenBlink.Size = new System.Drawing.Size(60, 31);
+            this.rbSignalGreenBlink.TabIndex = 72;
+            this.rbSignalGreenBlink.Text = "BLINK";
+            this.rbSignalGreenBlink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalGreenBlink, "shine intermittently ");
+            this.rbSignalGreenBlink.UseVisualStyleBackColor = true;
+            this.rbSignalGreenBlink.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalGreenOff
+            // 
+            this.rbSignalGreenOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalGreenOff.AutoSize = true;
+            this.rbSignalGreenOff.Checked = true;
+            this.rbSignalGreenOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalGreenOff.Location = new System.Drawing.Point(95, 7);
+            this.rbSignalGreenOff.Name = "rbSignalGreenOff";
+            this.rbSignalGreenOff.Size = new System.Drawing.Size(47, 31);
+            this.rbSignalGreenOff.TabIndex = 72;
+            this.rbSignalGreenOff.TabStop = true;
+            this.rbSignalGreenOff.Text = "OFF";
+            this.rbSignalGreenOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalGreenOff, "turn off");
+            this.rbSignalGreenOff.UseVisualStyleBackColor = true;
+            this.rbSignalGreenOff.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.Controls.Add(this.label33);
+            this.groupBox26.Controls.Add(this.rbSignalBlueOn);
+            this.groupBox26.Controls.Add(this.rbSignalBlueBlink);
+            this.groupBox26.Controls.Add(this.rbSignalBlueOff);
+            this.groupBox26.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox26.Location = new System.Drawing.Point(286, 71);
+            this.groupBox26.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox26.Size = new System.Drawing.Size(259, 44);
+            this.groupBox26.TabIndex = 76;
+            this.groupBox26.TabStop = false;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.MediumBlue;
+            this.label33.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(8, 10);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(81, 23);
+            this.label33.TabIndex = 40;
+            this.label33.Text = "        BLUE";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label33, "Blue");
+            // 
+            // rbSignalBlueOn
+            // 
+            this.rbSignalBlueOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalBlueOn.AutoSize = true;
+            this.rbSignalBlueOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalBlueOn.Location = new System.Drawing.Point(146, 6);
+            this.rbSignalBlueOn.Name = "rbSignalBlueOn";
+            this.rbSignalBlueOn.Size = new System.Drawing.Size(46, 31);
+            this.rbSignalBlueOn.TabIndex = 71;
+            this.rbSignalBlueOn.Text = " ON";
+            this.hint.SetToolTip(this.rbSignalBlueOn, "turn on");
+            this.rbSignalBlueOn.UseVisualStyleBackColor = true;
+            this.rbSignalBlueOn.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalBlueBlink
+            // 
+            this.rbSignalBlueBlink.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalBlueBlink.AutoSize = true;
+            this.rbSignalBlueBlink.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalBlueBlink.Location = new System.Drawing.Point(194, 6);
+            this.rbSignalBlueBlink.Name = "rbSignalBlueBlink";
+            this.rbSignalBlueBlink.Size = new System.Drawing.Size(60, 31);
+            this.rbSignalBlueBlink.TabIndex = 72;
+            this.rbSignalBlueBlink.Text = "BLINK";
+            this.rbSignalBlueBlink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalBlueBlink, "shine intermittently ");
+            this.rbSignalBlueBlink.UseVisualStyleBackColor = true;
+            this.rbSignalBlueBlink.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalBlueOff
+            // 
+            this.rbSignalBlueOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalBlueOff.AutoSize = true;
+            this.rbSignalBlueOff.Checked = true;
+            this.rbSignalBlueOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalBlueOff.Location = new System.Drawing.Point(95, 6);
+            this.rbSignalBlueOff.Name = "rbSignalBlueOff";
+            this.rbSignalBlueOff.Size = new System.Drawing.Size(47, 31);
+            this.rbSignalBlueOff.TabIndex = 72;
+            this.rbSignalBlueOff.TabStop = true;
+            this.rbSignalBlueOff.Text = "OFF";
+            this.rbSignalBlueOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalBlueOff, "turn off");
+            this.rbSignalBlueOff.UseVisualStyleBackColor = true;
+            this.rbSignalBlueOff.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // groupBox27
+            // 
+            this.groupBox27.Controls.Add(this.label34);
+            this.groupBox27.Controls.Add(this.rbSignalBuzzer1On);
+            this.groupBox27.Controls.Add(this.rbSignalBuzzer1Off);
+            this.groupBox27.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox27.Location = new System.Drawing.Point(18, 119);
+            this.groupBox27.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox27.Name = "groupBox27";
+            this.groupBox27.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox27.Size = new System.Drawing.Size(259, 44);
+            this.groupBox27.TabIndex = 76;
+            this.groupBox27.TabStop = false;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label34.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.White;
+            this.label34.Location = new System.Drawing.Point(8, 10);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(83, 23);
+            this.label34.TabIndex = 40;
+            this.label34.Text = " BUZZER1";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label34, "Continuous buzzer sound");
+            // 
+            // rbSignalBuzzer1On
+            // 
+            this.rbSignalBuzzer1On.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalBuzzer1On.AutoSize = true;
+            this.rbSignalBuzzer1On.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalBuzzer1On.Location = new System.Drawing.Point(145, 7);
+            this.rbSignalBuzzer1On.Name = "rbSignalBuzzer1On";
+            this.rbSignalBuzzer1On.Size = new System.Drawing.Size(46, 31);
+            this.rbSignalBuzzer1On.TabIndex = 71;
+            this.rbSignalBuzzer1On.Text = " ON";
+            this.hint.SetToolTip(this.rbSignalBuzzer1On, "turn on");
+            this.rbSignalBuzzer1On.UseVisualStyleBackColor = true;
+            this.rbSignalBuzzer1On.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalBuzzer1Off
+            // 
+            this.rbSignalBuzzer1Off.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalBuzzer1Off.AutoSize = true;
+            this.rbSignalBuzzer1Off.Checked = true;
+            this.rbSignalBuzzer1Off.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalBuzzer1Off.Location = new System.Drawing.Point(95, 7);
+            this.rbSignalBuzzer1Off.Name = "rbSignalBuzzer1Off";
+            this.rbSignalBuzzer1Off.Size = new System.Drawing.Size(47, 31);
+            this.rbSignalBuzzer1Off.TabIndex = 72;
+            this.rbSignalBuzzer1Off.TabStop = true;
+            this.rbSignalBuzzer1Off.Text = "OFF";
+            this.rbSignalBuzzer1Off.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalBuzzer1Off, "turn off");
+            this.rbSignalBuzzer1Off.UseVisualStyleBackColor = true;
+            this.rbSignalBuzzer1Off.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // groupBox28
+            // 
+            this.groupBox28.Controls.Add(this.label35);
+            this.groupBox28.Controls.Add(this.rbSignalRedOn);
+            this.groupBox28.Controls.Add(this.rbSignalRedBlink);
+            this.groupBox28.Controls.Add(this.rbSignalRedOff);
+            this.groupBox28.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox28.Location = new System.Drawing.Point(18, 24);
+            this.groupBox28.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox28.Name = "groupBox28";
+            this.groupBox28.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox28.Size = new System.Drawing.Size(259, 44);
+            this.groupBox28.TabIndex = 76;
+            this.groupBox28.TabStop = false;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Firebrick;
+            this.label35.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.White;
+            this.label35.Location = new System.Drawing.Point(7, 10);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(81, 23);
+            this.label35.TabIndex = 40;
+            this.label35.Text = "          RED";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label35, "Red");
+            // 
+            // rbSignalRedOn
+            // 
+            this.rbSignalRedOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalRedOn.AutoSize = true;
+            this.rbSignalRedOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalRedOn.Location = new System.Drawing.Point(145, 7);
+            this.rbSignalRedOn.Name = "rbSignalRedOn";
+            this.rbSignalRedOn.Size = new System.Drawing.Size(46, 31);
+            this.rbSignalRedOn.TabIndex = 71;
+            this.rbSignalRedOn.Text = " ON";
+            this.hint.SetToolTip(this.rbSignalRedOn, "turn on");
+            this.rbSignalRedOn.UseVisualStyleBackColor = true;
+            this.rbSignalRedOn.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalRedBlink
+            // 
+            this.rbSignalRedBlink.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalRedBlink.AutoSize = true;
+            this.rbSignalRedBlink.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalRedBlink.Location = new System.Drawing.Point(194, 7);
+            this.rbSignalRedBlink.Name = "rbSignalRedBlink";
+            this.rbSignalRedBlink.Size = new System.Drawing.Size(60, 31);
+            this.rbSignalRedBlink.TabIndex = 72;
+            this.rbSignalRedBlink.Text = "BLINK";
+            this.rbSignalRedBlink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalRedBlink, "shine intermittently ");
+            this.rbSignalRedBlink.UseVisualStyleBackColor = true;
+            this.rbSignalRedBlink.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // rbSignalRedOff
+            // 
+            this.rbSignalRedOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbSignalRedOff.AutoSize = true;
+            this.rbSignalRedOff.Checked = true;
+            this.rbSignalRedOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalRedOff.Location = new System.Drawing.Point(95, 7);
+            this.rbSignalRedOff.Name = "rbSignalRedOff";
+            this.rbSignalRedOff.Size = new System.Drawing.Size(47, 31);
+            this.rbSignalRedOff.TabIndex = 72;
+            this.rbSignalRedOff.TabStop = true;
+            this.rbSignalRedOff.Text = "OFF";
+            this.rbSignalRedOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalRedOff, "turn off");
+            this.rbSignalRedOff.UseVisualStyleBackColor = true;
+            this.rbSignalRedOff.Click += new System.EventHandler(this.rbSignal_Click);
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.groupBox25);
+            this.groupBox16.Controls.Add(this.groupBox19);
+            this.groupBox16.Controls.Add(this.groupBox22);
+            this.groupBox16.Controls.Add(this.groupBox24);
+            this.groupBox16.Controls.Add(this.groupBox18);
+            this.groupBox16.Controls.Add(this.groupBox21);
+            this.groupBox16.Controls.Add(this.groupBox17);
+            this.groupBox16.Location = new System.Drawing.Point(6, 3);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(804, 177);
+            this.groupBox16.TabIndex = 75;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Event setting";
+            // 
+            // groupBox25
+            // 
+            this.groupBox25.Controls.Add(this.label44);
+            this.groupBox25.Controls.Add(this.rbEvtFfuOn);
+            this.groupBox25.Controls.Add(this.rbEvtFfuOff);
+            this.groupBox25.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox25.Location = new System.Drawing.Point(536, 119);
+            this.groupBox25.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox25.Size = new System.Drawing.Size(241, 44);
+            this.groupBox25.TabIndex = 76;
+            this.groupBox25.TabStop = false;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label44.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.White;
+            this.label44.Location = new System.Drawing.Point(7, 10);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(124, 23);
+            this.label44.TabIndex = 40;
+            this.label44.Text = "                     FFU";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label44, "FFU revolution update event");
+            // 
+            // rbEvtFfuOn
+            // 
+            this.rbEvtFfuOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtFfuOn.AutoSize = true;
+            this.rbEvtFfuOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtFfuOn.Location = new System.Drawing.Point(188, 7);
+            this.rbEvtFfuOn.Name = "rbEvtFfuOn";
+            this.rbEvtFfuOn.Size = new System.Drawing.Size(46, 31);
+            this.rbEvtFfuOn.TabIndex = 71;
+            this.rbEvtFfuOn.Text = " ON";
+            this.hint.SetToolTip(this.rbEvtFfuOn, "Event is enabled");
+            this.rbEvtFfuOn.UseVisualStyleBackColor = true;
+            this.rbEvtFfuOn.Click += new System.EventHandler(this.rbEvt_Click);
+            // 
+            // rbEvtFfuOff
+            // 
+            this.rbEvtFfuOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtFfuOff.AutoSize = true;
+            this.rbEvtFfuOff.Checked = true;
+            this.rbEvtFfuOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtFfuOff.Location = new System.Drawing.Point(138, 7);
+            this.rbEvtFfuOff.Name = "rbEvtFfuOff";
+            this.rbEvtFfuOff.Size = new System.Drawing.Size(47, 31);
+            this.rbEvtFfuOff.TabIndex = 72;
+            this.rbEvtFfuOff.TabStop = true;
+            this.rbEvtFfuOff.Text = "OFF";
+            this.rbEvtFfuOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbEvtFfuOff, "Event is disabled");
+            this.rbEvtFfuOff.UseVisualStyleBackColor = true;
+            this.rbEvtFfuOff.Click += new System.EventHandler(this.rbEvt_Click);
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.label38);
+            this.groupBox19.Controls.Add(this.rbEvtTransOn);
+            this.groupBox19.Controls.Add(this.rbEvtTransOff);
+            this.groupBox19.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox19.Location = new System.Drawing.Point(18, 119);
+            this.groupBox19.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox19.Size = new System.Drawing.Size(241, 44);
+            this.groupBox19.TabIndex = 76;
+            this.groupBox19.TabStop = false;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label38.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.White;
+            this.label38.Location = new System.Drawing.Point(7, 10);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(125, 23);
+            this.label38.TabIndex = 40;
+            this.label38.Text = "        TRANSREQ";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label38, "E84 automatic transfer start event");
+            // 
+            // rbEvtTransOn
+            // 
+            this.rbEvtTransOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtTransOn.AutoSize = true;
+            this.rbEvtTransOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtTransOn.Location = new System.Drawing.Point(189, 7);
+            this.rbEvtTransOn.Name = "rbEvtTransOn";
+            this.rbEvtTransOn.Size = new System.Drawing.Size(46, 31);
+            this.rbEvtTransOn.TabIndex = 71;
+            this.rbEvtTransOn.Text = " ON";
+            this.hint.SetToolTip(this.rbEvtTransOn, "Event is enabled");
+            this.rbEvtTransOn.UseVisualStyleBackColor = true;
+            this.rbEvtTransOn.Click += new System.EventHandler(this.rbEvt_Click);
+            // 
+            // rbEvtTransOff
+            // 
+            this.rbEvtTransOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtTransOff.AutoSize = true;
+            this.rbEvtTransOff.Checked = true;
+            this.rbEvtTransOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtTransOff.Location = new System.Drawing.Point(138, 7);
+            this.rbEvtTransOff.Name = "rbEvtTransOff";
+            this.rbEvtTransOff.Size = new System.Drawing.Size(47, 31);
+            this.rbEvtTransOff.TabIndex = 72;
+            this.rbEvtTransOff.TabStop = true;
+            this.rbEvtTransOff.Text = "OFF";
+            this.rbEvtTransOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbEvtTransOff, "Event is disabled");
+            this.rbEvtTransOff.UseVisualStyleBackColor = true;
+            this.rbEvtTransOff.Click += new System.EventHandler(this.rbEvt_Click);
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.label41);
+            this.groupBox22.Controls.Add(this.rbEvtPortOn);
+            this.groupBox22.Controls.Add(this.rbEvtPortOff);
+            this.groupBox22.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox22.Location = new System.Drawing.Point(276, 119);
+            this.groupBox22.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox22.Size = new System.Drawing.Size(241, 44);
+            this.groupBox22.TabIndex = 76;
+            this.groupBox22.TabStop = false;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label41.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.White;
+            this.label41.Location = new System.Drawing.Point(8, 10);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(124, 23);
+            this.label41.TabIndex = 40;
+            this.label41.Text = "                  PORT";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label41, "Port I/O update event");
+            // 
+            // rbEvtPortOn
+            // 
+            this.rbEvtPortOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtPortOn.AutoSize = true;
+            this.rbEvtPortOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtPortOn.Location = new System.Drawing.Point(188, 7);
+            this.rbEvtPortOn.Name = "rbEvtPortOn";
+            this.rbEvtPortOn.Size = new System.Drawing.Size(46, 31);
+            this.rbEvtPortOn.TabIndex = 71;
+            this.rbEvtPortOn.Text = " ON";
+            this.hint.SetToolTip(this.rbEvtPortOn, "Event is enabled");
+            this.rbEvtPortOn.UseVisualStyleBackColor = true;
+            this.rbEvtPortOn.Click += new System.EventHandler(this.rbEvt_Click);
+            // 
+            // rbEvtPortOff
+            // 
+            this.rbEvtPortOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtPortOff.AutoSize = true;
+            this.rbEvtPortOff.Checked = true;
+            this.rbEvtPortOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtPortOff.Location = new System.Drawing.Point(138, 7);
+            this.rbEvtPortOff.Name = "rbEvtPortOff";
+            this.rbEvtPortOff.Size = new System.Drawing.Size(47, 31);
+            this.rbEvtPortOff.TabIndex = 72;
+            this.rbEvtPortOff.TabStop = true;
+            this.rbEvtPortOff.Text = "OFF";
+            this.rbEvtPortOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbEvtPortOff, "Event is disabled");
+            this.rbEvtPortOff.UseVisualStyleBackColor = true;
+            this.rbEvtPortOff.Click += new System.EventHandler(this.rbEvt_Click);
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.Controls.Add(this.label43);
+            this.groupBox24.Controls.Add(this.rbEvtPrsOn);
+            this.groupBox24.Controls.Add(this.rbEvtPrsOff);
+            this.groupBox24.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox24.Location = new System.Drawing.Point(536, 72);
+            this.groupBox24.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox24.Size = new System.Drawing.Size(241, 44);
+            this.groupBox24.TabIndex = 76;
+            this.groupBox24.TabStop = false;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label43.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.White;
+            this.label43.Location = new System.Drawing.Point(8, 10);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(123, 23);
+            this.label43.TabIndex = 40;
+            this.label43.Text = "                     PRS";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label43, "Pressure sensor measured value update event");
+            // 
+            // rbEvtPrsOn
+            // 
+            this.rbEvtPrsOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtPrsOn.AutoSize = true;
+            this.rbEvtPrsOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtPrsOn.Location = new System.Drawing.Point(188, 7);
+            this.rbEvtPrsOn.Name = "rbEvtPrsOn";
+            this.rbEvtPrsOn.Size = new System.Drawing.Size(46, 31);
+            this.rbEvtPrsOn.TabIndex = 71;
+            this.rbEvtPrsOn.Text = " ON";
+            this.hint.SetToolTip(this.rbEvtPrsOn, "Event is enabled");
+            this.rbEvtPrsOn.UseVisualStyleBackColor = true;
+            this.rbEvtPrsOn.Click += new System.EventHandler(this.rbEvt_Click);
+            // 
+            // rbEvtPrsOff
+            // 
+            this.rbEvtPrsOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtPrsOff.AutoSize = true;
+            this.rbEvtPrsOff.Checked = true;
+            this.rbEvtPrsOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtPrsOff.Location = new System.Drawing.Point(138, 7);
+            this.rbEvtPrsOff.Name = "rbEvtPrsOff";
+            this.rbEvtPrsOff.Size = new System.Drawing.Size(47, 31);
+            this.rbEvtPrsOff.TabIndex = 72;
+            this.rbEvtPrsOff.TabStop = true;
+            this.rbEvtPrsOff.Text = "OFF";
+            this.rbEvtPrsOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbEvtPrsOff, "Event is disabled");
+            this.rbEvtPrsOff.UseVisualStyleBackColor = true;
+            this.rbEvtPrsOff.Click += new System.EventHandler(this.rbEvt_Click);
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.label37);
+            this.groupBox18.Controls.Add(this.rbEvtMapdtOn);
+            this.groupBox18.Controls.Add(this.rbEvtMapdtOff);
+            this.groupBox18.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox18.Location = new System.Drawing.Point(18, 72);
+            this.groupBox18.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox18.Size = new System.Drawing.Size(241, 44);
+            this.groupBox18.TabIndex = 76;
+            this.groupBox18.TabStop = false;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label37.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.White;
+            this.label37.Location = new System.Drawing.Point(7, 10);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(124, 23);
+            this.label37.TabIndex = 40;
+            this.label37.Text = "              MAPDT";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label37, "Mapping result event");
+            // 
+            // rbEvtMapdtOn
+            // 
+            this.rbEvtMapdtOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtMapdtOn.AutoSize = true;
+            this.rbEvtMapdtOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtMapdtOn.Location = new System.Drawing.Point(189, 7);
+            this.rbEvtMapdtOn.Name = "rbEvtMapdtOn";
+            this.rbEvtMapdtOn.Size = new System.Drawing.Size(46, 31);
+            this.rbEvtMapdtOn.TabIndex = 71;
+            this.rbEvtMapdtOn.Text = " ON";
+            this.hint.SetToolTip(this.rbEvtMapdtOn, "Event is enabled");
+            this.rbEvtMapdtOn.UseVisualStyleBackColor = true;
+            this.rbEvtMapdtOn.Click += new System.EventHandler(this.rbEvt_Click);
+            // 
+            // rbEvtMapdtOff
+            // 
+            this.rbEvtMapdtOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtMapdtOff.AutoSize = true;
+            this.rbEvtMapdtOff.Checked = true;
+            this.rbEvtMapdtOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtMapdtOff.Location = new System.Drawing.Point(138, 7);
+            this.rbEvtMapdtOff.Name = "rbEvtMapdtOff";
+            this.rbEvtMapdtOff.Size = new System.Drawing.Size(47, 31);
+            this.rbEvtMapdtOff.TabIndex = 72;
+            this.rbEvtMapdtOff.TabStop = true;
+            this.rbEvtMapdtOff.Text = "OFF";
+            this.rbEvtMapdtOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbEvtMapdtOff, "Event is disabled");
+            this.rbEvtMapdtOff.UseVisualStyleBackColor = true;
+            this.rbEvtMapdtOff.Click += new System.EventHandler(this.rbEvt_Click);
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.label40);
+            this.groupBox21.Controls.Add(this.rbEvtSysOn);
+            this.groupBox21.Controls.Add(this.rbEvtSysOff);
+            this.groupBox21.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox21.Location = new System.Drawing.Point(276, 72);
+            this.groupBox21.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox21.Size = new System.Drawing.Size(241, 44);
+            this.groupBox21.TabIndex = 76;
+            this.groupBox21.TabStop = false;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label40.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.White;
+            this.label40.Location = new System.Drawing.Point(9, 10);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(123, 23);
+            this.label40.TabIndex = 40;
+            this.label40.Text = "             SYSTEM";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label40, "System I/O update event");
+            // 
+            // rbEvtSysOn
+            // 
+            this.rbEvtSysOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtSysOn.AutoSize = true;
+            this.rbEvtSysOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtSysOn.Location = new System.Drawing.Point(188, 7);
+            this.rbEvtSysOn.Name = "rbEvtSysOn";
+            this.rbEvtSysOn.Size = new System.Drawing.Size(46, 31);
+            this.rbEvtSysOn.TabIndex = 71;
+            this.rbEvtSysOn.Text = " ON";
+            this.hint.SetToolTip(this.rbEvtSysOn, "Event is enabled");
+            this.rbEvtSysOn.UseVisualStyleBackColor = true;
+            this.rbEvtSysOn.Click += new System.EventHandler(this.rbEvt_Click);
+            // 
+            // rbEvtSysOff
+            // 
+            this.rbEvtSysOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtSysOff.AutoSize = true;
+            this.rbEvtSysOff.Checked = true;
+            this.rbEvtSysOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtSysOff.Location = new System.Drawing.Point(138, 7);
+            this.rbEvtSysOff.Name = "rbEvtSysOff";
+            this.rbEvtSysOff.Size = new System.Drawing.Size(47, 31);
+            this.rbEvtSysOff.TabIndex = 72;
+            this.rbEvtSysOff.TabStop = true;
+            this.rbEvtSysOff.Text = "OFF";
+            this.rbEvtSysOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbEvtSysOff, "Event is disabled");
+            this.rbEvtSysOff.UseVisualStyleBackColor = true;
+            this.rbEvtSysOff.Click += new System.EventHandler(this.rbEvt_Click);
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.label36);
+            this.groupBox17.Controls.Add(this.rbEvtAllOn);
+            this.groupBox17.Controls.Add(this.rbEvtAllOff);
+            this.groupBox17.Font = new System.Drawing.Font("Calibri", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox17.Location = new System.Drawing.Point(18, 24);
+            this.groupBox17.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox17.Size = new System.Drawing.Size(241, 44);
+            this.groupBox17.TabIndex = 76;
+            this.groupBox17.TabStop = false;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.ForestGreen;
+            this.label36.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(7, 10);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(125, 23);
+            this.label36.TabIndex = 40;
+            this.label36.Text = "                      ALL";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label36, "All events (cannot be designated for GET)");
+            // 
+            // rbEvtAllOn
+            // 
+            this.rbEvtAllOn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtAllOn.AutoSize = true;
+            this.rbEvtAllOn.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtAllOn.Location = new System.Drawing.Point(189, 7);
+            this.rbEvtAllOn.Name = "rbEvtAllOn";
+            this.rbEvtAllOn.Size = new System.Drawing.Size(46, 31);
+            this.rbEvtAllOn.TabIndex = 71;
+            this.rbEvtAllOn.Text = " ON";
+            this.hint.SetToolTip(this.rbEvtAllOn, "Event is enabled");
+            this.rbEvtAllOn.UseVisualStyleBackColor = true;
+            this.rbEvtAllOn.Click += new System.EventHandler(this.rbEvtAllOn_Click);
+            // 
+            // rbEvtAllOff
+            // 
+            this.rbEvtAllOff.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbEvtAllOff.AutoSize = true;
+            this.rbEvtAllOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEvtAllOff.Location = new System.Drawing.Point(138, 7);
+            this.rbEvtAllOff.Name = "rbEvtAllOff";
+            this.rbEvtAllOff.Size = new System.Drawing.Size(47, 31);
+            this.rbEvtAllOff.TabIndex = 72;
+            this.rbEvtAllOff.Text = "OFF";
+            this.rbEvtAllOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbEvtAllOff, "Event is disabled");
+            this.rbEvtAllOff.UseVisualStyleBackColor = true;
+            this.rbEvtAllOff.Click += new System.EventHandler(this.rbEvtAllOff_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4054,6 +5802,57 @@
             this.tabInfo.ResumeLayout(false);
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
+            this.tabSetting.ResumeLayout(false);
+            this.groupBox34.ResumeLayout(false);
+            this.groupBox38.ResumeLayout(false);
+            this.groupBox38.PerformLayout();
+            this.groupBox39.ResumeLayout(false);
+            this.groupBox39.PerformLayout();
+            this.groupBox41.ResumeLayout(false);
+            this.groupBox41.PerformLayout();
+            this.groupBox42.ResumeLayout(false);
+            this.groupBox42.PerformLayout();
+            this.groupBox43.ResumeLayout(false);
+            this.groupBox43.PerformLayout();
+            this.groupBox32.ResumeLayout(false);
+            this.groupBox32.PerformLayout();
+            this.groupBox31.ResumeLayout(false);
+            this.groupBox30.ResumeLayout(false);
+            this.groupBox30.PerformLayout();
+            this.groupBox33.ResumeLayout(false);
+            this.groupBox33.PerformLayout();
+            this.groupBox36.ResumeLayout(false);
+            this.groupBox36.PerformLayout();
+            this.groupBox37.ResumeLayout(false);
+            this.groupBox37.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
+            this.groupBox23.ResumeLayout(false);
+            this.groupBox23.PerformLayout();
+            this.groupBox29.ResumeLayout(false);
+            this.groupBox29.PerformLayout();
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox26.PerformLayout();
+            this.groupBox27.ResumeLayout(false);
+            this.groupBox27.PerformLayout();
+            this.groupBox28.ResumeLayout(false);
+            this.groupBox28.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox25.ResumeLayout(false);
+            this.groupBox25.PerformLayout();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox22.PerformLayout();
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox24.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4271,7 +6070,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ToolTip slot;
+        private System.Windows.Forms.ToolTip hint;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Label label28;
@@ -4324,6 +6123,116 @@
         private System.Windows.Forms.TextBox tbRecoverMethod;
         private System.Windows.Forms.TextBox tbErrPosDecs;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TabPage tabSetting;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.RadioButton rbEvtAllOn;
+        private System.Windows.Forms.RadioButton rbEvtAllOff;
+        private System.Windows.Forms.GroupBox groupBox25;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.RadioButton rbEvtFfuOn;
+        private System.Windows.Forms.RadioButton rbEvtFfuOff;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.RadioButton rbEvtTransOn;
+        private System.Windows.Forms.RadioButton rbEvtTransOff;
+        private System.Windows.Forms.GroupBox groupBox22;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.RadioButton rbEvtPortOn;
+        private System.Windows.Forms.RadioButton rbEvtPortOff;
+        private System.Windows.Forms.GroupBox groupBox24;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.RadioButton rbEvtPrsOn;
+        private System.Windows.Forms.RadioButton rbEvtPrsOff;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.RadioButton rbEvtMapdtOn;
+        private System.Windows.Forms.RadioButton rbEvtMapdtOff;
+        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.RadioButton rbEvtSysOn;
+        private System.Windows.Forms.RadioButton rbEvtSysOff;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.RadioButton rbSignalBuzzer2On;
+        private System.Windows.Forms.RadioButton rbSignalBuzzer2Off;
+        private System.Windows.Forms.GroupBox groupBox23;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.RadioButton rbSignalYellowOn;
+        private System.Windows.Forms.RadioButton rbSignalYellowOff;
+        private System.Windows.Forms.GroupBox groupBox26;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.RadioButton rbSignalBlueOn;
+        private System.Windows.Forms.RadioButton rbSignalBlueOff;
+        private System.Windows.Forms.GroupBox groupBox27;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.RadioButton rbSignalBuzzer1On;
+        private System.Windows.Forms.RadioButton rbSignalBuzzer1Off;
+        private System.Windows.Forms.GroupBox groupBox28;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.RadioButton rbSignalRedOn;
+        private System.Windows.Forms.RadioButton rbSignalRedOff;
+        private System.Windows.Forms.GroupBox groupBox29;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.RadioButton rbSignalGreenOn;
+        private System.Windows.Forms.RadioButton rbSignalGreenOff;
+        private System.Windows.Forms.GroupBox groupBox31;
+        private System.Windows.Forms.RadioButton rbSignalYellowBlink;
+        private System.Windows.Forms.RadioButton rbSignalBlueBlink;
+        private System.Windows.Forms.RadioButton rbSignalRedBlink;
+        private System.Windows.Forms.RadioButton rbSignalGreenBlink;
+        private System.Windows.Forms.GroupBox groupBox30;
+        private System.Windows.Forms.GroupBox groupBox33;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.RadioButton rbSignalUnLoadOn;
+        private System.Windows.Forms.RadioButton rbSignalUnLoadBlink;
+        private System.Windows.Forms.RadioButton rbSignalUnLoadOff;
+        private System.Windows.Forms.GroupBox groupBox36;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.RadioButton rbSignalLoadOn;
+        private System.Windows.Forms.RadioButton rbSignalLoadBlink;
+        private System.Windows.Forms.RadioButton rbSignalLoadOff;
+        private System.Windows.Forms.GroupBox groupBox37;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.RadioButton rbSignalAccessOn;
+        private System.Windows.Forms.RadioButton rbSignalAccessBlink;
+        private System.Windows.Forms.RadioButton rbSignalAccessOff;
+        private System.Windows.Forms.RadioButton rbSignalP4;
+        private System.Windows.Forms.RadioButton rbSignalP3;
+        private System.Windows.Forms.RadioButton rbSignalP2;
+        private System.Windows.Forms.RadioButton rbSignalP1;
+        private System.Windows.Forms.GroupBox groupBox32;
+        private System.Windows.Forms.Button btnSetSize;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.ComboBox cbSizeTarget;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.RadioButton rbSize300;
+        private System.Windows.Forms.RadioButton rbSize200;
+        private System.Windows.Forms.RadioButton rbSizeNone;
+        private System.Windows.Forms.RadioButton rbSizeNa;
+        private System.Windows.Forms.GroupBox groupBox34;
+        private System.Windows.Forms.GroupBox groupBox38;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.RadioButton rbE84P2Manual;
+        private System.Windows.Forms.RadioButton rbE84P2Auto;
+        private System.Windows.Forms.GroupBox groupBox39;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.RadioButton rbE84P4Manual;
+        private System.Windows.Forms.RadioButton rbE84P4Auto;
+        private System.Windows.Forms.GroupBox groupBox41;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.RadioButton rbE84P1Manual;
+        private System.Windows.Forms.RadioButton rbE84P1Auto;
+        private System.Windows.Forms.GroupBox groupBox42;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.RadioButton rbE84P3Manual;
+        private System.Windows.Forms.RadioButton rbE84P3Auto;
+        private System.Windows.Forms.GroupBox groupBox43;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.RadioButton rbE84AllManual;
+        private System.Windows.Forms.RadioButton rbE84AllAuto;
     }
 }
 

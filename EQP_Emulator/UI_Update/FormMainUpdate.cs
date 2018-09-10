@@ -166,10 +166,12 @@ namespace EQP_Emulator.UI_Update
             {
                 Form form = Application.OpenForms["frmMain"];
                 RichTextBox W;
+                TabControl tabMode;
                 if (form == null)
                     return;
 
                 W = form.Controls.Find("rtbMsg", true).FirstOrDefault() as RichTextBox;
+                tabMode = form.Controls.Find("tabMode", true).FirstOrDefault() as TabControl;
                 
                 if (W == null)
                     return;
@@ -192,6 +194,8 @@ namespace EQP_Emulator.UI_Update
                         W.SelectedText = "";
                     }
                     W.ScrollToCaret();
+                    if (tabMode.SelectedIndex != 0)
+                        tabMode.SelectedIndex = 0;
                 }
             }
             catch
