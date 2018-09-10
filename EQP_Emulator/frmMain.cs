@@ -1583,5 +1583,74 @@ namespace EQP_Emulator
             string cmd = "SET:MODE/" + device + "/" + setting + ";";
             this.sendCommand(cmd);
         }
+
+        private void btnStateRefresh_Click(object sender, EventArgs e)
+        {
+            //dummy data
+            string version = "1.0.0.1(2018-01-01)";
+            string track = "200/NONE/????";
+            string prsn = "SNO1|STATUS1,SNO2|STATUS2,SNO3|STATUS3,SNO4|STATUS4,SNO5|STATUS5,SNO6|STATUS6,SNO7|STATUS7,SNO8|STATUS8";
+            string ffun = "FNO1|STATUS1,FNO2|STATUS2,FNO3|STATUS3,FNO4|STATUS4,FNO5|STATUS5,FNO6|STATUS6,FNO7|STATUS7,FNO8|STATUS8,FNO9|STATUS9,FNO10|STATUS10," +
+                          "FNO11|STATUS11,FNO12|STATUS12,FNO13|STATUS13,FNO14|STATUS14,FNO15|STATUS15,FNO16|STATUS16,FNO17|STATUS17,FNO18|STATUS18,FNO19|STATUS19,FNO20|STATUS20";
+            //parse data
+            EFEM.parseFFUn(ffun);
+            EFEM.parsePRSn(prsn);
+            EFEM.VER = version;
+            //check track string format
+            EFEM.TRACK = (track.Replace("/","").Length == track.Length - 2) ? track.Split('/'): new string[3];
+
+            //update GUI
+            this.tbStateVer.Text = EFEM.VER;
+
+            this.tbStateTrack1.Text = EFEM.TRACK[0];
+            this.tbStateTrack2.Text = EFEM.TRACK[1];
+            this.tbStateTrack3.Text = EFEM.TRACK[2];
+
+            this.tbStatePrs1.Text = EFEM.PRSn[0];
+            this.tbStatePrs2.Text = EFEM.PRSn[1];
+            this.tbStatePrs3.Text = EFEM.PRSn[2];
+            this.tbStatePrs4.Text = EFEM.PRSn[3];
+            this.tbStatePrs5.Text = EFEM.PRSn[4];
+            this.tbStatePrs6.Text = EFEM.PRSn[5];
+            this.tbStatePrs7.Text = EFEM.PRSn[6];
+            this.tbStatePrs8.Text = EFEM.PRSn[7];
+
+            this.tbStateFFU1.Text = EFEM.FFUn[0];
+            this.tbStateFFU2.Text = EFEM.FFUn[1];
+            this.tbStateFFU3.Text = EFEM.FFUn[2];
+            this.tbStateFFU4.Text = EFEM.FFUn[3];
+            this.tbStateFFU5.Text = EFEM.FFUn[4];
+            this.tbStateFFU6.Text = EFEM.FFUn[5];
+            this.tbStateFFU7.Text = EFEM.FFUn[6];
+            this.tbStateFFU8.Text = EFEM.FFUn[7];
+            this.tbStateFFU9.Text = EFEM.FFUn[8];
+            this.tbStateFFU10.Text = EFEM.FFUn[9];
+            this.tbStateFFU11.Text = EFEM.FFUn[10];
+            this.tbStateFFU12.Text = EFEM.FFUn[11];
+            this.tbStateFFU13.Text = EFEM.FFUn[12];
+            this.tbStateFFU14.Text = EFEM.FFUn[13];
+            this.tbStateFFU15.Text = EFEM.FFUn[14];
+            this.tbStateFFU16.Text = EFEM.FFUn[15];
+            this.tbStateFFU17.Text = EFEM.FFUn[16];
+            this.tbStateFFU18.Text = EFEM.FFUn[17];
+            this.tbStateFFU19.Text = EFEM.FFUn[18];
+            this.tbStateFFU20.Text = EFEM.FFUn[19];
+
+        }
+
+        private void btnErrorRefresh_Click(object sender, EventArgs e)
+        {
+            //dummy data
+            string inf = "INF:ERROR/CLAMPON/ROBOT1_ARM1;";
+            string error = inf.Replace("INF:ERROR/", "").Replace(";","");
+
+            //check track string format
+            EFEM.Error = (error.Replace("/", "").Length == error.Length - 1) ? error.Split('/') : new string[2];
+
+            //update GUI
+            cbErrMsg.SelectedItem = EFEM.Error[0];
+            cbErrPos.SelectedItem = EFEM.Error[1];
+
+        }
     }
 }

@@ -286,7 +286,7 @@
             this.rbNeedPMNo = new System.Windows.Forms.RadioButton();
             this.rbNeedPMYes = new System.Windows.Forms.RadioButton();
             this.label30 = new System.Windows.Forms.Label();
-            this.btnRecovery = new System.Windows.Forms.Button();
+            this.btnErrRecovery = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tbErrDesc = new System.Windows.Forms.TextBox();
@@ -403,6 +403,59 @@
             this.rbEvtAllOn = new System.Windows.Forms.RadioButton();
             this.rbEvtAllOff = new System.Windows.Forms.RadioButton();
             this.hint = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.tbStateTrack1 = new System.Windows.Forms.TextBox();
+            this.btnStateRefresh = new System.Windows.Forms.Button();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.groupBox40 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.label59 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.tbStateVer = new System.Windows.Forms.TextBox();
+            this.tbStateTrack2 = new System.Windows.Forms.TextBox();
+            this.tbStateTrack3 = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.tbStatePrs1 = new System.Windows.Forms.TextBox();
+            this.tbStatePrs2 = new System.Windows.Forms.TextBox();
+            this.tbStatePrs3 = new System.Windows.Forms.TextBox();
+            this.tbStatePrs4 = new System.Windows.Forms.TextBox();
+            this.tbStatePrs5 = new System.Windows.Forms.TextBox();
+            this.tbStatePrs6 = new System.Windows.Forms.TextBox();
+            this.tbStatePrs7 = new System.Windows.Forms.TextBox();
+            this.tbStatePrs8 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU1 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU2 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU3 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU4 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU5 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU6 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU7 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU8 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU9 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU10 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU11 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU12 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU13 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU14 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU15 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU16 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU17 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU18 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU19 = new System.Windows.Forms.TextBox();
+            this.tbStateFFU20 = new System.Windows.Forms.TextBox();
+            this.btnErrRefresh = new System.Windows.Forms.Button();
             this.GroupBox3.SuspendLayout();
             this.GroupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -455,6 +508,8 @@
             this.groupBox18.SuspendLayout();
             this.groupBox21.SuspendLayout();
             this.groupBox17.SuspendLayout();
+            this.groupBox35.SuspendLayout();
+            this.groupBox40.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -3914,6 +3969,8 @@
             // 
             // tabInfo
             // 
+            this.tabInfo.Controls.Add(this.groupBox40);
+            this.tabInfo.Controls.Add(this.groupBox35);
             this.tabInfo.Controls.Add(this.groupBox14);
             this.tabInfo.Location = new System.Drawing.Point(4, 33);
             this.tabInfo.Name = "tabInfo";
@@ -3931,12 +3988,13 @@
             this.groupBox14.Controls.Add(this.rbNeedPMNo);
             this.groupBox14.Controls.Add(this.rbNeedPMYes);
             this.groupBox14.Controls.Add(this.label30);
-            this.groupBox14.Controls.Add(this.btnRecovery);
+            this.groupBox14.Controls.Add(this.btnErrRecovery);
             this.groupBox14.Controls.Add(this.label29);
             this.groupBox14.Controls.Add(this.label14);
             this.groupBox14.Controls.Add(this.tbErrDesc);
             this.groupBox14.Controls.Add(this.label13);
             this.groupBox14.Controls.Add(this.label10);
+            this.groupBox14.Controls.Add(this.btnErrRefresh);
             this.groupBox14.Location = new System.Drawing.Point(2, -3);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(960, 165);
@@ -3948,16 +4006,17 @@
             // 
             this.tbRecoverMethod.Enabled = false;
             this.tbRecoverMethod.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRecoverMethod.Location = new System.Drawing.Point(810, 24);
+            this.tbRecoverMethod.Location = new System.Drawing.Point(794, 24);
             this.tbRecoverMethod.Name = "tbRecoverMethod";
             this.tbRecoverMethod.Size = new System.Drawing.Size(34, 36);
             this.tbRecoverMethod.TabIndex = 74;
+            this.tbRecoverMethod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbErrPosDecs
             // 
             this.tbErrPosDecs.Enabled = false;
             this.tbErrPosDecs.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbErrPosDecs.Location = new System.Drawing.Point(335, 68);
+            this.tbErrPosDecs.Location = new System.Drawing.Point(333, 68);
             this.tbErrPosDecs.Name = "tbErrPosDecs";
             this.tbErrPosDecs.Size = new System.Drawing.Size(300, 36);
             this.tbErrPosDecs.TabIndex = 73;
@@ -4012,7 +4071,7 @@
             "OCR1",
             "OCR2",
             "UNDEFINITION"});
-            this.cbErrPos.Location = new System.Drawing.Point(132, 68);
+            this.cbErrPos.Location = new System.Drawing.Point(130, 68);
             this.cbErrPos.Name = "cbErrPos";
             this.cbErrPos.Size = new System.Drawing.Size(197, 36);
             this.cbErrPos.TabIndex = 22;
@@ -4024,7 +4083,7 @@
             this.cbErrMsg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbErrMsg.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbErrMsg.FormattingEnabled = true;
-            this.cbErrMsg.Location = new System.Drawing.Point(131, 24);
+            this.cbErrMsg.Location = new System.Drawing.Point(129, 24);
             this.cbErrMsg.Name = "cbErrMsg";
             this.cbErrMsg.Size = new System.Drawing.Size(198, 36);
             this.cbErrMsg.TabIndex = 21;
@@ -4036,7 +4095,7 @@
             this.rbNeedPMNo.Checked = true;
             this.rbNeedPMNo.Enabled = false;
             this.rbNeedPMNo.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNeedPMNo.Location = new System.Drawing.Point(579, 31);
+            this.rbNeedPMNo.Location = new System.Drawing.Point(577, 31);
             this.rbNeedPMNo.Name = "rbNeedPMNo";
             this.rbNeedPMNo.Size = new System.Drawing.Size(48, 25);
             this.rbNeedPMNo.TabIndex = 72;
@@ -4049,7 +4108,7 @@
             this.rbNeedPMYes.AutoSize = true;
             this.rbNeedPMYes.Enabled = false;
             this.rbNeedPMYes.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNeedPMYes.Location = new System.Drawing.Point(523, 31);
+            this.rbNeedPMYes.Location = new System.Drawing.Point(521, 31);
             this.rbNeedPMYes.Name = "rbNeedPMYes";
             this.rbNeedPMYes.Size = new System.Drawing.Size(50, 25);
             this.rbNeedPMYes.TabIndex = 71;
@@ -4062,24 +4121,24 @@
             this.label30.BackColor = System.Drawing.SystemColors.Highlight;
             this.label30.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(335, 31);
+            this.label30.Location = new System.Drawing.Point(333, 31);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(182, 23);
             this.label30.TabIndex = 40;
             this.label30.Text = "Need of maintenance?";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnRecovery
+            // btnErrRecovery
             // 
-            this.btnRecovery.BackColor = System.Drawing.Color.Gold;
-            this.btnRecovery.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecovery.Location = new System.Drawing.Point(836, 97);
-            this.btnRecovery.Name = "btnRecovery";
-            this.btnRecovery.Size = new System.Drawing.Size(118, 50);
-            this.btnRecovery.TabIndex = 22;
-            this.btnRecovery.Text = "Recovery";
-            this.btnRecovery.UseVisualStyleBackColor = false;
-            this.btnRecovery.Click += new System.EventHandler(this.btnRecovery_Click);
+            this.btnErrRecovery.BackColor = System.Drawing.Color.Gold;
+            this.btnErrRecovery.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnErrRecovery.Location = new System.Drawing.Point(836, 87);
+            this.btnErrRecovery.Name = "btnErrRecovery";
+            this.btnErrRecovery.Size = new System.Drawing.Size(118, 50);
+            this.btnErrRecovery.TabIndex = 22;
+            this.btnErrRecovery.Text = "Recovery";
+            this.btnErrRecovery.UseVisualStyleBackColor = false;
+            this.btnErrRecovery.Click += new System.EventHandler(this.btnRecovery_Click);
             // 
             // label29
             // 
@@ -4087,11 +4146,11 @@
             this.label29.BackColor = System.Drawing.SystemColors.Highlight;
             this.label29.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.White;
-            this.label29.Location = new System.Drawing.Point(647, 31);
+            this.label29.Location = new System.Drawing.Point(635, 31);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(157, 23);
+            this.label29.Size = new System.Drawing.Size(153, 23);
             this.label29.TabIndex = 39;
-            this.label29.Text = "  Recovery  method";
+            this.label29.Text = " Recovery  method";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label14
@@ -4111,7 +4170,7 @@
             // 
             this.tbErrDesc.Enabled = false;
             this.tbErrDesc.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbErrDesc.Location = new System.Drawing.Point(131, 111);
+            this.tbErrDesc.Location = new System.Drawing.Point(129, 111);
             this.tbErrDesc.Name = "tbErrDesc";
             this.tbErrDesc.Size = new System.Drawing.Size(699, 36);
             this.tbErrDesc.TabIndex = 36;
@@ -5751,6 +5810,675 @@
             this.rbEvtAllOff.UseVisualStyleBackColor = true;
             this.rbEvtAllOff.Click += new System.EventHandler(this.rbEvtAllOff_Click);
             // 
+            // groupBox35
+            // 
+            this.groupBox35.Controls.Add(this.tbStateFFU20);
+            this.groupBox35.Controls.Add(this.tbStateFFU19);
+            this.groupBox35.Controls.Add(this.tbStateFFU10);
+            this.groupBox35.Controls.Add(this.tbStateFFU18);
+            this.groupBox35.Controls.Add(this.tbStateFFU9);
+            this.groupBox35.Controls.Add(this.tbStateFFU17);
+            this.groupBox35.Controls.Add(this.tbStateFFU8);
+            this.groupBox35.Controls.Add(this.tbStateFFU7);
+            this.groupBox35.Controls.Add(this.tbStateFFU16);
+            this.groupBox35.Controls.Add(this.tbStatePrs8);
+            this.groupBox35.Controls.Add(this.tbStateFFU6);
+            this.groupBox35.Controls.Add(this.tbStateFFU15);
+            this.groupBox35.Controls.Add(this.tbStatePrs7);
+            this.groupBox35.Controls.Add(this.tbStateFFU5);
+            this.groupBox35.Controls.Add(this.tbStateFFU14);
+            this.groupBox35.Controls.Add(this.tbStatePrs6);
+            this.groupBox35.Controls.Add(this.tbStateFFU4);
+            this.groupBox35.Controls.Add(this.tbStateFFU13);
+            this.groupBox35.Controls.Add(this.tbStatePrs5);
+            this.groupBox35.Controls.Add(this.tbStateFFU3);
+            this.groupBox35.Controls.Add(this.tbStateFFU12);
+            this.groupBox35.Controls.Add(this.tbStatePrs4);
+            this.groupBox35.Controls.Add(this.tbStateFFU2);
+            this.groupBox35.Controls.Add(this.tbStatePrs3);
+            this.groupBox35.Controls.Add(this.tbStatePrs2);
+            this.groupBox35.Controls.Add(this.tbStateTrack3);
+            this.groupBox35.Controls.Add(this.tbStateFFU11);
+            this.groupBox35.Controls.Add(this.tbStateTrack2);
+            this.groupBox35.Controls.Add(this.tbStateFFU1);
+            this.groupBox35.Controls.Add(this.tbStateVer);
+            this.groupBox35.Controls.Add(this.tbStatePrs1);
+            this.groupBox35.Controls.Add(this.tbStateTrack1);
+            this.groupBox35.Controls.Add(this.btnStateRefresh);
+            this.groupBox35.Controls.Add(this.label56);
+            this.groupBox35.Controls.Add(this.label46);
+            this.groupBox35.Controls.Add(this.label57);
+            this.groupBox35.Controls.Add(this.label58);
+            this.groupBox35.Location = new System.Drawing.Point(3, 161);
+            this.groupBox35.Name = "groupBox35";
+            this.groupBox35.Size = new System.Drawing.Size(960, 177);
+            this.groupBox35.TabIndex = 0;
+            this.groupBox35.TabStop = false;
+            this.groupBox35.Text = "State Area";
+            // 
+            // tbStateTrack1
+            // 
+            this.tbStateTrack1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateTrack1.Location = new System.Drawing.Point(522, 25);
+            this.tbStateTrack1.Name = "tbStateTrack1";
+            this.tbStateTrack1.ReadOnly = true;
+            this.tbStateTrack1.Size = new System.Drawing.Size(79, 36);
+            this.tbStateTrack1.TabIndex = 73;
+            this.tbStateTrack1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.hint.SetToolTip(this.tbStateTrack1, " shows the wafer presence on upper Arm");
+            // 
+            // btnStateRefresh
+            // 
+            this.btnStateRefresh.BackColor = System.Drawing.Color.Honeydew;
+            this.btnStateRefresh.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStateRefresh.Location = new System.Drawing.Point(835, 31);
+            this.btnStateRefresh.Name = "btnStateRefresh";
+            this.btnStateRefresh.Size = new System.Drawing.Size(118, 50);
+            this.btnStateRefresh.TabIndex = 22;
+            this.btnStateRefresh.Text = "Refresh";
+            this.btnStateRefresh.UseVisualStyleBackColor = false;
+            this.btnStateRefresh.Click += new System.EventHandler(this.btnStateRefresh_Click);
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label56.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.Color.White;
+            this.label56.Location = new System.Drawing.Point(424, 31);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(92, 23);
+            this.label56.TabIndex = 37;
+            this.label56.Text = "        TRACK";
+            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label56, "Wafer presence check");
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label57.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.White;
+            this.label57.Location = new System.Drawing.Point(7, 105);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(94, 23);
+            this.label57.TabIndex = 35;
+            this.label57.Text = "           FFUn";
+            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label57, "Fan Filter Unit.");
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label58.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.Location = new System.Drawing.Point(8, 31);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(92, 23);
+            this.label58.TabIndex = 34;
+            this.label58.Text = "             VER";
+            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label58, "Version");
+            // 
+            // groupBox40
+            // 
+            this.groupBox40.Controls.Add(this.textBox4);
+            this.groupBox40.Controls.Add(this.textBox5);
+            this.groupBox40.Controls.Add(this.comboBox3);
+            this.groupBox40.Controls.Add(this.comboBox4);
+            this.groupBox40.Controls.Add(this.radioButton3);
+            this.groupBox40.Controls.Add(this.radioButton4);
+            this.groupBox40.Controls.Add(this.label59);
+            this.groupBox40.Controls.Add(this.button2);
+            this.groupBox40.Controls.Add(this.label60);
+            this.groupBox40.Controls.Add(this.label61);
+            this.groupBox40.Controls.Add(this.textBox6);
+            this.groupBox40.Controls.Add(this.label62);
+            this.groupBox40.Controls.Add(this.label63);
+            this.groupBox40.Location = new System.Drawing.Point(2, 371);
+            this.groupBox40.Name = "groupBox40";
+            this.groupBox40.Size = new System.Drawing.Size(960, 165);
+            this.groupBox40.TabIndex = 0;
+            this.groupBox40.TabStop = false;
+            this.groupBox40.Text = "Signal Area";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Enabled = false;
+            this.textBox4.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(810, 24);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(34, 36);
+            this.textBox4.TabIndex = 74;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Enabled = false;
+            this.textBox5.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(335, 68);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(300, 36);
+            this.textBox5.TabIndex = 73;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox3.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "ROBOT1",
+            "ROBOT2",
+            "ROBOT1_Z",
+            "ROBOT2_Z",
+            "ROBOT1_S",
+            "ROBOT2_S",
+            "ROBOT1_ARM1",
+            "ROBOT1_ARM2",
+            "ROBOT2_ARM1",
+            "ROBOT2_ARM2",
+            "P1",
+            "P2",
+            "P3",
+            "P4",
+            "P1_Y",
+            "P2_Y",
+            "P3_Y",
+            "P4_Y",
+            "P1_Z",
+            "P2_Z",
+            "P2_Z",
+            "P2_Z",
+            "P1_MAP",
+            "P2_MAP",
+            "P3_MAP",
+            "P4_MAP",
+            "P1_IOxx",
+            "P2_IOxx",
+            "P3_IOxx",
+            "P4_IOxx",
+            "ALIGN1",
+            "ALIGN2",
+            "ALIGN1_X",
+            "ALIGN2_X",
+            "ALIGN1_Y",
+            "ALIGN2_Y",
+            "ALIGN1_R",
+            "ALIGN2_R",
+            "DIO1",
+            "DIO2",
+            "OCR1",
+            "OCR2",
+            "UNDEFINITION"});
+            this.comboBox3.Location = new System.Drawing.Point(132, 68);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(197, 36);
+            this.comboBox3.TabIndex = 22;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.cbErrPos_SelectedIndexChanged);
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox4.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(131, 24);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(198, 36);
+            this.comboBox4.TabIndex = 21;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.cbErrMsg_SelectedIndexChanged);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Checked = true;
+            this.radioButton3.Enabled = false;
+            this.radioButton3.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(579, 31);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(48, 25);
+            this.radioButton3.TabIndex = 72;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "No";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Enabled = false;
+            this.radioButton4.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton4.Location = new System.Drawing.Point(523, 31);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(50, 25);
+            this.radioButton4.TabIndex = 71;
+            this.radioButton4.Text = "Yes";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label59.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.White;
+            this.label59.Location = new System.Drawing.Point(335, 31);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(182, 23);
+            this.label59.TabIndex = 40;
+            this.label59.Text = "Need of maintenance?";
+            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gold;
+            this.button2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(836, 97);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 50);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Recovery";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.btnRecovery_Click);
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label60.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.White;
+            this.label60.Location = new System.Drawing.Point(647, 31);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(157, 23);
+            this.label60.TabIndex = 39;
+            this.label60.Text = "  Recovery  method";
+            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label61.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.Color.White;
+            this.label61.Location = new System.Drawing.Point(8, 73);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(114, 23);
+            this.label61.TabIndex = 37;
+            this.label61.Text = "  Occurred on";
+            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Enabled = false;
+            this.textBox6.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(131, 111);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(699, 36);
+            this.textBox6.TabIndex = 36;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label62.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.Color.White;
+            this.label62.Location = new System.Drawing.Point(7, 119);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(115, 23);
+            this.label62.TabIndex = 35;
+            this.label62.Text = "    Description";
+            this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label63.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.Color.White;
+            this.label63.Location = new System.Drawing.Point(8, 31);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(114, 23);
+            this.label63.TabIndex = 34;
+            this.label63.Text = "         Message";
+            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbStateVer
+            // 
+            this.tbStateVer.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateVer.Location = new System.Drawing.Point(109, 24);
+            this.tbStateVer.Name = "tbStateVer";
+            this.tbStateVer.ReadOnly = true;
+            this.tbStateVer.Size = new System.Drawing.Size(300, 36);
+            this.tbStateVer.TabIndex = 75;
+            this.tbStateVer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbStateTrack2
+            // 
+            this.tbStateTrack2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateTrack2.Location = new System.Drawing.Point(605, 25);
+            this.tbStateTrack2.Name = "tbStateTrack2";
+            this.tbStateTrack2.ReadOnly = true;
+            this.tbStateTrack2.Size = new System.Drawing.Size(79, 36);
+            this.tbStateTrack2.TabIndex = 76;
+            this.tbStateTrack2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.hint.SetToolTip(this.tbStateTrack2, " shows the wafer presence on lower Arm");
+            // 
+            // tbStateTrack3
+            // 
+            this.tbStateTrack3.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateTrack3.Location = new System.Drawing.Point(690, 25);
+            this.tbStateTrack3.Name = "tbStateTrack3";
+            this.tbStateTrack3.ReadOnly = true;
+            this.tbStateTrack3.Size = new System.Drawing.Size(76, 36);
+            this.tbStateTrack3.TabIndex = 77;
+            this.tbStateTrack3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.hint.SetToolTip(this.tbStateTrack3, "presence on aligner");
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label46.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.White;
+            this.label46.Location = new System.Drawing.Point(6, 69);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(95, 23);
+            this.label46.TabIndex = 35;
+            this.label46.Text = "              PRS";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hint.SetToolTip(this.label46, "Pressure sensor.");
+            // 
+            // tbStatePrs1
+            // 
+            this.tbStatePrs1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStatePrs1.Location = new System.Drawing.Point(110, 69);
+            this.tbStatePrs1.Name = "tbStatePrs1";
+            this.tbStatePrs1.ReadOnly = true;
+            this.tbStatePrs1.Size = new System.Drawing.Size(77, 26);
+            this.tbStatePrs1.TabIndex = 73;
+            this.hint.SetToolTip(this.tbStatePrs1, "measured value for connected sensor 1");
+            // 
+            // tbStatePrs2
+            // 
+            this.tbStatePrs2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStatePrs2.Location = new System.Drawing.Point(193, 69);
+            this.tbStatePrs2.Name = "tbStatePrs2";
+            this.tbStatePrs2.ReadOnly = true;
+            this.tbStatePrs2.Size = new System.Drawing.Size(77, 26);
+            this.tbStatePrs2.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStatePrs2, "measured value for connected sensor 2");
+            // 
+            // tbStatePrs3
+            // 
+            this.tbStatePrs3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStatePrs3.Location = new System.Drawing.Point(276, 69);
+            this.tbStatePrs3.Name = "tbStatePrs3";
+            this.tbStatePrs3.ReadOnly = true;
+            this.tbStatePrs3.Size = new System.Drawing.Size(77, 26);
+            this.tbStatePrs3.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStatePrs3, "measured value for connected sensor 3");
+            // 
+            // tbStatePrs4
+            // 
+            this.tbStatePrs4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStatePrs4.Location = new System.Drawing.Point(359, 69);
+            this.tbStatePrs4.Name = "tbStatePrs4";
+            this.tbStatePrs4.ReadOnly = true;
+            this.tbStatePrs4.Size = new System.Drawing.Size(77, 26);
+            this.tbStatePrs4.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStatePrs4, "measured value for connected sensor 4");
+            // 
+            // tbStatePrs5
+            // 
+            this.tbStatePrs5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStatePrs5.Location = new System.Drawing.Point(442, 69);
+            this.tbStatePrs5.Name = "tbStatePrs5";
+            this.tbStatePrs5.ReadOnly = true;
+            this.tbStatePrs5.Size = new System.Drawing.Size(77, 26);
+            this.tbStatePrs5.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStatePrs5, "measured value for connected sensor 5");
+            // 
+            // tbStatePrs6
+            // 
+            this.tbStatePrs6.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStatePrs6.Location = new System.Drawing.Point(525, 69);
+            this.tbStatePrs6.Name = "tbStatePrs6";
+            this.tbStatePrs6.ReadOnly = true;
+            this.tbStatePrs6.Size = new System.Drawing.Size(77, 26);
+            this.tbStatePrs6.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStatePrs6, "measured value for connected sensor 6");
+            // 
+            // tbStatePrs7
+            // 
+            this.tbStatePrs7.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStatePrs7.Location = new System.Drawing.Point(608, 69);
+            this.tbStatePrs7.Name = "tbStatePrs7";
+            this.tbStatePrs7.ReadOnly = true;
+            this.tbStatePrs7.Size = new System.Drawing.Size(77, 26);
+            this.tbStatePrs7.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStatePrs7, "measured value for connected sensor 7");
+            // 
+            // tbStatePrs8
+            // 
+            this.tbStatePrs8.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStatePrs8.Location = new System.Drawing.Point(690, 69);
+            this.tbStatePrs8.Name = "tbStatePrs8";
+            this.tbStatePrs8.ReadOnly = true;
+            this.tbStatePrs8.Size = new System.Drawing.Size(77, 26);
+            this.tbStatePrs8.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStatePrs8, "measured value for connected sensor 8");
+            // 
+            // tbStateFFU1
+            // 
+            this.tbStateFFU1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU1.Location = new System.Drawing.Point(110, 105);
+            this.tbStateFFU1.Name = "tbStateFFU1";
+            this.tbStateFFU1.ReadOnly = true;
+            this.tbStateFFU1.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU1.TabIndex = 73;
+            this.hint.SetToolTip(this.tbStateFFU1, "measured value for Fan Filter Unit 1 connected sensor");
+            // 
+            // tbStateFFU2
+            // 
+            this.tbStateFFU2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU2.Location = new System.Drawing.Point(193, 105);
+            this.tbStateFFU2.Name = "tbStateFFU2";
+            this.tbStateFFU2.ReadOnly = true;
+            this.tbStateFFU2.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU2.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU2, "measured value for Fan Filter Unit 2 connected sensor");
+            // 
+            // tbStateFFU3
+            // 
+            this.tbStateFFU3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU3.Location = new System.Drawing.Point(276, 105);
+            this.tbStateFFU3.Name = "tbStateFFU3";
+            this.tbStateFFU3.ReadOnly = true;
+            this.tbStateFFU3.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU3.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU3, "measured value for Fan Filter Unit 3 connected sensor");
+            // 
+            // tbStateFFU4
+            // 
+            this.tbStateFFU4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU4.Location = new System.Drawing.Point(359, 105);
+            this.tbStateFFU4.Name = "tbStateFFU4";
+            this.tbStateFFU4.ReadOnly = true;
+            this.tbStateFFU4.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU4.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU4, "measured value for Fan Filter Unit 4 connected sensor");
+            // 
+            // tbStateFFU5
+            // 
+            this.tbStateFFU5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU5.Location = new System.Drawing.Point(442, 105);
+            this.tbStateFFU5.Name = "tbStateFFU5";
+            this.tbStateFFU5.ReadOnly = true;
+            this.tbStateFFU5.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU5.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU5, "measured value for Fan Filter Unit 5 connected sensor");
+            // 
+            // tbStateFFU6
+            // 
+            this.tbStateFFU6.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU6.Location = new System.Drawing.Point(525, 105);
+            this.tbStateFFU6.Name = "tbStateFFU6";
+            this.tbStateFFU6.ReadOnly = true;
+            this.tbStateFFU6.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU6.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU6, "measured value for Fan Filter Unit 6 connected sensor");
+            // 
+            // tbStateFFU7
+            // 
+            this.tbStateFFU7.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU7.Location = new System.Drawing.Point(608, 105);
+            this.tbStateFFU7.Name = "tbStateFFU7";
+            this.tbStateFFU7.ReadOnly = true;
+            this.tbStateFFU7.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU7.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU7, "measured value for Fan Filter Unit 7 connected sensor");
+            // 
+            // tbStateFFU8
+            // 
+            this.tbStateFFU8.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU8.Location = new System.Drawing.Point(690, 105);
+            this.tbStateFFU8.Name = "tbStateFFU8";
+            this.tbStateFFU8.ReadOnly = true;
+            this.tbStateFFU8.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU8.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU8, "measured value for Fan Filter Unit 8 connected sensor");
+            // 
+            // tbStateFFU9
+            // 
+            this.tbStateFFU9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU9.Location = new System.Drawing.Point(773, 105);
+            this.tbStateFFU9.Name = "tbStateFFU9";
+            this.tbStateFFU9.ReadOnly = true;
+            this.tbStateFFU9.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU9.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU9, "measured value for Fan Filter Unit 9 connected sensor");
+            // 
+            // tbStateFFU10
+            // 
+            this.tbStateFFU10.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU10.Location = new System.Drawing.Point(856, 105);
+            this.tbStateFFU10.Name = "tbStateFFU10";
+            this.tbStateFFU10.ReadOnly = true;
+            this.tbStateFFU10.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU10.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU10, "measured value for Fan Filter Unit 10 connected sensor");
+            // 
+            // tbStateFFU11
+            // 
+            this.tbStateFFU11.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU11.Location = new System.Drawing.Point(110, 139);
+            this.tbStateFFU11.Name = "tbStateFFU11";
+            this.tbStateFFU11.ReadOnly = true;
+            this.tbStateFFU11.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU11.TabIndex = 73;
+            this.hint.SetToolTip(this.tbStateFFU11, "measured value for Fan Filter Unit 11 connected sensor");
+            // 
+            // tbStateFFU12
+            // 
+            this.tbStateFFU12.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU12.Location = new System.Drawing.Point(193, 139);
+            this.tbStateFFU12.Name = "tbStateFFU12";
+            this.tbStateFFU12.ReadOnly = true;
+            this.tbStateFFU12.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU12.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU12, "measured value for Fan Filter Unit 12 connected sensor");
+            // 
+            // tbStateFFU13
+            // 
+            this.tbStateFFU13.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU13.Location = new System.Drawing.Point(276, 139);
+            this.tbStateFFU13.Name = "tbStateFFU13";
+            this.tbStateFFU13.ReadOnly = true;
+            this.tbStateFFU13.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU13.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU13, "measured value for Fan Filter Unit 13 connected sensor");
+            // 
+            // tbStateFFU14
+            // 
+            this.tbStateFFU14.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU14.Location = new System.Drawing.Point(359, 139);
+            this.tbStateFFU14.Name = "tbStateFFU14";
+            this.tbStateFFU14.ReadOnly = true;
+            this.tbStateFFU14.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU14.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU14, "measured value for Fan Filter Unit 14 connected sensor");
+            // 
+            // tbStateFFU15
+            // 
+            this.tbStateFFU15.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU15.Location = new System.Drawing.Point(442, 139);
+            this.tbStateFFU15.Name = "tbStateFFU15";
+            this.tbStateFFU15.ReadOnly = true;
+            this.tbStateFFU15.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU15.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU15, "measured value for Fan Filter Unit 15 connected sensor");
+            // 
+            // tbStateFFU16
+            // 
+            this.tbStateFFU16.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU16.Location = new System.Drawing.Point(525, 139);
+            this.tbStateFFU16.Name = "tbStateFFU16";
+            this.tbStateFFU16.ReadOnly = true;
+            this.tbStateFFU16.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU16.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU16, "measured value for Fan Filter Unit 16 connected sensor");
+            // 
+            // tbStateFFU17
+            // 
+            this.tbStateFFU17.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU17.Location = new System.Drawing.Point(608, 139);
+            this.tbStateFFU17.Name = "tbStateFFU17";
+            this.tbStateFFU17.ReadOnly = true;
+            this.tbStateFFU17.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU17.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU17, "measured value for Fan Filter Unit 17 connected sensor");
+            // 
+            // tbStateFFU18
+            // 
+            this.tbStateFFU18.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU18.Location = new System.Drawing.Point(690, 139);
+            this.tbStateFFU18.Name = "tbStateFFU18";
+            this.tbStateFFU18.ReadOnly = true;
+            this.tbStateFFU18.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU18.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU18, "measured value for Fan Filter Unit 18 connected sensor");
+            // 
+            // tbStateFFU19
+            // 
+            this.tbStateFFU19.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU19.Location = new System.Drawing.Point(773, 139);
+            this.tbStateFFU19.Name = "tbStateFFU19";
+            this.tbStateFFU19.ReadOnly = true;
+            this.tbStateFFU19.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU19.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU19, "measured value for Fan Filter Unit 19 connected sensor");
+            // 
+            // tbStateFFU20
+            // 
+            this.tbStateFFU20.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStateFFU20.Location = new System.Drawing.Point(856, 139);
+            this.tbStateFFU20.Name = "tbStateFFU20";
+            this.tbStateFFU20.ReadOnly = true;
+            this.tbStateFFU20.Size = new System.Drawing.Size(77, 26);
+            this.tbStateFFU20.TabIndex = 78;
+            this.hint.SetToolTip(this.tbStateFFU20, "measured value for Fan Filter Unit 20 connected sensor");
+            // 
+            // btnErrRefresh
+            // 
+            this.btnErrRefresh.BackColor = System.Drawing.Color.Honeydew;
+            this.btnErrRefresh.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnErrRefresh.Location = new System.Drawing.Point(836, 31);
+            this.btnErrRefresh.Name = "btnErrRefresh";
+            this.btnErrRefresh.Size = new System.Drawing.Size(118, 50);
+            this.btnErrRefresh.TabIndex = 22;
+            this.btnErrRefresh.Text = "Refresh";
+            this.btnErrRefresh.UseVisualStyleBackColor = false;
+            this.btnErrRefresh.Click += new System.EventHandler(this.btnErrorRefresh_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -5853,6 +6581,10 @@
             this.groupBox21.PerformLayout();
             this.groupBox17.ResumeLayout(false);
             this.groupBox17.PerformLayout();
+            this.groupBox35.ResumeLayout(false);
+            this.groupBox35.PerformLayout();
+            this.groupBox40.ResumeLayout(false);
+            this.groupBox40.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6115,7 +6847,7 @@
         private System.Windows.Forms.RadioButton rbNeedPMNo;
         private System.Windows.Forms.RadioButton rbNeedPMYes;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Button btnRecovery;
+        private System.Windows.Forms.Button btnErrRecovery;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox tbErrDesc;
         private System.Windows.Forms.Label label13;
@@ -6233,6 +6965,59 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.RadioButton rbE84AllManual;
         private System.Windows.Forms.RadioButton rbE84AllAuto;
+        private System.Windows.Forms.GroupBox groupBox40;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.GroupBox groupBox35;
+        private System.Windows.Forms.TextBox tbStateTrack1;
+        private System.Windows.Forms.Button btnStateRefresh;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.TextBox tbStateFFU20;
+        private System.Windows.Forms.TextBox tbStateFFU19;
+        private System.Windows.Forms.TextBox tbStateFFU10;
+        private System.Windows.Forms.TextBox tbStateFFU18;
+        private System.Windows.Forms.TextBox tbStateFFU9;
+        private System.Windows.Forms.TextBox tbStateFFU17;
+        private System.Windows.Forms.TextBox tbStateFFU8;
+        private System.Windows.Forms.TextBox tbStateFFU7;
+        private System.Windows.Forms.TextBox tbStateFFU16;
+        private System.Windows.Forms.TextBox tbStatePrs8;
+        private System.Windows.Forms.TextBox tbStateFFU6;
+        private System.Windows.Forms.TextBox tbStateFFU15;
+        private System.Windows.Forms.TextBox tbStatePrs7;
+        private System.Windows.Forms.TextBox tbStateFFU5;
+        private System.Windows.Forms.TextBox tbStateFFU14;
+        private System.Windows.Forms.TextBox tbStatePrs6;
+        private System.Windows.Forms.TextBox tbStateFFU4;
+        private System.Windows.Forms.TextBox tbStateFFU13;
+        private System.Windows.Forms.TextBox tbStatePrs5;
+        private System.Windows.Forms.TextBox tbStateFFU3;
+        private System.Windows.Forms.TextBox tbStateFFU12;
+        private System.Windows.Forms.TextBox tbStatePrs4;
+        private System.Windows.Forms.TextBox tbStateFFU2;
+        private System.Windows.Forms.TextBox tbStatePrs3;
+        private System.Windows.Forms.TextBox tbStatePrs2;
+        private System.Windows.Forms.TextBox tbStateTrack3;
+        private System.Windows.Forms.TextBox tbStateFFU11;
+        private System.Windows.Forms.TextBox tbStateTrack2;
+        private System.Windows.Forms.TextBox tbStateFFU1;
+        private System.Windows.Forms.TextBox tbStateVer;
+        private System.Windows.Forms.TextBox tbStatePrs1;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Button btnErrRefresh;
     }
 }
 

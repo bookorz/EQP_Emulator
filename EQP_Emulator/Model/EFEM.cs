@@ -8,6 +8,14 @@ namespace EQP_Emulator
 {
     class EFEM
     {
+        public static string VER { get; set; } = "";
+        public static string[] TRACK { get; set; } = new string[] { "????", "????", "????" };
+        public static string[] PRSn { get; set; } = new string[8];
+        public static string[] FFUn { get; set; } = new string[20];
+
+        // 1:Error Message 2:Errors occurred position
+        public static string[] Error { get; set; } = new string[2];
+
         //Robot enable setting
         public static Boolean isROB1Enable { get; set; } = false;
         //public static Boolean isROB2Enable { get; set; } = false;
@@ -105,7 +113,7 @@ namespace EQP_Emulator
                 EFEM.setPointEmpty(wafers[wafer_id], true);
                 points[wafers[wafer_id]] = "";
             }
-                
+
 
             points[move_to] = wafer_id;// Record the wafer information at the point
             wafers[wafer_id] = move_to;// Record the point information of the wafer
@@ -141,6 +149,48 @@ namespace EQP_Emulator
                     isR1Arm2Empty = isEmpty;
                     break;
             }
+        }
+        public static void parsePRSn(string data)
+        {
+            string[] temp = new string[8];
+            foreach ( string item in data.Split(','))
+            {
+                if (!item.Contains("|"))
+                    continue;
+                try
+                {
+                    string key = item.Substring(0, item.IndexOf("|"));
+                    int idx = Int32.Parse(key.Replace("SNO", "")) - 1;
+                    string value = item.Substring(item.IndexOf("|") + 1);
+                    temp[idx] = value;
+                }
+                catch (Exception)
+                {
+                    continue;
+                }
+            }
+            PRSn = temp;
+        }
+        public static void parseFFUn(string data)
+        {
+            string[] temp = new string[20];
+            foreach (string item in data.Split(','))
+            {
+                if (!item.Contains("|"))
+                    continue;
+                try
+                {
+                    string key = item.Substring(0, item.IndexOf("|"));
+                    int idx = Int32.Parse(key.Replace("FNO", "")) - 1;
+                    string value = item.Substring(item.IndexOf("|") + 1);
+                    temp[idx] = value;
+                }
+                catch (Exception)
+                {
+                    continue;
+                }
+            }
+            FFUn = temp;
         }
     }
 }
