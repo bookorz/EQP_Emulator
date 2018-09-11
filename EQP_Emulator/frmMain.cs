@@ -140,6 +140,7 @@ namespace EQP_Emulator
             ackSleepTime = Int32.Parse(ConfigurationManager.AppSettings["ack_sleep_time"]);
 
             cbErrMsg.Items.AddRange(define.getErrMsgList());
+            cbErrPos.Items.AddRange(define.getErrPosList());
         }
 
         private void createCommand(object sender, EventArgs e)
@@ -270,14 +271,14 @@ namespace EQP_Emulator
                 FormMainUpdate.AlarmUpdate("Alarm set");
             }
             //Thread.Sleep(1000);
-            if (replyMsg.StartsWith("INF")|| replyMsg.StartsWith("NAK") || replyMsg.StartsWith("CAN") || replyMsg.StartsWith("ABS"))
+            if (replyMsg.StartsWith("INF") || replyMsg.StartsWith("ABS"))
             {
                 string[] cmd = replyMsg.Split(new char[] { ':', '/' });
                 //if (define.autoAckCmd.Contains(cmd[1]))
                 //{
                 //暫時收到INF一律回ACK
                 Thread.Sleep(ackSleepTime);
-                string ackMsg = replyMsg.Replace("INF:", "ACK:");
+                string ackMsg = replyMsg.Replace("INF:", "ACK:").Replace("ABS:", "ACK:");
                 sendCommand(ackMsg);
                 FormMainUpdate.LogUpdate("**************  Commnad Finish  **************\n");
                 //}
@@ -1371,8 +1372,24 @@ namespace EQP_Emulator
                     MessageBox.Show("Turn on the power again or reboot system program.");
                     break;
             }
+
+            #region kuma dummy code
+            //dummy data
+            string inf = "INF:ERROR/NOTHING/;";
+            string error = inf.Replace("INF:ERROR/", "").Replace(";", "");
+
+            //check track string format
+            EFEM.Error = (error.Replace("/", "").Length == error.Length - 1) ? error.Split('/') : new string[2];
+
+            //update GUI
+            cbErrMsg.SelectedIndex = -1;
+            cbErrMsg.SelectedItem = EFEM.Error[0];
+            cbErrPos.SelectedIndex = -1;
+            cbErrPos.SelectedItem = EFEM.Error[1];
+            #endregion
+
         }
-        
+
         private void rbEvtAllOn_Click(object sender, EventArgs e)
         {
             this.rbEvtFfuOn.Checked = true;
@@ -1648,9 +1665,10 @@ namespace EQP_Emulator
             EFEM.Error = (error.Replace("/", "").Length == error.Length - 1) ? error.Split('/') : new string[2];
 
             //update GUI
+            cbErrMsg.SelectedIndex = -1;
             cbErrMsg.SelectedItem = EFEM.Error[0];
+            cbErrPos.SelectedIndex = -1;
             cbErrPos.SelectedItem = EFEM.Error[1];
-
         }
     }
 }

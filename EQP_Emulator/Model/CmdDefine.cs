@@ -245,12 +245,17 @@ namespace EQP_Emulator
             
             dtErrPos.Columns.Add("position", typeof(String));
             dtErrPos.Columns.Add("desc", typeof(String));
+            dtErrPos.Rows.Add("ROBOT", "Robot 1");
             dtErrPos.Rows.Add("ROBOT1", "Robot 1");
             dtErrPos.Rows.Add("ROBOT2", "Robot 2");
+            dtErrPos.Rows.Add("Z_AXIS", "Robot 1 Z-axis");
             dtErrPos.Rows.Add("ROBOT1_Z", "Robot 1 Z-axis");
             dtErrPos.Rows.Add("ROBOT2_Z", "Robot 2 Z-axis");
-            dtErrPos.Rows.Add("ROBOT1_S", "Robot 1 θ-axis");
-            dtErrPos.Rows.Add("ROBOT2_S", "Robot 2 θ-axis");
+            dtErrPos.Rows.Add("ROT", "Robot 1 θ-axis(Rotation)");
+            dtErrPos.Rows.Add("ROBOT1_S", "Robot 1 θ-axis(Rotation)");
+            dtErrPos.Rows.Add("ROBOT2_S", "Robot 2 θ-axis(Rotation)");
+            dtErrPos.Rows.Add("ARM1", "ROBOT 1 Upper ARM");
+            dtErrPos.Rows.Add("ARM2", "ROBOT 1 Lower ARM");
             dtErrPos.Rows.Add("ROBOT1_ARM1", "ROBOT 1 Upper ARM");
             dtErrPos.Rows.Add("ROBOT1_ARM2", "ROBOT 1 Lower ARM");
             dtErrPos.Rows.Add("ROBOT2_ARM1", "ROBOT 2 Upper ARM");
@@ -275,16 +280,23 @@ namespace EQP_Emulator
             dtErrPos.Rows.Add("P2_IOxx", "Load port 2 IO");
             dtErrPos.Rows.Add("P3_IOxx", "Load port 3 IO");
             dtErrPos.Rows.Add("P4_IOxx", "Load port 4 IO");
+            dtErrPos.Rows.Add("ALIGN", "Aligner 1");
             dtErrPos.Rows.Add("ALIGN1", "Aligner 1");
             dtErrPos.Rows.Add("ALIGN2", "Aligner 2");
+            dtErrPos.Rows.Add("ALIGN_X", "Aligner 1 X-axis");
             dtErrPos.Rows.Add("ALIGN1_X", "Aligner 1 X-axis");
             dtErrPos.Rows.Add("ALIGN2_X", "Aligner 2 X-axis");
+            dtErrPos.Rows.Add("ALIGN_Y", "Aligner 1 Y-axis");
             dtErrPos.Rows.Add("ALIGN1_Y", "Aligner 1 Y-axis");
             dtErrPos.Rows.Add("ALIGN2_Y", "Aligner 2 Y-axis");
-            dtErrPos.Rows.Add("ALIGN1_R", "Aligner 1 θ-axis");
-            dtErrPos.Rows.Add("ALIGN2_R", "Aligner 2 θ-axis");
+            dtErrPos.Rows.Add("ALIGN_R", "Aligner 1 θ-axis(Rotation)");
+            dtErrPos.Rows.Add("ALIGN1_R", "Aligner 1 θ-axis(Rotation)");
+            dtErrPos.Rows.Add("ALIGN2_R", "Aligner 2 θ-axis(Rotation)");
             dtErrPos.Rows.Add("DIO1", "DIO 1");
             dtErrPos.Rows.Add("DIO2", "DIO 2");
+            dtErrPos.Rows.Add("DIO3", "DIO 6");
+            dtErrPos.Rows.Add("DIO4", "DIO 4");
+            dtErrPos.Rows.Add("DIO5", "DIO 5");
             dtErrPos.Rows.Add("OCR1", "OCR 1");
             dtErrPos.Rows.Add("OCR2", "OCR 2");
             dtErrPos.Rows.Add("UNDEFINITION", "Undefined error");
@@ -335,6 +347,26 @@ namespace EQP_Emulator
                 }
             }
             return result;
+        }
+
+        public string[] getErrPosList()
+        {
+            string[] listAry;
+            var query = (from t in dtErrPos.AsEnumerable()
+                         where 1 == 1
+                         select t).ToList();
+            listAry = new string[query.Count];
+            if (query.Count > 0)
+            {
+                DataTable dtTemp = query.CopyToDataTable();
+                DataView dvTemp = dtTemp.DefaultView;
+
+                for (int i = 0; i < dvTemp.Table.Rows.Count; i++)
+                {
+                    listAry[i] = (string)dvTemp.Table.Rows[i]["position"];
+                }
+            }
+            return listAry;
         }
 
         public ErrPosition getErrPosInfo(string position)
