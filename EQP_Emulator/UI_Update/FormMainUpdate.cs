@@ -77,7 +77,10 @@ namespace EQP_Emulator.UI_Update
                 return;
             Label W = form.Controls.Find("lbl_alarm", true).FirstOrDefault() as Label;
             Button btnReset = form.Controls.Find("btnReset", true).FirstOrDefault() as Button;
-
+            Button btnHold = form.Controls.Find("btnHold", true).FirstOrDefault() as Button;
+            Button btnAbort = form.Controls.Find("btnAbort", true).FirstOrDefault() as Button;
+            Button btnRestart = form.Controls.Find("btnRestart", true).FirstOrDefault() as Button;
+            
             if (W == null)
                 return;
 
@@ -95,6 +98,9 @@ namespace EQP_Emulator.UI_Update
                         W.BackColor = Color.LimeGreen;
                         btnReset.Enabled = false;
                         isAlarmSet = false;
+                        btnHold.Visible = true;
+                        btnAbort.Visible = false;
+                        btnRestart.Visible = false;
                         break;
                     case "Alarm set":
                         W.BackColor = Color.Red;

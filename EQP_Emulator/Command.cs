@@ -50,6 +50,60 @@ namespace EQP_Emulator
             addScriptCmd(cmd.ToString());
         }
 
+
+        /// <summary>
+        /// Clamp
+        /// </summary>
+        /// <param name="point"></param>
+        /// <param name="action">ON, OFF</param>
+        public static void Clamp(string point, string action)
+        {
+            //SET:CLAMP/ALIGN1/ON;
+            StringBuilder cmd = new StringBuilder();
+            cmd.Append("SET:CLAMP/");
+            cmd.Append(point);
+            cmd.Append("/");
+            cmd.Append(action);
+            cmd.Append(";");
+            addScriptCmd(cmd.ToString());
+        }
+        /// <summary>
+        /// Align 
+        /// </summary>
+        /// <param name="point"></param>
+        /// <param name="angle"></param>
+        public static void Align(string point, string angle)
+        {
+            StringBuilder cmd = new StringBuilder();
+            //SET:ALIGN/ALIGN/D******;
+            cmd.Append("SET:ALIGN/");
+            cmd.Append(point);
+            cmd.Append("/");
+            cmd.Append("D" + angle);
+            cmd.Append(";");
+            addScriptCmd(cmd.ToString());
+            //MOV:ALIGN/ALIGN1;
+            cmd.Clear();
+            cmd.Append("MOV:ALIGN/");
+            cmd.Append(point);
+            cmd.Append(";");
+            addScriptCmd(cmd.ToString());
+        }
+
+        /// <summary>
+        /// Home
+        /// </summary>
+        /// <param name="point"></param>
+        public static void Home(string point)
+        {
+            StringBuilder cmd = new StringBuilder();
+            //MOV:HOME/ALIGN1;
+            cmd.Append("MOV:HOME/");
+            cmd.Append(point);
+            cmd.Append(";");
+            addScriptCmd(cmd.ToString());
+        }
+
         public static void addScriptCmd(string cmd)
         {
             int seq = Command.oCmdScript.Count + 1;

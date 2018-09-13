@@ -19,6 +19,8 @@ using System.Configuration;
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using log4net;
+using log4net.Config;
 
 namespace EQP_Emulator
 {
@@ -26,8 +28,10 @@ namespace EQP_Emulator
     {
         SocketClient conn;
         CmdDefine define = new CmdDefine();
-        
-        
+        //private static ILog Logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        private static ILog log = LogManager.GetLogger(typeof(frmMain));
+
         Boolean isCmdFin = true;
         Boolean isPause = false;
         Boolean isScriptRunning = false;
@@ -45,6 +49,7 @@ namespace EQP_Emulator
         public frmMain()
         {
             InitializeComponent();
+            XmlConfigurator.Configure();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -285,7 +290,7 @@ namespace EQP_Emulator
                 {
                     Thread.Sleep(ackSleepTime);
                     isCmdFin = true;
-                    FormMainUpdate.LogUpdate("**************  Commnad Finish  **************\n");
+                    FormMainUpdate.LogUpdate("\n**************  Script Commnad Finish  **************");
                 }
             }
             if (replyMsg.StartsWith("INF:RESTR"))
@@ -296,6 +301,14 @@ namespace EQP_Emulator
                 isPause = false;
                 setIsRunning(false);
             }
+            else if (replyMsg.StartsWith("INF:ERROR/CLEAR"))
+            {
+                FormMainUpdate.AlarmUpdate("Alarm clear");
+                //isAlarmSet = false;
+                setIsRunning(false);
+            }
+
+
 
         }
 
@@ -334,8 +347,6 @@ namespace EQP_Emulator
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            if (!this.lbl_ConnectState.Text.Equals("Connected"))
-                FormMainUpdate.ShowMessage("Please connect first!!");
             if(tbCmd.Text.Trim().Equals(""))
                 FormMainUpdate.ShowMessage("Command text is empty.");
             else
@@ -453,16 +464,16 @@ namespace EQP_Emulator
 
             int idx = dgvCmdScript.CurrentCell.RowIndex;
             //send command
-            if (!this.lbl_ConnectState.Text.Equals("Connected"))
-            {
-                FormMainUpdate.ShowMessage("Please connect first!!");
-                return;
-            }
-            else
-            {
+            //if (!this.lbl_ConnectState.Text.Equals("Connected"))
+            //{
+            //    FormMainUpdate.ShowMessage("Please connect first!!");
+            //    return;
+            //}
+            //else
+            //{
                 string cmd = (string)dgvCmdScript.Rows[idx].Cells["Command"].Value;
                 sendCommand(cmd);
-            }
+            //}
 
             //change index
             if (idx < dgvCmdScript.RowCount - 1)
@@ -521,13 +532,18 @@ namespace EQP_Emulator
         {
             try
             {
-                if (FormMainUpdate.isAlarmSet && !cmd.StartsWith("ACK"))
+                if (FormMainUpdate.isAlarmSet && !cmd.StartsWith("ACK") && !cmd.Equals("SET:ERROR/CLEAR;"))
                 {
                     FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state:" + cmd + "\n");
+                }
+                else if (!this.lbl_ConnectState.Text.Equals("Connected"))
+                {
+                    FormMainUpdate.ShowMessage("Please connect first!!");
                 }
                 else
                 {
                     conn.Send(cmd + "\r");
+                    log.Info(cmd);
                     FormMainUpdate.LogUpdate("     Send => " + cmd);
                 }
             }
@@ -580,11 +596,18 @@ namespace EQP_Emulator
                     if (!isScriptRunning)
                     {
                         FormMainUpdate.ShowMessage("Script stop !!");
-                        break;//exit for
+                        return;//exit for
+                    }
+                    if (isPause)
+                    {
+                        FormMainUpdate.ShowMessage("Pause Timeout");
+                        FormMainUpdate.AlarmUpdate("Alarm set");
+                        return;//exit for
                     }
 
                     string cmd = element.Command;
                     isCmdFin = false;
+                    FormMainUpdate.LogUpdate("\n**************  Script Commnad Start  **************");
                     sendCommand(cmd);
                     currentCmd = cmd.Replace("MOV","").Replace("SET", "").Replace("GET", "");
 
@@ -595,14 +618,15 @@ namespace EQP_Emulator
                     {
                         FormMainUpdate.ShowMessage("Command Timeout");
                         FormMainUpdate.AlarmUpdate("Alarm set");
-                        break;//exit for
+                        return;//exit for
                     }
                     //resummn after motion complete               
                     if (FormMainUpdate.isAlarmSet)
                     {
                         FormMainUpdate.ShowMessage("Execute " + cmd + " error.");
-                        break;//exit for
+                        return;//exit for
                     }
+                    currentCmd = ""; //clear command
                 }
                 cnt++;
             }
@@ -624,13 +648,7 @@ namespace EQP_Emulator
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            FormMainUpdate.AlarmUpdate("Alarm clear");
-            //isAlarmSet = false;
-            setIsRunning(false);
-            btnHold.Visible = true;
-            btnAbort.Visible = false;
-            btnRestart.Visible = false;
-            isPause = false;
+            sendCommand("SET:ERROR/CLEAR;");
         }
 
 
@@ -930,7 +948,7 @@ namespace EQP_Emulator
             //create script
             createScript();
             // run script
-            btnScriptRun_Click(btnScriptRun, e); 
+            //btnScriptRun_Click(btnScriptRun, e); 
         }
 
         private void initEFEMConfig()
@@ -1186,7 +1204,11 @@ namespace EQP_Emulator
             }                
             else
                 return; // do nothing
+            if (source.StartsWith("ALIGN"))
+                Command.Clamp(source, "OFF");
             Command.Load(source, arm);
+            if(source.StartsWith("ALIGN"))
+                Command.Home(source);
             EFEM.UpdateWaferInfo(location, wafer_id);
         }
         
@@ -1224,7 +1246,14 @@ namespace EQP_Emulator
             }
             else
                 return; // do nothing
+            // clamp before put
+            if (destination.StartsWith("ALIGN"))
+                Command.Clamp(destination, "ON");
             Command.Unload(destination, arm);
+            // clamp before align
+            //if (source.StartsWith("ALIGN"))
+            //   Command.Clamp(source, "ON");
+            Command.Align(destination, "120");//120 angle
             EFEM.UpdateWaferInfo(destination, wafer_id);
         }
         public void PutLoadLock(string wafer_id)
