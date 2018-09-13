@@ -299,7 +299,7 @@ namespace EQP_Emulator
             dtErrPos.Rows.Add("DIO5", "DIO 5");
             dtErrPos.Rows.Add("OCR1", "OCR 1");
             dtErrPos.Rows.Add("OCR2", "OCR 2");
-            dtErrPos.Rows.Add("UNDEFINITION", "Undefined error");
+            dtErrPos.Rows.Add("SYSTEM", "System");
         }
 
         public CmdDefine()

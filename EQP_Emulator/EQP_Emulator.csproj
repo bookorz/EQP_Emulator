@@ -106,8 +106,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="images\blink.gif" />
+    <Content Include="images\off.png" />
+    <Content Include="images\on.gif" />
     <Content Include="Lib\log4net.dll" />
     <Content Include="Lib\nmodbuspc.dll" />
+    <None Include="Resources\on.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

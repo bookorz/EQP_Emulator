@@ -29,6 +29,7 @@ namespace EQP_Emulator
         
         
         Boolean isCmdFin = true;
+        Boolean isPause = false;
         Boolean isScriptRunning = false;
         Label[] p1Ary;
         Label[] p2Ary;
@@ -39,6 +40,7 @@ namespace EQP_Emulator
         int intCmdTimeOut = 300000;//default 5 mins
         int ackTimeOut = 5000; // default 5 seconds
         int ackSleepTime = 200; // default 0.2 seconds
+        string currentCmd = "";
 
         public frmMain()
         {
@@ -269,27 +271,32 @@ namespace EQP_Emulator
             {
                 //isAlarmSet = true;
                 FormMainUpdate.AlarmUpdate("Alarm set");
+                setIsRunning(false);//stop script
             }
-            //Thread.Sleep(1000);
+            //
             if (replyMsg.StartsWith("INF") || replyMsg.StartsWith("ABS"))
             {
                 string[] cmd = replyMsg.Split(new char[] { ':', '/' });
-                //if (define.autoAckCmd.Contains(cmd[1]))
-                //{
-                //暫時收到INF一律回ACK
-                Thread.Sleep(ackSleepTime);
+                //收到INF,ABS 一律自動回ACK
                 string ackMsg = replyMsg.Replace("INF:", "ACK:").Replace("ABS:", "ACK:");
+                //Thread.Sleep(ackSleepTime);
                 sendCommand(ackMsg);
-                FormMainUpdate.LogUpdate("**************  Commnad Finish  **************\n");
-                //}
-                isCmdFin = true;
+                if (!currentCmd.Equals("") && replyMsg.EndsWith(currentCmd))
+                {
+                    Thread.Sleep(ackSleepTime);
+                    isCmdFin = true;
+                    FormMainUpdate.LogUpdate("**************  Commnad Finish  **************\n");
+                }
             }
-            //if (FormMainUpdate.isAlarmSet)
-            //{
-            //    FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state.");
-            //    FormMainUpdate.AlarmUpdate("Alarm set");
-            //    return;
-            //}
+            if (replyMsg.StartsWith("INF:RESTR"))
+            {
+                isPause = false;
+            } else if (replyMsg.StartsWith("INF:ABORT"))
+            {
+                isPause = false;
+                setIsRunning(false);
+            }
+
         }
 
         void IConnectionReport.On_Connection_Connecting(string Msg)
@@ -516,7 +523,7 @@ namespace EQP_Emulator
             {
                 if (FormMainUpdate.isAlarmSet && !cmd.StartsWith("ACK"))
                 {
-                    FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state:" + cmd);
+                    FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state:" + cmd + "\n");
                 }
                 else
                 {
@@ -567,30 +574,33 @@ namespace EQP_Emulator
             while (cnt <= repeatTimes  && !FormMainUpdate.isAlarmSet && isScriptRunning)
             {
                 FormMainUpdate.LogUpdate("\n**************  Run Script: " + cnt + "  **************");
-                //for (int idx = 0; idx < dgvCmdScript.RowCount; idx++)
                 foreach (CmdScript element in Command.oCmdScript)
                 {
+                    SpinWait.SpinUntil(() => !isPause, 999999);// wait for pause 
+                    if (!isScriptRunning)
+                    {
+                        FormMainUpdate.ShowMessage("Script stop !!");
+                        break;//exit for
+                    }
+
                     string cmd = element.Command;
                     isCmdFin = false;
                     sendCommand(cmd);
+                    currentCmd = cmd.Replace("MOV","").Replace("SET", "").Replace("GET", "");
+
                     
-                    SpinWait.SpinUntil(() => isCmdFin, intCmdTimeOut);// pause for motion complete
+                    //SpinWait.SpinUntil(() => isCmdFin, intCmdTimeOut);// pause for motion complete     
+                    SpinWait.SpinUntil(() => isCmdFin, 999999999);// pause for motion complete       
                     if (!isCmdFin)
                     {
                         FormMainUpdate.ShowMessage("Command Timeout");
                         FormMainUpdate.AlarmUpdate("Alarm set");
-                        //isAlarmSet = true;
                         break;//exit for
                     }
                     //resummn after motion complete               
                     if (FormMainUpdate.isAlarmSet)
                     {
                         FormMainUpdate.ShowMessage("Execute " + cmd + " error.");
-                        break;//exit for
-                    }
-                    if (!isScriptRunning)
-                    {
-                        FormMainUpdate.ShowMessage("Script stop !!");
                         break;//exit for
                     }
                 }
@@ -604,10 +614,12 @@ namespace EQP_Emulator
         private void btnScriptStop_Click(object sender, EventArgs e)
         {
             setIsRunning(false);
-            FormMainUpdate.LogUpdate("\n*************   Manual Stop: Begin   *************");
-            sendCommand("MOV: HOLD;");//send pause command to efem
-            Thread.Sleep(200);
-            sendCommand("MOV: ABORT;");//send abort command to efem
+            isPause = false;
+            FormMainUpdate.LogUpdate("\n*************   Manual Stop     *************");
+
+            //sendCommand("MOV: HOLD;");//send pause command to efem
+            //Thread.Sleep(200);
+            //sendCommand("MOV: ABORT;");//send abort command to efem
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -615,6 +627,10 @@ namespace EQP_Emulator
             FormMainUpdate.AlarmUpdate("Alarm clear");
             //isAlarmSet = false;
             setIsRunning(false);
+            btnHold.Visible = true;
+            btnAbort.Visible = false;
+            btnRestart.Visible = false;
+            isPause = false;
         }
 
 
@@ -1669,6 +1685,35 @@ namespace EQP_Emulator
             cbErrMsg.SelectedItem = EFEM.Error[0];
             cbErrPos.SelectedIndex = -1;
             cbErrPos.SelectedItem = EFEM.Error[1];
+        }
+
+        private void btnDioRefresh_Click(object sender, EventArgs e)
+        {
+            //EQP_Emulator.Properties.Resources.on
+        }
+
+        private void btnHold_Click(object sender, EventArgs e)
+        {
+            btnHold.Visible = false;
+            btnAbort.Visible = true;
+            btnRestart.Visible = true;
+            isPause = true;
+            sendCommand("MOV:HOLD;");//send pause command to efem
+        }
+        private void btnAbort_Click(object sender, EventArgs e)
+        {
+            btnHold.Visible = true;
+            btnAbort.Visible = false;
+            btnRestart.Visible = false;
+            sendCommand("MOV:ABORT;");//send abort command to efem
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            btnHold.Visible = true;
+            btnAbort.Visible = false;
+            btnRestart.Visible = false;
+            sendCommand("MOV:RESTR;");//send abort command to efem
         }
     }
 }
