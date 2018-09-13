@@ -130,7 +130,6 @@
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.btnLoad_ml = new System.Windows.Forms.Button();
-            this.btnReset_ml = new System.Windows.Forms.Button();
             this.cbWithMap_ml = new System.Windows.Forms.CheckBox();
             this.label26 = new System.Windows.Forms.Label();
             this.btnMap_ml = new System.Windows.Forms.Button();
@@ -138,7 +137,6 @@
             this.btnInit_ml = new System.Windows.Forms.Button();
             this.cbport_ml = new System.Windows.Forms.ComboBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.btnReset_mr = new System.Windows.Forms.Button();
             this.cbRobot_mr = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.rdbArm2_mr = new System.Windows.Forms.RadioButton();
@@ -148,7 +146,7 @@
             this.btnOrg_mr = new System.Windows.Forms.Button();
             this.btnUnClamp_mr = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.btnReset_ma = new System.Windows.Forms.Button();
+            this.btnHome_ma = new System.Windows.Forms.Button();
             this.btnInit_ma = new System.Windows.Forms.Button();
             this.btnClamp_ma = new System.Windows.Forms.Button();
             this.btnUnClamp_ma = new System.Windows.Forms.Button();
@@ -463,6 +461,8 @@
             this.rbEvtAllOn = new System.Windows.Forms.RadioButton();
             this.rbEvtAllOff = new System.Windows.Forms.RadioButton();
             this.hint = new System.Windows.Forms.ToolTip(this.components);
+            this.btnInitAll = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.GroupBox3.SuspendLayout();
             this.GroupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -680,6 +680,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.btnInitAll);
             this.groupBox5.Controls.Add(this.btnReset);
             this.groupBox5.Controls.Add(this.btnAddScript);
             this.groupBox5.Controls.Add(this.cbPara4);
@@ -702,11 +703,10 @@
             // btnReset
             // 
             this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReset.Enabled = false;
             this.btnReset.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(820, 73);
+            this.btnReset.Location = new System.Drawing.Point(852, 73);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(106, 39);
+            this.btnReset.Size = new System.Drawing.Size(87, 39);
             this.btnReset.TabIndex = 29;
             this.btnReset.Text = "Reset Alarm";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -718,7 +718,7 @@
             this.btnAddScript.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddScript.Location = new System.Drawing.Point(634, 73);
             this.btnAddScript.Name = "btnAddScript";
-            this.btnAddScript.Size = new System.Drawing.Size(106, 39);
+            this.btnAddScript.Size = new System.Drawing.Size(87, 39);
             this.btnAddScript.TabIndex = 28;
             this.btnAddScript.Text = "Add To Script";
             this.btnAddScript.UseVisualStyleBackColor = true;
@@ -1132,6 +1132,7 @@
             // tabRun
             // 
             this.tabRun.BackColor = System.Drawing.SystemColors.Control;
+            this.tabRun.Controls.Add(this.button1);
             this.tabRun.Controls.Add(this.p4gb);
             this.tabRun.Controls.Add(this.p3gb);
             this.tabRun.Controls.Add(this.p2gb);
@@ -1389,7 +1390,7 @@
             // 
             this.btnTransfer.BackColor = System.Drawing.Color.Gold;
             this.btnTransfer.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransfer.Location = new System.Drawing.Point(135, 246);
+            this.btnTransfer.Location = new System.Drawing.Point(123, 246);
             this.btnTransfer.Name = "btnTransfer";
             this.btnTransfer.Size = new System.Drawing.Size(106, 39);
             this.btnTransfer.TabIndex = 21;
@@ -1823,7 +1824,6 @@
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.btnLoad_ml);
-            this.groupBox10.Controls.Add(this.btnReset_ml);
             this.groupBox10.Controls.Add(this.cbWithMap_ml);
             this.groupBox10.Controls.Add(this.label26);
             this.groupBox10.Controls.Add(this.btnMap_ml);
@@ -1846,17 +1846,6 @@
             this.btnLoad_ml.Text = "Load";
             this.btnLoad_ml.UseVisualStyleBackColor = true;
             this.btnLoad_ml.Click += new System.EventHandler(this.sendManualCmd);
-            // 
-            // btnReset_ml
-            // 
-            this.btnReset_ml.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset_ml.Location = new System.Drawing.Point(117, 13);
-            this.btnReset_ml.Name = "btnReset_ml";
-            this.btnReset_ml.Size = new System.Drawing.Size(90, 31);
-            this.btnReset_ml.TabIndex = 66;
-            this.btnReset_ml.Text = "Reset";
-            this.btnReset_ml.UseVisualStyleBackColor = true;
-            this.btnReset_ml.Click += new System.EventHandler(this.sendManualCmd);
             // 
             // cbWithMap_ml
             // 
@@ -1885,7 +1874,7 @@
             // btnMap_ml
             // 
             this.btnMap_ml.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMap_ml.Location = new System.Drawing.Point(309, 49);
+            this.btnMap_ml.Location = new System.Drawing.Point(117, 49);
             this.btnMap_ml.Name = "btnMap_ml";
             this.btnMap_ml.Size = new System.Drawing.Size(90, 31);
             this.btnMap_ml.TabIndex = 38;
@@ -1907,7 +1896,7 @@
             // btnInit_ml
             // 
             this.btnInit_ml.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInit_ml.Location = new System.Drawing.Point(117, 48);
+            this.btnInit_ml.Location = new System.Drawing.Point(309, 50);
             this.btnInit_ml.Name = "btnInit_ml";
             this.btnInit_ml.Size = new System.Drawing.Size(90, 31);
             this.btnInit_ml.TabIndex = 40;
@@ -1936,7 +1925,6 @@
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.btnReset_mr);
             this.groupBox12.Controls.Add(this.cbRobot_mr);
             this.groupBox12.Controls.Add(this.label27);
             this.groupBox12.Controls.Add(this.rdbArm2_mr);
@@ -1950,17 +1938,6 @@
             this.groupBox12.Size = new System.Drawing.Size(456, 85);
             this.groupBox12.TabIndex = 60;
             this.groupBox12.TabStop = false;
-            // 
-            // btnReset_mr
-            // 
-            this.btnReset_mr.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset_mr.Location = new System.Drawing.Point(117, 16);
-            this.btnReset_mr.Name = "btnReset_mr";
-            this.btnReset_mr.Size = new System.Drawing.Size(90, 31);
-            this.btnReset_mr.TabIndex = 67;
-            this.btnReset_mr.Text = "Reset";
-            this.btnReset_mr.UseVisualStyleBackColor = true;
-            this.btnReset_mr.Click += new System.EventHandler(this.sendManualCmd);
             // 
             // cbRobot_mr
             // 
@@ -2019,7 +1996,7 @@
             // btnInit_mr
             // 
             this.btnInit_mr.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInit_mr.Location = new System.Drawing.Point(117, 49);
+            this.btnInit_mr.Location = new System.Drawing.Point(309, 48);
             this.btnInit_mr.Name = "btnInit_mr";
             this.btnInit_mr.Size = new System.Drawing.Size(90, 31);
             this.btnInit_mr.TabIndex = 65;
@@ -2041,7 +2018,7 @@
             // btnOrg_mr
             // 
             this.btnOrg_mr.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrg_mr.Location = new System.Drawing.Point(309, 49);
+            this.btnOrg_mr.Location = new System.Drawing.Point(117, 48);
             this.btnOrg_mr.Name = "btnOrg_mr";
             this.btnOrg_mr.Size = new System.Drawing.Size(90, 31);
             this.btnOrg_mr.TabIndex = 62;
@@ -2062,7 +2039,7 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.btnReset_ma);
+            this.groupBox11.Controls.Add(this.btnHome_ma);
             this.groupBox11.Controls.Add(this.btnInit_ma);
             this.groupBox11.Controls.Add(this.btnClamp_ma);
             this.groupBox11.Controls.Add(this.btnUnClamp_ma);
@@ -2075,21 +2052,21 @@
             this.groupBox11.TabIndex = 60;
             this.groupBox11.TabStop = false;
             // 
-            // btnReset_ma
+            // btnHome_ma
             // 
-            this.btnReset_ma.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset_ma.Location = new System.Drawing.Point(117, 16);
-            this.btnReset_ma.Name = "btnReset_ma";
-            this.btnReset_ma.Size = new System.Drawing.Size(90, 31);
-            this.btnReset_ma.TabIndex = 70;
-            this.btnReset_ma.Text = "Reset";
-            this.btnReset_ma.UseVisualStyleBackColor = true;
-            this.btnReset_ma.Click += new System.EventHandler(this.sendManualCmd);
+            this.btnHome_ma.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome_ma.Location = new System.Drawing.Point(117, 49);
+            this.btnHome_ma.Name = "btnHome_ma";
+            this.btnHome_ma.Size = new System.Drawing.Size(90, 31);
+            this.btnHome_ma.TabIndex = 70;
+            this.btnHome_ma.Text = "Home";
+            this.btnHome_ma.UseVisualStyleBackColor = true;
+            this.btnHome_ma.Click += new System.EventHandler(this.sendManualCmd);
             // 
             // btnInit_ma
             // 
             this.btnInit_ma.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInit_ma.Location = new System.Drawing.Point(117, 49);
+            this.btnInit_ma.Location = new System.Drawing.Point(309, 49);
             this.btnInit_ma.Name = "btnInit_ma";
             this.btnInit_ma.Size = new System.Drawing.Size(90, 31);
             this.btnInit_ma.TabIndex = 69;
@@ -2122,7 +2099,7 @@
             // btnOrg_ma
             // 
             this.btnOrg_ma.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrg_ma.Location = new System.Drawing.Point(309, 49);
+            this.btnOrg_ma.Location = new System.Drawing.Point(117, 16);
             this.btnOrg_ma.Name = "btnOrg_ma";
             this.btnOrg_ma.Size = new System.Drawing.Size(90, 31);
             this.btnOrg_ma.TabIndex = 66;
@@ -6502,6 +6479,30 @@
             this.rbEvtAllOff.UseVisualStyleBackColor = true;
             this.rbEvtAllOff.Click += new System.EventHandler(this.rbEvtAllOff_Click);
             // 
+            // btnInitAll
+            // 
+            this.btnInitAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInitAll.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInitAll.Location = new System.Drawing.Point(761, 73);
+            this.btnInitAll.Name = "btnInitAll";
+            this.btnInitAll.Size = new System.Drawing.Size(87, 39);
+            this.btnInitAll.TabIndex = 29;
+            this.btnInitAll.Text = "Init All";
+            this.btnInitAll.UseVisualStyleBackColor = true;
+            this.btnInitAll.Click += new System.EventHandler(this.btnInitAll_Click);
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Enabled = false;
+            this.button1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(7, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 39);
+            this.button1.TabIndex = 65;
+            this.button1.Text = "Reset";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -6850,9 +6851,7 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Button btnReset_ml;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.Button btnReset_mr;
         private System.Windows.Forms.ComboBox cbRobot_mr;
         private System.Windows.Forms.RadioButton rdbArm2_mr;
         private System.Windows.Forms.RadioButton rdbArm1_mr;
@@ -6861,7 +6860,7 @@
         private System.Windows.Forms.Button btnUnClamp_mr;
         private System.Windows.Forms.Button btnOrg_mr;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.Button btnReset_ma;
+        private System.Windows.Forms.Button btnHome_ma;
         private System.Windows.Forms.Button btnInit_ma;
         private System.Windows.Forms.Button btnClamp_ma;
         private System.Windows.Forms.Button btnUnClamp_ma;
@@ -7059,6 +7058,8 @@
         private System.Windows.Forms.Button btnRestart;
         private System.Windows.Forms.Button btnAbort;
         private System.Windows.Forms.Button btnHold;
+        private System.Windows.Forms.Button btnInitAll;
+        private System.Windows.Forms.Button button1;
     }
 }
 

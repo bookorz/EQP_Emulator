@@ -272,11 +272,11 @@ namespace EQP_Emulator
         {
             string replyMsg = (string)Msg;
             FormMainUpdate.LogUpdate("Reveive <= " + replyMsg);
-            if (replyMsg.StartsWith("NAK") || replyMsg.StartsWith("CAN") || replyMsg.StartsWith("ABS"))
+            //if (replyMsg.StartsWith("NAK") || replyMsg.StartsWith("CAN") || replyMsg.StartsWith("ABS"))
+            if (replyMsg.StartsWith("ABS"))
             {
-                //isAlarmSet = true;
                 FormMainUpdate.AlarmUpdate("Alarm set");
-                setIsRunning(false);//stop script
+                setIsRunning(false);//ABS stop script
             }
             //
             if (replyMsg.StartsWith("INF") || replyMsg.StartsWith("ABS"))
@@ -299,13 +299,13 @@ namespace EQP_Emulator
             } else if (replyMsg.StartsWith("INF:ABORT"))
             {
                 isPause = false;
-                setIsRunning(false);
+                setIsRunning(false);// ABORT 
             }
             else if (replyMsg.StartsWith("INF:ERROR/CLEAR"))
             {
                 FormMainUpdate.AlarmUpdate("Alarm clear");
                 //isAlarmSet = false;
-                setIsRunning(false);
+                setIsRunning(false); //ERROR CLEAR
             }
 
 
@@ -637,7 +637,7 @@ namespace EQP_Emulator
 
         private void btnScriptStop_Click(object sender, EventArgs e)
         {
-            setIsRunning(false);
+            setIsRunning(false);//STOP
             isPause = false;
             FormMainUpdate.LogUpdate("\n*************   Manual Stop     *************");
 
@@ -948,7 +948,7 @@ namespace EQP_Emulator
             //create script
             createScript();
             // run script
-            //btnScriptRun_Click(btnScriptRun, e); 
+            btnScriptRun_Click(btnScriptRun, e); 
         }
 
         private void initEFEMConfig()
@@ -1253,7 +1253,7 @@ namespace EQP_Emulator
             // clamp before align
             //if (source.StartsWith("ALIGN"))
             //   Command.Clamp(source, "ON");
-            Command.Align(destination, "120");//120 angle
+            Command.Align(destination, "120000");//120 angle
             EFEM.UpdateWaferInfo(destination, wafer_id);
         }
         public void PutLoadLock(string wafer_id)
@@ -1329,7 +1329,58 @@ namespace EQP_Emulator
 
         private void sendManualCmd(object sender, EventArgs e)
         {
-            FormMainUpdate.ShowMessage(((Button)sender).Name);
+            string port = cbport_ml.SelectedItem.ToString();
+            string arm = rdbArm1_mr.Checked? "ARM1":"ARM2";
+            string robot = cbRobot_mr.SelectedItem.ToString();
+            string aligner = cbAlign_ma.SelectedItem.ToString();
+
+            switch (((Button)sender).Name)
+            {
+                //****************** load port ******************
+                case "btnMap_ml"://load port mapping
+                    sendCommand("MOV:WAFSH/" + port + ";");
+                    break;
+                case "btnLoad_ml"://load port load
+                    sendCommand("MOV:OPEN/" + cbport_ml.SelectedItem + ";");
+                    break;
+                case "btnUnload_ml"://load port unload
+                    sendCommand("MOV:UNDOCK/" + cbport_ml.SelectedItem + ";");
+                    break;
+                case "btnInit_ml"://load port init
+                    sendCommand("MOV:INIT/" + cbport_ml.SelectedItem + ";");
+                    break;
+
+                //****************** robot ******************
+                case "btnOrg_mr"://robot org
+                    sendCommand("MOV:ORGSH/" + cbRobot_mr.SelectedItem + ";");
+                    break;
+                case "btnClamp_mr"://robot clamp on
+                    sendCommand("SET:CLAMP/" + arm + "/ON;");
+                    break;
+                case "btnUnClamp_mr"://robot clamp off
+                    sendCommand("SET:CLAMP/" + arm + "/OFF;");
+                    break;
+                case "btnInit_mr"://robot init
+                    sendCommand("MOV:INIT/" + robot + ";");
+                    break;
+
+                //****************** aligner ******************
+                case "btnInit_ma":// aligner init
+                    sendCommand("MOV:INIT/" + aligner + ";");
+                    break;
+                case "btnOrg_ma":// aligner ORG
+                    sendCommand("MOV:ORGSH/" + aligner + ";");
+                    break;
+                case "btnHome_ma":// aligner init
+                    sendCommand("MOV:HOME/" + aligner + ";");
+                    break;
+                case "btnUnClamp_ma":// aligner init
+                    sendCommand("SET:CLAMP/" + aligner + "/OFF;");
+                    break;
+                case "btnClamp_ma":// aligner init
+                    sendCommand("SET:CLAMP/" + aligner + "/ON;");
+                    break;
+            }
         }
         
         private void cbR1Arm3_CheckedChanged(object sender, EventArgs e)
@@ -1743,6 +1794,11 @@ namespace EQP_Emulator
             btnAbort.Visible = false;
             btnRestart.Visible = false;
             sendCommand("MOV:RESTR;");//send abort command to efem
+        }
+
+        private void btnInitAll_Click(object sender, EventArgs e)
+        {
+            sendCommand("MOV:INIT/ALL;");
         }
     }
 }
