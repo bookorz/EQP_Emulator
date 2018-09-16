@@ -21,6 +21,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using log4net;
 using log4net.Config;
+using System.Text.RegularExpressions;
 
 namespace EQP_Emulator
 {
@@ -275,22 +276,23 @@ namespace EQP_Emulator
             //if (replyMsg.StartsWith("NAK") || replyMsg.StartsWith("CAN") || replyMsg.StartsWith("ABS"))
             if (replyMsg.StartsWith("ABS"))
             {
-                FormMainUpdate.AlarmUpdate("Alarm set");
+                FormMainUpdate.AlarmUpdate(true);
                 setIsRunning(false);//ABS stop script
+            }else if (replyMsg.StartsWith("CAN") || replyMsg.StartsWith("NAK"))
+            {
+                setIsRunning(false);//CAN  or  NAK stop script
             }
-            //
+
             if (replyMsg.StartsWith("INF") || replyMsg.StartsWith("ABS"))
             {
                 string[] cmd = replyMsg.Split(new char[] { ':', '/' });
                 //收到INF,ABS 一律自動回ACK
                 string ackMsg = replyMsg.Replace("INF:", "ACK:").Replace("ABS:", "ACK:");
-                //Thread.Sleep(ackSleepTime);
+                Thread.Sleep(ackSleepTime);
                 sendCommand(ackMsg);
                 if (!currentCmd.Equals("") && replyMsg.EndsWith(currentCmd))
                 {
-                    Thread.Sleep(ackSleepTime);
                     isCmdFin = true;
-                    FormMainUpdate.LogUpdate("\n**************  Script Commnad Finish  **************");
                 }
             }
             if (replyMsg.StartsWith("INF:RESTR"))
@@ -303,7 +305,7 @@ namespace EQP_Emulator
             }
             else if (replyMsg.StartsWith("INF:ERROR/CLEAR"))
             {
-                FormMainUpdate.AlarmUpdate("Alarm clear");
+                FormMainUpdate.AlarmUpdate(false);
                 //isAlarmSet = false;
                 setIsRunning(false); //ERROR CLEAR
             }
@@ -333,7 +335,7 @@ namespace EQP_Emulator
         void IConnectionReport.On_Connection_Error(string Msg)
         {
             //isAlarmSet = true;
-            FormMainUpdate.AlarmUpdate("Alarm set");
+            FormMainUpdate.AlarmUpdate(true);
             FormMainUpdate.ConnectUpdate("Connection_Error");
             FormMainUpdate.LogUpdate("Connection_Error");
         }
@@ -536,7 +538,7 @@ namespace EQP_Emulator
                 {
                     FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state:" + cmd + "\n");
                 }
-                else if (!this.lbl_ConnectState.Text.Equals("Connected"))
+                else if (!this.lbl_ConnectState.Text.Equals("Connected") && !cmd.Equals("ACK:READY/COMM;"))
                 {
                     FormMainUpdate.ShowMessage("Please connect first!!");
                 }
@@ -549,9 +551,8 @@ namespace EQP_Emulator
             }
             catch (Exception ex)
             {
-                //isAlarmSet = true;
                 FormMainUpdate.ShowMessage(ex.Message + ":" + ex.ToString());
-                FormMainUpdate.AlarmUpdate("Alarm set");
+                FormMainUpdate.AlarmUpdate(true);
             }
         }
 
@@ -592,16 +593,16 @@ namespace EQP_Emulator
                 FormMainUpdate.LogUpdate("\n**************  Run Script: " + cnt + "  **************");
                 foreach (CmdScript element in Command.oCmdScript)
                 {
-                    SpinWait.SpinUntil(() => !isPause, 999999);// wait for pause 
-                    if (!isScriptRunning)
-                    {
-                        FormMainUpdate.ShowMessage("Script stop !!");
-                        return;//exit for
-                    }
+                    SpinWait.SpinUntil(() => !isPause, 3600000);// wait for pause 
                     if (isPause)
                     {
                         FormMainUpdate.ShowMessage("Pause Timeout");
-                        FormMainUpdate.AlarmUpdate("Alarm set");
+                        FormMainUpdate.AlarmUpdate(true);
+                        return;//exit for
+                    }
+                    if (!isScriptRunning)
+                    {
+                        FormMainUpdate.ShowMessage("Script stop !!");
                         return;//exit for
                     }
 
@@ -609,15 +610,12 @@ namespace EQP_Emulator
                     isCmdFin = false;
                     FormMainUpdate.LogUpdate("\n**************  Script Commnad Start  **************");
                     sendCommand(cmd);
-                    currentCmd = cmd.Replace("MOV","").Replace("SET", "").Replace("GET", "");
-
-                    
-                    //SpinWait.SpinUntil(() => isCmdFin, intCmdTimeOut);// pause for motion complete     
-                    SpinWait.SpinUntil(() => isCmdFin, 999999999);// pause for motion complete       
+                    currentCmd = cmd.Replace("MOV","").Replace("SET", "").Replace("GET", "");    
+                    SpinWait.SpinUntil(() => isCmdFin, intCmdTimeOut);// wait for command complete       
                     if (!isCmdFin)
                     {
                         FormMainUpdate.ShowMessage("Command Timeout");
-                        FormMainUpdate.AlarmUpdate("Alarm set");
+                        FormMainUpdate.AlarmUpdate(true);
                         return;//exit for
                     }
                     //resummn after motion complete               
@@ -627,6 +625,7 @@ namespace EQP_Emulator
                         return;//exit for
                     }
                     currentCmd = ""; //clear command
+                    FormMainUpdate.LogUpdate("**************  Script Commnad Finish  **************");
                 }
                 cnt++;
             }
@@ -637,7 +636,7 @@ namespace EQP_Emulator
 
         private void btnScriptStop_Click(object sender, EventArgs e)
         {
-            setIsRunning(false);//STOP
+            FormMainUpdate.AlarmUpdate(false);
             isPause = false;
             FormMainUpdate.LogUpdate("\n*************   Manual Stop     *************");
 
@@ -1451,18 +1450,43 @@ namespace EQP_Emulator
             tbErrPosDecs.Text = pos.desc;
         }
 
+
+        private void runCommands(object data)
+        {
+            string[] cmds = (string[]) data;
+            FormMainUpdate.LogUpdate("\n**************  Commnads Start  ****************");
+            int i = 1;
+            foreach (string cmd in cmds)
+            {
+                isCmdFin = false;
+                currentCmd = cmd.Replace("MOV", "").Replace("SET", "").Replace("GET", "");
+                FormMainUpdate.LogUpdate("**************  Commnad " + i +" Start  ***********");
+                sendCommand(cmd);
+                SpinWait.SpinUntil(() => isCmdFin, intCmdTimeOut);// wait for command complete 
+                FormMainUpdate.LogUpdate("**************  Commnad " + i + " End  ************");
+                i++;
+            }
+            FormMainUpdate.LogUpdate("**************  Commnads End  ****************\n");
+        }
+
         private void btnRecovery_Click(object sender, EventArgs e)
         {
-            switch (tbRecoverMethod.Text)
+            System.Threading.WaitCallback thread = new WaitCallback(runCommands);
+            switch (tbRecoverMethod.Text.Trim())
             {
+                case "":
                 case "0":
                     MessageBox.Show("No Error");
                     break;
                 case "1":
-                    MessageBox.Show("Reset Error");
+                    //MessageBox.Show("Reset Error:Start");
+                    ThreadPool.QueueUserWorkItem(thread, new string[] { "SET:ERROR/CLEAR;" });
+                    MessageBox.Show("Reset Error:End");
                     break;
                 case "2":
-                    MessageBox.Show("Reset Error => Init => Origin search");
+                    //MessageBox.Show("Reset Error => Init => Origin search: Start");
+                    ThreadPool.QueueUserWorkItem(thread, new string[] { "SET:ERROR/CLEAR;", "MOV:INIT/ALL;", "MOV:ORGSH/ALL;" });
+                    MessageBox.Show("Reset Error => Init => Origin search: End");
                     break;
                 case "3":
                     MessageBox.Show("Turn on the power again or reboot system program.");
@@ -1767,9 +1791,102 @@ namespace EQP_Emulator
             cbErrPos.SelectedItem = EFEM.Error[1];
         }
 
-        private void btnDioRefresh_Click(object sender, EventArgs e)
+        private string getSignal(string type)
+        {
+            string result = "";
+
+            switch (type)
+            {
+                case "sysDio":
+                    result = "101010101010????????????????????"; //32 bit
+                    break;
+                case "sysLight":
+                    result = "01011?0101?00????????????????????";//32 bit
+                    break;
+                case "portDio":
+                    result = "0101????0101010?????????????????";//32 bit
+                    break;
+                case "portLight":
+                    result = "1101?1101???????????????????????";//32 bit
+                    break;
+            }
+            int random1 = new Random().Next(2) % 2;  // 測試用, 記得取消
+            int random2 = random1 + 1 % 2 ;  // 測試用, 記得取消
+            result = result.Replace("1", "K").Replace("0", random2.ToString()).Replace("K", random1.ToString());// 測試用, 記得取消
+            return result;
+        }
+
+        private void btnSignalQuery_Click(object sender, EventArgs e)
         {
             //EQP_Emulator.Properties.Resources.on
+            string sysDio    = getSignal("sysDio"); 
+            string sysLight  = getSignal("sysLight");
+            string portDio   = getSignal("portDio");
+            string portLight = getSignal("portLight");
+
+            char[] sysData1 = sysDio.ToCharArray();
+            char[] sysData2 = sysLight.ToCharArray();
+            char[] portData1 = portDio.ToCharArray();
+            char[] portData2 = portLight.ToCharArray();
+
+            Bitmap on = EQP_Emulator.Properties.Resources.on;
+            Bitmap off = EQP_Emulator.Properties.Resources.off;
+            Bitmap blink = EQP_Emulator.Properties.Resources.blink;
+            Bitmap reserved = null;
+
+            //sysrem data 1 : DIO
+            pbSysDIO0.Image = sysData1[0].Equals('1') ? on : off;//System vacuum source pressure 1
+            pbSysDIO1.Image = sysData1[1].Equals('1') ? on : off;//System vacuum source pressure 2
+            pbSysDIO2.Image = sysData1[2].Equals('1') ? on : off;//System compressed air pressure 1
+            pbSysDIO3.Image = sysData1[3].Equals('1') ? on : off;//System compressed air pressure 2
+            pbSysDIO4.Image = sysData1[4].Equals('1') ? on : off;//Differential pressure sensor setting 1
+            pbSysDIO5.Image = sysData1[5].Equals('1') ? on : off;//Differential pressure sensor setting 2
+            pbSysDIO6.Image = sysData1[6].Equals('1') ? on : off;//FFU alarm 
+            pbSysDIO7.Image = sysData1[7].Equals('1') ? on : off;//Ionizer alarm
+            pbSysDIO8.Image = sysData1[8].Equals('1') ? on : off;//Mode switch 
+            pbSysDIO9.Image = sysData1[9].Equals('1') ? on : off;//Drive power
+            pbSysDIO10.Image = sysData1[10].Equals('1') ? on : off;//Door open/close status D
+            pbSysDIO11.Image = sysData1[11].Equals('1') ? on : off;//Area sensor/ Bar interlock
+
+            //sysrem data 2 : Signal tower
+            pbSysLight0.Image = sysData2[0].Equals('1') ? on : off;//RED Lights
+            pbSysLight1.Image = sysData2[1].Equals('1') ? on : off;//YELLOW Lights
+            pbSysLight2.Image = sysData2[2].Equals('1') ? on : off;//GREEN Lights
+            pbSysLight3.Image = sysData2[3].Equals('1') ? on : off;//BLUE Lights
+            pbSysLight4.Image = reserved;//reserved
+            pbSysLight5.Image = sysData2[5].Equals('1') ? blink : off;//RED Lights blink
+            pbSysLight6.Image = sysData2[6].Equals('1') ? blink : off;//YELLOW Lights blink
+            pbSysLight7.Image = sysData2[7].Equals('1') ? blink : off;//GREEN Lights blink
+            pbSysLight8.Image = sysData2[8].Equals('1') ? blink : off;//BLUE Lights blink
+            pbSysLight9.Image = reserved;//reserved
+            pbSysLight10.Image = sysData2[10].Equals('1') ? on : off; ;//BUZZER1
+            pbSysLight11.Image = sysData2[11].Equals('1') ? on : off; ;//BUZZER2
+
+            //port data 1 : DIO
+            pbPortDIO0.Image = portData1[0].Equals('1') ? on : off;//FOUP proper placement
+            pbPortDIO1.Image = portData1[1].Equals('1') ? on : off;//FOUP presence
+            pbPortDIO2.Image = portData1[2].Equals('1') ? on : off;//ACCESS SW 
+            pbPortDIO3.Image = portData1[3].Equals('1') ? on : off;//FOUP Lock
+            pbPortDIO4.Image = portData1[4].Equals('1') ? on : off;//Cover Close (reserved)
+            pbPortDIO5.Image = portData1[5].Equals('1') ? on : off;//Cover Lock(reserved)
+            pbPortDIO8.Image = portData1[8].Equals('1') ? on : off;//Info pad A
+            pbPortDIO9.Image = portData1[9].Equals('1') ? on : off;//Info pad B
+            pbPortDIO10.Image = portData1[10].Equals('1') ? on : off;//Info pad C
+            pbPortDIO11.Image = portData1[11].Equals('1') ? on : off;//Info pad D
+            pbPortDIO12.Image = portData1[12].Equals('1') ? on : off;//Adapter presence
+            pbPortDIO13.Image = portData1[13].Equals('1') ? on : off;//Adapter cable connection status
+            pbPortDIO14.Image = portData1[14].Equals('1') ? on : off;//Adapter valid
+
+            //port data 2 : Port indicator light
+            pbPortLight0.Image = portData2[0].Equals('1') ? on : off;//PRESENCE
+            pbPortLight1.Image = portData2[1].Equals('1') ? on : off;//PLACEMENT
+            pbPortLight2.Image = portData2[2].Equals('1') ? on : off;//LOAD
+            pbPortLight3.Image = portData2[3].Equals('1') ? on : off;//UNLOAD
+            pbPortLight4.Image = reserved;//reserved (MANUAL MODE )
+            pbPortLight5.Image = portData2[5].Equals('1') ? on : off;//ERROR
+            pbPortLight6.Image = portData2[6].Equals('1') ? on : off;//CLAMP/UNCLAMP
+            pbPortLight7.Image = portData2[7].Equals('1') ? on : off;//DOCK/UNDOCK
+            pbPortLight8.Image = portData2[8].Equals('1') ? on : off;//ACCESS SW
         }
 
         private void btnHold_Click(object sender, EventArgs e)
@@ -1799,6 +1916,19 @@ namespace EQP_Emulator
         private void btnInitAll_Click(object sender, EventArgs e)
         {
             sendCommand("MOV:INIT/ALL;");
+        }
+
+        private void showStatus_MouseEnter(object sender, EventArgs e)
+        {
+            string hint = this.hint.GetToolTip((Control)sender);
+            slStatus.Text = hint;
+            slStatus.BackColor = SystemColors.Info;
+        }
+
+        private void clearStatus_MouseLeave(object sender, EventArgs e)
+        {
+            slStatus.Text = "";
+            slStatus.BackColor = SystemColors.Control;
         }
     }
 }

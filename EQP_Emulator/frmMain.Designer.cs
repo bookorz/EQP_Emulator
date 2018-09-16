@@ -44,6 +44,7 @@
             this.btnConn = new System.Windows.Forms.Button();
             this.btnDisConn = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnInitAll = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnAddScript = new System.Windows.Forms.Button();
             this.cbPara4 = new System.Windows.Forms.ComboBox();
@@ -79,6 +80,7 @@
             this.btnAbort = new System.Windows.Forms.Button();
             this.btnHold = new System.Windows.Forms.Button();
             this.tabRun = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.p4gb = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbP4Type = new System.Windows.Forms.ComboBox();
@@ -280,23 +282,64 @@
             this.lbl_p125 = new System.Windows.Forms.Label();
             this.lbl_slot25 = new System.Windows.Forms.Label();
             this.tabInfo = new System.Windows.Forms.TabPage();
+            this.groupBox40 = new System.Windows.Forms.GroupBox();
             this.groupBox44 = new System.Windows.Forms.GroupBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbSysLight11 = new System.Windows.Forms.PictureBox();
+            this.pbSysLight10 = new System.Windows.Forms.PictureBox();
+            this.pbSysDIO11 = new System.Windows.Forms.PictureBox();
+            this.pbSysLight8 = new System.Windows.Forms.PictureBox();
+            this.pbSysDIO10 = new System.Windows.Forms.PictureBox();
+            this.pbSysLight7 = new System.Windows.Forms.PictureBox();
+            this.pbSysDIO8 = new System.Windows.Forms.PictureBox();
+            this.pbSysLight5 = new System.Windows.Forms.PictureBox();
+            this.pbSysDIO7 = new System.Windows.Forms.PictureBox();
+            this.pbSysLight9 = new System.Windows.Forms.PictureBox();
+            this.pbSysDIO5 = new System.Windows.Forms.PictureBox();
+            this.pbSysLight4 = new System.Windows.Forms.PictureBox();
+            this.pbSysDIO9 = new System.Windows.Forms.PictureBox();
+            this.pbSysLight6 = new System.Windows.Forms.PictureBox();
+            this.pbSysDIO4 = new System.Windows.Forms.PictureBox();
+            this.pbSysLight2 = new System.Windows.Forms.PictureBox();
+            this.pbSysDIO6 = new System.Windows.Forms.PictureBox();
+            this.pbSysLight3 = new System.Windows.Forms.PictureBox();
+            this.pbSysDIO2 = new System.Windows.Forms.PictureBox();
+            this.pbSysLight1 = new System.Windows.Forms.PictureBox();
+            this.pbSysDIO3 = new System.Windows.Forms.PictureBox();
+            this.pbSysLight0 = new System.Windows.Forms.PictureBox();
+            this.pbSysDIO1 = new System.Windows.Forms.PictureBox();
+            this.pbSysDIO0 = new System.Windows.Forms.PictureBox();
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
-            this.btnDioRefresh = new System.Windows.Forms.Button();
-            this.groupBox40 = new System.Windows.Forms.GroupBox();
+            this.btnSignalQuery = new System.Windows.Forms.Button();
+            this.groupBox45 = new System.Windows.Forms.GroupBox();
+            this.pbPortDIO14 = new System.Windows.Forms.PictureBox();
+            this.rbSignalGetP3 = new System.Windows.Forms.RadioButton();
+            this.rbSignalGetP4 = new System.Windows.Forms.RadioButton();
+            this.rbSignalGetP2 = new System.Windows.Forms.RadioButton();
+            this.rbSignalGetP1 = new System.Windows.Forms.RadioButton();
+            this.pbPortDIO13 = new System.Windows.Forms.PictureBox();
+            this.pbPortLight8 = new System.Windows.Forms.PictureBox();
+            this.pbPortDIO12 = new System.Windows.Forms.PictureBox();
+            this.pbPortLight7 = new System.Windows.Forms.PictureBox();
+            this.pbPortDIO10 = new System.Windows.Forms.PictureBox();
+            this.pbPortLight5 = new System.Windows.Forms.PictureBox();
+            this.pbPortDIO9 = new System.Windows.Forms.PictureBox();
+            this.pbPortDIO5 = new System.Windows.Forms.PictureBox();
+            this.pbPortLight4 = new System.Windows.Forms.PictureBox();
+            this.pbPortDIO11 = new System.Windows.Forms.PictureBox();
+            this.pbPortLight6 = new System.Windows.Forms.PictureBox();
+            this.pbPortDIO4 = new System.Windows.Forms.PictureBox();
+            this.pbPortLight2 = new System.Windows.Forms.PictureBox();
+            this.pbPortDIO8 = new System.Windows.Forms.PictureBox();
+            this.pbPortLight3 = new System.Windows.Forms.PictureBox();
+            this.pbPortDIO2 = new System.Windows.Forms.PictureBox();
+            this.pbPortLight1 = new System.Windows.Forms.PictureBox();
+            this.pbPortDIO3 = new System.Windows.Forms.PictureBox();
+            this.pbPortLight0 = new System.Windows.Forms.PictureBox();
+            this.pbPortDIO1 = new System.Windows.Forms.PictureBox();
+            this.pbPortDIO0 = new System.Windows.Forms.PictureBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.tbStateFFU20 = new System.Windows.Forms.TextBox();
             this.tbStateFFU19 = new System.Windows.Forms.TextBox();
@@ -461,8 +504,8 @@
             this.rbEvtAllOn = new System.Windows.Forms.RadioButton();
             this.rbEvtAllOff = new System.Windows.Forms.RadioButton();
             this.hint = new System.Windows.Forms.ToolTip(this.components);
-            this.btnInitAll = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.slStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.GroupBox3.SuspendLayout();
             this.GroupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -486,19 +529,55 @@
             this.groupBox11.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabInfo.SuspendLayout();
+            this.groupBox40.SuspendLayout();
             this.groupBox44.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO0)).BeginInit();
+            this.groupBox45.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO0)).BeginInit();
             this.groupBox35.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.tabSetting.SuspendLayout();
@@ -529,6 +608,7 @@
             this.groupBox18.SuspendLayout();
             this.groupBox21.SuspendLayout();
             this.groupBox17.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -700,6 +780,21 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Command Area";
             // 
+            // btnInitAll
+            // 
+            this.btnInitAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInitAll.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInitAll.Location = new System.Drawing.Point(761, 73);
+            this.btnInitAll.Name = "btnInitAll";
+            this.btnInitAll.Size = new System.Drawing.Size(87, 39);
+            this.btnInitAll.TabIndex = 29;
+            this.btnInitAll.Text = "Init All";
+            this.hint.SetToolTip(this.btnInitAll, "Machine initialization");
+            this.btnInitAll.UseVisualStyleBackColor = true;
+            this.btnInitAll.Click += new System.EventHandler(this.btnInitAll_Click);
+            this.btnInitAll.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnInitAll.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
             // btnReset
             // 
             this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -709,8 +804,11 @@
             this.btnReset.Size = new System.Drawing.Size(87, 39);
             this.btnReset.TabIndex = 29;
             this.btnReset.Text = "Reset Alarm";
+            this.hint.SetToolTip(this.btnReset, "Reset erros");
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnReset.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnReset.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // btnAddScript
             // 
@@ -721,8 +819,11 @@
             this.btnAddScript.Size = new System.Drawing.Size(87, 39);
             this.btnAddScript.TabIndex = 28;
             this.btnAddScript.Text = "Add To Script";
+            this.hint.SetToolTip(this.btnAddScript, "Add the left command to the script");
             this.btnAddScript.UseVisualStyleBackColor = true;
             this.btnAddScript.Click += new System.EventHandler(this.btnAddScript_Click);
+            this.btnAddScript.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnAddScript.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // cbPara4
             // 
@@ -838,8 +939,11 @@
             this.btnSend.Size = new System.Drawing.Size(106, 39);
             this.btnSend.TabIndex = 19;
             this.btnSend.Text = "Send Command";
+            this.hint.SetToolTip(this.btnSend, "Send the command shown on the left");
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            this.btnSend.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnSend.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // groupBox6
             // 
@@ -945,8 +1049,11 @@
             this.btnNewScript.Size = new System.Drawing.Size(38, 32);
             this.btnNewScript.TabIndex = 31;
             this.btnNewScript.Text = "New";
+            this.hint.SetToolTip(this.btnNewScript, "Create new script");
             this.btnNewScript.UseVisualStyleBackColor = true;
             this.btnNewScript.Click += new System.EventHandler(this.btnNewScript_Click);
+            this.btnNewScript.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnNewScript.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // btnStepRun
             // 
@@ -957,8 +1064,11 @@
             this.btnStepRun.Size = new System.Drawing.Size(38, 32);
             this.btnStepRun.TabIndex = 30;
             this.btnStepRun.Text = "Step";
+            this.hint.SetToolTip(this.btnStepRun, "Run the select  item step by step");
             this.btnStepRun.UseVisualStyleBackColor = true;
             this.btnStepRun.Click += new System.EventHandler(this.btnStepRun_Click);
+            this.btnStepRun.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnStepRun.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // label6
             // 
@@ -980,6 +1090,8 @@
             this.tbTimes.Text = "1";
             this.tbTimes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbTimes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbTimes_KeyPress);
+            this.tbTimes.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbTimes.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // btnDel
             // 
@@ -990,8 +1102,11 @@
             this.btnDel.Size = new System.Drawing.Size(38, 32);
             this.btnDel.TabIndex = 25;
             this.btnDel.Text = "－";
+            this.hint.SetToolTip(this.btnDel, "Remove the selected item ");
             this.btnDel.UseVisualStyleBackColor = true;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            this.btnDel.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnDel.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // btnDown
             // 
@@ -1002,8 +1117,11 @@
             this.btnDown.Size = new System.Drawing.Size(38, 32);
             this.btnDown.TabIndex = 24;
             this.btnDown.Text = "↓";
+            this.hint.SetToolTip(this.btnDown, "Move the selected item down");
             this.btnDown.UseVisualStyleBackColor = true;
             this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
+            this.btnDown.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnDown.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // btnScriptStop
             // 
@@ -1016,8 +1134,11 @@
             this.btnScriptStop.Size = new System.Drawing.Size(58, 32);
             this.btnScriptStop.TabIndex = 21;
             this.btnScriptStop.Text = "STOP";
+            this.hint.SetToolTip(this.btnScriptStop, "Stop the script");
             this.btnScriptStop.UseVisualStyleBackColor = false;
             this.btnScriptStop.Click += new System.EventHandler(this.btnScriptStop_Click);
+            this.btnScriptStop.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnScriptStop.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // btnUp
             // 
@@ -1028,8 +1149,11 @@
             this.btnUp.Size = new System.Drawing.Size(38, 32);
             this.btnUp.TabIndex = 23;
             this.btnUp.Text = "↑";
+            this.hint.SetToolTip(this.btnUp, "Move the selected item up");
             this.btnUp.UseVisualStyleBackColor = true;
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
+            this.btnUp.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnUp.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // dgvCmdScript
             // 
@@ -1055,8 +1179,11 @@
             this.btnScriptRun.Size = new System.Drawing.Size(58, 32);
             this.btnScriptRun.TabIndex = 20;
             this.btnScriptRun.Text = "RUN";
+            this.hint.SetToolTip(this.btnScriptRun, "Run the script");
             this.btnScriptRun.UseVisualStyleBackColor = true;
             this.btnScriptRun.Click += new System.EventHandler(this.btnScriptRun_Click);
+            this.btnScriptRun.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnScriptRun.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // btnExport
             // 
@@ -1067,8 +1194,11 @@
             this.btnExport.Size = new System.Drawing.Size(58, 32);
             this.btnExport.TabIndex = 19;
             this.btnExport.Text = "Export";
+            this.hint.SetToolTip(this.btnExport, "Save script to file");
             this.btnExport.UseVisualStyleBackColor = true;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.btnExport.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnExport.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // btnImport
             // 
@@ -1079,8 +1209,11 @@
             this.btnImport.Size = new System.Drawing.Size(58, 32);
             this.btnImport.TabIndex = 18;
             this.btnImport.Text = "Import";
+            this.hint.SetToolTip(this.btnImport, "Import script from file");
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            this.btnImport.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnImport.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // btnRestart
             // 
@@ -1094,9 +1227,12 @@
             this.btnRestart.Size = new System.Drawing.Size(92, 32);
             this.btnRestart.TabIndex = 21;
             this.btnRestart.Text = "RESTR";
+            this.hint.SetToolTip(this.btnRestart, "Restart the motion");
             this.btnRestart.UseVisualStyleBackColor = false;
             this.btnRestart.Visible = false;
             this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
+            this.btnRestart.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnRestart.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // btnAbort
             // 
@@ -1110,9 +1246,12 @@
             this.btnAbort.Size = new System.Drawing.Size(92, 32);
             this.btnAbort.TabIndex = 21;
             this.btnAbort.Text = "ABORT";
+            this.hint.SetToolTip(this.btnAbort, "Abort the motion");
             this.btnAbort.UseVisualStyleBackColor = false;
             this.btnAbort.Visible = false;
             this.btnAbort.Click += new System.EventHandler(this.btnAbort_Click);
+            this.btnAbort.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnAbort.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // btnHold
             // 
@@ -1126,8 +1265,11 @@
             this.btnHold.Size = new System.Drawing.Size(92, 32);
             this.btnHold.TabIndex = 21;
             this.btnHold.Text = "HOLD";
+            this.hint.SetToolTip(this.btnHold, "Pause the motion");
             this.btnHold.UseVisualStyleBackColor = false;
             this.btnHold.Click += new System.EventHandler(this.btnHold_Click);
+            this.btnHold.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.btnHold.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tabRun
             // 
@@ -1146,6 +1288,18 @@
             this.tabRun.Size = new System.Drawing.Size(965, 622);
             this.tabRun.TabIndex = 1;
             this.tabRun.Text = "Running Mode";
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Enabled = false;
+            this.button1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(7, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 39);
+            this.button1.TabIndex = 65;
+            this.button1.Text = "Reset";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // p4gb
             // 
@@ -2315,6 +2469,8 @@
             this.lbl_p401.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p401, "Slot: 1");
             this.lbl_p401.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p401.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p401.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p301
             // 
@@ -2329,6 +2485,8 @@
             this.lbl_p301.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p301, "Slot: 1");
             this.lbl_p301.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p301.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p301.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p201
             // 
@@ -2343,6 +2501,8 @@
             this.lbl_p201.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p201, "Slot: 1");
             this.lbl_p201.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p201.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p201.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p101
             // 
@@ -2357,6 +2517,8 @@
             this.lbl_p101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p101, "Slot: 1");
             this.lbl_p101.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p101.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p101.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot1
             // 
@@ -2384,6 +2546,8 @@
             this.lbl_p402.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p402, "Slot: 2");
             this.lbl_p402.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p402.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p402.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p302
             // 
@@ -2398,6 +2562,8 @@
             this.lbl_p302.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p302, "Slot: 2");
             this.lbl_p302.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p302.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p302.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p202
             // 
@@ -2412,6 +2578,8 @@
             this.lbl_p202.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p202, "Slot: 2");
             this.lbl_p202.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p202.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p202.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p102
             // 
@@ -2426,6 +2594,8 @@
             this.lbl_p102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p102, "Slot: 2");
             this.lbl_p102.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p102.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p102.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot2
             // 
@@ -2453,6 +2623,8 @@
             this.lbl_p403.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p403, "Slot: 3");
             this.lbl_p403.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p403.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p403.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p303
             // 
@@ -2467,6 +2639,8 @@
             this.lbl_p303.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p303, "Slot: 3");
             this.lbl_p303.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p303.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p303.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p203
             // 
@@ -2481,6 +2655,8 @@
             this.lbl_p203.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p203, "Slot: 3");
             this.lbl_p203.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p203.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p203.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p103
             // 
@@ -2495,6 +2671,8 @@
             this.lbl_p103.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p103, "Slot: 3");
             this.lbl_p103.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p103.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p103.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot3
             // 
@@ -2522,6 +2700,8 @@
             this.lbl_p404.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p404, "Slot: 4");
             this.lbl_p404.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p404.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p404.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p304
             // 
@@ -2536,6 +2716,8 @@
             this.lbl_p304.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p304, "Slot: 4");
             this.lbl_p304.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p304.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p304.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p204
             // 
@@ -2550,6 +2732,8 @@
             this.lbl_p204.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p204, "Slot: 4");
             this.lbl_p204.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p204.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p204.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p104
             // 
@@ -2564,6 +2748,8 @@
             this.lbl_p104.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p104, "Slot: 4");
             this.lbl_p104.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p104.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p104.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot4
             // 
@@ -2591,6 +2777,8 @@
             this.lbl_p405.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p405, "Slot: 5");
             this.lbl_p405.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p405.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p405.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p305
             // 
@@ -2605,6 +2793,8 @@
             this.lbl_p305.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p305, "Slot: 5");
             this.lbl_p305.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p305.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p305.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p205
             // 
@@ -2619,6 +2809,8 @@
             this.lbl_p205.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p205, "Slot: 5");
             this.lbl_p205.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p205.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p205.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p105
             // 
@@ -2633,6 +2825,8 @@
             this.lbl_p105.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p105, "Slot: 5");
             this.lbl_p105.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p105.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p105.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot5
             // 
@@ -2660,6 +2854,8 @@
             this.lbl_p406.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p406, "Slot: 6");
             this.lbl_p406.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p406.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p406.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p306
             // 
@@ -2674,6 +2870,8 @@
             this.lbl_p306.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p306, "Slot: 6");
             this.lbl_p306.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p306.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p306.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p206
             // 
@@ -2688,6 +2886,8 @@
             this.lbl_p206.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p206, "Slot: 6");
             this.lbl_p206.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p206.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p206.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p106
             // 
@@ -2702,6 +2902,8 @@
             this.lbl_p106.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p106, "Slot: 6");
             this.lbl_p106.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p106.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p106.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot6
             // 
@@ -2729,6 +2931,8 @@
             this.lbl_p407.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p407, "Slot: 7");
             this.lbl_p407.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p407.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p407.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p307
             // 
@@ -2743,6 +2947,8 @@
             this.lbl_p307.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p307, "Slot: 7");
             this.lbl_p307.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p307.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p307.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p207
             // 
@@ -2757,6 +2963,8 @@
             this.lbl_p207.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p207, "Slot: 7");
             this.lbl_p207.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p207.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p207.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p107
             // 
@@ -2771,6 +2979,8 @@
             this.lbl_p107.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p107, "Slot: 7");
             this.lbl_p107.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p107.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p107.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot7
             // 
@@ -2798,6 +3008,8 @@
             this.lbl_p408.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p408, "Slot: 8");
             this.lbl_p408.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p408.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p408.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p308
             // 
@@ -2812,6 +3024,8 @@
             this.lbl_p308.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p308, "Slot: 8");
             this.lbl_p308.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p308.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p308.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p208
             // 
@@ -2826,6 +3040,8 @@
             this.lbl_p208.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p208, "Slot: 8");
             this.lbl_p208.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p208.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p208.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p108
             // 
@@ -2840,6 +3056,8 @@
             this.lbl_p108.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p108, "Slot: 8");
             this.lbl_p108.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p108.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p108.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot8
             // 
@@ -2867,6 +3085,8 @@
             this.lbl_p409.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p409, "Slot: 9");
             this.lbl_p409.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p409.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p409.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p309
             // 
@@ -2881,6 +3101,8 @@
             this.lbl_p309.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p309, "Slot: 9");
             this.lbl_p309.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p309.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p309.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p209
             // 
@@ -2895,6 +3117,8 @@
             this.lbl_p209.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p209, "Slot: 9");
             this.lbl_p209.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p209.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p209.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p109
             // 
@@ -2909,6 +3133,8 @@
             this.lbl_p109.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p109, "Slot: 9");
             this.lbl_p109.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p109.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p109.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot9
             // 
@@ -2936,6 +3162,8 @@
             this.lbl_p410.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p410, "Slot: 10");
             this.lbl_p410.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p410.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p410.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p310
             // 
@@ -2950,6 +3178,8 @@
             this.lbl_p310.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p310, "Slot: 10");
             this.lbl_p310.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p310.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p310.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p210
             // 
@@ -2964,6 +3194,8 @@
             this.lbl_p210.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p210, "Slot: 10");
             this.lbl_p210.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p210.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p210.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p110
             // 
@@ -2978,6 +3210,8 @@
             this.lbl_p110.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p110, "Slot: 10");
             this.lbl_p110.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p110.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p110.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot10
             // 
@@ -3005,6 +3239,8 @@
             this.lbl_p411.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p411, "Slot: 11");
             this.lbl_p411.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p411.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p411.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p311
             // 
@@ -3019,6 +3255,8 @@
             this.lbl_p311.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p311, "Slot: 11");
             this.lbl_p311.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p311.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p311.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p211
             // 
@@ -3033,6 +3271,8 @@
             this.lbl_p211.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p211, "Slot: 11");
             this.lbl_p211.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p211.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p211.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p111
             // 
@@ -3047,6 +3287,8 @@
             this.lbl_p111.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p111, "Slot: 11");
             this.lbl_p111.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p111.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p111.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot11
             // 
@@ -3074,6 +3316,8 @@
             this.lbl_p412.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p412, "Slot: 12");
             this.lbl_p412.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p412.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p412.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p312
             // 
@@ -3088,6 +3332,8 @@
             this.lbl_p312.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p312, "Slot: 12");
             this.lbl_p312.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p312.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p312.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p212
             // 
@@ -3102,6 +3348,8 @@
             this.lbl_p212.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p212, "Slot: 12");
             this.lbl_p212.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p212.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p212.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p112
             // 
@@ -3116,6 +3364,8 @@
             this.lbl_p112.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p112, "Slot: 12");
             this.lbl_p112.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p112.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p112.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot12
             // 
@@ -3143,6 +3393,8 @@
             this.lbl_p413.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p413, "Slot: 13");
             this.lbl_p413.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p413.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p413.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p313
             // 
@@ -3157,6 +3409,8 @@
             this.lbl_p313.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p313, "Slot: 13");
             this.lbl_p313.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p313.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p313.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p213
             // 
@@ -3171,6 +3425,8 @@
             this.lbl_p213.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p213, "Slot: 13");
             this.lbl_p213.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p213.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p213.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p113
             // 
@@ -3185,6 +3441,8 @@
             this.lbl_p113.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p113, "Slot: 13");
             this.lbl_p113.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p113.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p113.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot13
             // 
@@ -3212,6 +3470,8 @@
             this.lbl_p414.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p414, "Slot: 14");
             this.lbl_p414.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p414.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p414.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p314
             // 
@@ -3226,6 +3486,8 @@
             this.lbl_p314.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p314, "Slot: 14");
             this.lbl_p314.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p314.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p314.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p214
             // 
@@ -3240,6 +3502,8 @@
             this.lbl_p214.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p214, "Slot: 14");
             this.lbl_p214.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p214.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p214.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p114
             // 
@@ -3254,6 +3518,8 @@
             this.lbl_p114.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p114, "Slot: 14");
             this.lbl_p114.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p114.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p114.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot14
             // 
@@ -3281,6 +3547,8 @@
             this.lbl_p415.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p415, "Slot: 15");
             this.lbl_p415.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p415.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p415.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p315
             // 
@@ -3295,6 +3563,8 @@
             this.lbl_p315.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p315, "Slot: 15");
             this.lbl_p315.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p315.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p315.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p215
             // 
@@ -3309,6 +3579,8 @@
             this.lbl_p215.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p215, "Slot: 15");
             this.lbl_p215.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p215.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p215.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p115
             // 
@@ -3323,6 +3595,8 @@
             this.lbl_p115.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p115, "Slot: 15");
             this.lbl_p115.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p115.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p115.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot15
             // 
@@ -3350,6 +3624,8 @@
             this.lbl_p416.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p416, "Slot: 16");
             this.lbl_p416.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p416.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p416.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p316
             // 
@@ -3364,6 +3640,8 @@
             this.lbl_p316.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p316, "Slot: 16");
             this.lbl_p316.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p316.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p316.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p216
             // 
@@ -3378,6 +3656,8 @@
             this.lbl_p216.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p216, "Slot: 16");
             this.lbl_p216.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p216.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p216.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p116
             // 
@@ -3392,6 +3672,8 @@
             this.lbl_p116.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p116, "Slot: 16");
             this.lbl_p116.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p116.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p116.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot16
             // 
@@ -3419,6 +3701,8 @@
             this.lbl_p417.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p417, "Slot: 17");
             this.lbl_p417.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p417.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p417.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p317
             // 
@@ -3433,6 +3717,8 @@
             this.lbl_p317.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p317, "Slot: 17");
             this.lbl_p317.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p317.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p317.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p217
             // 
@@ -3447,6 +3733,8 @@
             this.lbl_p217.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p217, "Slot: 17");
             this.lbl_p217.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p217.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p217.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p117
             // 
@@ -3461,6 +3749,8 @@
             this.lbl_p117.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p117, "Slot: 17");
             this.lbl_p117.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p117.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p117.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot17
             // 
@@ -3488,6 +3778,8 @@
             this.lbl_p418.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p418, "Slot: 18");
             this.lbl_p418.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p418.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p418.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p318
             // 
@@ -3502,6 +3794,8 @@
             this.lbl_p318.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p318, "Slot: 18");
             this.lbl_p318.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p318.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p318.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p218
             // 
@@ -3516,6 +3810,8 @@
             this.lbl_p218.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p218, "Slot: 18");
             this.lbl_p218.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p218.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p218.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p118
             // 
@@ -3530,6 +3826,8 @@
             this.lbl_p118.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p118, "Slot: 18");
             this.lbl_p118.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p118.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p118.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot18
             // 
@@ -3557,6 +3855,8 @@
             this.lbl_p419.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p419, "Slot: 19");
             this.lbl_p419.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p419.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p419.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p319
             // 
@@ -3571,6 +3871,8 @@
             this.lbl_p319.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p319, "Slot: 19");
             this.lbl_p319.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p319.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p319.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p219
             // 
@@ -3585,6 +3887,8 @@
             this.lbl_p219.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p219, "Slot: 19");
             this.lbl_p219.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p219.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p219.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p119
             // 
@@ -3599,6 +3903,8 @@
             this.lbl_p119.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p119, "Slot: 19");
             this.lbl_p119.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p119.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p119.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot19
             // 
@@ -3626,6 +3932,8 @@
             this.lbl_p420.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p420, "Slot: 20");
             this.lbl_p420.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p420.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p420.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p320
             // 
@@ -3640,6 +3948,8 @@
             this.lbl_p320.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p320, "Slot: 20");
             this.lbl_p320.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p320.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p320.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p220
             // 
@@ -3654,6 +3964,8 @@
             this.lbl_p220.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p220, "Slot: 20");
             this.lbl_p220.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p220.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p220.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p120
             // 
@@ -3668,6 +3980,8 @@
             this.lbl_p120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p120, "Slot: 20");
             this.lbl_p120.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p120.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p120.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot20
             // 
@@ -3695,6 +4009,8 @@
             this.lbl_p421.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p421, "Slot: 21");
             this.lbl_p421.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p421.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p421.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p321
             // 
@@ -3709,6 +4025,8 @@
             this.lbl_p321.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p321, "Slot: 21");
             this.lbl_p321.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p321.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p321.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p221
             // 
@@ -3723,6 +4041,8 @@
             this.lbl_p221.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p221, "Slot: 21");
             this.lbl_p221.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p221.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p221.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p121
             // 
@@ -3737,6 +4057,8 @@
             this.lbl_p121.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p121, "Slot: 21");
             this.lbl_p121.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p121.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p121.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot21
             // 
@@ -3764,6 +4086,8 @@
             this.lbl_p422.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p422, "Slot: 22");
             this.lbl_p422.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p422.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p422.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p322
             // 
@@ -3778,6 +4102,8 @@
             this.lbl_p322.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p322, "Slot: 22");
             this.lbl_p322.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p322.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p322.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p222
             // 
@@ -3792,6 +4118,8 @@
             this.lbl_p222.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p222, "Slot: 22");
             this.lbl_p222.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p222.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p222.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p122
             // 
@@ -3806,6 +4134,8 @@
             this.lbl_p122.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p122, "Slot: 22");
             this.lbl_p122.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p122.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p122.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot22
             // 
@@ -3833,6 +4163,8 @@
             this.lbl_p423.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p423, "Slot: 23");
             this.lbl_p423.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p423.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p423.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p323
             // 
@@ -3847,6 +4179,8 @@
             this.lbl_p323.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p323, "Slot: 23");
             this.lbl_p323.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p323.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p323.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p223
             // 
@@ -3861,6 +4195,8 @@
             this.lbl_p223.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p223, "Slot: 23");
             this.lbl_p223.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p223.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p223.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p123
             // 
@@ -3875,6 +4211,8 @@
             this.lbl_p123.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p123, "Slot: 23");
             this.lbl_p123.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p123.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p123.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot23
             // 
@@ -3902,6 +4240,8 @@
             this.lbl_p424.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p424, "Slot: 24");
             this.lbl_p424.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p424.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p424.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p324
             // 
@@ -3916,6 +4256,8 @@
             this.lbl_p324.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p324, "Slot: 24");
             this.lbl_p324.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p324.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p324.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p224
             // 
@@ -3930,6 +4272,8 @@
             this.lbl_p224.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p224, "Slot: 24");
             this.lbl_p224.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p224.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p224.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p124
             // 
@@ -3944,6 +4288,8 @@
             this.lbl_p124.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p124, "Slot: 24");
             this.lbl_p124.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p124.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p124.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot24
             // 
@@ -3971,6 +4317,8 @@
             this.lbl_p425.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p425, "Slot: 25");
             this.lbl_p425.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p425.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p425.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p325
             // 
@@ -3985,6 +4333,8 @@
             this.lbl_p325.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p325, "Slot: 25");
             this.lbl_p325.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p325.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p325.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p225
             // 
@@ -3999,6 +4349,8 @@
             this.lbl_p225.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p225, "Slot: 25");
             this.lbl_p225.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p225.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p225.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_p125
             // 
@@ -4013,6 +4365,8 @@
             this.lbl_p125.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.lbl_p125, "Slot: 25");
             this.lbl_p125.Click += new System.EventHandler(this.slot_assign);
+            this.lbl_p125.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.lbl_p125.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // lbl_slot25
             // 
@@ -4029,7 +4383,6 @@
             // 
             // tabInfo
             // 
-            this.tabInfo.Controls.Add(this.groupBox44);
             this.tabInfo.Controls.Add(this.groupBox40);
             this.tabInfo.Controls.Add(this.groupBox35);
             this.tabInfo.Controls.Add(this.groupBox14);
@@ -4038,163 +4391,388 @@
             this.tabInfo.Size = new System.Drawing.Size(965, 622);
             this.tabInfo.TabIndex = 2;
             this.tabInfo.Text = " Information ";
-            this.tabInfo.UseVisualStyleBackColor = true;
+            // 
+            // groupBox40
+            // 
+            this.groupBox40.Controls.Add(this.groupBox44);
+            this.groupBox40.Controls.Add(this.btnSignalQuery);
+            this.groupBox40.Controls.Add(this.groupBox45);
+            this.groupBox40.Location = new System.Drawing.Point(3, 330);
+            this.groupBox40.Name = "groupBox40";
+            this.groupBox40.Size = new System.Drawing.Size(960, 274);
+            this.groupBox40.TabIndex = 0;
+            this.groupBox40.TabStop = false;
+            this.groupBox40.Text = "Signal Area";
             // 
             // groupBox44
             // 
-            this.groupBox44.Controls.Add(this.pictureBox12);
-            this.groupBox44.Controls.Add(this.pictureBox11);
-            this.groupBox44.Controls.Add(this.pictureBox9);
-            this.groupBox44.Controls.Add(this.pictureBox8);
-            this.groupBox44.Controls.Add(this.pictureBox6);
-            this.groupBox44.Controls.Add(this.pictureBox10);
-            this.groupBox44.Controls.Add(this.pictureBox5);
-            this.groupBox44.Controls.Add(this.pictureBox7);
-            this.groupBox44.Controls.Add(this.pictureBox2);
-            this.groupBox44.Controls.Add(this.pictureBox4);
-            this.groupBox44.Controls.Add(this.pictureBox1);
-            this.groupBox44.Controls.Add(this.pictureBox3);
+            this.groupBox44.Controls.Add(this.pbSysLight11);
+            this.groupBox44.Controls.Add(this.pbSysLight10);
+            this.groupBox44.Controls.Add(this.pbSysDIO11);
+            this.groupBox44.Controls.Add(this.pbSysLight8);
+            this.groupBox44.Controls.Add(this.pbSysDIO10);
+            this.groupBox44.Controls.Add(this.pbSysLight7);
+            this.groupBox44.Controls.Add(this.pbSysDIO8);
+            this.groupBox44.Controls.Add(this.pbSysLight5);
+            this.groupBox44.Controls.Add(this.pbSysDIO7);
+            this.groupBox44.Controls.Add(this.pbSysLight9);
+            this.groupBox44.Controls.Add(this.pbSysDIO5);
+            this.groupBox44.Controls.Add(this.pbSysLight4);
+            this.groupBox44.Controls.Add(this.pbSysDIO9);
+            this.groupBox44.Controls.Add(this.pbSysLight6);
+            this.groupBox44.Controls.Add(this.pbSysDIO4);
+            this.groupBox44.Controls.Add(this.pbSysLight2);
+            this.groupBox44.Controls.Add(this.pbSysDIO6);
+            this.groupBox44.Controls.Add(this.pbSysLight3);
+            this.groupBox44.Controls.Add(this.pbSysDIO2);
+            this.groupBox44.Controls.Add(this.pbSysLight1);
+            this.groupBox44.Controls.Add(this.pbSysDIO3);
+            this.groupBox44.Controls.Add(this.pbSysLight0);
+            this.groupBox44.Controls.Add(this.pbSysDIO1);
+            this.groupBox44.Controls.Add(this.pbSysDIO0);
             this.groupBox44.Controls.Add(this.label59);
             this.groupBox44.Controls.Add(this.label60);
-            this.groupBox44.Controls.Add(this.btnDioRefresh);
-            this.groupBox44.Location = new System.Drawing.Point(15, 372);
+            this.groupBox44.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox44.Location = new System.Drawing.Point(6, 22);
             this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Size = new System.Drawing.Size(946, 177);
+            this.groupBox44.Size = new System.Drawing.Size(802, 126);
             this.groupBox44.TabIndex = 0;
             this.groupBox44.TabStop = false;
-            this.groupBox44.Text = "State Area";
+            this.groupBox44.Text = "SYSTEM";
             // 
-            // pictureBox12
+            // pbSysLight11
             // 
-            this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(725, 54);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 36;
-            this.pictureBox12.TabStop = false;
+            this.pbSysLight11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysLight11.Image = ((System.Drawing.Image)(resources.GetObject("pbSysLight11.Image")));
+            this.pbSysLight11.Location = new System.Drawing.Point(737, 71);
+            this.pbSysLight11.Name = "pbSysLight11";
+            this.pbSysLight11.Size = new System.Drawing.Size(50, 50);
+            this.pbSysLight11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysLight11.TabIndex = 36;
+            this.pbSysLight11.TabStop = false;
+            this.hint.SetToolTip(this.pbSysLight11, "Bit11: BUZZER2");
+            this.pbSysLight11.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysLight11.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
-            // pictureBox11
+            // pbSysLight10
             // 
-            this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(669, 54);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 36;
-            this.pictureBox11.TabStop = false;
+            this.pbSysLight10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysLight10.Image = ((System.Drawing.Image)(resources.GetObject("pbSysLight10.Image")));
+            this.pbSysLight10.Location = new System.Drawing.Point(681, 71);
+            this.pbSysLight10.Name = "pbSysLight10";
+            this.pbSysLight10.Size = new System.Drawing.Size(50, 50);
+            this.pbSysLight10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysLight10.TabIndex = 36;
+            this.pbSysLight10.TabStop = false;
+            this.hint.SetToolTip(this.pbSysLight10, "Bit10: BUZZER1");
+            this.pbSysLight10.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysLight10.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
-            // pictureBox9
+            // pbSysDIO11
             // 
-            this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(553, 54);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 36;
-            this.pictureBox9.TabStop = false;
+            this.pbSysDIO11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysDIO11.Image = ((System.Drawing.Image)(resources.GetObject("pbSysDIO11.Image")));
+            this.pbSysDIO11.Location = new System.Drawing.Point(737, 15);
+            this.pbSysDIO11.Name = "pbSysDIO11";
+            this.pbSysDIO11.Size = new System.Drawing.Size(50, 50);
+            this.pbSysDIO11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysDIO11.TabIndex = 36;
+            this.pbSysDIO11.TabStop = false;
+            this.hint.SetToolTip(this.pbSysDIO11, "Bit11: Area sensor/ Bar interlock");
+            this.pbSysDIO11.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysDIO11.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
-            // pictureBox8
+            // pbSysLight8
             // 
-            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(497, 54);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 36;
-            this.pictureBox8.TabStop = false;
+            this.pbSysLight8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysLight8.Image = global::EQP_Emulator.Properties.Resources.blink;
+            this.pbSysLight8.Location = new System.Drawing.Point(568, 71);
+            this.pbSysLight8.Name = "pbSysLight8";
+            this.pbSysLight8.Size = new System.Drawing.Size(50, 50);
+            this.pbSysLight8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysLight8.TabIndex = 36;
+            this.pbSysLight8.TabStop = false;
+            this.hint.SetToolTip(this.pbSysLight8, "Bit8: BLUE Flashes");
+            this.pbSysLight8.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysLight8.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
-            // pictureBox6
+            // pbSysDIO10
             // 
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(387, 54);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 36;
-            this.pictureBox6.TabStop = false;
+            this.pbSysDIO10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysDIO10.Image = ((System.Drawing.Image)(resources.GetObject("pbSysDIO10.Image")));
+            this.pbSysDIO10.Location = new System.Drawing.Point(681, 15);
+            this.pbSysDIO10.Name = "pbSysDIO10";
+            this.pbSysDIO10.Size = new System.Drawing.Size(50, 50);
+            this.pbSysDIO10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysDIO10.TabIndex = 36;
+            this.pbSysDIO10.TabStop = false;
+            this.hint.SetToolTip(this.pbSysDIO10, "Bit10: Door open/close status");
+            this.pbSysDIO10.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysDIO10.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
-            // pictureBox10
+            // pbSysLight7
             // 
-            this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(613, 54);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 36;
-            this.pictureBox10.TabStop = false;
+            this.pbSysLight7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysLight7.Image = global::EQP_Emulator.Properties.Resources.blink;
+            this.pbSysLight7.Location = new System.Drawing.Point(512, 71);
+            this.pbSysLight7.Name = "pbSysLight7";
+            this.pbSysLight7.Size = new System.Drawing.Size(50, 50);
+            this.pbSysLight7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysLight7.TabIndex = 36;
+            this.pbSysLight7.TabStop = false;
+            this.hint.SetToolTip(this.pbSysLight7, "Bit7: GREEN Flashes");
+            this.pbSysLight7.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysLight7.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
-            // pictureBox5
+            // pbSysDIO8
             // 
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(331, 54);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 36;
-            this.pictureBox5.TabStop = false;
+            this.pbSysDIO8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysDIO8.Image = ((System.Drawing.Image)(resources.GetObject("pbSysDIO8.Image")));
+            this.pbSysDIO8.Location = new System.Drawing.Point(568, 15);
+            this.pbSysDIO8.Name = "pbSysDIO8";
+            this.pbSysDIO8.Size = new System.Drawing.Size(50, 50);
+            this.pbSysDIO8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysDIO8.TabIndex = 36;
+            this.pbSysDIO8.TabStop = false;
+            this.hint.SetToolTip(this.pbSysDIO8, "Bit8: Mode switch");
+            this.pbSysDIO8.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysDIO8.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
-            // pictureBox7
+            // pbSysLight5
             // 
-            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(441, 54);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 36;
-            this.pictureBox7.TabStop = false;
+            this.pbSysLight5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysLight5.Image = global::EQP_Emulator.Properties.Resources.blink;
+            this.pbSysLight5.Location = new System.Drawing.Point(399, 71);
+            this.pbSysLight5.Name = "pbSysLight5";
+            this.pbSysLight5.Size = new System.Drawing.Size(50, 50);
+            this.pbSysLight5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysLight5.TabIndex = 36;
+            this.pbSysLight5.TabStop = false;
+            this.hint.SetToolTip(this.pbSysLight5, "Bit5: RED Flashes");
+            this.pbSysLight5.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysLight5.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
-            // pictureBox2
+            // pbSysDIO7
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::EQP_Emulator.Properties.Resources.blink;
-            this.pictureBox2.Location = new System.Drawing.Point(219, 54);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
+            this.pbSysDIO7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysDIO7.Image = ((System.Drawing.Image)(resources.GetObject("pbSysDIO7.Image")));
+            this.pbSysDIO7.Location = new System.Drawing.Point(512, 15);
+            this.pbSysDIO7.Name = "pbSysDIO7";
+            this.pbSysDIO7.Size = new System.Drawing.Size(50, 50);
+            this.pbSysDIO7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysDIO7.TabIndex = 36;
+            this.pbSysDIO7.TabStop = false;
+            this.hint.SetToolTip(this.pbSysDIO7, "Bit7: Ionizer alarm");
+            this.pbSysDIO7.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysDIO7.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
-            // pictureBox4
+            // pbSysLight9
             // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(275, 54);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 36;
-            this.pictureBox4.TabStop = false;
+            this.pbSysLight9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysLight9.Location = new System.Drawing.Point(624, 71);
+            this.pbSysLight9.Name = "pbSysLight9";
+            this.pbSysLight9.Size = new System.Drawing.Size(50, 50);
+            this.pbSysLight9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysLight9.TabIndex = 36;
+            this.pbSysLight9.TabStop = false;
+            this.hint.SetToolTip(this.pbSysLight9, "Bit9: Reserved");
+            this.pbSysLight9.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysLight9.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
-            // pictureBox1
+            // pbSysDIO5
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::EQP_Emulator.Properties.Resources.off;
-            this.pictureBox1.Location = new System.Drawing.Point(163, 54);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
+            this.pbSysDIO5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysDIO5.Image = ((System.Drawing.Image)(resources.GetObject("pbSysDIO5.Image")));
+            this.pbSysDIO5.Location = new System.Drawing.Point(399, 15);
+            this.pbSysDIO5.Name = "pbSysDIO5";
+            this.pbSysDIO5.Size = new System.Drawing.Size(50, 50);
+            this.pbSysDIO5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysDIO5.TabIndex = 36;
+            this.pbSysDIO5.TabStop = false;
+            this.hint.SetToolTip(this.pbSysDIO5, "Bit5: Differential pressure sensor setting 2");
+            this.pbSysDIO5.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysDIO5.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
-            // pictureBox3
+            // pbSysLight4
             // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = global::EQP_Emulator.Properties.Resources.on;
-            this.pictureBox3.Location = new System.Drawing.Point(107, 54);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 36;
-            this.pictureBox3.TabStop = false;
+            this.pbSysLight4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysLight4.Location = new System.Drawing.Point(343, 71);
+            this.pbSysLight4.Name = "pbSysLight4";
+            this.pbSysLight4.Size = new System.Drawing.Size(50, 50);
+            this.pbSysLight4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysLight4.TabIndex = 36;
+            this.pbSysLight4.TabStop = false;
+            this.hint.SetToolTip(this.pbSysLight4, "Bit4: Reserved");
+            this.pbSysLight4.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysLight4.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbSysDIO9
+            // 
+            this.pbSysDIO9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysDIO9.Image = ((System.Drawing.Image)(resources.GetObject("pbSysDIO9.Image")));
+            this.pbSysDIO9.Location = new System.Drawing.Point(624, 15);
+            this.pbSysDIO9.Name = "pbSysDIO9";
+            this.pbSysDIO9.Size = new System.Drawing.Size(50, 50);
+            this.pbSysDIO9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysDIO9.TabIndex = 36;
+            this.pbSysDIO9.TabStop = false;
+            this.hint.SetToolTip(this.pbSysDIO9, "Bit9: Drive power");
+            this.pbSysDIO9.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysDIO9.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbSysLight6
+            // 
+            this.pbSysLight6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysLight6.Image = global::EQP_Emulator.Properties.Resources.blink;
+            this.pbSysLight6.Location = new System.Drawing.Point(456, 71);
+            this.pbSysLight6.Name = "pbSysLight6";
+            this.pbSysLight6.Size = new System.Drawing.Size(50, 50);
+            this.pbSysLight6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysLight6.TabIndex = 36;
+            this.pbSysLight6.TabStop = false;
+            this.hint.SetToolTip(this.pbSysLight6, "Bit6: YELLOW Flashes");
+            this.pbSysLight6.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysLight6.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbSysDIO4
+            // 
+            this.pbSysDIO4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysDIO4.Image = ((System.Drawing.Image)(resources.GetObject("pbSysDIO4.Image")));
+            this.pbSysDIO4.Location = new System.Drawing.Point(343, 15);
+            this.pbSysDIO4.Name = "pbSysDIO4";
+            this.pbSysDIO4.Size = new System.Drawing.Size(50, 50);
+            this.pbSysDIO4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysDIO4.TabIndex = 36;
+            this.pbSysDIO4.TabStop = false;
+            this.hint.SetToolTip(this.pbSysDIO4, "Bit4: Differential pressure sensor setting 1");
+            this.pbSysDIO4.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysDIO4.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbSysLight2
+            // 
+            this.pbSysLight2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysLight2.Image = ((System.Drawing.Image)(resources.GetObject("pbSysLight2.Image")));
+            this.pbSysLight2.Location = new System.Drawing.Point(231, 71);
+            this.pbSysLight2.Name = "pbSysLight2";
+            this.pbSysLight2.Size = new System.Drawing.Size(50, 50);
+            this.pbSysLight2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysLight2.TabIndex = 36;
+            this.pbSysLight2.TabStop = false;
+            this.hint.SetToolTip(this.pbSysLight2, "Bit2: GREEN Lights");
+            this.pbSysLight2.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysLight2.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbSysDIO6
+            // 
+            this.pbSysDIO6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysDIO6.Image = ((System.Drawing.Image)(resources.GetObject("pbSysDIO6.Image")));
+            this.pbSysDIO6.Location = new System.Drawing.Point(455, 15);
+            this.pbSysDIO6.Name = "pbSysDIO6";
+            this.pbSysDIO6.Size = new System.Drawing.Size(50, 50);
+            this.pbSysDIO6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysDIO6.TabIndex = 36;
+            this.pbSysDIO6.TabStop = false;
+            this.hint.SetToolTip(this.pbSysDIO6, "Bit6: FFU alarm");
+            this.pbSysDIO6.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysDIO6.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbSysLight3
+            // 
+            this.pbSysLight3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysLight3.Image = ((System.Drawing.Image)(resources.GetObject("pbSysLight3.Image")));
+            this.pbSysLight3.Location = new System.Drawing.Point(287, 71);
+            this.pbSysLight3.Name = "pbSysLight3";
+            this.pbSysLight3.Size = new System.Drawing.Size(50, 50);
+            this.pbSysLight3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysLight3.TabIndex = 36;
+            this.pbSysLight3.TabStop = false;
+            this.hint.SetToolTip(this.pbSysLight3, "Bit3: BLUE Lights");
+            this.pbSysLight3.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysLight3.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbSysDIO2
+            // 
+            this.pbSysDIO2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysDIO2.Image = ((System.Drawing.Image)(resources.GetObject("pbSysDIO2.Image")));
+            this.pbSysDIO2.Location = new System.Drawing.Point(231, 15);
+            this.pbSysDIO2.Name = "pbSysDIO2";
+            this.pbSysDIO2.Size = new System.Drawing.Size(50, 50);
+            this.pbSysDIO2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysDIO2.TabIndex = 36;
+            this.pbSysDIO2.TabStop = false;
+            this.hint.SetToolTip(this.pbSysDIO2, "Bit2: Compressed air pressure 1");
+            this.pbSysDIO2.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysDIO2.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbSysLight1
+            // 
+            this.pbSysLight1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysLight1.Image = global::EQP_Emulator.Properties.Resources.off;
+            this.pbSysLight1.Location = new System.Drawing.Point(175, 71);
+            this.pbSysLight1.Name = "pbSysLight1";
+            this.pbSysLight1.Size = new System.Drawing.Size(50, 50);
+            this.pbSysLight1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysLight1.TabIndex = 36;
+            this.pbSysLight1.TabStop = false;
+            this.hint.SetToolTip(this.pbSysLight1, "Bit1: YELLOW Lights");
+            this.pbSysLight1.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysLight1.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbSysDIO3
+            // 
+            this.pbSysDIO3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysDIO3.Image = ((System.Drawing.Image)(resources.GetObject("pbSysDIO3.Image")));
+            this.pbSysDIO3.Location = new System.Drawing.Point(287, 15);
+            this.pbSysDIO3.Name = "pbSysDIO3";
+            this.pbSysDIO3.Size = new System.Drawing.Size(50, 50);
+            this.pbSysDIO3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysDIO3.TabIndex = 36;
+            this.pbSysDIO3.TabStop = false;
+            this.hint.SetToolTip(this.pbSysDIO3, "Bit3: Compressed air pressure 2");
+            this.pbSysDIO3.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysDIO3.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbSysLight0
+            // 
+            this.pbSysLight0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysLight0.Image = ((System.Drawing.Image)(resources.GetObject("pbSysLight0.Image")));
+            this.pbSysLight0.Location = new System.Drawing.Point(119, 71);
+            this.pbSysLight0.Name = "pbSysLight0";
+            this.pbSysLight0.Size = new System.Drawing.Size(50, 50);
+            this.pbSysLight0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysLight0.TabIndex = 36;
+            this.pbSysLight0.TabStop = false;
+            this.hint.SetToolTip(this.pbSysLight0, "Bit0: RED Lights");
+            this.pbSysLight0.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysLight0.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbSysDIO1
+            // 
+            this.pbSysDIO1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysDIO1.Image = global::EQP_Emulator.Properties.Resources.off;
+            this.pbSysDIO1.Location = new System.Drawing.Point(175, 15);
+            this.pbSysDIO1.Name = "pbSysDIO1";
+            this.pbSysDIO1.Size = new System.Drawing.Size(50, 50);
+            this.pbSysDIO1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysDIO1.TabIndex = 36;
+            this.pbSysDIO1.TabStop = false;
+            this.hint.SetToolTip(this.pbSysDIO1, "Bit1: Vacuum source pressure 2");
+            this.pbSysDIO1.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysDIO1.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbSysDIO0
+            // 
+            this.pbSysDIO0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSysDIO0.Image = ((System.Drawing.Image)(resources.GetObject("pbSysDIO0.Image")));
+            this.pbSysDIO0.Location = new System.Drawing.Point(119, 15);
+            this.pbSysDIO0.Name = "pbSysDIO0";
+            this.pbSysDIO0.Size = new System.Drawing.Size(50, 50);
+            this.pbSysDIO0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSysDIO0.TabIndex = 36;
+            this.pbSysDIO0.TabStop = false;
+            this.hint.SetToolTip(this.pbSysDIO0, "Bit0: Vacuum source pressure 1");
+            this.pbSysDIO0.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbSysDIO0.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // label59
             // 
@@ -4202,11 +4780,11 @@
             this.label59.BackColor = System.Drawing.SystemColors.Highlight;
             this.label59.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.White;
-            this.label59.Location = new System.Drawing.Point(6, 69);
+            this.label59.Location = new System.Drawing.Point(6, 29);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(95, 23);
+            this.label59.Size = new System.Drawing.Size(105, 23);
             this.label59.TabIndex = 35;
-            this.label59.Text = "              PRS";
+            this.label59.Text = "                DIO";
             this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label60
@@ -4215,33 +4793,446 @@
             this.label60.BackColor = System.Drawing.SystemColors.Highlight;
             this.label60.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.ForeColor = System.Drawing.Color.White;
-            this.label60.Location = new System.Drawing.Point(7, 105);
+            this.label60.Location = new System.Drawing.Point(6, 87);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(94, 23);
+            this.label60.Size = new System.Drawing.Size(105, 23);
             this.label60.TabIndex = 35;
-            this.label60.Text = "           FFUn";
+            this.label60.Text = "Signal tower";
             this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnDioRefresh
+            // btnSignalQuery
             // 
-            this.btnDioRefresh.BackColor = System.Drawing.Color.Honeydew;
-            this.btnDioRefresh.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDioRefresh.Location = new System.Drawing.Point(812, 42);
-            this.btnDioRefresh.Name = "btnDioRefresh";
-            this.btnDioRefresh.Size = new System.Drawing.Size(118, 50);
-            this.btnDioRefresh.TabIndex = 22;
-            this.btnDioRefresh.Text = "Refresh";
-            this.btnDioRefresh.UseVisualStyleBackColor = false;
-            this.btnDioRefresh.Click += new System.EventHandler(this.btnDioRefresh_Click);
+            this.btnSignalQuery.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSignalQuery.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignalQuery.Location = new System.Drawing.Point(824, 66);
+            this.btnSignalQuery.Name = "btnSignalQuery";
+            this.btnSignalQuery.Size = new System.Drawing.Size(118, 50);
+            this.btnSignalQuery.TabIndex = 22;
+            this.btnSignalQuery.Text = "Refresh";
+            this.btnSignalQuery.UseVisualStyleBackColor = false;
+            this.btnSignalQuery.Click += new System.EventHandler(this.btnSignalQuery_Click);
             // 
-            // groupBox40
+            // groupBox45
             // 
-            this.groupBox40.Location = new System.Drawing.Point(37, 568);
-            this.groupBox40.Name = "groupBox40";
-            this.groupBox40.Size = new System.Drawing.Size(960, 165);
-            this.groupBox40.TabIndex = 0;
-            this.groupBox40.TabStop = false;
-            this.groupBox40.Text = "Signal Area";
+            this.groupBox45.Controls.Add(this.pbPortDIO14);
+            this.groupBox45.Controls.Add(this.rbSignalGetP3);
+            this.groupBox45.Controls.Add(this.rbSignalGetP4);
+            this.groupBox45.Controls.Add(this.rbSignalGetP2);
+            this.groupBox45.Controls.Add(this.rbSignalGetP1);
+            this.groupBox45.Controls.Add(this.pbPortDIO13);
+            this.groupBox45.Controls.Add(this.pbPortLight8);
+            this.groupBox45.Controls.Add(this.pbPortDIO12);
+            this.groupBox45.Controls.Add(this.pbPortLight7);
+            this.groupBox45.Controls.Add(this.pbPortDIO10);
+            this.groupBox45.Controls.Add(this.pbPortLight5);
+            this.groupBox45.Controls.Add(this.pbPortDIO9);
+            this.groupBox45.Controls.Add(this.pbPortDIO5);
+            this.groupBox45.Controls.Add(this.pbPortLight4);
+            this.groupBox45.Controls.Add(this.pbPortDIO11);
+            this.groupBox45.Controls.Add(this.pbPortLight6);
+            this.groupBox45.Controls.Add(this.pbPortDIO4);
+            this.groupBox45.Controls.Add(this.pbPortLight2);
+            this.groupBox45.Controls.Add(this.pbPortDIO8);
+            this.groupBox45.Controls.Add(this.pbPortLight3);
+            this.groupBox45.Controls.Add(this.pbPortDIO2);
+            this.groupBox45.Controls.Add(this.pbPortLight1);
+            this.groupBox45.Controls.Add(this.pbPortDIO3);
+            this.groupBox45.Controls.Add(this.pbPortLight0);
+            this.groupBox45.Controls.Add(this.pbPortDIO1);
+            this.groupBox45.Controls.Add(this.pbPortDIO0);
+            this.groupBox45.Controls.Add(this.label52);
+            this.groupBox45.Controls.Add(this.label61);
+            this.groupBox45.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox45.Location = new System.Drawing.Point(6, 145);
+            this.groupBox45.Name = "groupBox45";
+            this.groupBox45.Size = new System.Drawing.Size(872, 126);
+            this.groupBox45.TabIndex = 0;
+            this.groupBox45.TabStop = false;
+            this.groupBox45.Text = "PORT";
+            // 
+            // pbPortDIO14
+            // 
+            this.pbPortDIO14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO14.Image = ((System.Drawing.Image)(resources.GetObject("pbPortDIO14.Image")));
+            this.pbPortDIO14.Location = new System.Drawing.Point(793, 15);
+            this.pbPortDIO14.Name = "pbPortDIO14";
+            this.pbPortDIO14.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO14.TabIndex = 75;
+            this.pbPortDIO14.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO14, "Bit14: Adapter valid");
+            this.pbPortDIO14.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO14.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // rbSignalGetP3
+            // 
+            this.rbSignalGetP3.AutoSize = true;
+            this.rbSignalGetP3.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalGetP3.Location = new System.Drawing.Point(755, 85);
+            this.rbSignalGetP3.Name = "rbSignalGetP3";
+            this.rbSignalGetP3.Size = new System.Drawing.Size(46, 25);
+            this.rbSignalGetP3.TabIndex = 73;
+            this.rbSignalGetP3.Text = "P3";
+            this.rbSignalGetP3.UseVisualStyleBackColor = true;
+            this.rbSignalGetP3.CheckedChanged += new System.EventHandler(this.btnSignalQuery_Click);
+            // 
+            // rbSignalGetP4
+            // 
+            this.rbSignalGetP4.AutoSize = true;
+            this.rbSignalGetP4.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalGetP4.Location = new System.Drawing.Point(810, 85);
+            this.rbSignalGetP4.Name = "rbSignalGetP4";
+            this.rbSignalGetP4.Size = new System.Drawing.Size(46, 25);
+            this.rbSignalGetP4.TabIndex = 73;
+            this.rbSignalGetP4.Text = "P4";
+            this.rbSignalGetP4.UseVisualStyleBackColor = true;
+            this.rbSignalGetP4.CheckedChanged += new System.EventHandler(this.btnSignalQuery_Click);
+            // 
+            // rbSignalGetP2
+            // 
+            this.rbSignalGetP2.AutoSize = true;
+            this.rbSignalGetP2.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalGetP2.Location = new System.Drawing.Point(700, 85);
+            this.rbSignalGetP2.Name = "rbSignalGetP2";
+            this.rbSignalGetP2.Size = new System.Drawing.Size(46, 25);
+            this.rbSignalGetP2.TabIndex = 73;
+            this.rbSignalGetP2.Text = "P2";
+            this.hint.SetToolTip(this.rbSignalGetP2, "turn on");
+            this.rbSignalGetP2.UseVisualStyleBackColor = true;
+            this.rbSignalGetP2.CheckedChanged += new System.EventHandler(this.btnSignalQuery_Click);
+            // 
+            // rbSignalGetP1
+            // 
+            this.rbSignalGetP1.AutoSize = true;
+            this.rbSignalGetP1.Checked = true;
+            this.rbSignalGetP1.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSignalGetP1.Location = new System.Drawing.Point(645, 85);
+            this.rbSignalGetP1.Name = "rbSignalGetP1";
+            this.rbSignalGetP1.Size = new System.Drawing.Size(46, 25);
+            this.rbSignalGetP1.TabIndex = 74;
+            this.rbSignalGetP1.TabStop = true;
+            this.rbSignalGetP1.Text = "P1";
+            this.rbSignalGetP1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hint.SetToolTip(this.rbSignalGetP1, "turn off");
+            this.rbSignalGetP1.UseVisualStyleBackColor = true;
+            this.rbSignalGetP1.CheckedChanged += new System.EventHandler(this.btnSignalQuery_Click);
+            // 
+            // pbPortDIO13
+            // 
+            this.pbPortDIO13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO13.Image = ((System.Drawing.Image)(resources.GetObject("pbPortDIO13.Image")));
+            this.pbPortDIO13.Location = new System.Drawing.Point(737, 15);
+            this.pbPortDIO13.Name = "pbPortDIO13";
+            this.pbPortDIO13.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO13.TabIndex = 36;
+            this.pbPortDIO13.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO13, "Bit13: Adapter cable connection status(Reserved)");
+            this.pbPortDIO13.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO13.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortLight8
+            // 
+            this.pbPortLight8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortLight8.Image = ((System.Drawing.Image)(resources.GetObject("pbPortLight8.Image")));
+            this.pbPortLight8.Location = new System.Drawing.Point(568, 71);
+            this.pbPortLight8.Name = "pbPortLight8";
+            this.pbPortLight8.Size = new System.Drawing.Size(50, 50);
+            this.pbPortLight8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortLight8.TabIndex = 36;
+            this.pbPortLight8.TabStop = false;
+            this.hint.SetToolTip(this.pbPortLight8, "Bit8: ACCESS SW");
+            this.pbPortLight8.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortLight8.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortDIO12
+            // 
+            this.pbPortDIO12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO12.Image = ((System.Drawing.Image)(resources.GetObject("pbPortDIO12.Image")));
+            this.pbPortDIO12.Location = new System.Drawing.Point(681, 15);
+            this.pbPortDIO12.Name = "pbPortDIO12";
+            this.pbPortDIO12.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO12.TabIndex = 36;
+            this.pbPortDIO12.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO12, "Bit12: Adapter presence");
+            this.pbPortDIO12.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO12.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortLight7
+            // 
+            this.pbPortLight7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortLight7.Image = ((System.Drawing.Image)(resources.GetObject("pbPortLight7.Image")));
+            this.pbPortLight7.Location = new System.Drawing.Point(512, 71);
+            this.pbPortLight7.Name = "pbPortLight7";
+            this.pbPortLight7.Size = new System.Drawing.Size(50, 50);
+            this.pbPortLight7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortLight7.TabIndex = 36;
+            this.pbPortLight7.TabStop = false;
+            this.hint.SetToolTip(this.pbPortLight7, "Bit7: DOCK/UNDOCK ");
+            this.pbPortLight7.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortLight7.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortDIO10
+            // 
+            this.pbPortDIO10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO10.Image = ((System.Drawing.Image)(resources.GetObject("pbPortDIO10.Image")));
+            this.pbPortDIO10.Location = new System.Drawing.Point(568, 15);
+            this.pbPortDIO10.Name = "pbPortDIO10";
+            this.pbPortDIO10.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO10.TabIndex = 36;
+            this.pbPortDIO10.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO10, "Bit10: Info pad C");
+            this.pbPortDIO10.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO10.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortLight5
+            // 
+            this.pbPortLight5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortLight5.Image = ((System.Drawing.Image)(resources.GetObject("pbPortLight5.Image")));
+            this.pbPortLight5.Location = new System.Drawing.Point(399, 71);
+            this.pbPortLight5.Name = "pbPortLight5";
+            this.pbPortLight5.Size = new System.Drawing.Size(50, 50);
+            this.pbPortLight5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortLight5.TabIndex = 36;
+            this.pbPortLight5.TabStop = false;
+            this.hint.SetToolTip(this.pbPortLight5, "Bit5: ERROR");
+            this.pbPortLight5.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortLight5.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortDIO9
+            // 
+            this.pbPortDIO9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO9.Image = ((System.Drawing.Image)(resources.GetObject("pbPortDIO9.Image")));
+            this.pbPortDIO9.Location = new System.Drawing.Point(512, 15);
+            this.pbPortDIO9.Name = "pbPortDIO9";
+            this.pbPortDIO9.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO9.TabIndex = 36;
+            this.pbPortDIO9.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO9, "Bit9: Info pad B");
+            this.pbPortDIO9.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO9.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortDIO5
+            // 
+            this.pbPortDIO5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO5.Location = new System.Drawing.Point(399, 15);
+            this.pbPortDIO5.Name = "pbPortDIO5";
+            this.pbPortDIO5.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO5.TabIndex = 36;
+            this.pbPortDIO5.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO5, "Bit5: Cover Lock( 8\" Adapter only)");
+            this.pbPortDIO5.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO5.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortLight4
+            // 
+            this.pbPortLight4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortLight4.Location = new System.Drawing.Point(343, 71);
+            this.pbPortLight4.Name = "pbPortLight4";
+            this.pbPortLight4.Size = new System.Drawing.Size(50, 50);
+            this.pbPortLight4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortLight4.TabIndex = 36;
+            this.pbPortLight4.TabStop = false;
+            this.hint.SetToolTip(this.pbPortLight4, "Bit4: MANUAL MODE(Reserved)");
+            this.pbPortLight4.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortLight4.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortDIO11
+            // 
+            this.pbPortDIO11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO11.Image = ((System.Drawing.Image)(resources.GetObject("pbPortDIO11.Image")));
+            this.pbPortDIO11.Location = new System.Drawing.Point(624, 15);
+            this.pbPortDIO11.Name = "pbPortDIO11";
+            this.pbPortDIO11.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO11.TabIndex = 36;
+            this.pbPortDIO11.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO11, "Bit11: Info pad D");
+            this.pbPortDIO11.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO11.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortLight6
+            // 
+            this.pbPortLight6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortLight6.Image = ((System.Drawing.Image)(resources.GetObject("pbPortLight6.Image")));
+            this.pbPortLight6.Location = new System.Drawing.Point(456, 71);
+            this.pbPortLight6.Name = "pbPortLight6";
+            this.pbPortLight6.Size = new System.Drawing.Size(50, 50);
+            this.pbPortLight6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortLight6.TabIndex = 36;
+            this.pbPortLight6.TabStop = false;
+            this.hint.SetToolTip(this.pbPortLight6, "Bit6: CLAMP/UNCLAMP");
+            this.pbPortLight6.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortLight6.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortDIO4
+            // 
+            this.pbPortDIO4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO4.Location = new System.Drawing.Point(343, 15);
+            this.pbPortDIO4.Name = "pbPortDIO4";
+            this.pbPortDIO4.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO4.TabIndex = 36;
+            this.pbPortDIO4.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO4, "Bit4: Cover Close ( 8\" Adapter only)");
+            this.pbPortDIO4.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO4.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortLight2
+            // 
+            this.pbPortLight2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortLight2.Image = ((System.Drawing.Image)(resources.GetObject("pbPortLight2.Image")));
+            this.pbPortLight2.Location = new System.Drawing.Point(231, 71);
+            this.pbPortLight2.Name = "pbPortLight2";
+            this.pbPortLight2.Size = new System.Drawing.Size(50, 50);
+            this.pbPortLight2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortLight2.TabIndex = 36;
+            this.pbPortLight2.TabStop = false;
+            this.hint.SetToolTip(this.pbPortLight2, "Bit2: LOAD");
+            this.pbPortLight2.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortLight2.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortDIO8
+            // 
+            this.pbPortDIO8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO8.Image = ((System.Drawing.Image)(resources.GetObject("pbPortDIO8.Image")));
+            this.pbPortDIO8.Location = new System.Drawing.Point(455, 15);
+            this.pbPortDIO8.Name = "pbPortDIO8";
+            this.pbPortDIO8.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO8.TabIndex = 36;
+            this.pbPortDIO8.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO8, "Bit8: Info pad A");
+            this.pbPortDIO8.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO8.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortLight3
+            // 
+            this.pbPortLight3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortLight3.Image = ((System.Drawing.Image)(resources.GetObject("pbPortLight3.Image")));
+            this.pbPortLight3.Location = new System.Drawing.Point(287, 71);
+            this.pbPortLight3.Name = "pbPortLight3";
+            this.pbPortLight3.Size = new System.Drawing.Size(50, 50);
+            this.pbPortLight3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortLight3.TabIndex = 36;
+            this.pbPortLight3.TabStop = false;
+            this.hint.SetToolTip(this.pbPortLight3, "Bit3: UNLOAD");
+            this.pbPortLight3.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortLight3.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortDIO2
+            // 
+            this.pbPortDIO2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO2.Image = ((System.Drawing.Image)(resources.GetObject("pbPortDIO2.Image")));
+            this.pbPortDIO2.Location = new System.Drawing.Point(231, 15);
+            this.pbPortDIO2.Name = "pbPortDIO2";
+            this.pbPortDIO2.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO2.TabIndex = 36;
+            this.pbPortDIO2.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO2, "Bit2: ACCESS SW");
+            this.pbPortDIO2.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO2.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortLight1
+            // 
+            this.pbPortLight1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortLight1.Image = global::EQP_Emulator.Properties.Resources.off;
+            this.pbPortLight1.Location = new System.Drawing.Point(175, 71);
+            this.pbPortLight1.Name = "pbPortLight1";
+            this.pbPortLight1.Size = new System.Drawing.Size(50, 50);
+            this.pbPortLight1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortLight1.TabIndex = 36;
+            this.pbPortLight1.TabStop = false;
+            this.hint.SetToolTip(this.pbPortLight1, "Bit1: PLACEMENT");
+            this.pbPortLight1.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortLight1.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortDIO3
+            // 
+            this.pbPortDIO3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO3.Image = ((System.Drawing.Image)(resources.GetObject("pbPortDIO3.Image")));
+            this.pbPortDIO3.Location = new System.Drawing.Point(287, 15);
+            this.pbPortDIO3.Name = "pbPortDIO3";
+            this.pbPortDIO3.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO3.TabIndex = 36;
+            this.pbPortDIO3.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO3, "Bit3: FOUP Lock");
+            this.pbPortDIO3.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO3.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortLight0
+            // 
+            this.pbPortLight0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortLight0.Image = ((System.Drawing.Image)(resources.GetObject("pbPortLight0.Image")));
+            this.pbPortLight0.Location = new System.Drawing.Point(119, 71);
+            this.pbPortLight0.Name = "pbPortLight0";
+            this.pbPortLight0.Size = new System.Drawing.Size(50, 50);
+            this.pbPortLight0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortLight0.TabIndex = 36;
+            this.pbPortLight0.TabStop = false;
+            this.hint.SetToolTip(this.pbPortLight0, "Bit0: PRESENCE");
+            this.pbPortLight0.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortLight0.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortDIO1
+            // 
+            this.pbPortDIO1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO1.Image = global::EQP_Emulator.Properties.Resources.off;
+            this.pbPortDIO1.Location = new System.Drawing.Point(175, 15);
+            this.pbPortDIO1.Name = "pbPortDIO1";
+            this.pbPortDIO1.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO1.TabIndex = 36;
+            this.pbPortDIO1.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO1, "Bit1: FOUP presence");
+            this.pbPortDIO1.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO1.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // pbPortDIO0
+            // 
+            this.pbPortDIO0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPortDIO0.Image = ((System.Drawing.Image)(resources.GetObject("pbPortDIO0.Image")));
+            this.pbPortDIO0.Location = new System.Drawing.Point(119, 15);
+            this.pbPortDIO0.Name = "pbPortDIO0";
+            this.pbPortDIO0.Size = new System.Drawing.Size(50, 50);
+            this.pbPortDIO0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPortDIO0.TabIndex = 36;
+            this.pbPortDIO0.TabStop = false;
+            this.hint.SetToolTip(this.pbPortDIO0, "Bit0: FOUP proper placement");
+            this.pbPortDIO0.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.pbPortDIO0.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label52.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.White;
+            this.label52.Location = new System.Drawing.Point(6, 29);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(103, 23);
+            this.label52.TabIndex = 35;
+            this.label52.Text = "            Signal";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label61.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.Color.White;
+            this.label61.Location = new System.Drawing.Point(6, 87);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(104, 23);
+            this.label61.TabIndex = 35;
+            this.label61.Text = "      Indicator";
+            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // groupBox35
             // 
@@ -4282,7 +5273,7 @@
             this.groupBox35.Controls.Add(this.label46);
             this.groupBox35.Controls.Add(this.label57);
             this.groupBox35.Controls.Add(this.label58);
-            this.groupBox35.Location = new System.Drawing.Point(3, 161);
+            this.groupBox35.Location = new System.Drawing.Point(3, 154);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Size = new System.Drawing.Size(960, 177);
             this.groupBox35.TabIndex = 0;
@@ -4698,7 +5689,7 @@
             this.groupBox14.Controls.Add(this.btnErrRefresh);
             this.groupBox14.Location = new System.Drawing.Point(2, -3);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(960, 165);
+            this.groupBox14.Size = new System.Drawing.Size(960, 158);
             this.groupBox14.TabIndex = 0;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Error Area";
@@ -4943,13 +5934,11 @@
             // 
             this.rbE84P2Auto.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbE84P2Auto.AutoSize = true;
-            this.rbE84P2Auto.Checked = true;
             this.rbE84P2Auto.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbE84P2Auto.Location = new System.Drawing.Point(86, 7);
             this.rbE84P2Auto.Name = "rbE84P2Auto";
             this.rbE84P2Auto.Size = new System.Drawing.Size(60, 31);
             this.rbE84P2Auto.TabIndex = 72;
-            this.rbE84P2Auto.TabStop = true;
             this.rbE84P2Auto.Text = "AUTO";
             this.rbE84P2Auto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbE84P2Auto, "Performs E84 sequence automatically.");
@@ -5001,13 +5990,11 @@
             // 
             this.rbE84P4Auto.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbE84P4Auto.AutoSize = true;
-            this.rbE84P4Auto.Checked = true;
             this.rbE84P4Auto.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbE84P4Auto.Location = new System.Drawing.Point(88, 6);
             this.rbE84P4Auto.Name = "rbE84P4Auto";
             this.rbE84P4Auto.Size = new System.Drawing.Size(60, 31);
             this.rbE84P4Auto.TabIndex = 72;
-            this.rbE84P4Auto.TabStop = true;
             this.rbE84P4Auto.Text = "AUTO";
             this.rbE84P4Auto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbE84P4Auto, "Performs E84 sequence automatically.");
@@ -5059,13 +6046,11 @@
             // 
             this.rbE84P1Auto.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbE84P1Auto.AutoSize = true;
-            this.rbE84P1Auto.Checked = true;
             this.rbE84P1Auto.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbE84P1Auto.Location = new System.Drawing.Point(86, 7);
             this.rbE84P1Auto.Name = "rbE84P1Auto";
             this.rbE84P1Auto.Size = new System.Drawing.Size(60, 31);
             this.rbE84P1Auto.TabIndex = 72;
-            this.rbE84P1Auto.TabStop = true;
             this.rbE84P1Auto.Text = "AUTO";
             this.rbE84P1Auto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbE84P1Auto, "Performs E84 sequence automatically.");
@@ -5117,13 +6102,11 @@
             // 
             this.rbE84P3Auto.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbE84P3Auto.AutoSize = true;
-            this.rbE84P3Auto.Checked = true;
             this.rbE84P3Auto.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbE84P3Auto.Location = new System.Drawing.Point(88, 6);
             this.rbE84P3Auto.Name = "rbE84P3Auto";
             this.rbE84P3Auto.Size = new System.Drawing.Size(60, 31);
             this.rbE84P3Auto.TabIndex = 72;
-            this.rbE84P3Auto.TabStop = true;
             this.rbE84P3Auto.Text = "AUTO";
             this.rbE84P3Auto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbE84P3Auto, "Performs E84 sequence automatically.");
@@ -5456,13 +6439,11 @@
             // 
             this.rbSignalUnLoadOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbSignalUnLoadOff.AutoSize = true;
-            this.rbSignalUnLoadOff.Checked = true;
             this.rbSignalUnLoadOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSignalUnLoadOff.Location = new System.Drawing.Point(111, 7);
             this.rbSignalUnLoadOff.Name = "rbSignalUnLoadOff";
             this.rbSignalUnLoadOff.Size = new System.Drawing.Size(47, 31);
             this.rbSignalUnLoadOff.TabIndex = 72;
-            this.rbSignalUnLoadOff.TabStop = true;
             this.rbSignalUnLoadOff.Text = "OFF";
             this.rbSignalUnLoadOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbSignalUnLoadOff, "turn off");
@@ -5531,13 +6512,11 @@
             // 
             this.rbSignalLoadOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbSignalLoadOff.AutoSize = true;
-            this.rbSignalLoadOff.Checked = true;
             this.rbSignalLoadOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSignalLoadOff.Location = new System.Drawing.Point(111, 7);
             this.rbSignalLoadOff.Name = "rbSignalLoadOff";
             this.rbSignalLoadOff.Size = new System.Drawing.Size(47, 31);
             this.rbSignalLoadOff.TabIndex = 72;
-            this.rbSignalLoadOff.TabStop = true;
             this.rbSignalLoadOff.Text = "OFF";
             this.rbSignalLoadOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbSignalLoadOff, "turn off");
@@ -5606,13 +6585,11 @@
             // 
             this.rbSignalAccessOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbSignalAccessOff.AutoSize = true;
-            this.rbSignalAccessOff.Checked = true;
             this.rbSignalAccessOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSignalAccessOff.Location = new System.Drawing.Point(111, 6);
             this.rbSignalAccessOff.Name = "rbSignalAccessOff";
             this.rbSignalAccessOff.Size = new System.Drawing.Size(47, 31);
             this.rbSignalAccessOff.TabIndex = 72;
-            this.rbSignalAccessOff.TabStop = true;
             this.rbSignalAccessOff.Text = "OFF";
             this.rbSignalAccessOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbSignalAccessOff, "turn off");
@@ -5680,13 +6657,11 @@
             // 
             this.rbSignalBuzzer2Off.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbSignalBuzzer2Off.AutoSize = true;
-            this.rbSignalBuzzer2Off.Checked = true;
             this.rbSignalBuzzer2Off.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSignalBuzzer2Off.Location = new System.Drawing.Point(95, 7);
             this.rbSignalBuzzer2Off.Name = "rbSignalBuzzer2Off";
             this.rbSignalBuzzer2Off.Size = new System.Drawing.Size(47, 31);
             this.rbSignalBuzzer2Off.TabIndex = 72;
-            this.rbSignalBuzzer2Off.TabStop = true;
             this.rbSignalBuzzer2Off.Text = "OFF";
             this.rbSignalBuzzer2Off.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbSignalBuzzer2Off, "turn off");
@@ -5755,13 +6730,11 @@
             // 
             this.rbSignalYellowOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbSignalYellowOff.AutoSize = true;
-            this.rbSignalYellowOff.Checked = true;
             this.rbSignalYellowOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSignalYellowOff.Location = new System.Drawing.Point(95, 6);
             this.rbSignalYellowOff.Name = "rbSignalYellowOff";
             this.rbSignalYellowOff.Size = new System.Drawing.Size(47, 31);
             this.rbSignalYellowOff.TabIndex = 72;
-            this.rbSignalYellowOff.TabStop = true;
             this.rbSignalYellowOff.Text = "OFF";
             this.rbSignalYellowOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbSignalYellowOff, "turn off");
@@ -5830,13 +6803,11 @@
             // 
             this.rbSignalGreenOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbSignalGreenOff.AutoSize = true;
-            this.rbSignalGreenOff.Checked = true;
             this.rbSignalGreenOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSignalGreenOff.Location = new System.Drawing.Point(95, 7);
             this.rbSignalGreenOff.Name = "rbSignalGreenOff";
             this.rbSignalGreenOff.Size = new System.Drawing.Size(47, 31);
             this.rbSignalGreenOff.TabIndex = 72;
-            this.rbSignalGreenOff.TabStop = true;
             this.rbSignalGreenOff.Text = "OFF";
             this.rbSignalGreenOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbSignalGreenOff, "turn off");
@@ -5905,13 +6876,11 @@
             // 
             this.rbSignalBlueOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbSignalBlueOff.AutoSize = true;
-            this.rbSignalBlueOff.Checked = true;
             this.rbSignalBlueOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSignalBlueOff.Location = new System.Drawing.Point(95, 6);
             this.rbSignalBlueOff.Name = "rbSignalBlueOff";
             this.rbSignalBlueOff.Size = new System.Drawing.Size(47, 31);
             this.rbSignalBlueOff.TabIndex = 72;
-            this.rbSignalBlueOff.TabStop = true;
             this.rbSignalBlueOff.Text = "OFF";
             this.rbSignalBlueOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbSignalBlueOff, "turn off");
@@ -5964,13 +6933,11 @@
             // 
             this.rbSignalBuzzer1Off.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbSignalBuzzer1Off.AutoSize = true;
-            this.rbSignalBuzzer1Off.Checked = true;
             this.rbSignalBuzzer1Off.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSignalBuzzer1Off.Location = new System.Drawing.Point(95, 7);
             this.rbSignalBuzzer1Off.Name = "rbSignalBuzzer1Off";
             this.rbSignalBuzzer1Off.Size = new System.Drawing.Size(47, 31);
             this.rbSignalBuzzer1Off.TabIndex = 72;
-            this.rbSignalBuzzer1Off.TabStop = true;
             this.rbSignalBuzzer1Off.Text = "OFF";
             this.rbSignalBuzzer1Off.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbSignalBuzzer1Off, "turn off");
@@ -6039,13 +7006,11 @@
             // 
             this.rbSignalRedOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbSignalRedOff.AutoSize = true;
-            this.rbSignalRedOff.Checked = true;
             this.rbSignalRedOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSignalRedOff.Location = new System.Drawing.Point(95, 7);
             this.rbSignalRedOff.Name = "rbSignalRedOff";
             this.rbSignalRedOff.Size = new System.Drawing.Size(47, 31);
             this.rbSignalRedOff.TabIndex = 72;
-            this.rbSignalRedOff.TabStop = true;
             this.rbSignalRedOff.Text = "OFF";
             this.rbSignalRedOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbSignalRedOff, "turn off");
@@ -6114,13 +7079,11 @@
             // 
             this.rbEvtFfuOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbEvtFfuOff.AutoSize = true;
-            this.rbEvtFfuOff.Checked = true;
             this.rbEvtFfuOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEvtFfuOff.Location = new System.Drawing.Point(138, 7);
             this.rbEvtFfuOff.Name = "rbEvtFfuOff";
             this.rbEvtFfuOff.Size = new System.Drawing.Size(47, 31);
             this.rbEvtFfuOff.TabIndex = 72;
-            this.rbEvtFfuOff.TabStop = true;
             this.rbEvtFfuOff.Text = "OFF";
             this.rbEvtFfuOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbEvtFfuOff, "Event is disabled");
@@ -6173,13 +7136,11 @@
             // 
             this.rbEvtTransOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbEvtTransOff.AutoSize = true;
-            this.rbEvtTransOff.Checked = true;
             this.rbEvtTransOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEvtTransOff.Location = new System.Drawing.Point(138, 7);
             this.rbEvtTransOff.Name = "rbEvtTransOff";
             this.rbEvtTransOff.Size = new System.Drawing.Size(47, 31);
             this.rbEvtTransOff.TabIndex = 72;
-            this.rbEvtTransOff.TabStop = true;
             this.rbEvtTransOff.Text = "OFF";
             this.rbEvtTransOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbEvtTransOff, "Event is disabled");
@@ -6232,13 +7193,11 @@
             // 
             this.rbEvtPortOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbEvtPortOff.AutoSize = true;
-            this.rbEvtPortOff.Checked = true;
             this.rbEvtPortOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEvtPortOff.Location = new System.Drawing.Point(138, 7);
             this.rbEvtPortOff.Name = "rbEvtPortOff";
             this.rbEvtPortOff.Size = new System.Drawing.Size(47, 31);
             this.rbEvtPortOff.TabIndex = 72;
-            this.rbEvtPortOff.TabStop = true;
             this.rbEvtPortOff.Text = "OFF";
             this.rbEvtPortOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbEvtPortOff, "Event is disabled");
@@ -6291,13 +7250,11 @@
             // 
             this.rbEvtPrsOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbEvtPrsOff.AutoSize = true;
-            this.rbEvtPrsOff.Checked = true;
             this.rbEvtPrsOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEvtPrsOff.Location = new System.Drawing.Point(138, 7);
             this.rbEvtPrsOff.Name = "rbEvtPrsOff";
             this.rbEvtPrsOff.Size = new System.Drawing.Size(47, 31);
             this.rbEvtPrsOff.TabIndex = 72;
-            this.rbEvtPrsOff.TabStop = true;
             this.rbEvtPrsOff.Text = "OFF";
             this.rbEvtPrsOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbEvtPrsOff, "Event is disabled");
@@ -6350,13 +7307,11 @@
             // 
             this.rbEvtMapdtOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbEvtMapdtOff.AutoSize = true;
-            this.rbEvtMapdtOff.Checked = true;
             this.rbEvtMapdtOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEvtMapdtOff.Location = new System.Drawing.Point(138, 7);
             this.rbEvtMapdtOff.Name = "rbEvtMapdtOff";
             this.rbEvtMapdtOff.Size = new System.Drawing.Size(47, 31);
             this.rbEvtMapdtOff.TabIndex = 72;
-            this.rbEvtMapdtOff.TabStop = true;
             this.rbEvtMapdtOff.Text = "OFF";
             this.rbEvtMapdtOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbEvtMapdtOff, "Event is disabled");
@@ -6409,13 +7364,11 @@
             // 
             this.rbEvtSysOff.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbEvtSysOff.AutoSize = true;
-            this.rbEvtSysOff.Checked = true;
             this.rbEvtSysOff.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEvtSysOff.Location = new System.Drawing.Point(138, 7);
             this.rbEvtSysOff.Name = "rbEvtSysOff";
             this.rbEvtSysOff.Size = new System.Drawing.Size(47, 31);
             this.rbEvtSysOff.TabIndex = 72;
-            this.rbEvtSysOff.TabStop = true;
             this.rbEvtSysOff.Text = "OFF";
             this.rbEvtSysOff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hint.SetToolTip(this.rbEvtSysOff, "Event is disabled");
@@ -6479,35 +7432,31 @@
             this.rbEvtAllOff.UseVisualStyleBackColor = true;
             this.rbEvtAllOff.Click += new System.EventHandler(this.rbEvtAllOff_Click);
             // 
-            // btnInitAll
+            // statusStrip
             // 
-            this.btnInitAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInitAll.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInitAll.Location = new System.Drawing.Point(761, 73);
-            this.btnInitAll.Name = "btnInitAll";
-            this.btnInitAll.Size = new System.Drawing.Size(87, 39);
-            this.btnInitAll.TabIndex = 29;
-            this.btnInitAll.Text = "Init All";
-            this.btnInitAll.UseVisualStyleBackColor = true;
-            this.btnInitAll.Click += new System.EventHandler(this.btnInitAll_Click);
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.slStatus});
+            this.statusStrip.Location = new System.Drawing.Point(0, 718);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(984, 28);
+            this.statusStrip.TabIndex = 21;
+            this.statusStrip.Text = "statusStrip1";
             // 
-            // button1
+            // slStatus
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(7, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 39);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "Reset";
-            this.button1.UseVisualStyleBackColor = true;
+            this.slStatus.BackColor = System.Drawing.SystemColors.Control;
+            this.slStatus.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slStatus.ForeColor = System.Drawing.Color.Red;
+            this.slStatus.Name = "slStatus";
+            this.slStatus.Size = new System.Drawing.Size(58, 23);
+            this.slStatus.Text = "            ";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 721);
+            this.ClientSize = new System.Drawing.Size(984, 746);
+            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabMode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -6552,20 +7501,57 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabInfo.ResumeLayout(false);
+            this.groupBox40.ResumeLayout(false);
             this.groupBox44.ResumeLayout(false);
             this.groupBox44.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysLight0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSysDIO0)).EndInit();
+            this.groupBox45.ResumeLayout(false);
+            this.groupBox45.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortLight0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortDIO0)).EndInit();
             this.groupBox35.ResumeLayout(false);
             this.groupBox35.PerformLayout();
             this.groupBox14.ResumeLayout(false);
@@ -6621,7 +7607,10 @@
             this.groupBox21.PerformLayout();
             this.groupBox17.ResumeLayout(false);
             this.groupBox17.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -7042,24 +8031,67 @@
         private System.Windows.Forms.GroupBox groupBox44;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button btnDioRefresh;
+        private System.Windows.Forms.PictureBox pbSysDIO0;
+        private System.Windows.Forms.PictureBox pbSysDIO2;
+        private System.Windows.Forms.PictureBox pbSysDIO1;
+        private System.Windows.Forms.PictureBox pbSysDIO11;
+        private System.Windows.Forms.PictureBox pbSysDIO10;
+        private System.Windows.Forms.PictureBox pbSysDIO8;
+        private System.Windows.Forms.PictureBox pbSysDIO7;
+        private System.Windows.Forms.PictureBox pbSysDIO5;
+        private System.Windows.Forms.PictureBox pbSysDIO9;
+        private System.Windows.Forms.PictureBox pbSysDIO4;
+        private System.Windows.Forms.PictureBox pbSysDIO6;
+        private System.Windows.Forms.PictureBox pbSysDIO3;
+        private System.Windows.Forms.Button btnSignalQuery;
         private System.Windows.Forms.Button btnRestart;
         private System.Windows.Forms.Button btnAbort;
         private System.Windows.Forms.Button btnHold;
         private System.Windows.Forms.Button btnInitAll;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pbSysLight11;
+        private System.Windows.Forms.PictureBox pbSysLight10;
+        private System.Windows.Forms.PictureBox pbSysLight8;
+        private System.Windows.Forms.PictureBox pbSysLight7;
+        private System.Windows.Forms.PictureBox pbSysLight5;
+        private System.Windows.Forms.PictureBox pbSysLight9;
+        private System.Windows.Forms.PictureBox pbSysLight4;
+        private System.Windows.Forms.PictureBox pbSysLight6;
+        private System.Windows.Forms.PictureBox pbSysLight2;
+        private System.Windows.Forms.PictureBox pbSysLight3;
+        private System.Windows.Forms.PictureBox pbSysLight1;
+        private System.Windows.Forms.PictureBox pbSysLight0;
+        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel slStatus;
+        private System.Windows.Forms.GroupBox groupBox45;
+        private System.Windows.Forms.PictureBox pbPortDIO13;
+        private System.Windows.Forms.PictureBox pbPortLight8;
+        private System.Windows.Forms.PictureBox pbPortDIO12;
+        private System.Windows.Forms.PictureBox pbPortLight7;
+        private System.Windows.Forms.PictureBox pbPortDIO10;
+        private System.Windows.Forms.PictureBox pbPortLight5;
+        private System.Windows.Forms.PictureBox pbPortDIO9;
+        private System.Windows.Forms.PictureBox pbPortDIO5;
+        private System.Windows.Forms.PictureBox pbPortLight4;
+        private System.Windows.Forms.PictureBox pbPortDIO11;
+        private System.Windows.Forms.PictureBox pbPortLight6;
+        private System.Windows.Forms.PictureBox pbPortDIO4;
+        private System.Windows.Forms.PictureBox pbPortLight2;
+        private System.Windows.Forms.PictureBox pbPortDIO8;
+        private System.Windows.Forms.PictureBox pbPortLight3;
+        private System.Windows.Forms.PictureBox pbPortDIO2;
+        private System.Windows.Forms.PictureBox pbPortLight1;
+        private System.Windows.Forms.PictureBox pbPortDIO3;
+        private System.Windows.Forms.PictureBox pbPortLight0;
+        private System.Windows.Forms.PictureBox pbPortDIO1;
+        private System.Windows.Forms.PictureBox pbPortDIO0;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.RadioButton rbSignalGetP3;
+        private System.Windows.Forms.RadioButton rbSignalGetP4;
+        private System.Windows.Forms.RadioButton rbSignalGetP2;
+        private System.Windows.Forms.RadioButton rbSignalGetP1;
+        private System.Windows.Forms.PictureBox pbPortDIO14;
     }
 }
 

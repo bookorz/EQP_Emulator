@@ -12,6 +12,7 @@ namespace EQP_Emulator.UI_Update
     {
         public static Boolean isAlarmSet = false;
         delegate void UpdateLog(string msg);
+        delegate void UpdateAlarm(Boolean isAlarm);
         delegate void UpdateBtnEnable(Boolean isRun);
         delegate void MessageShow(string msg);
 
@@ -70,8 +71,9 @@ namespace EQP_Emulator.UI_Update
             
         }
 
-        public static void AlarmUpdate(string status)
+        public static void AlarmUpdate(Boolean isAlarm)
         {
+            string status = isAlarm? "Alarm set" : "Alarm clear";
             Form form = Application.OpenForms["frmMain"];
             if (form == null)
                 return;
@@ -86,8 +88,8 @@ namespace EQP_Emulator.UI_Update
 
             if (W.InvokeRequired)
             {
-                UpdateLog ph = new UpdateLog(AlarmUpdate);
-                W.BeginInvoke(ph, status);
+                UpdateAlarm ph = new UpdateAlarm(AlarmUpdate);
+                W.BeginInvoke(ph, isAlarm);
             }
             else
             {
@@ -96,7 +98,7 @@ namespace EQP_Emulator.UI_Update
                 {
                     case "Alarm clear":
                         W.BackColor = Color.LimeGreen;
-                        btnReset.Enabled = false;
+                        //btnReset.Enabled = false; //20180914 change to  always open
                         isAlarmSet = false;
                         btnHold.Visible = true;
                         btnAbort.Visible = false;
@@ -104,7 +106,7 @@ namespace EQP_Emulator.UI_Update
                         break;
                     case "Alarm set":
                         W.BackColor = Color.Red;
-                        btnReset.Enabled = true;
+                        //btnReset.Enabled = true; //20180914 change to  always open
                         isAlarmSet = true;
                         break;
                 }
@@ -200,8 +202,8 @@ namespace EQP_Emulator.UI_Update
                         W.SelectedText = "";
                     }
                     W.ScrollToCaret();
-                    if (tabMode.SelectedIndex != 0)
-                        tabMode.SelectedIndex = 0;
+                    //if (tabMode.SelectedIndex != 0)
+                    //    tabMode.SelectedIndex = 0;
                 }
             }
             catch

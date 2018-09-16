@@ -117,7 +117,7 @@ namespace EQP_Emulator.Comm
             catch (Exception e)
             {
                 FormMainUpdate.LogUpdate(e.StackTrace + ":" + e.Message);
-                FormMainUpdate.AlarmUpdate("Alarm set");
+                FormMainUpdate.AlarmUpdate(true);
                 return false;
             }
         }
