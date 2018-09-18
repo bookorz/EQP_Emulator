@@ -52,6 +52,18 @@ namespace EQP_Emulator
         public static Boolean isAlign1Empty { get; set; } = true;
         public static Boolean isAlign2Empty { get; set; } = true;
 
+        //signal
+        public static string sysData1 { get; set; } = "00000000000000000000000000000000";
+        public static string sysData2 { get; set; } = "00000000000000000000000000000000";
+        public static string port1Data1 { get; set; } = "00000000000000000000000000000000";
+        public static string port2Data1 { get; set; } = "00000000000000000000000000000000";
+        public static string port3Data1 { get; set; } = "00000000000000000000000000000000";
+        public static string port4Data1 { get; set; } = "00000000000000000000000000000000";
+        public static string port1Data2 { get; set; } = "00000000000000000000000000000000";
+        public static string port2Data2 { get; set; } = "00000000000000000000000000000000";
+        public static string port3Data2 { get; set; } = "00000000000000000000000000000000";
+        public static string port4Data2 { get; set; } = "00000000000000000000000000000000";
+
         //Record the wafer information at the point
         public static Dictionary<string, string> points = new Dictionary<string, string>()
         {

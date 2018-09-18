@@ -534,7 +534,7 @@ namespace EQP_Emulator
         {
             try
             {
-                if (FormMainUpdate.isAlarmSet && !cmd.StartsWith("ACK") && !cmd.Equals("SET:ERROR/CLEAR;"))
+                if (FormMainUpdate.isAlarmSet && !cmd.StartsWith("ACK") && !cmd.Equals("SET:ERROR/CLEAR;") && !cmd.StartsWith("GET"))
                 {
                     FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state:" + cmd + "\n");
                 }
@@ -1818,17 +1818,60 @@ namespace EQP_Emulator
 
         private void btnSignalQuery_Click(object sender, EventArgs e)
         {
-            //EQP_Emulator.Properties.Resources.on
-            string sysDio    = getSignal("sysDio"); 
+            if (sender is RadioButton)
+            {
+                RadioButton btn = (RadioButton) sender;
+                if (!btn.Checked)
+                    return; //not selected item 
+            }
+
+            char[] sysData1 = new char[32];
+            char[] sysData2 = new char[32];
+            char[] portData1 = new char[32];
+            char[] portData2 = new char[32];
+
+            //get data
+            string sysDio    = getSignal("sysDio");
             string sysLight  = getSignal("sysLight");
             string portDio   = getSignal("portDio");
             string portLight = getSignal("portLight");
 
-            char[] sysData1 = sysDio.ToCharArray();
-            char[] sysData2 = sysLight.ToCharArray();
-            char[] portData1 = portDio.ToCharArray();
-            char[] portData2 = portLight.ToCharArray();
+            //set dada
+            EFEM.sysData1 = sysDio;
+            EFEM.sysData2 = sysLight;
+            sysData1 = EFEM.sysData1.ToCharArray();
+            sysData2 = EFEM.sysData2.ToCharArray();
 
+            if (rbSignalGetP1.Checked)
+            {
+                EFEM.port1Data1 = portDio;
+                EFEM.port1Data2 = portLight;
+                portData1 = EFEM.port1Data1.ToCharArray();
+                portData2 = EFEM.port1Data2.ToCharArray();
+            }
+            else if (rbSignalGetP2.Checked)
+            {
+                EFEM.port2Data1 = portDio;
+                EFEM.port2Data2 = portLight;
+                portData1 = EFEM.port2Data1.ToCharArray();
+                portData2 = EFEM.port2Data2.ToCharArray();
+            }
+            else if (rbSignalGetP3.Checked)
+            {
+                EFEM.port3Data1 = portDio;
+                EFEM.port3Data2 = portLight;
+                portData1 = EFEM.port3Data1.ToCharArray();
+                portData2 = EFEM.port3Data2.ToCharArray();
+            }
+            else if (rbSignalGetP4.Checked)
+            {
+                EFEM.port4Data1 = portDio;
+                EFEM.port4Data2 = portLight;
+                portData1 = EFEM.port4Data1.ToCharArray();
+                portData2 = EFEM.port4Data2.ToCharArray();
+            }
+
+            // set GUI
             Bitmap on = EQP_Emulator.Properties.Resources.on;
             Bitmap off = EQP_Emulator.Properties.Resources.off;
             Bitmap blink = EQP_Emulator.Properties.Resources.blink;

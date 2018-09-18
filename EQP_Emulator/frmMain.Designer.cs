@@ -5289,6 +5289,8 @@
             this.tbStateFFU20.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU20.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU20, "measured value for Fan Filter Unit 20 connected sensor");
+            this.tbStateFFU20.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU20.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU19
             // 
@@ -5299,6 +5301,8 @@
             this.tbStateFFU19.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU19.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU19, "measured value for Fan Filter Unit 19 connected sensor");
+            this.tbStateFFU19.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU19.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU10
             // 
@@ -5309,6 +5313,8 @@
             this.tbStateFFU10.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU10.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU10, "measured value for Fan Filter Unit 10 connected sensor");
+            this.tbStateFFU10.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU10.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU18
             // 
@@ -5319,6 +5325,8 @@
             this.tbStateFFU18.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU18.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU18, "measured value for Fan Filter Unit 18 connected sensor");
+            this.tbStateFFU18.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU18.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU9
             // 
@@ -5329,6 +5337,8 @@
             this.tbStateFFU9.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU9.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU9, "measured value for Fan Filter Unit 9 connected sensor");
+            this.tbStateFFU9.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU9.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU17
             // 
@@ -5339,6 +5349,8 @@
             this.tbStateFFU17.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU17.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU17, "measured value for Fan Filter Unit 17 connected sensor");
+            this.tbStateFFU17.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU17.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU8
             // 
@@ -5349,6 +5361,8 @@
             this.tbStateFFU8.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU8.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU8, "measured value for Fan Filter Unit 8 connected sensor");
+            this.tbStateFFU8.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU8.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU7
             // 
@@ -5359,6 +5373,8 @@
             this.tbStateFFU7.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU7.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU7, "measured value for Fan Filter Unit 7 connected sensor");
+            this.tbStateFFU7.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU7.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU16
             // 
@@ -5369,6 +5385,8 @@
             this.tbStateFFU16.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU16.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU16, "measured value for Fan Filter Unit 16 connected sensor");
+            this.tbStateFFU16.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU16.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStatePrs8
             // 
@@ -5379,6 +5397,8 @@
             this.tbStatePrs8.Size = new System.Drawing.Size(77, 26);
             this.tbStatePrs8.TabIndex = 78;
             this.hint.SetToolTip(this.tbStatePrs8, "measured value for connected sensor 8");
+            this.tbStatePrs8.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStatePrs8.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU6
             // 
@@ -5389,6 +5409,8 @@
             this.tbStateFFU6.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU6.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU6, "measured value for Fan Filter Unit 6 connected sensor");
+            this.tbStateFFU6.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU6.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU15
             // 
@@ -5399,6 +5421,8 @@
             this.tbStateFFU15.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU15.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU15, "measured value for Fan Filter Unit 15 connected sensor");
+            this.tbStateFFU15.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU15.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStatePrs7
             // 
@@ -5409,6 +5433,8 @@
             this.tbStatePrs7.Size = new System.Drawing.Size(77, 26);
             this.tbStatePrs7.TabIndex = 78;
             this.hint.SetToolTip(this.tbStatePrs7, "measured value for connected sensor 7");
+            this.tbStatePrs7.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStatePrs7.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU5
             // 
@@ -5419,6 +5445,8 @@
             this.tbStateFFU5.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU5.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU5, "measured value for Fan Filter Unit 5 connected sensor");
+            this.tbStateFFU5.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU5.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU14
             // 
@@ -5429,6 +5457,8 @@
             this.tbStateFFU14.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU14.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU14, "measured value for Fan Filter Unit 14 connected sensor");
+            this.tbStateFFU14.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU14.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStatePrs6
             // 
@@ -5439,6 +5469,8 @@
             this.tbStatePrs6.Size = new System.Drawing.Size(77, 26);
             this.tbStatePrs6.TabIndex = 78;
             this.hint.SetToolTip(this.tbStatePrs6, "measured value for connected sensor 6");
+            this.tbStatePrs6.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStatePrs6.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU4
             // 
@@ -5449,6 +5481,8 @@
             this.tbStateFFU4.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU4.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU4, "measured value for Fan Filter Unit 4 connected sensor");
+            this.tbStateFFU4.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU4.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU13
             // 
@@ -5459,6 +5493,8 @@
             this.tbStateFFU13.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU13.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU13, "measured value for Fan Filter Unit 13 connected sensor");
+            this.tbStateFFU13.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU13.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStatePrs5
             // 
@@ -5469,6 +5505,8 @@
             this.tbStatePrs5.Size = new System.Drawing.Size(77, 26);
             this.tbStatePrs5.TabIndex = 78;
             this.hint.SetToolTip(this.tbStatePrs5, "measured value for connected sensor 5");
+            this.tbStatePrs5.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStatePrs5.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU3
             // 
@@ -5479,6 +5517,8 @@
             this.tbStateFFU3.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU3.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU3, "measured value for Fan Filter Unit 3 connected sensor");
+            this.tbStateFFU3.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU3.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU12
             // 
@@ -5489,6 +5529,8 @@
             this.tbStateFFU12.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU12.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU12, "measured value for Fan Filter Unit 12 connected sensor");
+            this.tbStateFFU12.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU12.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStatePrs4
             // 
@@ -5499,6 +5541,8 @@
             this.tbStatePrs4.Size = new System.Drawing.Size(77, 26);
             this.tbStatePrs4.TabIndex = 78;
             this.hint.SetToolTip(this.tbStatePrs4, "measured value for connected sensor 4");
+            this.tbStatePrs4.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStatePrs4.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU2
             // 
@@ -5509,6 +5553,8 @@
             this.tbStateFFU2.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU2.TabIndex = 78;
             this.hint.SetToolTip(this.tbStateFFU2, "measured value for Fan Filter Unit 2 connected sensor");
+            this.tbStateFFU2.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU2.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStatePrs3
             // 
@@ -5519,6 +5565,8 @@
             this.tbStatePrs3.Size = new System.Drawing.Size(77, 26);
             this.tbStatePrs3.TabIndex = 78;
             this.hint.SetToolTip(this.tbStatePrs3, "measured value for connected sensor 3");
+            this.tbStatePrs3.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStatePrs3.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStatePrs2
             // 
@@ -5529,6 +5577,8 @@
             this.tbStatePrs2.Size = new System.Drawing.Size(77, 26);
             this.tbStatePrs2.TabIndex = 78;
             this.hint.SetToolTip(this.tbStatePrs2, "measured value for connected sensor 2");
+            this.tbStatePrs2.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStatePrs2.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateTrack3
             // 
@@ -5540,6 +5590,8 @@
             this.tbStateTrack3.TabIndex = 77;
             this.tbStateTrack3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.hint.SetToolTip(this.tbStateTrack3, "presence on aligner");
+            this.tbStateTrack3.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateTrack3.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU11
             // 
@@ -5550,6 +5602,8 @@
             this.tbStateFFU11.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU11.TabIndex = 73;
             this.hint.SetToolTip(this.tbStateFFU11, "measured value for Fan Filter Unit 11 connected sensor");
+            this.tbStateFFU11.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU11.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateTrack2
             // 
@@ -5561,6 +5615,8 @@
             this.tbStateTrack2.TabIndex = 76;
             this.tbStateTrack2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.hint.SetToolTip(this.tbStateTrack2, " shows the wafer presence on lower Arm");
+            this.tbStateTrack2.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateTrack2.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateFFU1
             // 
@@ -5571,6 +5627,8 @@
             this.tbStateFFU1.Size = new System.Drawing.Size(77, 26);
             this.tbStateFFU1.TabIndex = 73;
             this.hint.SetToolTip(this.tbStateFFU1, "measured value for Fan Filter Unit 1 connected sensor");
+            this.tbStateFFU1.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateFFU1.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateVer
             // 
@@ -5581,6 +5639,9 @@
             this.tbStateVer.Size = new System.Drawing.Size(300, 36);
             this.tbStateVer.TabIndex = 75;
             this.tbStateVer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.hint.SetToolTip(this.tbStateVer, "Software version");
+            this.tbStateVer.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateVer.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStatePrs1
             // 
@@ -5591,6 +5652,8 @@
             this.tbStatePrs1.Size = new System.Drawing.Size(77, 26);
             this.tbStatePrs1.TabIndex = 73;
             this.hint.SetToolTip(this.tbStatePrs1, "measured value for connected sensor 1");
+            this.tbStatePrs1.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStatePrs1.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // tbStateTrack1
             // 
@@ -5602,6 +5665,8 @@
             this.tbStateTrack1.TabIndex = 73;
             this.tbStateTrack1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.hint.SetToolTip(this.tbStateTrack1, " shows the wafer presence on upper Arm");
+            this.tbStateTrack1.MouseEnter += new System.EventHandler(this.showStatus_MouseEnter);
+            this.tbStateTrack1.MouseLeave += new System.EventHandler(this.clearStatus_MouseLeave);
             // 
             // btnStateRefresh
             // 
