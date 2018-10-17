@@ -82,19 +82,19 @@
             this.tabRun = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.p4gb = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblP4 = new System.Windows.Forms.Label();
             this.cbP4Type = new System.Windows.Forms.ComboBox();
             this.cbP4Target = new System.Windows.Forms.ComboBox();
             this.p3gb = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblP3 = new System.Windows.Forms.Label();
             this.cbP3Type = new System.Windows.Forms.ComboBox();
             this.cbP3Target = new System.Windows.Forms.ComboBox();
             this.p2gb = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblP2 = new System.Windows.Forms.Label();
             this.cbP2Target = new System.Windows.Forms.ComboBox();
             this.cbP2Type = new System.Windows.Forms.ComboBox();
             this.p1gb = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblP1 = new System.Windows.Forms.Label();
             this.cbP1Target = new System.Windows.Forms.ComboBox();
             this.cbP1Type = new System.Windows.Forms.ComboBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
@@ -113,13 +113,13 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.cbP1Size = new System.Windows.Forms.ComboBox();
-            this.cbLLA = new System.Windows.Forms.CheckBox();
+            this.cbBF1 = new System.Windows.Forms.CheckBox();
             this.cbA2 = new System.Windows.Forms.CheckBox();
-            this.cbLLB = new System.Windows.Forms.CheckBox();
+            this.cbBF2 = new System.Windows.Forms.CheckBox();
             this.cbR2Arm3 = new System.Windows.Forms.CheckBox();
-            this.cbLLC = new System.Windows.Forms.CheckBox();
+            this.cbBF3 = new System.Windows.Forms.CheckBox();
             this.cbR2Arm2 = new System.Windows.Forms.CheckBox();
-            this.cbLLD = new System.Windows.Forms.CheckBox();
+            this.cbBF4 = new System.Windows.Forms.CheckBox();
             this.cbR2Arm1 = new System.Windows.Forms.CheckBox();
             this.cbA1 = new System.Windows.Forms.CheckBox();
             this.cbR1Arm3 = new System.Windows.Forms.CheckBox();
@@ -1300,10 +1300,11 @@
             this.button1.TabIndex = 65;
             this.button1.Text = "Reset";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             // 
             // p4gb
             // 
-            this.p4gb.Controls.Add(this.label9);
+            this.p4gb.Controls.Add(this.lblP4);
             this.p4gb.Controls.Add(this.cbP4Type);
             this.p4gb.Controls.Add(this.cbP4Target);
             this.p4gb.Location = new System.Drawing.Point(380, -4);
@@ -1312,17 +1313,18 @@
             this.p4gb.TabIndex = 64;
             this.p4gb.TabStop = false;
             // 
-            // label9
+            // lblP4
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(5, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 18);
-            this.label9.TabIndex = 9;
-            this.label9.Text = " Type   P4   To  ";
+            this.lblP4.AutoSize = true;
+            this.lblP4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblP4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblP4.ForeColor = System.Drawing.Color.White;
+            this.lblP4.Location = new System.Drawing.Point(5, 13);
+            this.lblP4.Name = "lblP4";
+            this.lblP4.Size = new System.Drawing.Size(93, 18);
+            this.lblP4.TabIndex = 9;
+            this.lblP4.Text = " Type   P4   To  ";
+            this.lblP4.Click += new System.EventHandler(this.lblP4_Click);
             // 
             // cbP4Type
             // 
@@ -1359,7 +1361,7 @@
             // 
             // p3gb
             // 
-            this.p3gb.Controls.Add(this.label8);
+            this.p3gb.Controls.Add(this.lblP3);
             this.p3gb.Controls.Add(this.cbP3Type);
             this.p3gb.Controls.Add(this.cbP3Target);
             this.p3gb.Location = new System.Drawing.Point(279, -4);
@@ -1368,17 +1370,18 @@
             this.p3gb.TabIndex = 64;
             this.p3gb.TabStop = false;
             // 
-            // label8
+            // lblP3
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(5, 13);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 18);
-            this.label8.TabIndex = 9;
-            this.label8.Text = " Type   P3   To  ";
+            this.lblP3.AutoSize = true;
+            this.lblP3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblP3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblP3.ForeColor = System.Drawing.Color.White;
+            this.lblP3.Location = new System.Drawing.Point(5, 13);
+            this.lblP3.Name = "lblP3";
+            this.lblP3.Size = new System.Drawing.Size(93, 18);
+            this.lblP3.TabIndex = 9;
+            this.lblP3.Text = " Type   P3   To  ";
+            this.lblP3.Click += new System.EventHandler(this.lblP3_Click);
             // 
             // cbP3Type
             // 
@@ -1415,7 +1418,7 @@
             // 
             // p2gb
             // 
-            this.p2gb.Controls.Add(this.label12);
+            this.p2gb.Controls.Add(this.lblP2);
             this.p2gb.Controls.Add(this.cbP2Target);
             this.p2gb.Controls.Add(this.cbP2Type);
             this.p2gb.Location = new System.Drawing.Point(179, -4);
@@ -1424,17 +1427,18 @@
             this.p2gb.TabIndex = 64;
             this.p2gb.TabStop = false;
             // 
-            // label12
+            // lblP2
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(5, 13);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 18);
-            this.label12.TabIndex = 9;
-            this.label12.Text = " Type   P2   To  ";
+            this.lblP2.AutoSize = true;
+            this.lblP2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblP2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblP2.ForeColor = System.Drawing.Color.White;
+            this.lblP2.Location = new System.Drawing.Point(5, 13);
+            this.lblP2.Name = "lblP2";
+            this.lblP2.Size = new System.Drawing.Size(93, 18);
+            this.lblP2.TabIndex = 9;
+            this.lblP2.Text = " Type   P2   To  ";
+            this.lblP2.Click += new System.EventHandler(this.lblP2_Click);
             // 
             // cbP2Target
             // 
@@ -1471,27 +1475,28 @@
             // 
             // p1gb
             // 
-            this.p1gb.Controls.Add(this.label7);
+            this.p1gb.Controls.Add(this.lblP1);
             this.p1gb.Controls.Add(this.cbP1Target);
             this.p1gb.Controls.Add(this.cbP1Type);
-            this.p1gb.Location = new System.Drawing.Point(79, -4);
+            this.p1gb.Location = new System.Drawing.Point(79, -2);
             this.p1gb.Name = "p1gb";
             this.p1gb.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.p1gb.Size = new System.Drawing.Size(100, 70);
             this.p1gb.TabIndex = 63;
             this.p1gb.TabStop = false;
             // 
-            // label7
+            // lblP1
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(5, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 18);
-            this.label7.TabIndex = 9;
-            this.label7.Text = " Type   P1   To  ";
+            this.lblP1.AutoSize = true;
+            this.lblP1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblP1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblP1.ForeColor = System.Drawing.Color.White;
+            this.lblP1.Location = new System.Drawing.Point(5, 10);
+            this.lblP1.Name = "lblP1";
+            this.lblP1.Size = new System.Drawing.Size(93, 18);
+            this.lblP1.TabIndex = 9;
+            this.lblP1.Text = " Type   P1   To  ";
+            this.lblP1.Click += new System.EventHandler(this.lblP1_Click);
             // 
             // cbP1Target
             // 
@@ -1578,13 +1583,13 @@
             this.groupBox8.Controls.Add(this.label20);
             this.groupBox8.Controls.Add(this.label21);
             this.groupBox8.Controls.Add(this.cbP1Size);
-            this.groupBox8.Controls.Add(this.cbLLA);
+            this.groupBox8.Controls.Add(this.cbBF1);
             this.groupBox8.Controls.Add(this.cbA2);
-            this.groupBox8.Controls.Add(this.cbLLB);
+            this.groupBox8.Controls.Add(this.cbBF2);
             this.groupBox8.Controls.Add(this.cbR2Arm3);
-            this.groupBox8.Controls.Add(this.cbLLC);
+            this.groupBox8.Controls.Add(this.cbBF3);
             this.groupBox8.Controls.Add(this.cbR2Arm2);
-            this.groupBox8.Controls.Add(this.cbLLD);
+            this.groupBox8.Controls.Add(this.cbBF4);
             this.groupBox8.Controls.Add(this.cbR2Arm1);
             this.groupBox8.Controls.Add(this.cbA1);
             this.groupBox8.Controls.Add(this.cbR1Arm3);
@@ -1774,18 +1779,18 @@
             this.cbP1Size.Size = new System.Drawing.Size(60, 32);
             this.cbP1Size.TabIndex = 49;
             // 
-            // cbLLA
+            // cbBF1
             // 
-            this.cbLLA.AutoSize = true;
-            this.cbLLA.Checked = true;
-            this.cbLLA.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbLLA.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLLA.Location = new System.Drawing.Point(128, 185);
-            this.cbLLA.Name = "cbLLA";
-            this.cbLLA.Size = new System.Drawing.Size(53, 25);
-            this.cbLLA.TabIndex = 37;
-            this.cbLLA.Text = "LLA";
-            this.cbLLA.UseVisualStyleBackColor = true;
+            this.cbBF1.AutoSize = true;
+            this.cbBF1.Checked = true;
+            this.cbBF1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbBF1.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBF1.Location = new System.Drawing.Point(128, 185);
+            this.cbBF1.Name = "cbBF1";
+            this.cbBF1.Size = new System.Drawing.Size(55, 25);
+            this.cbBF1.TabIndex = 37;
+            this.cbBF1.Text = "BF1";
+            this.cbBF1.UseVisualStyleBackColor = true;
             // 
             // cbA2
             // 
@@ -1798,18 +1803,18 @@
             this.cbA2.Text = "ALIGN2";
             this.cbA2.UseVisualStyleBackColor = true;
             // 
-            // cbLLB
+            // cbBF2
             // 
-            this.cbLLB.AutoSize = true;
-            this.cbLLB.Checked = true;
-            this.cbLLB.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbLLB.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLLB.Location = new System.Drawing.Point(185, 185);
-            this.cbLLB.Name = "cbLLB";
-            this.cbLLB.Size = new System.Drawing.Size(52, 25);
-            this.cbLLB.TabIndex = 38;
-            this.cbLLB.Text = "LLB";
-            this.cbLLB.UseVisualStyleBackColor = true;
+            this.cbBF2.AutoSize = true;
+            this.cbBF2.Checked = true;
+            this.cbBF2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbBF2.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBF2.Location = new System.Drawing.Point(185, 185);
+            this.cbBF2.Name = "cbBF2";
+            this.cbBF2.Size = new System.Drawing.Size(55, 25);
+            this.cbBF2.TabIndex = 38;
+            this.cbBF2.Text = "BF2";
+            this.cbBF2.UseVisualStyleBackColor = true;
             // 
             // cbR2Arm3
             // 
@@ -1823,16 +1828,16 @@
             this.cbR2Arm3.UseVisualStyleBackColor = true;
             this.cbR2Arm3.CheckedChanged += new System.EventHandler(this.cbR2Arm3_CheckedChanged);
             // 
-            // cbLLC
+            // cbBF3
             // 
-            this.cbLLC.AutoSize = true;
-            this.cbLLC.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLLC.Location = new System.Drawing.Point(242, 185);
-            this.cbLLC.Name = "cbLLC";
-            this.cbLLC.Size = new System.Drawing.Size(52, 25);
-            this.cbLLC.TabIndex = 39;
-            this.cbLLC.Text = "LLC";
-            this.cbLLC.UseVisualStyleBackColor = true;
+            this.cbBF3.AutoSize = true;
+            this.cbBF3.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBF3.Location = new System.Drawing.Point(242, 185);
+            this.cbBF3.Name = "cbBF3";
+            this.cbBF3.Size = new System.Drawing.Size(55, 25);
+            this.cbBF3.TabIndex = 39;
+            this.cbBF3.Text = "BF3";
+            this.cbBF3.UseVisualStyleBackColor = true;
             // 
             // cbR2Arm2
             // 
@@ -1846,16 +1851,16 @@
             this.cbR2Arm2.UseVisualStyleBackColor = true;
             this.cbR2Arm2.Click += new System.EventHandler(this.cbR2Arm2_Click);
             // 
-            // cbLLD
+            // cbBF4
             // 
-            this.cbLLD.AutoSize = true;
-            this.cbLLD.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLLD.Location = new System.Drawing.Point(299, 185);
-            this.cbLLD.Name = "cbLLD";
-            this.cbLLD.Size = new System.Drawing.Size(53, 25);
-            this.cbLLD.TabIndex = 40;
-            this.cbLLD.Text = "LLD";
-            this.cbLLD.UseVisualStyleBackColor = true;
+            this.cbBF4.AutoSize = true;
+            this.cbBF4.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBF4.Location = new System.Drawing.Point(299, 185);
+            this.cbBF4.Name = "cbBF4";
+            this.cbBF4.Size = new System.Drawing.Size(55, 25);
+            this.cbBF4.TabIndex = 40;
+            this.cbBF4.Text = "BF4";
+            this.cbBF4.UseVisualStyleBackColor = true;
             // 
             // cbR2Arm1
             // 
@@ -1883,8 +1888,6 @@
             // cbR1Arm3
             // 
             this.cbR1Arm3.AutoSize = true;
-            this.cbR1Arm3.Checked = true;
-            this.cbR1Arm3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbR1Arm3.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbR1Arm3.Location = new System.Drawing.Point(278, 104);
             this.cbR1Arm3.Name = "cbR1Arm3";
@@ -1911,8 +1914,6 @@
             // cbR1Arm2
             // 
             this.cbR1Arm2.AutoSize = true;
-            this.cbR1Arm2.Checked = true;
-            this.cbR1Arm2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbR1Arm2.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbR1Arm2.Location = new System.Drawing.Point(203, 104);
             this.cbR1Arm2.Name = "cbR1Arm2";
@@ -6292,10 +6293,10 @@
             "ALIGN2",
             "ARM1",
             "ARM2",
-            "LLA",
-            "LLB",
-            "LLC",
-            "LLD"});
+            "BF1",
+            "BF2",
+            "BF3",
+            "BF4"});
             this.cbSizeTarget.Location = new System.Drawing.Point(184, 27);
             this.cbSizeTarget.Name = "cbSizeTarget";
             this.cbSizeTarget.Size = new System.Drawing.Size(245, 36);
@@ -7861,7 +7862,7 @@
         private System.Windows.Forms.ComboBox cbP2Type;
         private System.Windows.Forms.ComboBox cbP1Target;
         private System.Windows.Forms.ComboBox cbP1Type;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblP1;
         private System.Windows.Forms.Button btnTransfer;
         private System.Windows.Forms.Button btnAssign;
         private System.Windows.Forms.Label label25;
@@ -7880,10 +7881,10 @@
         private System.Windows.Forms.CheckBox cbR1Arm2;
         private System.Windows.Forms.CheckBox cbR1Arm1;
         private System.Windows.Forms.CheckBox cbA1;
-        private System.Windows.Forms.CheckBox cbLLD;
-        private System.Windows.Forms.CheckBox cbLLC;
-        private System.Windows.Forms.CheckBox cbLLB;
-        private System.Windows.Forms.CheckBox cbLLA;
+        private System.Windows.Forms.CheckBox cbBF4;
+        private System.Windows.Forms.CheckBox cbBF3;
+        private System.Windows.Forms.CheckBox cbBF2;
+        private System.Windows.Forms.CheckBox cbBF1;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
@@ -7923,10 +7924,10 @@
         private System.Windows.Forms.Button btnLoad_ml;
         private System.Windows.Forms.GroupBox p3gb;
         private System.Windows.Forms.GroupBox p4gb;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblP4;
+        private System.Windows.Forms.Label lblP3;
         private System.Windows.Forms.GroupBox p2gb;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblP2;
         private System.Windows.Forms.GroupBox p1gb;
         private System.Windows.Forms.TabPage tabInfo;
         private System.Windows.Forms.GroupBox groupBox14;

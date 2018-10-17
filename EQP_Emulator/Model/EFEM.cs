@@ -28,10 +28,10 @@ namespace EQP_Emulator
         //public static Boolean isR2Arm2Enable { get; set; } = false;
         //public static Boolean isR2Arm3Enable { get; set; } = false;
         //Load lock enable setting
-        public static Boolean isLLAEnable { get; set; } = false;
-        public static Boolean isLLBEnable { get; set; } = false;
-        public static Boolean isLLCEnable { get; set; } = false;
-        public static Boolean isLLDEnable { get; set; } = false;
+        public static Boolean isBF1Enable { get; set; } = false;
+        public static Boolean isBF2Enable { get; set; } = false;
+        public static Boolean isBF3Enable { get; set; } = false;
+        public static Boolean isBF4Enable { get; set; } = false;
         //Load pord enable setting
         public static Boolean isP1Enable { get; set; } = false;
         public static Boolean isP2Enable { get; set; } = false;
@@ -45,10 +45,10 @@ namespace EQP_Emulator
         //Robot enable setting
         public static Boolean isR1Arm1Empty { get; set; } = true;
         public static Boolean isR1Arm2Empty { get; set; } = true;
-        public static Boolean isLLAEmpty { get; set; } = true;
-        public static Boolean isLLBEmpty { get; set; } = true;
-        public static Boolean isLLCEmpty { get; set; } = true;
-        public static Boolean isLLDEmpty { get; set; } = true;
+        public static Boolean isBF1Empty { get; set; } = true;
+        public static Boolean isBF2Empty { get; set; } = true;
+        public static Boolean isBF3Empty { get; set; } = true;
+        public static Boolean isBF4Empty { get; set; } = true;
         public static Boolean isAlign1Empty { get; set; } = true;
         public static Boolean isAlign2Empty { get; set; } = true;
 
@@ -69,7 +69,7 @@ namespace EQP_Emulator
         {
          {"R1A1", ""},{"R1A2", ""},
          {"R2A1", ""},{"R2A2", ""},
-         {"LLA01", ""},{"LLB01", ""},{"LLC01", ""},{"LLD01", ""},
+         {"BF101", ""},{"BF201", ""},{"BF301", ""},{"BF401", ""},
          {"ALIGN1", ""},{"ALIGN2", ""},
          {"P101", ""},{"P102", ""},{"P103", ""},{"P104", ""},{"P105", ""},
          {"P106", ""},{"P107", ""},{"P108", ""},{"P109", ""},{"P110", ""},
@@ -142,17 +142,17 @@ namespace EQP_Emulator
                 case "ALIGN2":
                     isAlign2Empty = isEmpty;
                     break;
-                case "LLA01":
-                    isLLAEmpty = isEmpty;
+                case "BF101":
+                    isBF1Empty = isEmpty;
                     break;
-                case "LLB01":
-                    isLLBEmpty = isEmpty;
+                case "BF201":
+                    isBF2Empty = isEmpty;
                     break;
-                case "LLC01":
-                    isLLCEmpty = isEmpty;
+                case "BF301":
+                    isBF3Empty = isEmpty;
                     break;
-                case "LLD01":
-                    isLLDEmpty = isEmpty;
+                case "BF401":
+                    isBF4Empty = isEmpty;
                     break;
                 case "R1A1":
                     isR1Arm1Empty = isEmpty;

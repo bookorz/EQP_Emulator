@@ -32,14 +32,14 @@ namespace EQP_Emulator
                                                  "HOLD","RESTR","ABORT","EMS","ADPLOCK","ADPUNLOCK", "TRANSREQ" };
         string[] getCmds = new string[] { "MAPDT", "ERROR", "CLAMP", "STATE", "MODE", "TRANSREQ", "SIGSTAT",
                                                  "EVENT", "CSTID", "SIZE" };
-        string[] setCmds = new string[] { "ALIGN", "ERROR", "CLAMP", "MODE", "SIGOUT", "EVENT", "SIZE" };
+        string[] setCmds = new string[] { "ALIGN", "ERROR", "CLAMP", "MODE", "SIGOUT", "EVENT", "SIZE", "SPEED" };
 
         // parameter list 
         public static string[] devices = new string[] { "ALL", "P1", "P2", "P3", "P4", "ROB", "ROB1", "ROB2", "ALIGN", "ALIGN1", "ALIGN2" };
         public static string[] devices_single = new string[] { "P1", "P2", "P3", "P4", "ROB", "ROB1", "ROB2", "ALIGN", "ALIGN1", "ALIGN2" };
         public static string[] ports = new string[] { "P1", "P2", "P3", "P4" };
-        public static string[] points = new string[] { "P1", "P2", "P3", "P4", "LLA", "LLB", "LLC", "LLD", "ALIGN", "ALIGN1", "ALIGN2" };
-        public static string[] points_inside = new string[] { "ALIGN", "ALIGN1", "ALIGN2", "LLA", "LLA01", "LLB", "LLB01", "LLC", "LLC01", "LLD", "LLD01" };
+        public static string[] points = new string[] { "P1", "P2", "P3", "P4", "BF1", "BF2", "BF3", "BF4", "ALIGN", "ALIGN1", "ALIGN2" };
+        public static string[] points_inside = new string[] { "ALIGN", "ALIGN1", "ALIGN2", "BF1", "BF101", "BF2", "BF201", "BF3", "BF301", "BF4", "BF401" };
         public static string[] points_slot = new string[] {
             "P101","P102","P103","P104","P105","P106","P107","P108","P109","P110",
             "P111","P112","P113","P114","P115","P116","P117","P118","P119","P120",
@@ -53,14 +53,14 @@ namespace EQP_Emulator
             "P401","P402","P403","P404","P405","P406","P407","P408","P409","P410",
             "P411","P412","P413","P414","P415","P416","P417","P418","P419","P420",
             "P421","P422","P423","P424","P425",
-            "ALIGN", "ALIGN1", "ALIGN2", 
-            "LLA", "LLA01", "LLB", "LLB01", "LLC", "LLC01", "LLD", "LLD01" };
+            "ALIGN", "ALIGN1", "ALIGN2",
+            "BF1", "BF101", "BF2", "BF201", "BF3", "BF301", "BF4", "BF401" };
         //public static string[] p_position = points_slot.Concat(new string[] { "ARM1", "ARM2" }).ToArray();
         public static string[] p_size_pos = new string[] { "P1", "P2", "P3", "P4", "ALIGN", "ALIGN1", "ALIGN2", "ARM1", "ARM2",
-                                                           "LLA", "LLA01", "LLB", "LLB01", "LLC", "LLC01", "LLD", "LLD01" };
+                                                           "BF1", "BF101", "BF2", "BF201", "BF3", "BF301", "BF4", "BF401" };
         public static string[] arms = new string[] { "ARM1", "ARM2", "ARM3"};
         public static string[] arms_single = new string[] { "ARM1", "ARM2" };
-        public static string[] angles = new string[] { "P1", "P2", "P3", "P4", "LLA", "LLB", "LLC", "LLD", "D******" };
+        public static string[] angles = new string[] { "P1", "P2", "P3", "P4", "BF1", "BF2", "BF3", "BF4", "D******" };
         public static string[] aligners = new string[] { "ALIGN", "ALIGN1", "ALIGN2"};
         public static string[] devices_clamp = new string[] { "ALIGN", "ALIGN1", "ALIGN2", "ARM1", "ARM2" };
         public static string[] p_states = new string[] { "VER", "TRACK", "PRS1", "FFU1" };
@@ -164,6 +164,10 @@ namespace EQP_Emulator
             cmdParams1.Add("MOV:TRANSREQ", p_e84_port);//E84 Port
             cmdParams2.Add("MOV:TRANSREQ", p_e84_request);//E84 request type
             cmdParams1.Add("GET:TRANSREQ", p_e84_port);//E84 Port
+
+            /****************** 設定 Robot 速度 **************************/
+            cmdParams1.Add("SET:SPEED", new string[] { "ROB1", "ROB2"});//Robot
+            cmdParams2.Add("SET:SPEED", new string[] { "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95", "100" });//Robot
 
             /****************** 燈號控制相關 **************************/
             cmdParams1.Add("SET:SIGOUT", new string[] { "STOWER","P1","P2","P3","P4" });//燈號設備

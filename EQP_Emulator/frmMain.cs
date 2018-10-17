@@ -135,10 +135,10 @@ namespace EQP_Emulator
             }
             cbA1.Enabled = ConfigurationManager.AppSettings["Aligner1_enable"].Equals("false") ? false : true;
             cbA2.Enabled = ConfigurationManager.AppSettings["Aligner2_enable"].Equals("false") ? false : true;
-            cbLLA.Enabled = ConfigurationManager.AppSettings["LLA_enable"].Equals("false") ? false : true;
-            cbLLB.Enabled = ConfigurationManager.AppSettings["LLB_enable"].Equals("false") ? false : true;
-            cbLLC.Enabled = ConfigurationManager.AppSettings["LLC_enable"].Equals("false") ? false : true;
-            cbLLD.Enabled = ConfigurationManager.AppSettings["LLD_enable"].Equals("false") ? false : true;
+            cbBF1.Enabled = ConfigurationManager.AppSettings["BF1_enable"].Equals("false") ? false : true;
+            cbBF2.Enabled = ConfigurationManager.AppSettings["BF2_enable"].Equals("false") ? false : true;
+            cbBF3.Enabled = ConfigurationManager.AppSettings["BF3_enable"].Equals("false") ? false : true;
+            cbBF4.Enabled = ConfigurationManager.AppSettings["BF4_enable"].Equals("false") ? false : true;
             p1gb.Enabled = ConfigurationManager.AppSettings["PORT1_Enable"].Equals("false") ? false : true;
             p2gb.Enabled = ConfigurationManager.AppSettings["PORT2_Enable"].Equals("false") ? false : true;
             p3gb.Enabled = ConfigurationManager.AppSettings["PORT3_Enable"].Equals("false") ? false : true;
@@ -639,6 +639,7 @@ namespace EQP_Emulator
             FormMainUpdate.AlarmUpdate(false);
             isPause = false;
             FormMainUpdate.LogUpdate("\n*************   Manual Stop     *************");
+            setIsRunning(false);//執行結束
 
             //sendCommand("MOV: HOLD;");//send pause command to efem
             //Thread.Sleep(200);
@@ -959,14 +960,14 @@ namespace EQP_Emulator
             EFEM.isAlign2Enable = cbA2.Checked;
             EFEM.isAlign1Empty = cbA1.Checked;
             EFEM.isAlign2Empty = cbA2.Checked;
-            EFEM.isLLAEnable = cbLLA.Checked;
-            EFEM.isLLBEnable = cbLLB.Checked;
-            EFEM.isLLCEnable = cbLLC.Checked;
-            EFEM.isLLDEnable = cbLLD.Checked;
-            EFEM.isLLAEmpty = cbLLA.Checked;
-            EFEM.isLLBEmpty = cbLLB.Checked;
-            EFEM.isLLCEmpty = cbLLC.Checked;
-            EFEM.isLLDEmpty = cbLLD.Checked;
+            EFEM.isBF1Enable = cbBF1.Checked;
+            EFEM.isBF2Enable = cbBF2.Checked;
+            EFEM.isBF3Enable = cbBF3.Checked;
+            EFEM.isBF4Enable = cbBF4.Checked;
+            EFEM.isBF1Empty = cbBF1.Checked;
+            EFEM.isBF2Empty = cbBF2.Checked;
+            EFEM.isBF3Empty = cbBF3.Checked;
+            EFEM.isBF4Empty = cbBF4.Checked;
         }
 
         private void createScript()
@@ -1065,10 +1066,10 @@ namespace EQP_Emulator
                     GetWafer(wafer_id1);
                 }
             }
-            if (cbLLA.Checked || cbLLB.Checked || cbLLC.Checked || cbLLD.Checked)
+            if (cbBF1.Checked || cbBF2.Checked || cbBF3.Checked || cbBF4.Checked)
             {
                 PutLoadLock(wafer_id2);
-                if (EFEM.isLLAEmpty || EFEM.isLLBEmpty || EFEM.isLLCEmpty || EFEM.isLLDEmpty)
+                if (EFEM.isBF1Empty || EFEM.isBF2Empty || EFEM.isBF3Empty || EFEM.isBF4Empty)
                 {
                     PutLoadLock(wafer_id1);
                     GetWafer(wafer_id2);
@@ -1112,10 +1113,10 @@ namespace EQP_Emulator
                     GetWafer(wafer_id2);
                 }
             }
-            if (cbLLA.Checked || cbLLB.Checked || cbLLC.Checked || cbLLD.Checked)
+            if (cbBF1.Checked || cbBF2.Checked || cbBF3.Checked || cbBF4.Checked)
             {
                 PutLoadLock(wafer_id1);
-                if (EFEM.isLLAEmpty || EFEM.isLLBEmpty || EFEM.isLLCEmpty || EFEM.isLLDEmpty )
+                if (EFEM.isBF1Empty || EFEM.isBF2Empty || EFEM.isBF3Empty || EFEM.isBF4Empty )
                 {
                     PutLoadLock(wafer_id2);
                     GetWafer(wafer_id1);
@@ -1144,7 +1145,7 @@ namespace EQP_Emulator
                 PutAlign(wafer_id1);//PutWafer2Align
                 GetWafer(wafer_id1);//GetWafer from aligner
             }
-            if (cbLLA.Checked || cbLLB.Checked || cbLLC.Checked || cbLLD.Checked)
+            if (cbBF1.Checked || cbBF2.Checked || cbBF3.Checked || cbBF4.Checked)
             {
                 PutLoadLock(wafer_id1);//PutWafer2LoadLock
                 GetWafer(wafer_id1);//GetWafer from load lock
@@ -1262,21 +1263,25 @@ namespace EQP_Emulator
                 return;
             string arm = source.EndsWith("A1") ? "ARM1" : "ARM2";
             string destination = "";
-            if (EFEM.isLLAEnable && EFEM.isLLAEmpty)
+            if (EFEM.isBF1Enable && EFEM.isBF1Empty)
             {
-                destination = "LLA01";
+                //destination = "LLA01";
+                destination = "BF1";
             }
-            else if (EFEM.isLLBEnable && EFEM.isLLBEmpty)
+            else if (EFEM.isBF2Enable && EFEM.isBF2Empty)
             {
-                destination = "LLB01";
+                //destination = "LLB01";
+                destination = "BF2";
             }
-            else if (EFEM.isLLCEnable && EFEM.isLLCEmpty)
+            else if (EFEM.isBF3Enable && EFEM.isBF3Empty)
             {
-                destination = "LLC01";
+                //destination = "LLC01";
+                destination = "BF3";
             }
-            else if (EFEM.isLLDEnable && EFEM.isLLDEmpty)
+            else if (EFEM.isBF4Enable && EFEM.isBF4Empty)
             {
-                destination = "LLD01";
+                //destination = "LLD01";
+                destination = "BF4";
             }
             else
                 return; // do nothing
@@ -1972,6 +1977,87 @@ namespace EQP_Emulator
         {
             slStatus.Text = "";
             slStatus.BackColor = SystemColors.Control;
+        }
+
+        private void lblP1_Click(object sender, EventArgs e)
+        {
+            Label[] lables = new Label[] { lbl_p125, lbl_p124, lbl_p123, lbl_p122, lbl_p121,
+            lbl_p120, lbl_p119, lbl_p118, lbl_p117, lbl_p116, lbl_p115, lbl_p114, lbl_p113, lbl_p112, lbl_p111,
+            lbl_p110, lbl_p109, lbl_p108, lbl_p107, lbl_p106, lbl_p105, lbl_p104, lbl_p103, lbl_p102, lbl_p101};
+            foreach(Label label in lables)
+            {
+                Color color = label.BackColor;
+                label.Text = ""; //重新 assign 時, 一律清空目的地
+                if (color == SystemColors.HighlightText)
+                {
+                    label.BackColor = Color.LightGreen;
+                }
+                else if (color == Color.LightGreen)
+                {
+                    label.BackColor = SystemColors.HighlightText;
+                }
+            }
+
+        }
+
+        private void lblP2_Click(object sender, EventArgs e)
+        {
+            Label[] lables = new Label[] { lbl_p225, lbl_p224, lbl_p223, lbl_p222, lbl_p221,
+            lbl_p220, lbl_p219, lbl_p218, lbl_p217, lbl_p216, lbl_p215, lbl_p214, lbl_p213, lbl_p212, lbl_p211,
+            lbl_p210, lbl_p209, lbl_p208, lbl_p207, lbl_p206, lbl_p205, lbl_p204, lbl_p203, lbl_p202, lbl_p201};
+            foreach (Label label in lables)
+            {
+                Color color = label.BackColor;
+                label.Text = ""; //重新 assign 時, 一律清空目的地
+                if (color == SystemColors.HighlightText)
+                {
+                    label.BackColor = Color.LightGreen;
+                }
+                else if (color == Color.LightGreen)
+                {
+                    label.BackColor = SystemColors.HighlightText;
+                }
+            }
+        }
+
+        private void lblP3_Click(object sender, EventArgs e)
+        {
+            Label[] lables = new Label[] { lbl_p325, lbl_p324, lbl_p323, lbl_p322, lbl_p321,
+            lbl_p320, lbl_p319, lbl_p318, lbl_p317, lbl_p316, lbl_p315, lbl_p314, lbl_p313, lbl_p312, lbl_p311,
+            lbl_p310, lbl_p309, lbl_p308, lbl_p307, lbl_p306, lbl_p305, lbl_p304, lbl_p303, lbl_p302, lbl_p301};
+            foreach (Label label in lables)
+            {
+                Color color = label.BackColor;
+                label.Text = ""; //重新 assign 時, 一律清空目的地
+                if (color == SystemColors.HighlightText)
+                {
+                    label.BackColor = Color.LightGreen;
+                }
+                else if (color == Color.LightGreen)
+                {
+                    label.BackColor = SystemColors.HighlightText;
+                }
+            }
+        }
+
+        private void lblP4_Click(object sender, EventArgs e)
+        {
+            Label[] lables = new Label[] { lbl_p425, lbl_p424, lbl_p423, lbl_p422, lbl_p421,
+            lbl_p420, lbl_p419, lbl_p418, lbl_p417, lbl_p416, lbl_p415, lbl_p414, lbl_p413, lbl_p412, lbl_p411,
+            lbl_p410, lbl_p409, lbl_p408, lbl_p407, lbl_p406, lbl_p405, lbl_p404, lbl_p403, lbl_p402, lbl_p401};
+            foreach (Label label in lables)
+            {
+                Color color = label.BackColor;
+                label.Text = ""; //重新 assign 時, 一律清空目的地
+                if (color == SystemColors.HighlightText)
+                {
+                    label.BackColor = Color.LightGreen;
+                }
+                else if (color == Color.LightGreen)
+                {
+                    label.BackColor = SystemColors.HighlightText;
+                }
+            }
         }
     }
 }
