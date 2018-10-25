@@ -389,13 +389,13 @@ namespace EQP_Emulator.Comm
             string data = "";
             S += Encoding.Default.GetString(OrgData, 0, OrgData.Length);
 
-            if (S.IndexOf("\r") != -1)
+            if (S.IndexOf(";\r") != -1)
             {
                 //logger.Debug("s:" + S);
-                data = S.Substring(0, S.IndexOf("\r"));
+                data = S.Substring(0, S.IndexOf(";\r"));
                 //logger.Debug("data:" + data);
 
-                S = S.Substring(S.IndexOf("\r") + 1);
+                S = S.Substring(S.IndexOf(";\r") + 2);
                 //logger.Debug("s:" + S);
                 ThreadPool.QueueUserWorkItem(new WaitCallback(ConnReport.On_Connection_Message), data);
                 //break;

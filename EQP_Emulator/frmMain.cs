@@ -181,7 +181,7 @@ namespace EQP_Emulator
                     cmd.Append("/" + cbPara4.Text);
                 }
             }
-            tbCmd.Text = cmd.ToString() + ";";
+            tbCmd.Text = cmd.ToString() + ";\n";
         }
 
         private void cbCmd_SelectedIndexChanged(object sender, EventArgs e)
@@ -287,10 +287,10 @@ namespace EQP_Emulator
             {
                 string[] cmd = replyMsg.Split(new char[] { ':', '/' });
                 //收到INF,ABS 一律自動回ACK
-                string ackMsg = replyMsg.Replace("INF:", "ACK:").Replace("ABS:", "ACK:");
+                string ackMsg = replyMsg.Replace("INF:", "ACK:").Replace("ABS:", "ACK:")+";";
                 Thread.Sleep(ackSleepTime);
                 sendCommand(ackMsg);
-                if (!currentCmd.Equals("") && replyMsg.EndsWith(currentCmd))
+                if (!currentCmd.Equals("") && replyMsg.EndsWith(currentCmd.Replace(";\n","")))
                 {
                     isCmdFin = true;
                 }
