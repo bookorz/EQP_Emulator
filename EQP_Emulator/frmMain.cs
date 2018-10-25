@@ -342,6 +342,7 @@ namespace EQP_Emulator
 
         private void btnDisConn_Click(object sender, EventArgs e)
         {
+            conn.Close();
             conn = null;
             FormMainUpdate.ConnectUpdate("Disconnected");
             FormMainUpdate.LogUpdate("Disconnected");

@@ -524,6 +524,10 @@ namespace EQP_Emulator.Comm
             }
         }
 
+        public void Close()
+        {
+            theSocket.Close();
+        }
 
         ///
 
