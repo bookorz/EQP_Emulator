@@ -182,16 +182,23 @@ namespace EQP_Emulator.Comm
         /// 
         private bool Reconnect()
         {
-            //關閉socket
-            theSocket.Shutdown(SocketShutdown.Both);
+            try
+            {
+                //關閉socket
+                theSocket.Shutdown(SocketShutdown.Both);
 
-            theSocket.Disconnect(true);
-            IsconnectSuccess = false;
+                theSocket.Disconnect(true);
+                IsconnectSuccess = false;
 
-            theSocket.Close();
+                theSocket.Close();
 
-            //創建socket
-            return socket_create_connect();
+                //創建socket
+                return socket_create_connect();
+            }
+            catch 
+            {
+                return false;
+            }
         }
 
         ///
@@ -389,13 +396,13 @@ namespace EQP_Emulator.Comm
             string data = "";
             S += Encoding.Default.GetString(OrgData, 0, OrgData.Length);
 
-            if (S.IndexOf(";\r") != -1)
+            if (S.LastIndexOf(";\r") != -1)
             {
                 //logger.Debug("s:" + S);
-                data = S.Substring(0, S.IndexOf(";\r"));
+                data = S.Substring(0, S.LastIndexOf(";\r"));
                 //logger.Debug("data:" + data);
 
-                S = S.Substring(S.IndexOf(";\r") + 2);
+                S = S.Substring(S.LastIndexOf(";\r") + 2);
                 //logger.Debug("s:" + S);
                 ThreadPool.QueueUserWorkItem(new WaitCallback(ConnReport.On_Connection_Message), data);
                 //break;

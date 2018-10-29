@@ -271,46 +271,51 @@ namespace EQP_Emulator
 
         void IConnectionReport.On_Connection_Message(object Msg)
         {
-            string replyMsg = (string)Msg;
-            FormMainUpdate.LogUpdate("Reveive <= " + replyMsg);
-            //if (replyMsg.StartsWith("NAK") || replyMsg.StartsWith("CAN") || replyMsg.StartsWith("ABS"))
-            if (replyMsg.StartsWith("ABS"))
+            //string replyMsg = (string)Msg;
+            string[] MsgAry = ((string)Msg).Split(new string[] { ";\r" },StringSplitOptions.None);
+            foreach (string replyMsg in MsgAry)
             {
-                FormMainUpdate.AlarmUpdate(true);
-                setIsRunning(false);//ABS stop script
-            }else if (replyMsg.StartsWith("CAN") || replyMsg.StartsWith("NAK"))
-            {
-                setIsRunning(false);//CAN  or  NAK stop script
-            }
-
-            if (replyMsg.StartsWith("INF") || replyMsg.StartsWith("ABS"))
-            {
-                string[] cmd = replyMsg.Split(new char[] { ':', '/' });
-                //收到INF,ABS 一律自動回ACK
-                string ackMsg = replyMsg.Replace("INF:", "ACK:").Replace("ABS:", "ACK:")+";";
-                Thread.Sleep(ackSleepTime);
-                sendCommand(ackMsg);
-                if (!currentCmd.Equals("") && replyMsg.EndsWith(currentCmd.Replace(";\n","")))
+                FormMainUpdate.LogUpdate("Reveive <= " + replyMsg);
+                //if (replyMsg.StartsWith("NAK") || replyMsg.StartsWith("CAN") || replyMsg.StartsWith("ABS"))
+                if (replyMsg.StartsWith("ABS"))
                 {
-                    isCmdFin = true;
+                    FormMainUpdate.AlarmUpdate(true);
+                    setIsRunning(false);//ABS stop script
                 }
-            }
-            if (replyMsg.StartsWith("INF:RESTR"))
-            {
-                isPause = false;
-            } else if (replyMsg.StartsWith("INF:ABORT"))
-            {
-                isPause = false;
-                setIsRunning(false);// ABORT 
-            }
-            else if (replyMsg.StartsWith("INF:ERROR/CLEAR"))
-            {
-                FormMainUpdate.AlarmUpdate(false);
-                //isAlarmSet = false;
-                setIsRunning(false); //ERROR CLEAR
-            }
+                else if (replyMsg.StartsWith("CAN") || replyMsg.StartsWith("NAK"))
+                {
+                    setIsRunning(false);//CAN  or  NAK stop script
+                }
 
+                if (replyMsg.StartsWith("INF") || replyMsg.StartsWith("ABS"))
+                {
+                    string[] cmd = replyMsg.Split(new char[] { ':', '/' });
+                    //收到INF,ABS 一律自動回ACK
+                    string ackMsg = replyMsg.Replace("INF:", "ACK:").Replace("ABS:", "ACK:") + ";";
+                    Thread.Sleep(ackSleepTime);
+                    sendCommand(ackMsg);
+                    if (!currentCmd.Equals("") && replyMsg.EndsWith(currentCmd.Replace(";\n", "")))
+                    {
+                        isCmdFin = true;
+                    }
+                }
+                if (replyMsg.StartsWith("INF:RESTR"))
+                {
+                    isPause = false;
+                }
+                else if (replyMsg.StartsWith("INF:ABORT"))
+                {
+                    isPause = false;
+                    setIsRunning(false);// ABORT 
+                }
+                else if (replyMsg.StartsWith("INF:ERROR/CLEAR"))
+                {
+                    FormMainUpdate.AlarmUpdate(false);
+                    //isAlarmSet = false;
+                    setIsRunning(false); //ERROR CLEAR
+                }
 
+            }
 
         }
 
