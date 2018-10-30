@@ -285,6 +285,7 @@ namespace EQP_Emulator
                 else if (replyMsg.StartsWith("CAN") || replyMsg.StartsWith("NAK"))
                 {
                     setIsRunning(false);//CAN  or  NAK stop script
+                    isCmdFin = true;
                 }
 
                 if (replyMsg.StartsWith("INF") || replyMsg.StartsWith("ABS"))
