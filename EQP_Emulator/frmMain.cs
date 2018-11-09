@@ -181,7 +181,7 @@ namespace EQP_Emulator
                     cmd.Append("/" + cbPara4.Text);
                 }
             }
-            tbCmd.Text = cmd.ToString() + ";\n";
+            tbCmd.Text = cmd.ToString() + ";";
         }
 
         private void cbCmd_SelectedIndexChanged(object sender, EventArgs e)
@@ -295,7 +295,7 @@ namespace EQP_Emulator
                     string ackMsg = replyMsg.Replace("INF:", "ACK:").Replace("ABS:", "ACK:") + ";";
                     Thread.Sleep(ackSleepTime);
                     sendCommand(ackMsg);
-                    if (!currentCmd.Equals("") && replyMsg.EndsWith(currentCmd.Replace(";\n", "")))
+                    if (!currentCmd.Equals("") && replyMsg.EndsWith(currentCmd.Replace(";", "")))
                     {
                         isCmdFin = true;
                     }
@@ -543,7 +543,7 @@ namespace EQP_Emulator
             {
                 if (FormMainUpdate.isAlarmSet && !cmd.StartsWith("ACK") && !cmd.Equals("SET:ERROR/CLEAR;") && !cmd.StartsWith("GET"))
                 {
-                    FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state:" + cmd + "\n");
+                    FormMainUpdate.LogUpdate("Do not execute the following instructions in the abnormal state:" + cmd + "");
                 }
                 else if (!this.lbl_ConnectState.Text.Equals("Connected") && !cmd.Equals("ACK:READY/COMM;"))
                 {
